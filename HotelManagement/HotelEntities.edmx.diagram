@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="279ddc1030ee48a594a5551f0eb72820" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="HotelManagementModel.DatTour" Width="1.5" PointX="15.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.DichVu" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.Doan" Width="1.5" PointX="1.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.DoiTac" Width="1.5" PointX="10.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.HanhLy" Width="1.5" PointX="13.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.HoaDon" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhachHang" Width="1.5" PointX="3.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhuyenMai" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.NhanVien" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDanhGia" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhong" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVu" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVuChiTiet" Width="1.5" PointX="10.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuVanChuyenHanhLy" Width="1.5" PointX="11.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.Phong" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.sysdiagram" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelManagementModel.TourDuLich" Width="1.5" PointX="13" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="HotelManagementModel.fk_DatTour_makhachhang" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_DatTour_matour" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_madichvu" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_truongdoan" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_TourDuLich_madoitac" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_HanhLy_maphieuvanchuyen" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_HoaDon_maketoan" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_HoaDon_maphieudatphong" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDanhGia_makhachhang" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_makhachhang" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDatPhong_nhanvienvesinh" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_manhanvienphutrach" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuDanhGia_maphieudatphong" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVu_maphong" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.ApDungKhuyenMai" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.CungCapDichVu" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.PhieuDatPhongChiTiet" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelManagementModel.ThamGiaDoan" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

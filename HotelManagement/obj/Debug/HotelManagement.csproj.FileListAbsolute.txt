@@ -1,0 +1,16 @@
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\bin\Debug\HotelManagement.exe.config
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\bin\Debug\HotelManagement.exe
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\bin\Debug\HotelManagement.pdb
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\bin\Debug\EntityFramework.dll
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\bin\Debug\EntityFramework.xml
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.AssemblyReference.cache
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.Form1.resources
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.Properties.Resources.resources
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.GenerateResource.cache
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.CoreCompileInputs.cache
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.CopyComplete
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.exe
+C:\Users\codew\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.pdb
