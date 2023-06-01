@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HotelManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HotelManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ApDungKhuyenMai">
           <Key>
             <PropertyRef Name="makhuyenmai" />
@@ -87,7 +87,8 @@
           <Property Name="sodienthoai" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="sofax" Type="varchar" MaxLength="50" />
           <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="cccd" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="cccd" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="mataikhoan" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="KhuyenMai">
           <Key>
@@ -109,6 +110,16 @@
           <Property Name="luong" Type="float" Nullable="false" />
           <Property Name="ngaybatdau" Type="date" />
           <Property Name="trangthai" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="mataikhoan" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NoiThat">
+          <Key>
+            <PropertyRef Name="manoithat" />
+          </Key>
+          <Property Name="manoithat" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ten" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="gia" Type="float" />
+          <Property Name="maphong" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuDanhGia">
           <Key>
@@ -140,6 +151,15 @@
           <Property Name="maphong" Type="int" Nullable="false" />
           <Property Name="maphieudatphong" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="PhieuHuHongNoiThat">
+          <Key>
+            <PropertyRef Name="maphieudatphong" />
+            <PropertyRef Name="manoithat" />
+          </Key>
+          <Property Name="maphieudatphong" Type="int" Nullable="false" />
+          <Property Name="manoithat" Type="int" Nullable="false" />
+          <Property Name="giatienden" Type="float" />
+        </EntityType>
         <EntityType Name="PhieuSuDungDichVu">
           <Key>
             <PropertyRef Name="maphieu" />
@@ -162,6 +182,16 @@
           <Property Name="dongia" Type="float" />
           <Property Name="tenkhachhang" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
+        <EntityType Name="PhieuSuDungThucPham">
+          <Key>
+            <PropertyRef Name="maphieudatphong" />
+            <PropertyRef Name="mathucpham" />
+          </Key>
+          <Property Name="maphieudatphong" Type="int" Nullable="false" />
+          <Property Name="mathucpham" Type="int" Nullable="false" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="dongia" Type="float" />
+        </EntityType>
         <EntityType Name="PhieuVanChuyenHanhLy">
           <Key>
             <PropertyRef Name="maphieuvanchuyen" />
@@ -182,25 +212,32 @@
           <Property Name="bikhoa" Type="bit" Nullable="false" />
           <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
+        <EntityType Name="TaiKhoan">
           <Key>
-            <PropertyRef Name="diagram_id" />
+            <PropertyRef Name="mataikhoan" />
           </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
+          <Property Name="mataikhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tentaikhoan" Type="varchar" MaxLength="100" />
+          <Property Name="matkhau" Type="varchar" MaxLength="60" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="ThamGiaDoan">
+        <EntityType Name="ThanhVien">
           <Key>
-            <PropertyRef Name="makhachhang" />
+            <PropertyRef Name="sothutu" />
             <PropertyRef Name="madoan" />
           </Key>
-          <Property Name="makhachhang" Type="int" Nullable="false" />
+          <Property Name="sothutu" Type="int" Nullable="false" />
           <Property Name="madoan" Type="int" Nullable="false" />
+          <Property Name="hoten" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="cccd" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ThucPham">
+          <Key>
+            <PropertyRef Name="mathucpham" />
+          </Key>
+          <Property Name="mathucpham" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenthucpham" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="soluongton" Type="int" />
+          <Property Name="gia" Type="float" />
         </EntityType>
         <EntityType Name="TourDuLich">
           <Key>
@@ -320,6 +357,42 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_KhachHang_taikhoan">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
+          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="mataikhoan" />
+            </Principal>
+            <Dependent Role="KhachHang">
+              <PropertyRef Name="mataikhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_NhanVien_taikhoan">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="mataikhoan" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="mataikhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_NoiThat_maphong">
+          <End Role="Phong" Type="Self.Phong" Multiplicity="1" />
+          <End Role="NoiThat" Type="Self.NoiThat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Phong">
+              <PropertyRef Name="maphong" />
+            </Principal>
+            <Dependent Role="NoiThat">
+              <PropertyRef Name="maphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuDanhGia_makhachhang">
           <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
           <End Role="PhieuDanhGia" Type="Self.PhieuDanhGia" Multiplicity="*" />
@@ -404,6 +477,30 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_PhieuHuHongNoiThat_manoithat">
+          <End Role="NoiThat" Type="Self.NoiThat" Multiplicity="1" />
+          <End Role="PhieuHuHongNoiThat" Type="Self.PhieuHuHongNoiThat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoiThat">
+              <PropertyRef Name="manoithat" />
+            </Principal>
+            <Dependent Role="PhieuHuHongNoiThat">
+              <PropertyRef Name="manoithat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PhieuHuHongNoiThat_maphieudatphong">
+          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
+          <End Role="PhieuHuHongNoiThat" Type="Self.PhieuHuHongNoiThat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuDatPhong">
+              <PropertyRef Name="maphieudatphong" />
+            </Principal>
+            <Dependent Role="PhieuHuHongNoiThat">
+              <PropertyRef Name="maphieudatphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuSuDungDichVu_maphong">
           <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
           <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="*" />
@@ -440,6 +537,30 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_PhieuSuDungThucPham_maphieudatphong">
+          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
+          <End Role="PhieuSuDungThucPham" Type="Self.PhieuSuDungThucPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuDatPhong">
+              <PropertyRef Name="maphieudatphong" />
+            </Principal>
+            <Dependent Role="PhieuSuDungThucPham">
+              <PropertyRef Name="maphieudatphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PhieuSuDungThucPham_mathucpham">
+          <End Role="ThucPham" Type="Self.ThucPham" Multiplicity="1" />
+          <End Role="PhieuSuDungThucPham" Type="Self.PhieuSuDungThucPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThucPham">
+              <PropertyRef Name="mathucpham" />
+            </Principal>
+            <Dependent Role="PhieuSuDungThucPham">
+              <PropertyRef Name="mathucpham" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuVanChuyenHanhLy_manhanvienphutrach">
           <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
           <End Role="PhieuVanChuyenHanhLy" Type="Self.PhieuVanChuyenHanhLy" Multiplicity="*" />
@@ -464,27 +585,15 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_ThamGiaDoan_madoan">
+        <Association Name="fk_ThanhVien_madoan">
           <End Role="Doan" Type="Self.Doan" Multiplicity="1" />
-          <End Role="ThamGiaDoan" Type="Self.ThamGiaDoan" Multiplicity="*" />
+          <End Role="ThanhVien" Type="Self.ThanhVien" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Doan">
               <PropertyRef Name="madoan" />
             </Principal>
-            <Dependent Role="ThamGiaDoan">
+            <Dependent Role="ThanhVien">
               <PropertyRef Name="madoan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_ThamGiaDoan_makhachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-          <End Role="ThamGiaDoan" Type="Self.ThamGiaDoan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KhachHang">
-              <PropertyRef Name="makhachhang" />
-            </Principal>
-            <Dependent Role="ThamGiaDoan">
-              <PropertyRef Name="makhachhang" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -524,21 +633,20 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NoiThat" EntityType="Self.NoiThat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuDanhGia" EntityType="Self.PhieuDanhGia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuDatPhong" EntityType="Self.PhieuDatPhong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuDatPhongChiTiet" EntityType="Self.PhieuDatPhongChiTiet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhieuHuHongNoiThat" EntityType="Self.PhieuHuHongNoiThat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuSuDungDichVu" EntityType="Self.PhieuSuDungDichVu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuSuDungDichVuChiTiet" EntityType="Self.PhieuSuDungDichVuChiTiet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhieuSuDungThucPham" EntityType="Self.PhieuSuDungThucPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuVanChuyenHanhLy" EntityType="Self.PhieuVanChuyenHanhLy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ThanhVien" EntityType="Self.ThanhVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ThucPham" EntityType="Self.ThucPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TourDuLich" EntityType="Self.TourDuLich" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ThamGiaDoan" EntityType="Self.ThamGiaDoan" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [ThamGiaDoan].[makhachhang] AS [makhachhang], 
-    [ThamGiaDoan].[madoan] AS [madoan]
-    FROM [dbo].[ThamGiaDoan] AS [ThamGiaDoan]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="fk_ApDungKhuyenMai_makhuyenmai" Association="Self.fk_ApDungKhuyenMai_makhuyenmai">
             <End Role="KhuyenMai" EntitySet="KhuyenMai" />
             <End Role="ApDungKhuyenMai" EntitySet="ApDungKhuyenMai" />
@@ -575,6 +683,18 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
+          <AssociationSet Name="fk_KhachHang_taikhoan" Association="Self.fk_KhachHang_taikhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="KhachHang" EntitySet="KhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="fk_NhanVien_taikhoan" Association="Self.fk_NhanVien_taikhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="fk_NoiThat_maphong" Association="Self.fk_NoiThat_maphong">
+            <End Role="Phong" EntitySet="Phong" />
+            <End Role="NoiThat" EntitySet="NoiThat" />
+          </AssociationSet>
           <AssociationSet Name="fk_PhieuDanhGia_makhachhang" Association="Self.fk_PhieuDanhGia_makhachhang">
             <End Role="KhachHang" EntitySet="KhachHang" />
             <End Role="PhieuDanhGia" EntitySet="PhieuDanhGia" />
@@ -603,6 +723,14 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             <End Role="Phong" EntitySet="Phong" />
             <End Role="PhieuDatPhongChiTiet" EntitySet="PhieuDatPhongChiTiet" />
           </AssociationSet>
+          <AssociationSet Name="fk_PhieuHuHongNoiThat_manoithat" Association="Self.fk_PhieuHuHongNoiThat_manoithat">
+            <End Role="NoiThat" EntitySet="NoiThat" />
+            <End Role="PhieuHuHongNoiThat" EntitySet="PhieuHuHongNoiThat" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuHuHongNoiThat_maphieudatphong" Association="Self.fk_PhieuHuHongNoiThat_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
+            <End Role="PhieuHuHongNoiThat" EntitySet="PhieuHuHongNoiThat" />
+          </AssociationSet>
           <AssociationSet Name="fk_PhieuSuDungDichVu_maphong" Association="Self.fk_PhieuSuDungDichVu_maphong">
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
             <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVu" />
@@ -615,6 +743,14 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVu" />
             <End Role="PhieuSuDungDichVuChiTiet" EntitySet="PhieuSuDungDichVuChiTiet" />
           </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphong" Association="Self.fk_PhieuSuDungThucPham_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
+            <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPham" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungThucPham_mathucpham" Association="Self.fk_PhieuSuDungThucPham_mathucpham">
+            <End Role="ThucPham" EntitySet="ThucPham" />
+            <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPham" />
+          </AssociationSet>
           <AssociationSet Name="fk_PhieuVanChuyenHanhLy_manhanvienphutrach" Association="Self.fk_PhieuVanChuyenHanhLy_manhanvienphutrach">
             <End Role="NhanVien" EntitySet="NhanVien" />
             <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLy" />
@@ -623,13 +759,9 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
             <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLy" />
           </AssociationSet>
-          <AssociationSet Name="fk_ThamGiaDoan_madoan" Association="Self.fk_ThamGiaDoan_madoan">
+          <AssociationSet Name="fk_ThanhVien_madoan" Association="Self.fk_ThanhVien_madoan">
             <End Role="Doan" EntitySet="Doan" />
-            <End Role="ThamGiaDoan" EntitySet="ThamGiaDoan" />
-          </AssociationSet>
-          <AssociationSet Name="fk_ThamGiaDoan_makhachhang" Association="Self.fk_ThamGiaDoan_makhachhang">
-            <End Role="KhachHang" EntitySet="KhachHang" />
-            <End Role="ThamGiaDoan" EntitySet="ThamGiaDoan" />
+            <End Role="ThanhVien" EntitySet="ThanhVien" />
           </AssociationSet>
           <AssociationSet Name="fk_TourDuLich_madoitac" Association="Self.fk_TourDuLich_madoitac">
             <End Role="DoiTac" EntitySet="DoiTac" />
@@ -640,11 +772,146 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             <End Role="Doan" EntitySet="Doan" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HotelManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HotelManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DatTours" EntityType="HotelManagementModel.DatTour" />
+          <EntitySet Name="DichVus" EntityType="HotelManagementModel.DichVu" />
+          <EntitySet Name="Doans" EntityType="HotelManagementModel.Doan" />
+          <EntitySet Name="DoiTacs" EntityType="HotelManagementModel.DoiTac" />
+          <EntitySet Name="HanhLies" EntityType="HotelManagementModel.HanhLy" />
+          <EntitySet Name="HoaDons" EntityType="HotelManagementModel.HoaDon" />
+          <EntitySet Name="KhachHangs" EntityType="HotelManagementModel.KhachHang" />
+          <EntitySet Name="KhuyenMais" EntityType="HotelManagementModel.KhuyenMai" />
+          <EntitySet Name="NhanViens" EntityType="HotelManagementModel.NhanVien" />
+          <EntitySet Name="NoiThats" EntityType="HotelManagementModel.NoiThat" />
+          <EntitySet Name="PhieuDanhGias" EntityType="HotelManagementModel.PhieuDanhGia" />
+          <EntitySet Name="PhieuDatPhongs" EntityType="HotelManagementModel.PhieuDatPhong" />
+          <EntitySet Name="PhieuHuHongNoiThats" EntityType="HotelManagementModel.PhieuHuHongNoiThat" />
+          <EntitySet Name="PhieuSuDungDichVus" EntityType="HotelManagementModel.PhieuSuDungDichVu" />
+          <EntitySet Name="PhieuSuDungDichVuChiTiets" EntityType="HotelManagementModel.PhieuSuDungDichVuChiTiet" />
+          <EntitySet Name="PhieuSuDungThucPhams" EntityType="HotelManagementModel.PhieuSuDungThucPham" />
+          <EntitySet Name="PhieuVanChuyenHanhLies" EntityType="HotelManagementModel.PhieuVanChuyenHanhLy" />
+          <EntitySet Name="Phongs" EntityType="HotelManagementModel.Phong" />
+          <EntitySet Name="TaiKhoans" EntityType="HotelManagementModel.TaiKhoan" />
+          <EntitySet Name="ThanhViens" EntityType="HotelManagementModel.ThanhVien" />
+          <EntitySet Name="ThucPhams" EntityType="HotelManagementModel.ThucPham" />
+          <EntitySet Name="TourDuLiches" EntityType="HotelManagementModel.TourDuLich" />
+          <AssociationSet Name="fk_DatTour_makhachhang" Association="HotelManagementModel.fk_DatTour_makhachhang">
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+            <End Role="DatTour" EntitySet="DatTours" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DatTour_matour" Association="HotelManagementModel.fk_DatTour_matour">
+            <End Role="TourDuLich" EntitySet="TourDuLiches" />
+            <End Role="DatTour" EntitySet="DatTours" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungDichVuChiTiet_madichvu" Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_madichvu">
+            <End Role="DichVu" EntitySet="DichVus" />
+            <End Role="PhieuSuDungDichVuChiTiet" EntitySet="PhieuSuDungDichVuChiTiets" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ThanhVien_madoan" Association="HotelManagementModel.fk_ThanhVien_madoan">
+            <End Role="Doan" EntitySet="Doans" />
+            <End Role="ThanhVien" EntitySet="ThanhViens" />
+          </AssociationSet>
+          <AssociationSet Name="fk_truongdoan" Association="HotelManagementModel.fk_truongdoan">
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+            <End Role="Doan" EntitySet="Doans" />
+          </AssociationSet>
+          <AssociationSet Name="fk_TourDuLich_madoitac" Association="HotelManagementModel.fk_TourDuLich_madoitac">
+            <End Role="DoiTac" EntitySet="DoiTacs" />
+            <End Role="TourDuLich" EntitySet="TourDuLiches" />
+          </AssociationSet>
+          <AssociationSet Name="fk_HanhLy_maphieuvanchuyen" Association="HotelManagementModel.fk_HanhLy_maphieuvanchuyen">
+            <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLies" />
+            <End Role="HanhLy" EntitySet="HanhLies" />
+          </AssociationSet>
+          <AssociationSet Name="fk_HoaDon_maketoan" Association="HotelManagementModel.fk_HoaDon_maketoan">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="fk_HoaDon_maphieudatphong" Association="HotelManagementModel.fk_HoaDon_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="fk_KhachHang_taikhoan" Association="HotelManagementModel.fk_KhachHang_taikhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuDanhGia_makhachhang" Association="HotelManagementModel.fk_PhieuDanhGia_makhachhang">
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+            <End Role="PhieuDanhGia" EntitySet="PhieuDanhGias" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuDatPhong_makhachhang" Association="HotelManagementModel.fk_PhieuDatPhong_makhachhang">
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_NhanVien_taikhoan" Association="HotelManagementModel.fk_NhanVien_taikhoan">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="NhanVien" EntitySet="NhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuDatPhong_nhanviencheckout" Association="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuDatPhong_nhanvienvesinh" Association="HotelManagementModel.fk_PhieuDatPhong_nhanvienvesinh">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuVanChuyenHanhLy_manhanvienphutrach" Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_manhanvienphutrach">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLies" />
+          </AssociationSet>
+          <AssociationSet Name="fk_NoiThat_maphong" Association="HotelManagementModel.fk_NoiThat_maphong">
+            <End Role="Phong" EntitySet="Phongs" />
+            <End Role="NoiThat" EntitySet="NoiThats" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuHuHongNoiThat_manoithat" Association="HotelManagementModel.fk_PhieuHuHongNoiThat_manoithat">
+            <End Role="NoiThat" EntitySet="NoiThats" />
+            <End Role="PhieuHuHongNoiThat" EntitySet="PhieuHuHongNoiThats" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuDanhGia_maphieudatphong" Association="HotelManagementModel.fk_PhieuDanhGia_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="PhieuDanhGia" EntitySet="PhieuDanhGias" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuHuHongNoiThat_maphieudatphong" Association="HotelManagementModel.fk_PhieuHuHongNoiThat_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="PhieuHuHongNoiThat" EntitySet="PhieuHuHongNoiThats" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungDichVu_maphong" Association="HotelManagementModel.fk_PhieuSuDungDichVu_maphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphong" Association="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPhams" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuVanChuyenHanhLy_maphieudatphong" Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLies" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu">
+            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
+            <End Role="PhieuSuDungDichVuChiTiet" EntitySet="PhieuSuDungDichVuChiTiets" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungThucPham_mathucpham" Association="HotelManagementModel.fk_PhieuSuDungThucPham_mathucpham">
+            <End Role="ThucPham" EntitySet="ThucPhams" />
+            <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPhams" />
+          </AssociationSet>
+          <AssociationSet Name="ApDungKhuyenMai" Association="HotelManagementModel.ApDungKhuyenMai">
+            <End Role="KhuyenMai" EntitySet="KhuyenMais" />
+            <End Role="Phong" EntitySet="Phongs" />
+          </AssociationSet>
+          <AssociationSet Name="CungCapDichVu" Association="HotelManagementModel.CungCapDichVu">
+            <End Role="DichVu" EntitySet="DichVus" />
+            <End Role="Phong" EntitySet="Phongs" />
+          </AssociationSet>
+          <AssociationSet Name="PhieuDatPhongChiTiet" Association="HotelManagementModel.PhieuDatPhongChiTiet">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="Phong" EntitySet="Phongs" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="DatTour">
           <Key>
             <PropertyRef Name="madattour" />
@@ -655,18 +922,18 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="thoigiankhoihanh" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="thoigiantrove" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="soluonghanhkhach" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="KhachHang" Relationship="Self.fk_DatTour_makhachhang" FromRole="DatTour" ToRole="KhachHang" />
-          <NavigationProperty Name="TourDuLich" Relationship="Self.fk_DatTour_matour" FromRole="DatTour" ToRole="TourDuLich" />
+          <NavigationProperty Name="KhachHang" Relationship="HotelManagementModel.fk_DatTour_makhachhang" FromRole="DatTour" ToRole="KhachHang" />
+          <NavigationProperty Name="TourDuLich" Relationship="HotelManagementModel.fk_DatTour_matour" FromRole="DatTour" ToRole="TourDuLich" />
         </EntityType>
         <EntityType Name="DichVu">
           <Key>
             <PropertyRef Name="madichvu" />
           </Key>
           <Property Name="madichvu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tendichvu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tendichvu" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="gia" Type="Double" />
-          <NavigationProperty Name="PhieuSuDungDichVuChiTiets" Relationship="Self.fk_PhieuSuDungDichVuChiTiet_madichvu" FromRole="DichVu" ToRole="PhieuSuDungDichVuChiTiet" />
-          <NavigationProperty Name="Phongs" Relationship="Self.CungCapDichVu" FromRole="DichVu" ToRole="Phong" />
+          <NavigationProperty Name="PhieuSuDungDichVuChiTiets" Relationship="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_madichvu" FromRole="DichVu" ToRole="PhieuSuDungDichVuChiTiet" />
+          <NavigationProperty Name="Phongs" Relationship="HotelManagementModel.CungCapDichVu" FromRole="DichVu" ToRole="Phong" />
         </EntityType>
         <EntityType Name="Doan">
           <Key>
@@ -675,18 +942,18 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="madoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="soluong" Type="Int32" Nullable="false" />
           <Property Name="truongdoan" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="KhachHang" Relationship="Self.fk_truongdoan" FromRole="Doan" ToRole="KhachHang" />
-          <NavigationProperty Name="KhachHangs" Relationship="Self.ThamGiaDoan" FromRole="Doan" ToRole="KhachHang" />
+          <NavigationProperty Name="ThanhViens" Relationship="HotelManagementModel.fk_ThanhVien_madoan" FromRole="Doan" ToRole="ThanhVien" />
+          <NavigationProperty Name="KhachHang" Relationship="HotelManagementModel.fk_truongdoan" FromRole="Doan" ToRole="KhachHang" />
         </EntityType>
         <EntityType Name="DoiTac">
           <Key>
             <PropertyRef Name="madoitac" />
           </Key>
           <Property Name="madoitac" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tendoitac" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="sodienthoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="TourDuLiches" Relationship="Self.fk_TourDuLich_madoitac" FromRole="DoiTac" ToRole="TourDuLich" />
+          <Property Name="tendoitac" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sodienthoai" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TourDuLiches" Relationship="HotelManagementModel.fk_TourDuLich_madoitac" FromRole="DoiTac" ToRole="TourDuLich" />
         </EntityType>
         <EntityType Name="HanhLy">
           <Key>
@@ -694,9 +961,9 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </Key>
           <Property Name="mahanhly" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="maphieuvanchuyen" Type="Int32" Nullable="false" />
-          <Property Name="ten" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ten" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="dacdiem" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="PhieuVanChuyenHanhLy" Relationship="Self.fk_HanhLy_maphieuvanchuyen" FromRole="HanhLy" ToRole="PhieuVanChuyenHanhLy" />
+          <NavigationProperty Name="PhieuVanChuyenHanhLy" Relationship="HotelManagementModel.fk_HanhLy_maphieuvanchuyen" FromRole="HanhLy" ToRole="PhieuVanChuyenHanhLy" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -708,51 +975,65 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
           <Property Name="maketoan" Type="Int32" Nullable="false" />
           <Property Name="tinhtrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.fk_HoaDon_maketoan" FromRole="HoaDon" ToRole="NhanVien" />
-          <NavigationProperty Name="PhieuDatPhong" Relationship="Self.fk_HoaDon_maphieudatphong" FromRole="HoaDon" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_HoaDon_maketoan" FromRole="HoaDon" ToRole="NhanVien" />
+          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_HoaDon_maphieudatphong" FromRole="HoaDon" ToRole="PhieuDatPhong" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
             <PropertyRef Name="makhachhang" />
           </Key>
           <Property Name="makhachhang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tenkhachhang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="diachi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="sodienthoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tenkhachhang" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="diachi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sodienthoai" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="sofax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="cccd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="DatTours" Relationship="Self.fk_DatTour_makhachhang" FromRole="KhachHang" ToRole="DatTour" />
-          <NavigationProperty Name="Doans" Relationship="Self.fk_truongdoan" FromRole="KhachHang" ToRole="Doan" />
-          <NavigationProperty Name="PhieuDanhGias" Relationship="Self.fk_PhieuDanhGia_makhachhang" FromRole="KhachHang" ToRole="PhieuDanhGia" />
-          <NavigationProperty Name="PhieuDatPhongs" Relationship="Self.fk_PhieuDatPhong_makhachhang" FromRole="KhachHang" ToRole="PhieuDatPhong" />
-          <NavigationProperty Name="Doans1" Relationship="Self.ThamGiaDoan" FromRole="KhachHang" ToRole="Doan" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cccd" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="mataikhoan" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DatTours" Relationship="HotelManagementModel.fk_DatTour_makhachhang" FromRole="KhachHang" ToRole="DatTour" />
+          <NavigationProperty Name="Doans" Relationship="HotelManagementModel.fk_truongdoan" FromRole="KhachHang" ToRole="Doan" />
+          <NavigationProperty Name="TaiKhoan" Relationship="HotelManagementModel.fk_KhachHang_taikhoan" FromRole="KhachHang" ToRole="TaiKhoan" />
+          <NavigationProperty Name="PhieuDanhGias" Relationship="HotelManagementModel.fk_PhieuDanhGia_makhachhang" FromRole="KhachHang" ToRole="PhieuDanhGia" />
+          <NavigationProperty Name="PhieuDatPhongs" Relationship="HotelManagementModel.fk_PhieuDatPhong_makhachhang" FromRole="KhachHang" ToRole="PhieuDatPhong" />
         </EntityType>
         <EntityType Name="KhuyenMai">
           <Key>
             <PropertyRef Name="makhuyenmai" />
           </Key>
           <Property Name="makhuyenmai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tenkhuyenmai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tenkhuyenmai" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="thoigianbatdau" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="thoigianketthuc" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="ngaykhoa" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="Phongs" Relationship="Self.ApDungKhuyenMai" FromRole="KhuyenMai" ToRole="Phong" />
+          <NavigationProperty Name="Phongs" Relationship="HotelManagementModel.ApDungKhuyenMai" FromRole="KhuyenMai" ToRole="Phong" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
             <PropertyRef Name="manhanvien" />
           </Key>
           <Property Name="manhanvien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ten" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="loai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ten" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="loai" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="luong" Type="Double" Nullable="false" />
           <Property Name="ngaybatdau" Type="DateTime" Precision="0" />
-          <Property Name="trangthai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.fk_HoaDon_maketoan" FromRole="NhanVien" ToRole="HoaDon" />
-          <NavigationProperty Name="PhieuDatPhongs" Relationship="Self.fk_PhieuDatPhong_nhanviencheckout" FromRole="NhanVien" ToRole="PhieuDatPhong" />
-          <NavigationProperty Name="PhieuDatPhongs1" Relationship="Self.fk_PhieuDatPhong_nhanvienvesinh" FromRole="NhanVien" ToRole="PhieuDatPhong" />
-          <NavigationProperty Name="PhieuVanChuyenHanhLies" Relationship="Self.fk_PhieuVanChuyenHanhLy_manhanvienphutrach" FromRole="NhanVien" ToRole="PhieuVanChuyenHanhLy" />
+          <Property Name="trangthai" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mataikhoan" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="HoaDons" Relationship="HotelManagementModel.fk_HoaDon_maketoan" FromRole="NhanVien" ToRole="HoaDon" />
+          <NavigationProperty Name="TaiKhoan" Relationship="HotelManagementModel.fk_NhanVien_taikhoan" FromRole="NhanVien" ToRole="TaiKhoan" />
+          <NavigationProperty Name="PhieuDatPhongs" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" FromRole="NhanVien" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="PhieuDatPhongs1" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanvienvesinh" FromRole="NhanVien" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="PhieuVanChuyenHanhLies" Relationship="HotelManagementModel.fk_PhieuVanChuyenHanhLy_manhanvienphutrach" FromRole="NhanVien" ToRole="PhieuVanChuyenHanhLy" />
+        </EntityType>
+        <EntityType Name="NoiThat">
+          <Key>
+            <PropertyRef Name="manoithat" />
+          </Key>
+          <Property Name="manoithat" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ten" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gia" Type="Double" />
+          <Property Name="maphong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Phong" Relationship="HotelManagementModel.fk_NoiThat_maphong" FromRole="NoiThat" ToRole="Phong" />
+          <NavigationProperty Name="PhieuHuHongNoiThats" Relationship="HotelManagementModel.fk_PhieuHuHongNoiThat_manoithat" FromRole="NoiThat" ToRole="PhieuHuHongNoiThat" />
         </EntityType>
         <EntityType Name="PhieuDanhGia">
           <Key>
@@ -763,8 +1044,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="diem" Type="Int32" Nullable="false" />
           <Property Name="makhachhang" Type="Int32" Nullable="false" />
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="KhachHang" Relationship="Self.fk_PhieuDanhGia_makhachhang" FromRole="PhieuDanhGia" ToRole="KhachHang" />
-          <NavigationProperty Name="PhieuDatPhong" Relationship="Self.fk_PhieuDanhGia_maphieudatphong" FromRole="PhieuDanhGia" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="KhachHang" Relationship="HotelManagementModel.fk_PhieuDanhGia_makhachhang" FromRole="PhieuDanhGia" ToRole="KhachHang" />
+          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_PhieuDanhGia_maphieudatphong" FromRole="PhieuDanhGia" ToRole="PhieuDatPhong" />
         </EntityType>
         <EntityType Name="PhieuDatPhong">
           <Key>
@@ -777,14 +1058,27 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="makhachhang" Type="Int32" Nullable="false" />
           <Property Name="nhanviencheckout" Type="Int32" Nullable="false" />
           <Property Name="nhanvienvesinh" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.fk_HoaDon_maphieudatphong" FromRole="PhieuDatPhong" ToRole="HoaDon" />
-          <NavigationProperty Name="KhachHang" Relationship="Self.fk_PhieuDatPhong_makhachhang" FromRole="PhieuDatPhong" ToRole="KhachHang" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.fk_PhieuDatPhong_nhanviencheckout" FromRole="PhieuDatPhong" ToRole="NhanVien" />
-          <NavigationProperty Name="NhanVien1" Relationship="Self.fk_PhieuDatPhong_nhanvienvesinh" FromRole="PhieuDatPhong" ToRole="NhanVien" />
-          <NavigationProperty Name="PhieuDanhGias" Relationship="Self.fk_PhieuDanhGia_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuDanhGia" />
-          <NavigationProperty Name="PhieuSuDungDichVus" Relationship="Self.fk_PhieuSuDungDichVu_maphong" FromRole="PhieuDatPhong" ToRole="PhieuSuDungDichVu" />
-          <NavigationProperty Name="PhieuVanChuyenHanhLies" Relationship="Self.fk_PhieuVanChuyenHanhLy_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuVanChuyenHanhLy" />
-          <NavigationProperty Name="Phongs" Relationship="Self.PhieuDatPhongChiTiet" FromRole="PhieuDatPhong" ToRole="Phong" />
+          <NavigationProperty Name="HoaDons" Relationship="HotelManagementModel.fk_HoaDon_maphieudatphong" FromRole="PhieuDatPhong" ToRole="HoaDon" />
+          <NavigationProperty Name="KhachHang" Relationship="HotelManagementModel.fk_PhieuDatPhong_makhachhang" FromRole="PhieuDatPhong" ToRole="KhachHang" />
+          <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" FromRole="PhieuDatPhong" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanvienvesinh" FromRole="PhieuDatPhong" ToRole="NhanVien" />
+          <NavigationProperty Name="PhieuDanhGias" Relationship="HotelManagementModel.fk_PhieuDanhGia_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuDanhGia" />
+          <NavigationProperty Name="PhieuHuHongNoiThats" Relationship="HotelManagementModel.fk_PhieuHuHongNoiThat_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuHuHongNoiThat" />
+          <NavigationProperty Name="PhieuSuDungDichVus" Relationship="HotelManagementModel.fk_PhieuSuDungDichVu_maphong" FromRole="PhieuDatPhong" ToRole="PhieuSuDungDichVu" />
+          <NavigationProperty Name="PhieuSuDungThucPhams" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuSuDungThucPham" />
+          <NavigationProperty Name="PhieuVanChuyenHanhLies" Relationship="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuVanChuyenHanhLy" />
+          <NavigationProperty Name="Phongs" Relationship="HotelManagementModel.PhieuDatPhongChiTiet" FromRole="PhieuDatPhong" ToRole="Phong" />
+        </EntityType>
+        <EntityType Name="PhieuHuHongNoiThat">
+          <Key>
+            <PropertyRef Name="maphieudatphong" />
+            <PropertyRef Name="manoithat" />
+          </Key>
+          <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
+          <Property Name="manoithat" Type="Int32" Nullable="false" />
+          <Property Name="giatienden" Type="Double" />
+          <NavigationProperty Name="NoiThat" Relationship="HotelManagementModel.fk_PhieuHuHongNoiThat_manoithat" FromRole="PhieuHuHongNoiThat" ToRole="NoiThat" />
+          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_PhieuHuHongNoiThat_maphieudatphong" FromRole="PhieuHuHongNoiThat" ToRole="PhieuDatPhong" />
         </EntityType>
         <EntityType Name="PhieuSuDungDichVu">
           <Key>
@@ -794,8 +1088,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="tongtien" Type="Double" />
           <Property Name="maletan" Type="Int32" Nullable="false" />
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="PhieuDatPhong" Relationship="Self.fk_PhieuSuDungDichVu_maphong" FromRole="PhieuSuDungDichVu" ToRole="PhieuDatPhong" />
-          <NavigationProperty Name="PhieuSuDungDichVuChiTiets" Relationship="Self.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" FromRole="PhieuSuDungDichVu" ToRole="PhieuSuDungDichVuChiTiet" />
+          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_PhieuSuDungDichVu_maphong" FromRole="PhieuSuDungDichVu" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="PhieuSuDungDichVuChiTiets" Relationship="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" FromRole="PhieuSuDungDichVu" ToRole="PhieuSuDungDichVuChiTiet" />
         </EntityType>
         <EntityType Name="PhieuSuDungDichVuChiTiet">
           <Key>
@@ -808,9 +1102,21 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="thoigiansudung" Type="Int32" />
           <Property Name="thoigianbatdau" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="dongia" Type="Double" />
-          <Property Name="tenkhachhang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="DichVu" Relationship="Self.fk_PhieuSuDungDichVuChiTiet_madichvu" FromRole="PhieuSuDungDichVuChiTiet" ToRole="DichVu" />
-          <NavigationProperty Name="PhieuSuDungDichVu" Relationship="Self.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" FromRole="PhieuSuDungDichVuChiTiet" ToRole="PhieuSuDungDichVu" />
+          <Property Name="tenkhachhang" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DichVu" Relationship="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_madichvu" FromRole="PhieuSuDungDichVuChiTiet" ToRole="DichVu" />
+          <NavigationProperty Name="PhieuSuDungDichVu" Relationship="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" FromRole="PhieuSuDungDichVuChiTiet" ToRole="PhieuSuDungDichVu" />
+        </EntityType>
+        <EntityType Name="PhieuSuDungThucPham">
+          <Key>
+            <PropertyRef Name="maphieudatphong" />
+            <PropertyRef Name="mathucpham" />
+          </Key>
+          <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
+          <Property Name="mathucpham" Type="Int32" Nullable="false" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="dongia" Type="Double" />
+          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphong" FromRole="PhieuSuDungThucPham" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="ThucPham" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_mathucpham" FromRole="PhieuSuDungThucPham" ToRole="ThucPham" />
         </EntityType>
         <EntityType Name="PhieuVanChuyenHanhLy">
           <Key>
@@ -821,48 +1127,70 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <Property Name="thoigian" Type="DateTime" Precision="3" />
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
           <Property Name="manhanvienphutrach" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HanhLies" Relationship="Self.fk_HanhLy_maphieuvanchuyen" FromRole="PhieuVanChuyenHanhLy" ToRole="HanhLy" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.fk_PhieuVanChuyenHanhLy_manhanvienphutrach" FromRole="PhieuVanChuyenHanhLy" ToRole="NhanVien" />
-          <NavigationProperty Name="PhieuDatPhong" Relationship="Self.fk_PhieuVanChuyenHanhLy_maphieudatphong" FromRole="PhieuVanChuyenHanhLy" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="HanhLies" Relationship="HotelManagementModel.fk_HanhLy_maphieuvanchuyen" FromRole="PhieuVanChuyenHanhLy" ToRole="HanhLy" />
+          <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_PhieuVanChuyenHanhLy_manhanvienphutrach" FromRole="PhieuVanChuyenHanhLy" ToRole="NhanVien" />
+          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong" FromRole="PhieuVanChuyenHanhLy" ToRole="PhieuDatPhong" />
         </EntityType>
         <EntityType Name="Phong">
           <Key>
             <PropertyRef Name="maphong" />
           </Key>
           <Property Name="maphong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sophong" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sophong" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="gia" Type="Double" Nullable="false" />
           <Property Name="bikhoa" Type="Boolean" Nullable="false" />
-          <Property Name="tinhtrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="KhuyenMais" Relationship="Self.ApDungKhuyenMai" FromRole="Phong" ToRole="KhuyenMai" />
-          <NavigationProperty Name="DichVus" Relationship="Self.CungCapDichVu" FromRole="Phong" ToRole="DichVu" />
-          <NavigationProperty Name="PhieuDatPhongs" Relationship="Self.PhieuDatPhongChiTiet" FromRole="Phong" ToRole="PhieuDatPhong" />
+          <Property Name="tinhtrang" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NoiThats" Relationship="HotelManagementModel.fk_NoiThat_maphong" FromRole="Phong" ToRole="NoiThat" />
+          <NavigationProperty Name="KhuyenMais" Relationship="HotelManagementModel.ApDungKhuyenMai" FromRole="Phong" ToRole="KhuyenMai" />
+          <NavigationProperty Name="DichVus" Relationship="HotelManagementModel.CungCapDichVu" FromRole="Phong" ToRole="DichVu" />
+          <NavigationProperty Name="PhieuDatPhongs" Relationship="HotelManagementModel.PhieuDatPhongChiTiet" FromRole="Phong" ToRole="PhieuDatPhong" />
         </EntityType>
-        <EntityType Name="sysdiagram">
+        <EntityType Name="TaiKhoan">
           <Key>
-            <PropertyRef Name="diagram_id" />
+            <PropertyRef Name="mataikhoan" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="mataikhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tentaikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="matkhau" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="KhachHangs" Relationship="HotelManagementModel.fk_KhachHang_taikhoan" FromRole="TaiKhoan" ToRole="KhachHang" />
+          <NavigationProperty Name="NhanViens" Relationship="HotelManagementModel.fk_NhanVien_taikhoan" FromRole="TaiKhoan" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="ThanhVien">
+          <Key>
+            <PropertyRef Name="sothutu" />
+            <PropertyRef Name="madoan" />
+          </Key>
+          <Property Name="sothutu" Type="Int32" Nullable="false" />
+          <Property Name="madoan" Type="Int32" Nullable="false" />
+          <Property Name="hoten" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="cccd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Doan" Relationship="HotelManagementModel.fk_ThanhVien_madoan" FromRole="ThanhVien" ToRole="Doan" />
+        </EntityType>
+        <EntityType Name="ThucPham">
+          <Key>
+            <PropertyRef Name="mathucpham" />
+          </Key>
+          <Property Name="mathucpham" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenthucpham" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soluongton" Type="Int32" />
+          <Property Name="gia" Type="Double" />
+          <NavigationProperty Name="PhieuSuDungThucPhams" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_mathucpham" FromRole="ThucPham" ToRole="PhieuSuDungThucPham" />
         </EntityType>
         <EntityType Name="TourDuLich">
           <Key>
             <PropertyRef Name="matour" />
           </Key>
           <Property Name="matour" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tentour" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tentour" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="gia" Type="Double" Nullable="false" />
           <Property Name="songay" Type="Int32" Nullable="false" />
           <Property Name="madoitac" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DatTours" Relationship="Self.fk_DatTour_matour" FromRole="TourDuLich" ToRole="DatTour" />
-          <NavigationProperty Name="DoiTac" Relationship="Self.fk_TourDuLich_madoitac" FromRole="TourDuLich" ToRole="DoiTac" />
+          <NavigationProperty Name="DatTours" Relationship="HotelManagementModel.fk_DatTour_matour" FromRole="TourDuLich" ToRole="DatTour" />
+          <NavigationProperty Name="DoiTac" Relationship="HotelManagementModel.fk_TourDuLich_madoitac" FromRole="TourDuLich" ToRole="DoiTac" />
         </EntityType>
         <Association Name="fk_DatTour_makhachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-          <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+          <End Type="HotelManagementModel.KhachHang" Role="KhachHang" Multiplicity="1" />
+          <End Type="HotelManagementModel.DatTour" Role="DatTour" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
               <PropertyRef Name="makhachhang" />
@@ -873,8 +1201,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_DatTour_matour">
-          <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="1" />
-          <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+          <End Type="HotelManagementModel.TourDuLich" Role="TourDuLich" Multiplicity="1" />
+          <End Type="HotelManagementModel.DatTour" Role="DatTour" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TourDuLich">
               <PropertyRef Name="matour" />
@@ -885,8 +1213,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuSuDungDichVuChiTiet_madichvu">
-          <End Role="DichVu" Type="Self.DichVu" Multiplicity="1" />
-          <End Role="PhieuSuDungDichVuChiTiet" Type="Self.PhieuSuDungDichVuChiTiet" Multiplicity="*" />
+          <End Type="HotelManagementModel.DichVu" Role="DichVu" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuSuDungDichVuChiTiet" Role="PhieuSuDungDichVuChiTiet" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DichVu">
               <PropertyRef Name="madichvu" />
@@ -896,9 +1224,21 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_ThanhVien_madoan">
+          <End Type="HotelManagementModel.Doan" Role="Doan" Multiplicity="1" />
+          <End Type="HotelManagementModel.ThanhVien" Role="ThanhVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doan">
+              <PropertyRef Name="madoan" />
+            </Principal>
+            <Dependent Role="ThanhVien">
+              <PropertyRef Name="madoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_truongdoan">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-          <End Role="Doan" Type="Self.Doan" Multiplicity="*" />
+          <End Type="HotelManagementModel.KhachHang" Role="KhachHang" Multiplicity="1" />
+          <End Type="HotelManagementModel.Doan" Role="Doan" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
               <PropertyRef Name="makhachhang" />
@@ -909,8 +1249,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_TourDuLich_madoitac">
-          <End Role="DoiTac" Type="Self.DoiTac" Multiplicity="1" />
-          <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="*" />
+          <End Type="HotelManagementModel.DoiTac" Role="DoiTac" Multiplicity="1" />
+          <End Type="HotelManagementModel.TourDuLich" Role="TourDuLich" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DoiTac">
               <PropertyRef Name="madoitac" />
@@ -921,8 +1261,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_HanhLy_maphieuvanchuyen">
-          <End Role="PhieuVanChuyenHanhLy" Type="Self.PhieuVanChuyenHanhLy" Multiplicity="1" />
-          <End Role="HanhLy" Type="Self.HanhLy" Multiplicity="*" />
+          <End Type="HotelManagementModel.PhieuVanChuyenHanhLy" Role="PhieuVanChuyenHanhLy" Multiplicity="1" />
+          <End Type="HotelManagementModel.HanhLy" Role="HanhLy" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PhieuVanChuyenHanhLy">
               <PropertyRef Name="maphieuvanchuyen" />
@@ -933,8 +1273,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_HoaDon_maketoan">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HotelManagementModel.HoaDon" Role="HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
               <PropertyRef Name="manhanvien" />
@@ -945,8 +1285,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_HoaDon_maphieudatphong">
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
+          <End Type="HotelManagementModel.HoaDon" Role="HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PhieuDatPhong">
               <PropertyRef Name="maphieudatphong" />
@@ -956,9 +1296,21 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_KhachHang_taikhoan">
+          <End Type="HotelManagementModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
+          <End Type="HotelManagementModel.KhachHang" Role="KhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="mataikhoan" />
+            </Principal>
+            <Dependent Role="KhachHang">
+              <PropertyRef Name="mataikhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuDanhGia_makhachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-          <End Role="PhieuDanhGia" Type="Self.PhieuDanhGia" Multiplicity="*" />
+          <End Type="HotelManagementModel.KhachHang" Role="KhachHang" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuDanhGia" Role="PhieuDanhGia" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
               <PropertyRef Name="makhachhang" />
@@ -969,8 +1321,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_makhachhang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
+          <End Type="HotelManagementModel.KhachHang" Role="KhachHang" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KhachHang">
               <PropertyRef Name="makhachhang" />
@@ -980,9 +1332,21 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_NhanVien_taikhoan">
+          <End Type="HotelManagementModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="mataikhoan" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="mataikhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuDatPhong_nhanviencheckout">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
               <PropertyRef Name="manhanvien" />
@@ -993,8 +1357,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanvienvesinh">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
               <PropertyRef Name="manhanvien" />
@@ -1005,8 +1369,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuVanChuyenHanhLy_manhanvienphutrach">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
-          <End Role="PhieuVanChuyenHanhLy" Type="Self.PhieuVanChuyenHanhLy" Multiplicity="*" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuVanChuyenHanhLy" Role="PhieuVanChuyenHanhLy" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
               <PropertyRef Name="manhanvien" />
@@ -1016,9 +1380,33 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_NoiThat_maphong">
+          <End Type="HotelManagementModel.Phong" Role="Phong" Multiplicity="1" />
+          <End Type="HotelManagementModel.NoiThat" Role="NoiThat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Phong">
+              <PropertyRef Name="maphong" />
+            </Principal>
+            <Dependent Role="NoiThat">
+              <PropertyRef Name="maphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PhieuHuHongNoiThat_manoithat">
+          <End Type="HotelManagementModel.NoiThat" Role="NoiThat" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuHuHongNoiThat" Role="PhieuHuHongNoiThat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoiThat">
+              <PropertyRef Name="manoithat" />
+            </Principal>
+            <Dependent Role="PhieuHuHongNoiThat">
+              <PropertyRef Name="manoithat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuDanhGia_maphieudatphong">
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
-          <End Role="PhieuDanhGia" Type="Self.PhieuDanhGia" Multiplicity="*" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuDanhGia" Role="PhieuDanhGia" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PhieuDatPhong">
               <PropertyRef Name="maphieudatphong" />
@@ -1028,9 +1416,21 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_PhieuHuHongNoiThat_maphieudatphong">
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuHuHongNoiThat" Role="PhieuHuHongNoiThat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuDatPhong">
+              <PropertyRef Name="maphieudatphong" />
+            </Principal>
+            <Dependent Role="PhieuHuHongNoiThat">
+              <PropertyRef Name="maphieudatphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuSuDungDichVu_maphong">
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
-          <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="*" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuSuDungDichVu" Role="PhieuSuDungDichVu" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PhieuDatPhong">
               <PropertyRef Name="maphieudatphong" />
@@ -1040,9 +1440,21 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_PhieuSuDungThucPham_maphieudatphong">
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuSuDungThucPham" Role="PhieuSuDungThucPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuDatPhong">
+              <PropertyRef Name="maphieudatphong" />
+            </Principal>
+            <Dependent Role="PhieuSuDungThucPham">
+              <PropertyRef Name="maphieudatphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuVanChuyenHanhLy_maphieudatphong">
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
-          <End Role="PhieuVanChuyenHanhLy" Type="Self.PhieuVanChuyenHanhLy" Multiplicity="*" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuVanChuyenHanhLy" Role="PhieuVanChuyenHanhLy" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PhieuDatPhong">
               <PropertyRef Name="maphieudatphong" />
@@ -1053,8 +1465,8 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu">
-          <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="1" />
-          <End Role="PhieuSuDungDichVuChiTiet" Type="Self.PhieuSuDungDichVuChiTiet" Multiplicity="*" />
+          <End Type="HotelManagementModel.PhieuSuDungDichVu" Role="PhieuSuDungDichVu" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuSuDungDichVuChiTiet" Role="PhieuSuDungDichVuChiTiet" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PhieuSuDungDichVu">
               <PropertyRef Name="maphieu" />
@@ -1064,125 +1476,30 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_PhieuSuDungThucPham_mathucpham">
+          <End Type="HotelManagementModel.ThucPham" Role="ThucPham" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuSuDungThucPham" Role="PhieuSuDungThucPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThucPham">
+              <PropertyRef Name="mathucpham" />
+            </Principal>
+            <Dependent Role="PhieuSuDungThucPham">
+              <PropertyRef Name="mathucpham" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="ApDungKhuyenMai">
-          <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="*" />
-          <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+          <End Type="HotelManagementModel.KhuyenMai" Role="KhuyenMai" Multiplicity="*" />
+          <End Type="HotelManagementModel.Phong" Role="Phong" Multiplicity="*" />
         </Association>
         <Association Name="CungCapDichVu">
-          <End Role="DichVu" Type="Self.DichVu" Multiplicity="*" />
-          <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+          <End Type="HotelManagementModel.DichVu" Role="DichVu" Multiplicity="*" />
+          <End Type="HotelManagementModel.Phong" Role="Phong" Multiplicity="*" />
         </Association>
         <Association Name="PhieuDatPhongChiTiet">
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
-          <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
+          <End Type="HotelManagementModel.Phong" Role="Phong" Multiplicity="*" />
         </Association>
-        <Association Name="ThamGiaDoan">
-          <End Role="Doan" Type="Self.Doan" Multiplicity="*" />
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="*" />
-        </Association>
-        <EntityContainer Name="HotelManagementEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="DatTours" EntityType="Self.DatTour" />
-          <EntitySet Name="DichVus" EntityType="Self.DichVu" />
-          <EntitySet Name="Doans" EntityType="Self.Doan" />
-          <EntitySet Name="DoiTacs" EntityType="Self.DoiTac" />
-          <EntitySet Name="HanhLies" EntityType="Self.HanhLy" />
-          <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
-          <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
-          <EntitySet Name="KhuyenMais" EntityType="Self.KhuyenMai" />
-          <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
-          <EntitySet Name="PhieuDanhGias" EntityType="Self.PhieuDanhGia" />
-          <EntitySet Name="PhieuDatPhongs" EntityType="Self.PhieuDatPhong" />
-          <EntitySet Name="PhieuSuDungDichVus" EntityType="Self.PhieuSuDungDichVu" />
-          <EntitySet Name="PhieuSuDungDichVuChiTiets" EntityType="Self.PhieuSuDungDichVuChiTiet" />
-          <EntitySet Name="PhieuVanChuyenHanhLies" EntityType="Self.PhieuVanChuyenHanhLy" />
-          <EntitySet Name="Phongs" EntityType="Self.Phong" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="TourDuLiches" EntityType="Self.TourDuLich" />
-          <AssociationSet Name="fk_DatTour_makhachhang" Association="Self.fk_DatTour_makhachhang">
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-            <End Role="DatTour" EntitySet="DatTours" />
-          </AssociationSet>
-          <AssociationSet Name="fk_DatTour_matour" Association="Self.fk_DatTour_matour">
-            <End Role="TourDuLich" EntitySet="TourDuLiches" />
-            <End Role="DatTour" EntitySet="DatTours" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuSuDungDichVuChiTiet_madichvu" Association="Self.fk_PhieuSuDungDichVuChiTiet_madichvu">
-            <End Role="DichVu" EntitySet="DichVus" />
-            <End Role="PhieuSuDungDichVuChiTiet" EntitySet="PhieuSuDungDichVuChiTiets" />
-          </AssociationSet>
-          <AssociationSet Name="fk_truongdoan" Association="Self.fk_truongdoan">
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-            <End Role="Doan" EntitySet="Doans" />
-          </AssociationSet>
-          <AssociationSet Name="fk_TourDuLich_madoitac" Association="Self.fk_TourDuLich_madoitac">
-            <End Role="DoiTac" EntitySet="DoiTacs" />
-            <End Role="TourDuLich" EntitySet="TourDuLiches" />
-          </AssociationSet>
-          <AssociationSet Name="fk_HanhLy_maphieuvanchuyen" Association="Self.fk_HanhLy_maphieuvanchuyen">
-            <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLies" />
-            <End Role="HanhLy" EntitySet="HanhLies" />
-          </AssociationSet>
-          <AssociationSet Name="fk_HoaDon_maketoan" Association="Self.fk_HoaDon_maketoan">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="fk_HoaDon_maphieudatphong" Association="Self.fk_HoaDon_maphieudatphong">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuDanhGia_makhachhang" Association="Self.fk_PhieuDanhGia_makhachhang">
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-            <End Role="PhieuDanhGia" EntitySet="PhieuDanhGias" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuDatPhong_makhachhang" Association="Self.fk_PhieuDatPhong_makhachhang">
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuDatPhong_nhanviencheckout" Association="Self.fk_PhieuDatPhong_nhanviencheckout">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuDatPhong_nhanvienvesinh" Association="Self.fk_PhieuDatPhong_nhanvienvesinh">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuVanChuyenHanhLy_manhanvienphutrach" Association="Self.fk_PhieuVanChuyenHanhLy_manhanvienphutrach">
-            <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLies" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuDanhGia_maphieudatphong" Association="Self.fk_PhieuDanhGia_maphieudatphong">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-            <End Role="PhieuDanhGia" EntitySet="PhieuDanhGias" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuSuDungDichVu_maphong" Association="Self.fk_PhieuSuDungDichVu_maphong">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuVanChuyenHanhLy_maphieudatphong" Association="Self.fk_PhieuVanChuyenHanhLy_maphieudatphong">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-            <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLies" />
-          </AssociationSet>
-          <AssociationSet Name="fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" Association="Self.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu">
-            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
-            <End Role="PhieuSuDungDichVuChiTiet" EntitySet="PhieuSuDungDichVuChiTiets" />
-          </AssociationSet>
-          <AssociationSet Name="ApDungKhuyenMai" Association="Self.ApDungKhuyenMai">
-            <End Role="KhuyenMai" EntitySet="KhuyenMais" />
-            <End Role="Phong" EntitySet="Phongs" />
-          </AssociationSet>
-          <AssociationSet Name="CungCapDichVu" Association="Self.CungCapDichVu">
-            <End Role="DichVu" EntitySet="DichVus" />
-            <End Role="Phong" EntitySet="Phongs" />
-          </AssociationSet>
-          <AssociationSet Name="PhieuDatPhongChiTiet" Association="Self.PhieuDatPhongChiTiet">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-            <End Role="Phong" EntitySet="Phongs" />
-          </AssociationSet>
-          <AssociationSet Name="ThamGiaDoan" Association="Self.ThamGiaDoan">
-            <End Role="Doan" EntitySet="Doans" />
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1192,222 +1509,263 @@ warning 6002: The table/view 'HotelManagement.dbo.ThamGiaDoan' does not have a p
           <EntitySetMapping Name="DatTours">
             <EntityTypeMapping TypeName="HotelManagementModel.DatTour">
               <MappingFragment StoreEntitySet="DatTour">
-                <ScalarProperty Name="madattour" ColumnName="madattour" />
-                <ScalarProperty Name="matour" ColumnName="matour" />
-                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
-                <ScalarProperty Name="thoigiankhoihanh" ColumnName="thoigiankhoihanh" />
-                <ScalarProperty Name="thoigiantrove" ColumnName="thoigiantrove" />
                 <ScalarProperty Name="soluonghanhkhach" ColumnName="soluonghanhkhach" />
+                <ScalarProperty Name="thoigiantrove" ColumnName="thoigiantrove" />
+                <ScalarProperty Name="thoigiankhoihanh" ColumnName="thoigiankhoihanh" />
+                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+                <ScalarProperty Name="matour" ColumnName="matour" />
+                <ScalarProperty Name="madattour" ColumnName="madattour" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DichVus">
             <EntityTypeMapping TypeName="HotelManagementModel.DichVu">
               <MappingFragment StoreEntitySet="DichVu">
-                <ScalarProperty Name="madichvu" ColumnName="madichvu" />
-                <ScalarProperty Name="tendichvu" ColumnName="tendichvu" />
                 <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="tendichvu" ColumnName="tendichvu" />
+                <ScalarProperty Name="madichvu" ColumnName="madichvu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Doans">
             <EntityTypeMapping TypeName="HotelManagementModel.Doan">
               <MappingFragment StoreEntitySet="Doan">
-                <ScalarProperty Name="madoan" ColumnName="madoan" />
-                <ScalarProperty Name="soluong" ColumnName="soluong" />
                 <ScalarProperty Name="truongdoan" ColumnName="truongdoan" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="madoan" ColumnName="madoan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DoiTacs">
             <EntityTypeMapping TypeName="HotelManagementModel.DoiTac">
               <MappingFragment StoreEntitySet="DoiTac">
-                <ScalarProperty Name="madoitac" ColumnName="madoitac" />
-                <ScalarProperty Name="tendoitac" ColumnName="tendoitac" />
-                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
                 <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+                <ScalarProperty Name="tendoitac" ColumnName="tendoitac" />
+                <ScalarProperty Name="madoitac" ColumnName="madoitac" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HanhLies">
             <EntityTypeMapping TypeName="HotelManagementModel.HanhLy">
               <MappingFragment StoreEntitySet="HanhLy">
-                <ScalarProperty Name="mahanhly" ColumnName="mahanhly" />
-                <ScalarProperty Name="maphieuvanchuyen" ColumnName="maphieuvanchuyen" />
-                <ScalarProperty Name="ten" ColumnName="ten" />
                 <ScalarProperty Name="dacdiem" ColumnName="dacdiem" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="maphieuvanchuyen" ColumnName="maphieuvanchuyen" />
+                <ScalarProperty Name="mahanhly" ColumnName="mahanhly" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDons">
             <EntityTypeMapping TypeName="HotelManagementModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
-                <ScalarProperty Name="mahoadon" ColumnName="mahoadon" />
-                <ScalarProperty Name="tongtien" ColumnName="tongtien" />
-                <ScalarProperty Name="sotiendathanhtoan" ColumnName="sotiendathanhtoan" />
-                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
-                <ScalarProperty Name="maketoan" ColumnName="maketoan" />
                 <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+                <ScalarProperty Name="maketoan" ColumnName="maketoan" />
+                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+                <ScalarProperty Name="sotiendathanhtoan" ColumnName="sotiendathanhtoan" />
+                <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+                <ScalarProperty Name="mahoadon" ColumnName="mahoadon" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KhachHangs">
             <EntityTypeMapping TypeName="HotelManagementModel.KhachHang">
               <MappingFragment StoreEntitySet="KhachHang">
-                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
-                <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
-                <ScalarProperty Name="diachi" ColumnName="diachi" />
-                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
-                <ScalarProperty Name="sofax" ColumnName="sofax" />
-                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mataikhoan" ColumnName="mataikhoan" />
                 <ScalarProperty Name="cccd" ColumnName="cccd" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="sofax" ColumnName="sofax" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+                <ScalarProperty Name="diachi" ColumnName="diachi" />
+                <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
+                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KhuyenMais">
             <EntityTypeMapping TypeName="HotelManagementModel.KhuyenMai">
               <MappingFragment StoreEntitySet="KhuyenMai">
-                <ScalarProperty Name="makhuyenmai" ColumnName="makhuyenmai" />
-                <ScalarProperty Name="tenkhuyenmai" ColumnName="tenkhuyenmai" />
-                <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
-                <ScalarProperty Name="thoigianketthuc" ColumnName="thoigianketthuc" />
                 <ScalarProperty Name="ngaykhoa" ColumnName="ngaykhoa" />
+                <ScalarProperty Name="thoigianketthuc" ColumnName="thoigianketthuc" />
+                <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
+                <ScalarProperty Name="tenkhuyenmai" ColumnName="tenkhuyenmai" />
+                <ScalarProperty Name="makhuyenmai" ColumnName="makhuyenmai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NhanViens">
             <EntityTypeMapping TypeName="HotelManagementModel.NhanVien">
               <MappingFragment StoreEntitySet="NhanVien">
-                <ScalarProperty Name="manhanvien" ColumnName="manhanvien" />
-                <ScalarProperty Name="ten" ColumnName="ten" />
-                <ScalarProperty Name="loai" ColumnName="loai" />
-                <ScalarProperty Name="luong" ColumnName="luong" />
-                <ScalarProperty Name="ngaybatdau" ColumnName="ngaybatdau" />
+                <ScalarProperty Name="mataikhoan" ColumnName="mataikhoan" />
                 <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+                <ScalarProperty Name="ngaybatdau" ColumnName="ngaybatdau" />
+                <ScalarProperty Name="luong" ColumnName="luong" />
+                <ScalarProperty Name="loai" ColumnName="loai" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="manhanvien" ColumnName="manhanvien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoiThats">
+            <EntityTypeMapping TypeName="HotelManagementModel.NoiThat">
+              <MappingFragment StoreEntitySet="NoiThat">
+                <ScalarProperty Name="maphong" ColumnName="maphong" />
+                <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="manoithat" ColumnName="manoithat" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PhieuDanhGias">
             <EntityTypeMapping TypeName="HotelManagementModel.PhieuDanhGia">
               <MappingFragment StoreEntitySet="PhieuDanhGia">
-                <ScalarProperty Name="maphieudanhgia" ColumnName="maphieudanhgia" />
-                <ScalarProperty Name="noidung" ColumnName="noidung" />
-                <ScalarProperty Name="diem" ColumnName="diem" />
-                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
                 <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+                <ScalarProperty Name="diem" ColumnName="diem" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="maphieudanhgia" ColumnName="maphieudanhgia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PhieuDatPhongs">
             <EntityTypeMapping TypeName="HotelManagementModel.PhieuDatPhong">
               <MappingFragment StoreEntitySet="PhieuDatPhong">
-                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
-                <ScalarProperty Name="yeucaudatbiet" ColumnName="yeucaudatbiet" />
-                <ScalarProperty Name="sodemluutru" ColumnName="sodemluutru" />
-                <ScalarProperty Name="ngayden" ColumnName="ngayden" />
-                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
-                <ScalarProperty Name="nhanviencheckout" ColumnName="nhanviencheckout" />
                 <ScalarProperty Name="nhanvienvesinh" ColumnName="nhanvienvesinh" />
+                <ScalarProperty Name="nhanviencheckout" ColumnName="nhanviencheckout" />
+                <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+                <ScalarProperty Name="ngayden" ColumnName="ngayden" />
+                <ScalarProperty Name="sodemluutru" ColumnName="sodemluutru" />
+                <ScalarProperty Name="yeucaudatbiet" ColumnName="yeucaudatbiet" />
+                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuHuHongNoiThats">
+            <EntityTypeMapping TypeName="HotelManagementModel.PhieuHuHongNoiThat">
+              <MappingFragment StoreEntitySet="PhieuHuHongNoiThat">
+                <ScalarProperty Name="giatienden" ColumnName="giatienden" />
+                <ScalarProperty Name="manoithat" ColumnName="manoithat" />
+                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PhieuSuDungDichVus">
             <EntityTypeMapping TypeName="HotelManagementModel.PhieuSuDungDichVu">
               <MappingFragment StoreEntitySet="PhieuSuDungDichVu">
-                <ScalarProperty Name="maphieu" ColumnName="maphieu" />
-                <ScalarProperty Name="tongtien" ColumnName="tongtien" />
-                <ScalarProperty Name="maletan" ColumnName="maletan" />
                 <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+                <ScalarProperty Name="maletan" ColumnName="maletan" />
+                <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+                <ScalarProperty Name="maphieu" ColumnName="maphieu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PhieuSuDungDichVuChiTiets">
             <EntityTypeMapping TypeName="HotelManagementModel.PhieuSuDungDichVuChiTiet">
               <MappingFragment StoreEntitySet="PhieuSuDungDichVuChiTiet">
-                <ScalarProperty Name="madichvu" ColumnName="madichvu" />
-                <ScalarProperty Name="maphieusudungdichvu" ColumnName="maphieusudungdichvu" />
-                <ScalarProperty Name="soluong" ColumnName="soluong" />
-                <ScalarProperty Name="thoigiansudung" ColumnName="thoigiansudung" />
-                <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
-                <ScalarProperty Name="dongia" ColumnName="dongia" />
                 <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
+                <ScalarProperty Name="thoigiansudung" ColumnName="thoigiansudung" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="maphieusudungdichvu" ColumnName="maphieusudungdichvu" />
+                <ScalarProperty Name="madichvu" ColumnName="madichvu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuSuDungThucPhams">
+            <EntityTypeMapping TypeName="HotelManagementModel.PhieuSuDungThucPham">
+              <MappingFragment StoreEntitySet="PhieuSuDungThucPham">
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="mathucpham" ColumnName="mathucpham" />
+                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PhieuVanChuyenHanhLies">
             <EntityTypeMapping TypeName="HotelManagementModel.PhieuVanChuyenHanhLy">
               <MappingFragment StoreEntitySet="PhieuVanChuyenHanhLy">
-                <ScalarProperty Name="maphieuvanchuyen" ColumnName="maphieuvanchuyen" />
-                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
-                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
-                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
                 <ScalarProperty Name="manhanvienphutrach" ColumnName="manhanvienphutrach" />
+                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="maphieuvanchuyen" ColumnName="maphieuvanchuyen" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Phongs">
             <EntityTypeMapping TypeName="HotelManagementModel.Phong">
               <MappingFragment StoreEntitySet="Phong">
-                <ScalarProperty Name="maphong" ColumnName="maphong" />
-                <ScalarProperty Name="sophong" ColumnName="sophong" />
-                <ScalarProperty Name="gia" ColumnName="gia" />
-                <ScalarProperty Name="bikhoa" ColumnName="bikhoa" />
                 <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+                <ScalarProperty Name="bikhoa" ColumnName="bikhoa" />
+                <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="sophong" ColumnName="sophong" />
+                <ScalarProperty Name="maphong" ColumnName="maphong" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="HotelManagementModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="HotelManagementModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+                <ScalarProperty Name="tentaikhoan" ColumnName="tentaikhoan" />
+                <ScalarProperty Name="mataikhoan" ColumnName="mataikhoan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThanhViens">
+            <EntityTypeMapping TypeName="HotelManagementModel.ThanhVien">
+              <MappingFragment StoreEntitySet="ThanhVien">
+                <ScalarProperty Name="cccd" ColumnName="cccd" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="madoan" ColumnName="madoan" />
+                <ScalarProperty Name="sothutu" ColumnName="sothutu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThucPhams">
+            <EntityTypeMapping TypeName="HotelManagementModel.ThucPham">
+              <MappingFragment StoreEntitySet="ThucPham">
+                <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="soluongton" ColumnName="soluongton" />
+                <ScalarProperty Name="tenthucpham" ColumnName="tenthucpham" />
+                <ScalarProperty Name="mathucpham" ColumnName="mathucpham" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TourDuLiches">
             <EntityTypeMapping TypeName="HotelManagementModel.TourDuLich">
               <MappingFragment StoreEntitySet="TourDuLich">
-                <ScalarProperty Name="matour" ColumnName="matour" />
-                <ScalarProperty Name="tentour" ColumnName="tentour" />
-                <ScalarProperty Name="gia" ColumnName="gia" />
-                <ScalarProperty Name="songay" ColumnName="songay" />
                 <ScalarProperty Name="madoitac" ColumnName="madoitac" />
+                <ScalarProperty Name="songay" ColumnName="songay" />
+                <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="tentour" ColumnName="tentour" />
+                <ScalarProperty Name="matour" ColumnName="matour" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <AssociationSetMapping Name="ApDungKhuyenMai" TypeName="HotelManagementModel.ApDungKhuyenMai" StoreEntitySet="ApDungKhuyenMai">
+            <EndProperty Name="Phong">
+              <ScalarProperty Name="maphong" ColumnName="maphong" />
+            </EndProperty>
             <EndProperty Name="KhuyenMai">
               <ScalarProperty Name="makhuyenmai" ColumnName="makhuyenmai" />
             </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="CungCapDichVu" TypeName="HotelManagementModel.CungCapDichVu" StoreEntitySet="CungCapDichVu">
             <EndProperty Name="Phong">
               <ScalarProperty Name="maphong" ColumnName="maphong" />
             </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="CungCapDichVu" TypeName="HotelManagementModel.CungCapDichVu" StoreEntitySet="CungCapDichVu">
             <EndProperty Name="DichVu">
               <ScalarProperty Name="madichvu" ColumnName="madichvu" />
             </EndProperty>
-            <EndProperty Name="Phong">
-              <ScalarProperty Name="maphong" ColumnName="maphong" />
-            </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="PhieuDatPhongChiTiet" TypeName="HotelManagementModel.PhieuDatPhongChiTiet" StoreEntitySet="PhieuDatPhongChiTiet">
-            <EndProperty Name="PhieuDatPhong">
-              <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
-            </EndProperty>
             <EndProperty Name="Phong">
               <ScalarProperty Name="maphong" ColumnName="maphong" />
             </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="ThamGiaDoan" TypeName="HotelManagementModel.ThamGiaDoan" StoreEntitySet="ThamGiaDoan">
-            <EndProperty Name="Doan">
-              <ScalarProperty Name="madoan" ColumnName="madoan" />
-            </EndProperty>
-            <EndProperty Name="KhachHang">
-              <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+            <EndProperty Name="PhieuDatPhong">
+              <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

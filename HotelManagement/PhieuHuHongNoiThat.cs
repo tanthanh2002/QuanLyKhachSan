@@ -12,12 +12,13 @@ namespace HotelManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class PhieuHuHongNoiThat
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int maphieudatphong { get; set; }
+        public int manoithat { get; set; }
+        public Nullable<double> giatienden { get; set; }
+    
+        public virtual NoiThat NoiThat { get; set; }
+        public virtual PhieuDatPhong PhieuDatPhong { get; set; }
     }
 }

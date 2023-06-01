@@ -19,7 +19,9 @@ namespace HotelManagement
         {
             this.HoaDons = new HashSet<HoaDon>();
             this.PhieuDanhGias = new HashSet<PhieuDanhGia>();
+            this.PhieuHuHongNoiThats = new HashSet<PhieuHuHongNoiThat>();
             this.PhieuSuDungDichVus = new HashSet<PhieuSuDungDichVu>();
+            this.PhieuSuDungThucPhams = new HashSet<PhieuSuDungThucPham>();
             this.PhieuVanChuyenHanhLies = new HashSet<PhieuVanChuyenHanhLy>();
             this.Phongs = new HashSet<Phong>();
         }
@@ -40,7 +42,11 @@ namespace HotelManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuDanhGia> PhieuDanhGias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuHuHongNoiThat> PhieuHuHongNoiThats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuSuDungDichVu> PhieuSuDungDichVus { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuSuDungThucPham> PhieuSuDungThucPhams { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuVanChuyenHanhLy> PhieuVanChuyenHanhLies { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

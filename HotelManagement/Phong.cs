@@ -17,6 +17,7 @@ namespace HotelManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Phong()
         {
+            this.NoiThats = new HashSet<NoiThat>();
             this.KhuyenMais = new HashSet<KhuyenMai>();
             this.DichVus = new HashSet<DichVu>();
             this.PhieuDatPhongs = new HashSet<PhieuDatPhong>();
@@ -28,6 +29,8 @@ namespace HotelManagement
         public bool bikhoa { get; set; }
         public string tinhtrang { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NoiThat> NoiThats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KhuyenMai> KhuyenMais { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -105,16 +105,25 @@
     <Compile Include="NhanVien.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="NoiThat.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="PhieuDanhGia.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuDatPhong.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="PhieuHuHongNoiThat.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="PhieuSuDungDichVu.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuSuDungDichVuChiTiet.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuSuDungThucPham.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuVanChuyenHanhLy.cs">
@@ -125,7 +134,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhVien.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThucPham.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TourDuLich.cs">

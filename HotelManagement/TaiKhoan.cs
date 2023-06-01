@@ -12,20 +12,22 @@ namespace HotelManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class Doan
+    public partial class TaiKhoan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Doan()
+        public TaiKhoan()
         {
-            this.ThanhViens = new HashSet<ThanhVien>();
+            this.KhachHangs = new HashSet<KhachHang>();
+            this.NhanViens = new HashSet<NhanVien>();
         }
     
-        public int madoan { get; set; }
-        public int soluong { get; set; }
-        public int truongdoan { get; set; }
+        public int mataikhoan { get; set; }
+        public string tentaikhoan { get; set; }
+        public string matkhau { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThanhVien> ThanhViens { get; set; }
-        public virtual KhachHang KhachHang { get; set; }
+        public virtual ICollection<KhachHang> KhachHangs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVien> NhanViens { get; set; }
     }
 }

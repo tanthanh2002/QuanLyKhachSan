@@ -21,7 +21,6 @@ namespace HotelManagement
             this.Doans = new HashSet<Doan>();
             this.PhieuDanhGias = new HashSet<PhieuDanhGia>();
             this.PhieuDatPhongs = new HashSet<PhieuDatPhong>();
-            this.Doans1 = new HashSet<Doan>();
         }
     
         public int makhachhang { get; set; }
@@ -31,16 +30,16 @@ namespace HotelManagement
         public string sofax { get; set; }
         public string email { get; set; }
         public string cccd { get; set; }
+        public int mataikhoan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DatTour> DatTours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Doan> Doans { get; set; }
+        public virtual TaiKhoan TaiKhoan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuDanhGia> PhieuDanhGias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuDatPhong> PhieuDatPhongs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Doan> Doans1 { get; set; }
     }
 }
