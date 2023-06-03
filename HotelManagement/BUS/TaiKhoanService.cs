@@ -1,0 +1,43 @@
+﻿using HotelManagement.DAO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HotelManagement.BUS
+{
+    public class TaiKhoanService
+    {
+
+        private static TaiKhoanService instance = new BUS.TaiKhoanService();
+        
+        private TaiKhoanRepo repo=TaiKhoanRepo.getInstance();
+        private TaiKhoanService() { }
+
+        public static TaiKhoanService getInstance() { return instance; }
+
+        public TaiKhoan findByUsername(string username)
+        {
+           return repo.findByUsername(username);
+        }
+
+        public Boolean login(String username, String password)
+        {
+            try
+            {
+                TaiKhoan taiKhoan = repo.findByUsername(username);
+
+                if (taiKhoan == null) { return false; }
+                else
+                {
+                    return taiKhoan.matkhau == password;
+                }
+                return false;
+            }catch(Exception e) { 
+                return false; 
+            }
+            
+        }
+    }
+}

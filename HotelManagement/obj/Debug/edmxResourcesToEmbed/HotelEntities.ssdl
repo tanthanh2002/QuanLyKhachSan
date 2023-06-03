@@ -214,6 +214,7 @@
     <Property Name="mataikhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="tentaikhoan" Type="varchar" MaxLength="100" />
     <Property Name="matkhau" Type="varchar" MaxLength="60" />
+    <Property Name="loaitaikhoan" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="ThanhVien">
     <Key>

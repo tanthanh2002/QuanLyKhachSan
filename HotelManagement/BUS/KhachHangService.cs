@@ -12,6 +12,7 @@ namespace HotelManagement.BUS
         private static KhachHangService instance = new KhachHangService();
 
         private KhachHangRepo repo = KhachHangRepo.getInstance();
+
         private KhachHangService() { }
 
         public static KhachHangService getInstance() {  return instance; }
@@ -20,5 +21,7 @@ namespace HotelManagement.BUS
         {
             return repo.getAll();
         }
+
+        
     }
 }

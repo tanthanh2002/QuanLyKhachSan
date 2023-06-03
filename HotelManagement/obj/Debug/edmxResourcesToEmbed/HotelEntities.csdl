@@ -376,6 +376,7 @@
     <Property Name="mataikhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tentaikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="matkhau" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="loaitaikhoan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="KhachHangs" Relationship="HotelManagementModel.fk_KhachHang_taikhoan" FromRole="TaiKhoan" ToRole="KhachHang" />
     <NavigationProperty Name="NhanViens" Relationship="HotelManagementModel.fk_NhanVien_taikhoan" FromRole="TaiKhoan" ToRole="NhanVien" />
   </EntityType>
