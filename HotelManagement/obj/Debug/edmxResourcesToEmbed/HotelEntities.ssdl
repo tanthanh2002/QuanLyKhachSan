@@ -215,6 +215,7 @@
     <Property Name="tentaikhoan" Type="varchar" MaxLength="100" />
     <Property Name="matkhau" Type="varchar" MaxLength="60" />
     <Property Name="loaitaikhoan" Type="varchar" MaxLength="20" />
+    <Property Name="bikhoa" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="ThanhVien">
     <Key>

@@ -22,6 +22,14 @@ namespace HotelManagement.BUS
             return repo.getAll();
         }
 
-        
+        public void save(KhachHang khachHang)
+        {
+            repo.save(khachHang); 
+        }
+
+        public void register(KhachHang khachHang)
+        {
+            repo.save(khachHang);
+        }
     }
 }

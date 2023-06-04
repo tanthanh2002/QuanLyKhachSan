@@ -15,6 +15,8 @@ namespace HotelManagement.GUI
     public partial class fLogin : MaterialSkin.Controls.MaterialForm
     {
         private TaiKhoanService taiKhoanService = TaiKhoanService.getInstance();
+
+        private KhachHangService khachHangService = KhachHangService.getInstance();
         public fLogin()
         {
             InitializeComponent();
@@ -48,5 +50,61 @@ namespace HotelManagement.GUI
         {
 
         }
+
+        private void linkLblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControlMenu.SelectTab(tabRegister);
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            String username = registerTxtUsername.Text;
+            String password = registerTxtPassword.Text;
+            String fullName = registerTxtFullName.Text;
+            String phone = registerTxtPhone.Text;
+            String email = registerTxtEmail.Text;
+            String fax = registerTxtFax.Text;
+            String id = registerTxtID.Text;
+            String address = registerTxtAddress.Text;
+            
+            TaiKhoan taiKhoan = new TaiKhoan();
+            taiKhoan.tentaikhoan = username;
+            taiKhoan.matkhau = password;
+            taiKhoan.loaitaikhoan = "khachhang";
+            taiKhoan.bikhoa = false;
+
+            KhachHang khachHang = new KhachHang();
+            khachHang.tenkhachhang = fullName;
+            khachHang.diachi = address;
+            khachHang.sodienthoai = phone;
+            khachHang.cccd = id;
+            khachHang.email = email;
+            khachHang.sofax = fax;
+
+
+
+            try
+            {
+                taiKhoanService.save(taiKhoan);
+                khachHang.mataikhoan = taiKhoanService.findByUsername(username).mataikhoan;
+                khachHangService.save(khachHang);
+
+                MessageBox.Show("Đăng ký thành công!");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
+
+        }
+
+        private void tabRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

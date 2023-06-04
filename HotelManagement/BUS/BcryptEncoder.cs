@@ -8,5 +8,6 @@ namespace HotelManagement.BUS
 {
     internal class BcryptEncoder
     {
+        
     }
 }

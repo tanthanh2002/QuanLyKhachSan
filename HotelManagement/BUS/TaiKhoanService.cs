@@ -11,6 +11,10 @@ namespace HotelManagement.BUS
     {
 
         private static TaiKhoanService instance = new BUS.TaiKhoanService();
+
+        private HotelManagementEntities db = new HotelManagementEntities();
+
+        private KhachHangService khachHangService = KhachHangService.getInstance();
         
         private TaiKhoanRepo repo=TaiKhoanRepo.getInstance();
         private TaiKhoanService() { }
@@ -38,6 +42,12 @@ namespace HotelManagement.BUS
                 return false; 
             }
             
+        }
+
+
+        public void save(TaiKhoan taiKhoan)
+        {
+            repo.save(taiKhoan);
         }
     }
 }

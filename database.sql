@@ -2,7 +2,8 @@
 --CREATE DATABASE HotelManagement;
 --USE HotelManagement;
 
-
+--select * from TaiKhoan;
+--select * from KhachHang;
 --0
 CREATE TABLE TaiKhoan
 (
