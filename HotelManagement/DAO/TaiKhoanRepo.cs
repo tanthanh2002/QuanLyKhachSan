@@ -25,5 +25,11 @@ namespace HotelManagement.DAO
                 throw new MissingManifestResourceException("username: " + username + " not found");
             }
         }
+
+        public void save(TaiKhoan taiKhoan)
+        {
+            db.TaiKhoans.Add(taiKhoan);
+            db.SaveChanges();
+        }
     }
 }
