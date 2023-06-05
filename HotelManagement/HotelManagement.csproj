@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="BUS\BcryptEncoder.cs" />
     <Compile Include="BUS\KhachHangService.cs" />
+    <Compile Include="BUS\PhieuDanhGiaService.cs" />
     <Compile Include="BUS\TaiKhoanService.cs" />
     <Compile Include="DAO\KhachHangRepo.cs" />
     <Compile Include="DAO\TaiKhoanRepo.cs" />
@@ -82,6 +83,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fCreateServiceInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fCreateServiceInvoice.Designer.cs">
+      <DependentUpon>fCreateServiceInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +106,30 @@
     </Compile>
     <Compile Include="GUI\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fOnlinePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fOnlinePayment.Designer.cs">
+      <DependentUpon>fOnlinePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fRoomBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fRoomBook.Designer.cs">
+      <DependentUpon>fRoomBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fRoomSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fRoomSearch.Designer.cs">
+      <DependentUpon>fRoomSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fTakeFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTakeFeedback.Designer.cs">
+      <DependentUpon>fTakeFeedback.cs</DependentUpon>
     </Compile>
     <Compile Include="HanhLy.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
@@ -174,8 +205,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fCreateServiceInvoice.resx">
+      <DependentUpon>fCreateServiceInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fOnlinePayment.resx">
+      <DependentUpon>fOnlinePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fRoomBook.resx">
+      <DependentUpon>fRoomBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fRoomSearch.resx">
+      <DependentUpon>fRoomSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fTakeFeedback.resx">
+      <DependentUpon>fTakeFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

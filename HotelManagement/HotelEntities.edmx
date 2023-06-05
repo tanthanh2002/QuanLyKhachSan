@@ -220,6 +220,7 @@
           <Property Name="tentaikhoan" Type="varchar" MaxLength="100" />
           <Property Name="matkhau" Type="varchar" MaxLength="60" />
           <Property Name="loaitaikhoan" Type="varchar" MaxLength="20" />
+          <Property Name="bikhoa" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ThanhVien">
           <Key>
@@ -1154,6 +1155,7 @@
           <Property Name="tentaikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="matkhau" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="loaitaikhoan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="bikhoa" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="KhachHangs" Relationship="HotelManagementModel.fk_KhachHang_taikhoan" FromRole="TaiKhoan" ToRole="KhachHang" />
           <NavigationProperty Name="NhanViens" Relationship="HotelManagementModel.fk_NhanVien_taikhoan" FromRole="TaiKhoan" ToRole="NhanVien" />
         </EntityType>
@@ -1709,6 +1711,7 @@
           <EntitySetMapping Name="TaiKhoans">
             <EntityTypeMapping TypeName="HotelManagementModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="bikhoa" ColumnName="bikhoa" />
                 <ScalarProperty Name="loaitaikhoan" ColumnName="loaitaikhoan" />
                 <ScalarProperty Name="matkhau" ColumnName="matkhau" />
                 <ScalarProperty Name="tentaikhoan" ColumnName="tentaikhoan" />
