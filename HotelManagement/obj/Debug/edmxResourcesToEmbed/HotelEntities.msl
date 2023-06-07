@@ -59,6 +59,9 @@
           <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
           <ScalarProperty Name="sotiendathanhtoan" ColumnName="sotiendathanhtoan" />
           <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="tienhuhongnoithat" ColumnName="tienhuhongnoithat" />
+          <ScalarProperty Name="tienthucpham" ColumnName="tienthucpham" />
+          <ScalarProperty Name="tiendichvu" ColumnName="tiendichvu" />
           <ScalarProperty Name="mahoadon" ColumnName="mahoadon" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -135,6 +138,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PhieuDatPhongChiTiets">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuDatPhongChiTiet">
+        <MappingFragment StoreEntitySet="PhieuDatPhongChiTiet">
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="PhieuHuHongNoiThats">
       <EntityTypeMapping TypeName="HotelManagementModel.PhieuHuHongNoiThat">
         <MappingFragment StoreEntitySet="PhieuHuHongNoiThat">
@@ -173,6 +184,7 @@
           <ScalarProperty Name="dongia" ColumnName="dongia" />
           <ScalarProperty Name="soluong" ColumnName="soluong" />
           <ScalarProperty Name="mathucpham" ColumnName="mathucpham" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
           <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -255,14 +267,6 @@
       </EndProperty>
       <EndProperty Name="DichVu">
         <ScalarProperty Name="madichvu" ColumnName="madichvu" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="PhieuDatPhongChiTiet" TypeName="HotelManagementModel.PhieuDatPhongChiTiet" StoreEntitySet="PhieuDatPhongChiTiet">
-      <EndProperty Name="Phong">
-        <ScalarProperty Name="maphong" ColumnName="maphong" />
-      </EndProperty>
-      <EndProperty Name="PhieuDatPhong">
-        <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

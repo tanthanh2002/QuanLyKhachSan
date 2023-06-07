@@ -37,6 +37,7 @@ namespace HotelManagement
         public virtual DbSet<NoiThat> NoiThats { get; set; }
         public virtual DbSet<PhieuDanhGia> PhieuDanhGias { get; set; }
         public virtual DbSet<PhieuDatPhong> PhieuDatPhongs { get; set; }
+        public virtual DbSet<PhieuDatPhongChiTiet> PhieuDatPhongChiTiets { get; set; }
         public virtual DbSet<PhieuHuHongNoiThat> PhieuHuHongNoiThats { get; set; }
         public virtual DbSet<PhieuSuDungDichVu> PhieuSuDungDichVus { get; set; }
         public virtual DbSet<PhieuSuDungDichVuChiTiet> PhieuSuDungDichVuChiTiets { get; set; }

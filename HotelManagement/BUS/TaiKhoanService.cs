@@ -49,5 +49,10 @@ namespace HotelManagement.BUS
         {
             repo.save(taiKhoan);
         }
+
+        public void update(TaiKhoan taiKhoan)
+        {
+            repo.saveOrUpdate(taiKhoan);
+        }
     }
 }

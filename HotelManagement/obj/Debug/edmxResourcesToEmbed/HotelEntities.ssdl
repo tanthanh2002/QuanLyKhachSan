@@ -66,6 +66,9 @@
       <PropertyRef Name="mahoadon" />
     </Key>
     <Property Name="mahoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tiendichvu" Type="float" Nullable="false" />
+    <Property Name="tienthucpham" Type="float" Nullable="false" />
+    <Property Name="tienhuhongnoithat" Type="float" Nullable="false" />
     <Property Name="tongtien" Type="float" Nullable="false" />
     <Property Name="sotiendathanhtoan" Type="float" Nullable="false" />
     <Property Name="maphieudatphong" Type="int" Nullable="false" />
@@ -180,9 +183,11 @@
   <EntityType Name="PhieuSuDungThucPham">
     <Key>
       <PropertyRef Name="maphieudatphong" />
+      <PropertyRef Name="maphong" />
       <PropertyRef Name="mathucpham" />
     </Key>
     <Property Name="maphieudatphong" Type="int" Nullable="false" />
+    <Property Name="maphong" Type="int" Nullable="false" />
     <Property Name="mathucpham" Type="int" Nullable="false" />
     <Property Name="soluong" Type="int" />
     <Property Name="dongia" Type="float" />
@@ -534,14 +539,16 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_PhieuSuDungThucPham_maphieudatphong">
-    <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
+  <Association Name="fk_PhieuSuDungThucPham_maphieudatphongchitiet">
+    <End Role="PhieuDatPhongChiTiet" Type="Self.PhieuDatPhongChiTiet" Multiplicity="1" />
     <End Role="PhieuSuDungThucPham" Type="Self.PhieuSuDungThucPham" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="PhieuDatPhong">
+      <Principal Role="PhieuDatPhongChiTiet">
+        <PropertyRef Name="maphong" />
         <PropertyRef Name="maphieudatphong" />
       </Principal>
       <Dependent Role="PhieuSuDungThucPham">
+        <PropertyRef Name="maphong" />
         <PropertyRef Name="maphieudatphong" />
       </Dependent>
     </ReferentialConstraint>
@@ -740,8 +747,8 @@
       <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVu" />
       <End Role="PhieuSuDungDichVuChiTiet" EntitySet="PhieuSuDungDichVuChiTiet" />
     </AssociationSet>
-    <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphong" Association="Self.fk_PhieuSuDungThucPham_maphieudatphong">
-      <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
+    <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphongchitiet" Association="Self.fk_PhieuSuDungThucPham_maphieudatphongchitiet">
+      <End Role="PhieuDatPhongChiTiet" EntitySet="PhieuDatPhongChiTiet" />
       <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPham" />
     </AssociationSet>
     <AssociationSet Name="fk_PhieuSuDungThucPham_mathucpham" Association="Self.fk_PhieuSuDungThucPham_mathucpham">

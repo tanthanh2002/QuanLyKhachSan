@@ -71,6 +71,9 @@
             <PropertyRef Name="mahoadon" />
           </Key>
           <Property Name="mahoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tiendichvu" Type="float" Nullable="false" />
+          <Property Name="tienthucpham" Type="float" Nullable="false" />
+          <Property Name="tienhuhongnoithat" Type="float" Nullable="false" />
           <Property Name="tongtien" Type="float" Nullable="false" />
           <Property Name="sotiendathanhtoan" Type="float" Nullable="false" />
           <Property Name="maphieudatphong" Type="int" Nullable="false" />
@@ -185,9 +188,11 @@
         <EntityType Name="PhieuSuDungThucPham">
           <Key>
             <PropertyRef Name="maphieudatphong" />
+            <PropertyRef Name="maphong" />
             <PropertyRef Name="mathucpham" />
           </Key>
           <Property Name="maphieudatphong" Type="int" Nullable="false" />
+          <Property Name="maphong" Type="int" Nullable="false" />
           <Property Name="mathucpham" Type="int" Nullable="false" />
           <Property Name="soluong" Type="int" />
           <Property Name="dongia" Type="float" />
@@ -539,14 +544,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_PhieuSuDungThucPham_maphieudatphong">
-          <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="1" />
+        <Association Name="fk_PhieuSuDungThucPham_maphieudatphongchitiet">
+          <End Role="PhieuDatPhongChiTiet" Type="Self.PhieuDatPhongChiTiet" Multiplicity="1" />
           <End Role="PhieuSuDungThucPham" Type="Self.PhieuSuDungThucPham" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="PhieuDatPhong">
+            <Principal Role="PhieuDatPhongChiTiet">
+              <PropertyRef Name="maphong" />
               <PropertyRef Name="maphieudatphong" />
             </Principal>
             <Dependent Role="PhieuSuDungThucPham">
+              <PropertyRef Name="maphong" />
               <PropertyRef Name="maphieudatphong" />
             </Dependent>
           </ReferentialConstraint>
@@ -745,8 +752,8 @@
             <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVu" />
             <End Role="PhieuSuDungDichVuChiTiet" EntitySet="PhieuSuDungDichVuChiTiet" />
           </AssociationSet>
-          <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphong" Association="Self.fk_PhieuSuDungThucPham_maphieudatphong">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
+          <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphongchitiet" Association="Self.fk_PhieuSuDungThucPham_maphieudatphongchitiet">
+            <End Role="PhieuDatPhongChiTiet" EntitySet="PhieuDatPhongChiTiet" />
             <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPham" />
           </AssociationSet>
           <AssociationSet Name="fk_PhieuSuDungThucPham_mathucpham" Association="Self.fk_PhieuSuDungThucPham_mathucpham">
@@ -791,6 +798,7 @@
           <EntitySet Name="NoiThats" EntityType="HotelManagementModel.NoiThat" />
           <EntitySet Name="PhieuDanhGias" EntityType="HotelManagementModel.PhieuDanhGia" />
           <EntitySet Name="PhieuDatPhongs" EntityType="HotelManagementModel.PhieuDatPhong" />
+          <EntitySet Name="PhieuDatPhongChiTiets" EntityType="HotelManagementModel.PhieuDatPhongChiTiet" />
           <EntitySet Name="PhieuHuHongNoiThats" EntityType="HotelManagementModel.PhieuHuHongNoiThat" />
           <EntitySet Name="PhieuSuDungDichVus" EntityType="HotelManagementModel.PhieuSuDungDichVu" />
           <EntitySet Name="PhieuSuDungDichVuChiTiets" EntityType="HotelManagementModel.PhieuSuDungDichVuChiTiet" />
@@ -877,6 +885,10 @@
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
             <End Role="PhieuDanhGia" EntitySet="PhieuDanhGias" />
           </AssociationSet>
+          <AssociationSet Name="fk_PhieuDatPhongChiTiet_maphieudatphong" Association="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphieudatphong">
+            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
+            <End Role="PhieuDatPhongChiTiet" EntitySet="PhieuDatPhongChiTiets" />
+          </AssociationSet>
           <AssociationSet Name="fk_PhieuHuHongNoiThat_maphieudatphong" Association="HotelManagementModel.fk_PhieuHuHongNoiThat_maphieudatphong">
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
             <End Role="PhieuHuHongNoiThat" EntitySet="PhieuHuHongNoiThats" />
@@ -885,13 +897,17 @@
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
             <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
           </AssociationSet>
-          <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphong" Association="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphong">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
-            <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPhams" />
-          </AssociationSet>
           <AssociationSet Name="fk_PhieuVanChuyenHanhLy_maphieudatphong" Association="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong">
             <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
             <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLies" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuDatPhongChiTiet_maphong" Association="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphong">
+            <End Role="Phong" EntitySet="Phongs" />
+            <End Role="PhieuDatPhongChiTiet" EntitySet="PhieuDatPhongChiTiets" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PhieuSuDungThucPham_maphieudatphongchitiet" Association="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphongchitiet">
+            <End Role="PhieuDatPhongChiTiet" EntitySet="PhieuDatPhongChiTiets" />
+            <End Role="PhieuSuDungThucPham" EntitySet="PhieuSuDungThucPhams" />
           </AssociationSet>
           <AssociationSet Name="fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu">
             <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
@@ -907,10 +923,6 @@
           </AssociationSet>
           <AssociationSet Name="CungCapDichVu" Association="HotelManagementModel.CungCapDichVu">
             <End Role="DichVu" EntitySet="DichVus" />
-            <End Role="Phong" EntitySet="Phongs" />
-          </AssociationSet>
-          <AssociationSet Name="PhieuDatPhongChiTiet" Association="HotelManagementModel.PhieuDatPhongChiTiet">
-            <End Role="PhieuDatPhong" EntitySet="PhieuDatPhongs" />
             <End Role="Phong" EntitySet="Phongs" />
           </AssociationSet>
         </EntityContainer>
@@ -972,6 +984,9 @@
             <PropertyRef Name="mahoadon" />
           </Key>
           <Property Name="mahoadon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tiendichvu" Type="Double" Nullable="false" />
+          <Property Name="tienthucpham" Type="Double" Nullable="false" />
+          <Property Name="tienhuhongnoithat" Type="Double" Nullable="false" />
           <Property Name="tongtien" Type="Double" Nullable="false" />
           <Property Name="sotiendathanhtoan" Type="Double" Nullable="false" />
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
@@ -1065,11 +1080,21 @@
           <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" FromRole="PhieuDatPhong" ToRole="NhanVien" />
           <NavigationProperty Name="NhanVien1" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanvienvesinh" FromRole="PhieuDatPhong" ToRole="NhanVien" />
           <NavigationProperty Name="PhieuDanhGias" Relationship="HotelManagementModel.fk_PhieuDanhGia_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuDanhGia" />
+          <NavigationProperty Name="PhieuDatPhongChiTiets" Relationship="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuDatPhongChiTiet" />
           <NavigationProperty Name="PhieuHuHongNoiThats" Relationship="HotelManagementModel.fk_PhieuHuHongNoiThat_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuHuHongNoiThat" />
           <NavigationProperty Name="PhieuSuDungDichVus" Relationship="HotelManagementModel.fk_PhieuSuDungDichVu_maphong" FromRole="PhieuDatPhong" ToRole="PhieuSuDungDichVu" />
-          <NavigationProperty Name="PhieuSuDungThucPhams" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuSuDungThucPham" />
           <NavigationProperty Name="PhieuVanChuyenHanhLies" Relationship="HotelManagementModel.fk_PhieuVanChuyenHanhLy_maphieudatphong" FromRole="PhieuDatPhong" ToRole="PhieuVanChuyenHanhLy" />
-          <NavigationProperty Name="Phongs" Relationship="HotelManagementModel.PhieuDatPhongChiTiet" FromRole="PhieuDatPhong" ToRole="Phong" />
+        </EntityType>
+        <EntityType Name="PhieuDatPhongChiTiet">
+          <Key>
+            <PropertyRef Name="maphong" />
+            <PropertyRef Name="maphieudatphong" />
+          </Key>
+          <Property Name="maphong" Type="Int32" Nullable="false" />
+          <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphieudatphong" FromRole="PhieuDatPhongChiTiet" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="Phong" Relationship="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphong" FromRole="PhieuDatPhongChiTiet" ToRole="Phong" />
+          <NavigationProperty Name="PhieuSuDungThucPhams" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphongchitiet" FromRole="PhieuDatPhongChiTiet" ToRole="PhieuSuDungThucPham" />
         </EntityType>
         <EntityType Name="PhieuHuHongNoiThat">
           <Key>
@@ -1111,13 +1136,15 @@
         <EntityType Name="PhieuSuDungThucPham">
           <Key>
             <PropertyRef Name="maphieudatphong" />
+            <PropertyRef Name="maphong" />
             <PropertyRef Name="mathucpham" />
           </Key>
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
+          <Property Name="maphong" Type="Int32" Nullable="false" />
           <Property Name="mathucpham" Type="Int32" Nullable="false" />
           <Property Name="soluong" Type="Int32" />
           <Property Name="dongia" Type="Double" />
-          <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphong" FromRole="PhieuSuDungThucPham" ToRole="PhieuDatPhong" />
+          <NavigationProperty Name="PhieuDatPhongChiTiet" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphongchitiet" FromRole="PhieuSuDungThucPham" ToRole="PhieuDatPhongChiTiet" />
           <NavigationProperty Name="ThucPham" Relationship="HotelManagementModel.fk_PhieuSuDungThucPham_mathucpham" FromRole="PhieuSuDungThucPham" ToRole="ThucPham" />
         </EntityType>
         <EntityType Name="PhieuVanChuyenHanhLy">
@@ -1143,9 +1170,9 @@
           <Property Name="bikhoa" Type="Boolean" Nullable="false" />
           <Property Name="tinhtrang" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NoiThats" Relationship="HotelManagementModel.fk_NoiThat_maphong" FromRole="Phong" ToRole="NoiThat" />
+          <NavigationProperty Name="PhieuDatPhongChiTiets" Relationship="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphong" FromRole="Phong" ToRole="PhieuDatPhongChiTiet" />
           <NavigationProperty Name="KhuyenMais" Relationship="HotelManagementModel.ApDungKhuyenMai" FromRole="Phong" ToRole="KhuyenMai" />
           <NavigationProperty Name="DichVus" Relationship="HotelManagementModel.CungCapDichVu" FromRole="Phong" ToRole="DichVu" />
-          <NavigationProperty Name="PhieuDatPhongs" Relationship="HotelManagementModel.PhieuDatPhongChiTiet" FromRole="Phong" ToRole="PhieuDatPhong" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -1420,6 +1447,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_PhieuDatPhongChiTiet_maphieudatphong">
+          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuDatPhongChiTiet" Role="PhieuDatPhongChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuDatPhong">
+              <PropertyRef Name="maphieudatphong" />
+            </Principal>
+            <Dependent Role="PhieuDatPhongChiTiet">
+              <PropertyRef Name="maphieudatphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_PhieuHuHongNoiThat_maphieudatphong">
           <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
           <End Type="HotelManagementModel.PhieuHuHongNoiThat" Role="PhieuHuHongNoiThat" Multiplicity="*" />
@@ -1444,18 +1483,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_PhieuSuDungThucPham_maphieudatphong">
-          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
-          <End Type="HotelManagementModel.PhieuSuDungThucPham" Role="PhieuSuDungThucPham" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuDatPhong">
-              <PropertyRef Name="maphieudatphong" />
-            </Principal>
-            <Dependent Role="PhieuSuDungThucPham">
-              <PropertyRef Name="maphieudatphong" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="fk_PhieuVanChuyenHanhLy_maphieudatphong">
           <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="1" />
           <End Type="HotelManagementModel.PhieuVanChuyenHanhLy" Role="PhieuVanChuyenHanhLy" Multiplicity="*" />
@@ -1464,6 +1491,32 @@
               <PropertyRef Name="maphieudatphong" />
             </Principal>
             <Dependent Role="PhieuVanChuyenHanhLy">
+              <PropertyRef Name="maphieudatphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PhieuDatPhongChiTiet_maphong">
+          <End Type="HotelManagementModel.Phong" Role="Phong" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuDatPhongChiTiet" Role="PhieuDatPhongChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Phong">
+              <PropertyRef Name="maphong" />
+            </Principal>
+            <Dependent Role="PhieuDatPhongChiTiet">
+              <PropertyRef Name="maphong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PhieuSuDungThucPham_maphieudatphongchitiet">
+          <End Type="HotelManagementModel.PhieuDatPhongChiTiet" Role="PhieuDatPhongChiTiet" Multiplicity="1" />
+          <End Type="HotelManagementModel.PhieuSuDungThucPham" Role="PhieuSuDungThucPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhieuDatPhongChiTiet">
+              <PropertyRef Name="maphong" />
+              <PropertyRef Name="maphieudatphong" />
+            </Principal>
+            <Dependent Role="PhieuSuDungThucPham">
+              <PropertyRef Name="maphong" />
               <PropertyRef Name="maphieudatphong" />
             </Dependent>
           </ReferentialConstraint>
@@ -1498,10 +1551,6 @@
         </Association>
         <Association Name="CungCapDichVu">
           <End Type="HotelManagementModel.DichVu" Role="DichVu" Multiplicity="*" />
-          <End Type="HotelManagementModel.Phong" Role="Phong" Multiplicity="*" />
-        </Association>
-        <Association Name="PhieuDatPhongChiTiet">
-          <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <End Type="HotelManagementModel.Phong" Role="Phong" Multiplicity="*" />
         </Association>
         </Schema>
@@ -1568,6 +1617,9 @@
                 <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
                 <ScalarProperty Name="sotiendathanhtoan" ColumnName="sotiendathanhtoan" />
                 <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+                <ScalarProperty Name="tienhuhongnoithat" ColumnName="tienhuhongnoithat" />
+                <ScalarProperty Name="tienthucpham" ColumnName="tienthucpham" />
+                <ScalarProperty Name="tiendichvu" ColumnName="tiendichvu" />
                 <ScalarProperty Name="mahoadon" ColumnName="mahoadon" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1644,6 +1696,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="PhieuDatPhongChiTiets">
+            <EntityTypeMapping TypeName="HotelManagementModel.PhieuDatPhongChiTiet">
+              <MappingFragment StoreEntitySet="PhieuDatPhongChiTiet">
+                <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+                <ScalarProperty Name="maphong" ColumnName="maphong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="PhieuHuHongNoiThats">
             <EntityTypeMapping TypeName="HotelManagementModel.PhieuHuHongNoiThat">
               <MappingFragment StoreEntitySet="PhieuHuHongNoiThat">
@@ -1682,6 +1742,7 @@
                 <ScalarProperty Name="dongia" ColumnName="dongia" />
                 <ScalarProperty Name="soluong" ColumnName="soluong" />
                 <ScalarProperty Name="mathucpham" ColumnName="mathucpham" />
+                <ScalarProperty Name="maphong" ColumnName="maphong" />
                 <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1764,14 +1825,6 @@
             </EndProperty>
             <EndProperty Name="DichVu">
               <ScalarProperty Name="madichvu" ColumnName="madichvu" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="PhieuDatPhongChiTiet" TypeName="HotelManagementModel.PhieuDatPhongChiTiet" StoreEntitySet="PhieuDatPhongChiTiet">
-            <EndProperty Name="Phong">
-              <ScalarProperty Name="maphong" ColumnName="maphong" />
-            </EndProperty>
-            <EndProperty Name="PhieuDatPhong">
-              <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

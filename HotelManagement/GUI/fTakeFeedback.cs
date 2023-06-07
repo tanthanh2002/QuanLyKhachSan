@@ -25,7 +25,7 @@ namespace HotelManagement.GUI
         private void btnGhiNhan_Click(object sender, EventArgs e)
         {
             PhieuDanhGia phieu = new PhieuDanhGia();
-            phieu.noidung = txt
+            //phieu.noidung = txt;
         }
     }
 }

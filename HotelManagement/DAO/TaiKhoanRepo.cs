@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Resources;
 using System.Text;
@@ -29,6 +30,12 @@ namespace HotelManagement.DAO
         public void save(TaiKhoan taiKhoan)
         {
             db.TaiKhoans.Add(taiKhoan);
+            db.SaveChanges();
+        }
+
+        public void saveOrUpdate(TaiKhoan taiKhoan) 
+        {
+            db.TaiKhoans.AddOrUpdate(taiKhoan);
             db.SaveChanges();
         }
     }

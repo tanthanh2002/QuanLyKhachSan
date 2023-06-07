@@ -55,3 +55,10 @@ D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagemen
 D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.exe
 D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.pdb
 D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fCreateServiceInvoice.resources
+D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fCreateServiceInvoice.resources
+D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fOnlinePayment.resources
+D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fRoomBook.resources
+D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fRoomSearch.resources
+D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fTakeFeedback.resources
+D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\bin\Debug\BCrypt.Net.dll
+D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\bin\Debug\BCrypt.Net.xml

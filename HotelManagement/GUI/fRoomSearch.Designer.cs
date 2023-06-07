@@ -44,8 +44,9 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(58, 98);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(44, 80);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(110, 19);
@@ -56,8 +57,9 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(95, 136);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(71, 110);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(99, 19);
@@ -69,7 +71,8 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(95, 178);
+            this.materialLabel3.Location = new System.Drawing.Point(71, 145);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(107, 19);
@@ -81,7 +84,8 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(58, 218);
+            this.materialLabel4.Location = new System.Drawing.Point(44, 177);
+            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(120, 19);
@@ -92,7 +96,7 @@
             // 
             this.checkBinhDan.AutoSize = true;
             this.checkBinhDan.Depth = 0;
-            this.checkBinhDan.Location = new System.Drawing.Point(248, 128);
+            this.checkBinhDan.Location = new System.Drawing.Point(186, 104);
             this.checkBinhDan.Margin = new System.Windows.Forms.Padding(0);
             this.checkBinhDan.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkBinhDan.MouseState = MaterialSkin.MouseState.HOVER;
@@ -108,7 +112,7 @@
             // 
             this.checkPhongDon.AutoSize = true;
             this.checkPhongDon.Depth = 0;
-            this.checkPhongDon.Location = new System.Drawing.Point(248, 169);
+            this.checkPhongDon.Location = new System.Drawing.Point(186, 137);
             this.checkPhongDon.Margin = new System.Windows.Forms.Padding(0);
             this.checkPhongDon.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkPhongDon.MouseState = MaterialSkin.MouseState.HOVER;
@@ -124,7 +128,7 @@
             // 
             this.checkCaoCap.AutoSize = true;
             this.checkCaoCap.Depth = 0;
-            this.checkCaoCap.Location = new System.Drawing.Point(421, 128);
+            this.checkCaoCap.Location = new System.Drawing.Point(316, 104);
             this.checkCaoCap.Margin = new System.Windows.Forms.Padding(0);
             this.checkCaoCap.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkCaoCap.MouseState = MaterialSkin.MouseState.HOVER;
@@ -140,7 +144,7 @@
             // 
             this.checkPhongDoi.AutoSize = true;
             this.checkPhongDoi.Depth = 0;
-            this.checkPhongDoi.Location = new System.Drawing.Point(421, 169);
+            this.checkPhongDoi.Location = new System.Drawing.Point(316, 137);
             this.checkPhongDoi.Margin = new System.Windows.Forms.Padding(0);
             this.checkPhongDoi.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkPhongDoi.MouseState = MaterialSkin.MouseState.HOVER;
@@ -160,13 +164,14 @@
             this.listViewTimPhong.Depth = 0;
             this.listViewTimPhong.FullRowSelect = true;
             this.listViewTimPhong.HideSelection = false;
-            this.listViewTimPhong.Location = new System.Drawing.Point(61, 265);
-            this.listViewTimPhong.MinimumSize = new System.Drawing.Size(200, 100);
+            this.listViewTimPhong.Location = new System.Drawing.Point(46, 215);
+            this.listViewTimPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewTimPhong.MinimumSize = new System.Drawing.Size(150, 81);
             this.listViewTimPhong.MouseLocation = new System.Drawing.Point(-1, -1);
             this.listViewTimPhong.MouseState = MaterialSkin.MouseState.OUT;
             this.listViewTimPhong.Name = "listViewTimPhong";
             this.listViewTimPhong.OwnerDraw = true;
-            this.listViewTimPhong.Size = new System.Drawing.Size(695, 150);
+            this.listViewTimPhong.Size = new System.Drawing.Size(521, 122);
             this.listViewTimPhong.TabIndex = 8;
             this.listViewTimPhong.UseCompatibleStateImageBehavior = false;
             this.listViewTimPhong.View = System.Windows.Forms.View.Details;
@@ -178,8 +183,8 @@
             this.btnXong.Depth = 0;
             this.btnXong.HighEmphasis = true;
             this.btnXong.Icon = null;
-            this.btnXong.Location = new System.Drawing.Point(671, 439);
-            this.btnXong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnXong.Location = new System.Drawing.Point(503, 357);
+            this.btnXong.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnXong.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnXong.Name = "btnXong";
             this.btnXong.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -192,9 +197,9 @@
             // 
             // fRoomSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(600, 406);
             this.Controls.Add(this.btnXong);
             this.Controls.Add(this.listViewTimPhong);
             this.Controls.Add(this.checkPhongDoi);
@@ -205,7 +210,9 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fRoomSearch";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Tìm kiếm phòng";
             this.ResumeLayout(false);
             this.PerformLayout();

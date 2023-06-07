@@ -10,7 +10,7 @@ namespace HotelManagement.BUS
     public class PhieuDanhGiaService
     {
         private static PhieuDanhGiaService _instance = new BUS.PhieuDanhGiaService();
-        private PhieuDanhGiaRepo _repo = PhieuDanhGiaRepo.getInstace();
+        //private PhieuDanhGiaRepo _repo = PhieuDanhGiaRepo.getInstace();
         private PhieuDanhGiaService() { }
         public static PhieuDanhGiaService getInstance() { return _instance; }
         public void themDanhGia(PhieuDanhGia phieuDanhGia)

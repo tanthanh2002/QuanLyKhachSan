@@ -15,11 +15,12 @@ namespace HotelManagement
     public partial class PhieuSuDungThucPham
     {
         public int maphieudatphong { get; set; }
+        public int maphong { get; set; }
         public int mathucpham { get; set; }
         public Nullable<int> soluong { get; set; }
         public Nullable<double> dongia { get; set; }
     
-        public virtual PhieuDatPhong PhieuDatPhong { get; set; }
+        public virtual PhieuDatPhongChiTiet PhieuDatPhongChiTiet { get; set; }
         public virtual ThucPham ThucPham { get; set; }
     }
 }

@@ -12,19 +12,20 @@ namespace HotelManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class HoaDon
+    public partial class PhieuDatPhongChiTiet
     {
-        public int mahoadon { get; set; }
-        public double tiendichvu { get; set; }
-        public double tienthucpham { get; set; }
-        public double tienhuhongnoithat { get; set; }
-        public double tongtien { get; set; }
-        public double sotiendathanhtoan { get; set; }
-        public int maphieudatphong { get; set; }
-        public int maketoan { get; set; }
-        public string tinhtrang { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PhieuDatPhongChiTiet()
+        {
+            this.PhieuSuDungThucPhams = new HashSet<PhieuSuDungThucPham>();
+        }
     
-        public virtual NhanVien NhanVien { get; set; }
+        public int maphong { get; set; }
+        public int maphieudatphong { get; set; }
+    
         public virtual PhieuDatPhong PhieuDatPhong { get; set; }
+        public virtual Phong Phong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuSuDungThucPham> PhieuSuDungThucPhams { get; set; }
     }
 }

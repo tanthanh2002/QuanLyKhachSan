@@ -24,7 +24,10 @@ namespace HotelManagement
         
         void loadData()
         {
-            dataGridView1.DataSource = khachHangService.getAll();
+            List<KhachHang> list = new List<KhachHang>();
+            list.Add(khachHangService.findByMaTaiKhoan(2));
+
+            dataGridView1.DataSource = list.Select(p => new { p.tenkhachhang, p.mataikhoan, p.cccd}).ToList();
         }
         #endregion
 

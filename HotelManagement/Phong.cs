@@ -18,9 +18,9 @@ namespace HotelManagement
         public Phong()
         {
             this.NoiThats = new HashSet<NoiThat>();
+            this.PhieuDatPhongChiTiets = new HashSet<PhieuDatPhongChiTiet>();
             this.KhuyenMais = new HashSet<KhuyenMai>();
             this.DichVus = new HashSet<DichVu>();
-            this.PhieuDatPhongs = new HashSet<PhieuDatPhong>();
         }
     
         public int maphong { get; set; }
@@ -32,10 +32,10 @@ namespace HotelManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NoiThat> NoiThats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhieuDatPhongChiTiet> PhieuDatPhongChiTiets { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KhuyenMai> KhuyenMais { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DichVu> DichVus { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuDatPhong> PhieuDatPhongs { get; set; }
     }
 }

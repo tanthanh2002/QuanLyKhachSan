@@ -31,5 +31,10 @@ namespace HotelManagement.BUS
         {
             repo.save(khachHang);
         }
+
+        public KhachHang findByMaTaiKhoan(int mataikhoan)
+        {
+            return repo.findByMaTaiKhoan(mataikhoan);
+        }
     }
 }

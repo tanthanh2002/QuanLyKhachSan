@@ -170,17 +170,7 @@ CREATE TABLE ThucPham
 	soluongton						int					check(soluongton>=0),
 	gia								float				check(gia>=0),
 );	
---12.2
-CREATE TABLE PhieuSuDungThucPham
-(
-	maphieudatphong					int					not null,
-	mathucpham						int					not null,
-	soluong							int					check(soluong > 0),
-	dongia							float				check(dongia>0),
-	primary key(maphieudatphong,mathucpham),
-	constraint fk_PhieuSuDungThucPham_maphieudatphong foreign key (maphieudatphong) references PhieuDatPhong(maphieudatphong),
-	constraint fk_PhieuSuDungThucPham_mathucpham foreign key (mathucpham) references ThucPham(mathucpham)
-);
+
 --12.3
 CREATE TABLE NoiThat
 (
@@ -213,6 +203,19 @@ CREATE TABLE PhieuDatPhongChiTiet
 );
 
 
+--12.2
+CREATE TABLE PhieuSuDungThucPham
+(
+	maphieudatphong					int					not null,
+	maphong							int					not null,
+	mathucpham						int					not null,
+	soluong							int					check(soluong > 0),
+	dongia							float				check(dongia>0),
+	primary key(maphieudatphong,maphong,mathucpham),
+	constraint fk_PhieuSuDungThucPham_maphieudatphongchitiet foreign key (maphong,maphieudatphong) references PhieuDatPhongChiTiet(maphong,maphieudatphong),
+	constraint fk_PhieuSuDungThucPham_mathucpham foreign key (mathucpham) references ThucPham(mathucpham)
+);
+
 --14
 CREATE TABLE KhuyenMai
 (
@@ -241,6 +244,9 @@ CREATE TABLE ApDungKhuyenMai
 CREATE TABLE HoaDon
 (
 	mahoadon						int					identity primary key,
+	tiendichvu						float				not null check(tiendichvu > 0),
+	tienthucpham					float				not null check(tienthucpham > 0),
+	tienhuhongnoithat				float				not null check(tienhuhongnoithat > 0),
 	tongtien						float				not null check(tongtien > 0),
 	sotiendathanhtoan				float				not null ,
 	maphieudatphong					int					not null,

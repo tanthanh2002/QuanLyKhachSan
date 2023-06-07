@@ -33,10 +33,15 @@ namespace HotelManagement.DAO
             db.SaveChanges();
         }
 
-        public KhachHang findKhachHangByTaiKhoan(int mataikhoan)
+
+        public KhachHang findByMaTaiKhoan(int mataikhoan)
         {
-            var result = db.KhachHangs.Where(p => p.mataikhoan == mataikhoan).SingleOrDefault(null);
-            return result;
+            return db.KhachHangs.SingleOrDefault(p => p.TaiKhoan.mataikhoan == mataikhoan);
+        }
+
+        public KhachHang findByMaKhachHang(int makhachhang)
+        {
+            return db.KhachHangs.Find(makhachhang);
         }
     }
 }
