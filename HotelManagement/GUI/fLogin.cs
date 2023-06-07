@@ -17,6 +17,8 @@ namespace HotelManagement.GUI
         private TaiKhoanService taiKhoanService = TaiKhoanService.getInstance();
 
         private KhachHangService khachHangService = KhachHangService.getInstance();
+
+        private BcryptEncoder bcryptEncoder = BcryptEncoder.getInstance();
         public fLogin()
         {
             InitializeComponent();
@@ -69,7 +71,7 @@ namespace HotelManagement.GUI
             
             TaiKhoan taiKhoan = new TaiKhoan();
             taiKhoan.tentaikhoan = username;
-            taiKhoan.matkhau = password;
+            taiKhoan.matkhau = bcryptEncoder.HashPassword(password);
             taiKhoan.loaitaikhoan = "khachhang";
             taiKhoan.bikhoa = false;
 
@@ -85,15 +87,15 @@ namespace HotelManagement.GUI
 
             try
             {
-                taiKhoanService.save(taiKhoan);
-                khachHang.mataikhoan = taiKhoanService.findByUsername(username).mataikhoan;
+                khachHang.TaiKhoan = taiKhoan;
                 khachHangService.save(khachHang);
 
                 MessageBox.Show("Đăng ký thành công!");
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                MessageBox.Show("Đăng ký thất bại!");
             }
             
 
@@ -105,6 +107,9 @@ namespace HotelManagement.GUI
 
         }
 
+        private void tabLogin_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

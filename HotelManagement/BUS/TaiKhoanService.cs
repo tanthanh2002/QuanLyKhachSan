@@ -12,6 +12,8 @@ namespace HotelManagement.BUS
 
         private static TaiKhoanService instance = new BUS.TaiKhoanService();
 
+        private BcryptEncoder bcryptEncoder = BcryptEncoder.getInstance();
+
         private HotelManagementEntities db = new HotelManagementEntities();
 
         private KhachHangService khachHangService = KhachHangService.getInstance();
@@ -35,7 +37,7 @@ namespace HotelManagement.BUS
                 if (taiKhoan == null) { return false; }
                 else
                 {
-                    return taiKhoan.matkhau == password;
+                    return bcryptEncoder.verify(password,taiKhoan.matkhau);
                 }
                 return false;
             }catch(Exception e) { 

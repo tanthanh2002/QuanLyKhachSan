@@ -9,7 +9,7 @@ CREATE TABLE TaiKhoan
 (
 	mataikhoan						int						identity primary key,
 	tentaikhoan						varchar(100)			unique check(len(tentaikhoan)>6),
-	matkhau							varchar(60)				check(matkhau>6),
+	matkhau							varchar(60)				not null,
 	loaitaikhoan					varchar(20)				check(loaitaikhoan in ('khachhang','letan','vesinh','ketoan','buongphong','bellman')),
 	bikhoa							bit						not null
 );

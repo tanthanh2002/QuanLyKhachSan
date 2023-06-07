@@ -223,7 +223,7 @@
           </Key>
           <Property Name="mataikhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tentaikhoan" Type="varchar" MaxLength="100" />
-          <Property Name="matkhau" Type="varchar" MaxLength="60" />
+          <Property Name="matkhau" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="loaitaikhoan" Type="varchar" MaxLength="20" />
           <Property Name="bikhoa" Type="bit" Nullable="false" />
         </EntityType>
@@ -1180,7 +1180,7 @@
           </Key>
           <Property Name="mataikhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tentaikhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="matkhau" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="matkhau" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="loaitaikhoan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="bikhoa" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="KhachHangs" Relationship="HotelManagementModel.fk_KhachHang_taikhoan" FromRole="TaiKhoan" ToRole="KhachHang" />

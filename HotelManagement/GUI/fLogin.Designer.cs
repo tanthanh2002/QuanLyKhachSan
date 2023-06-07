@@ -45,6 +45,7 @@
             this.tabRegister = new System.Windows.Forms.TabPage();
             this.btnRegister = new MaterialSkin.Controls.MaterialButton();
             this.lblCCCD = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
@@ -53,6 +54,7 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.registerTxtID = new MaterialSkin.Controls.MaterialTextBox();
+            this.registerTxtPhone = new MaterialSkin.Controls.MaterialTextBox();
             this.registerTxtFax = new MaterialSkin.Controls.MaterialTextBox();
             this.registerTxtEmail = new MaterialSkin.Controls.MaterialTextBox();
             this.registerTxtAddress = new MaterialSkin.Controls.MaterialTextBox();
@@ -60,8 +62,6 @@
             this.registerTxtConfirmPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.registerTxtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.registerTxtUsername = new MaterialSkin.Controls.MaterialTextBox();
-            this.registerTxtPhone = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.tabControlMenu.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabRegister.SuspendLayout();
@@ -97,10 +97,11 @@
             this.tabLogin.Location = new System.Drawing.Point(4, 39);
             this.tabLogin.Name = "tabLogin";
             this.tabLogin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLogin.Size = new System.Drawing.Size(969, 489);
+            this.tabLogin.Size = new System.Drawing.Size(1014, 489);
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "Đăng nhập";
             this.tabLogin.UseVisualStyleBackColor = true;
+            this.tabLogin.Click += new System.EventHandler(this.tabLogin_Click);
             // 
             // materialLabel7
             // 
@@ -325,6 +326,18 @@
             this.lblCCCD.TabIndex = 3;
             this.lblCCCD.Text = "Căn cước công dân";
             // 
+            // materialLabel9
+            // 
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel9.Location = new System.Drawing.Point(383, 357);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(95, 19);
+            this.materialLabel9.TabIndex = 3;
+            this.materialLabel9.Text = "Số điện thoại";
+            // 
             // materialLabel6
             // 
             this.materialLabel6.AutoSize = true;
@@ -426,6 +439,24 @@
             this.registerTxtID.TabIndex = 9;
             this.registerTxtID.Text = "";
             this.registerTxtID.TrailingIcon = null;
+            // 
+            // registerTxtPhone
+            // 
+            this.registerTxtPhone.AnimateReadOnly = false;
+            this.registerTxtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.registerTxtPhone.Depth = 0;
+            this.registerTxtPhone.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtPhone.Hint = "số điện thoại";
+            this.registerTxtPhone.LeadingIcon = null;
+            this.registerTxtPhone.Location = new System.Drawing.Point(383, 383);
+            this.registerTxtPhone.MaxLength = 50;
+            this.registerTxtPhone.MouseState = MaterialSkin.MouseState.OUT;
+            this.registerTxtPhone.Multiline = false;
+            this.registerTxtPhone.Name = "registerTxtPhone";
+            this.registerTxtPhone.Size = new System.Drawing.Size(262, 50);
+            this.registerTxtPhone.TabIndex = 8;
+            this.registerTxtPhone.Text = "";
+            this.registerTxtPhone.TrailingIcon = null;
             // 
             // registerTxtFax
             // 
@@ -554,36 +585,6 @@
             this.registerTxtUsername.TabIndex = 1;
             this.registerTxtUsername.Text = "";
             this.registerTxtUsername.TrailingIcon = null;
-            // 
-            // registerTxtPhone
-            // 
-            this.registerTxtPhone.AnimateReadOnly = false;
-            this.registerTxtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.registerTxtPhone.Depth = 0;
-            this.registerTxtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.registerTxtPhone.Hint = "số điện thoại";
-            this.registerTxtPhone.LeadingIcon = null;
-            this.registerTxtPhone.Location = new System.Drawing.Point(383, 383);
-            this.registerTxtPhone.MaxLength = 50;
-            this.registerTxtPhone.MouseState = MaterialSkin.MouseState.OUT;
-            this.registerTxtPhone.Multiline = false;
-            this.registerTxtPhone.Name = "registerTxtPhone";
-            this.registerTxtPhone.Size = new System.Drawing.Size(262, 50);
-            this.registerTxtPhone.TabIndex = 8;
-            this.registerTxtPhone.Text = "";
-            this.registerTxtPhone.TrailingIcon = null;
-            // 
-            // materialLabel9
-            // 
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.Location = new System.Drawing.Point(383, 357);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(95, 19);
-            this.materialLabel9.TabIndex = 3;
-            this.materialLabel9.Text = "Số điện thoại";
             // 
             // fLogin
             // 
