@@ -42,5 +42,10 @@ namespace HotelManagement.GUI
                 MessageBox.Show("Thêm đánh giá thất bại!");
             }
         }
+        /*private void load()
+        {
+            //dataGridViewDS.DataSource = .....\
+
+        }*/
     }
 }

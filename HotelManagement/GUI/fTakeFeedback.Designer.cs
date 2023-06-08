@@ -37,10 +37,11 @@
             this.btnGhiNhan = new MaterialSkin.Controls.MaterialButton();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
             this.txtNoiDung = new MaterialSkin.Controls.MaterialTextBox();
-            this.listViewDanhSach = new MaterialSkin.Controls.MaterialListView();
             this.txtDiem = new MaterialSkin.Controls.MaterialTextBox();
             this.txtMaPhieuDatPhong = new MaterialSkin.Controls.MaterialTextBox();
             this.txtMaKhachHang = new MaterialSkin.Controls.MaterialTextBox();
+            this.dataGridViewDS = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -165,25 +166,6 @@
             this.txtNoiDung.Text = "";
             this.txtNoiDung.TrailingIcon = null;
             // 
-            // listViewDanhSach
-            // 
-            this.listViewDanhSach.AutoSizeTable = false;
-            this.listViewDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.listViewDanhSach.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewDanhSach.Depth = 0;
-            this.listViewDanhSach.FullRowSelect = true;
-            this.listViewDanhSach.HideSelection = false;
-            this.listViewDanhSach.Location = new System.Drawing.Point(42, 85);
-            this.listViewDanhSach.MinimumSize = new System.Drawing.Size(200, 100);
-            this.listViewDanhSach.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.listViewDanhSach.MouseState = MaterialSkin.MouseState.OUT;
-            this.listViewDanhSach.Name = "listViewDanhSach";
-            this.listViewDanhSach.OwnerDraw = true;
-            this.listViewDanhSach.Size = new System.Drawing.Size(562, 211);
-            this.listViewDanhSach.TabIndex = 14;
-            this.listViewDanhSach.UseCompatibleStateImageBehavior = false;
-            this.listViewDanhSach.View = System.Windows.Forms.View.Details;
-            // 
             // txtDiem
             // 
             this.txtDiem.AnimateReadOnly = false;
@@ -235,12 +217,22 @@
             this.txtMaKhachHang.Text = "";
             this.txtMaKhachHang.TrailingIcon = null;
             // 
+            // dataGridViewDS
+            // 
+            this.dataGridViewDS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDS.Location = new System.Drawing.Point(51, 90);
+            this.dataGridViewDS.Name = "dataGridViewDS";
+            this.dataGridViewDS.RowHeadersWidth = 51;
+            this.dataGridViewDS.RowTemplate.Height = 24;
+            this.dataGridViewDS.Size = new System.Drawing.Size(561, 211);
+            this.dataGridViewDS.TabIndex = 14;
+            // 
             // fTakeFeedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.listViewDanhSach);
+            this.Controls.Add(this.dataGridViewDS);
             this.Controls.Add(this.txtDiem);
             this.Controls.Add(this.txtMaPhieuDatPhong);
             this.Controls.Add(this.txtMaKhachHang);
@@ -255,6 +247,7 @@
             this.Controls.Add(this.label3);
             this.Name = "fTakeFeedback";
             this.Text = "Ghi nhận phản hồi";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,9 +263,9 @@
         private MaterialSkin.Controls.MaterialButton btnGhiNhan;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
         private MaterialSkin.Controls.MaterialTextBox txtNoiDung;
-        private MaterialSkin.Controls.MaterialListView listViewDanhSach;
         private MaterialSkin.Controls.MaterialTextBox txtDiem;
         private MaterialSkin.Controls.MaterialTextBox txtMaPhieuDatPhong;
         private MaterialSkin.Controls.MaterialTextBox txtMaKhachHang;
+        private System.Windows.Forms.DataGridView dataGridViewDS;
     }
 }
