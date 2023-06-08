@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using HotelManagement.BUS;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace HotelManagement.GUI
 {
     public partial class fTakeFeedback : MaterialSkin.Controls.MaterialForm
     {
+        private PhieuDanhGiaService phieuDanhGiaService = PhieuDanhGiaService.getInstance();
         public fTakeFeedback()
         {
             InitializeComponent();
@@ -24,8 +26,21 @@ namespace HotelManagement.GUI
 
         private void btnGhiNhan_Click(object sender, EventArgs e)
         {
-            PhieuDanhGia phieu = new PhieuDanhGia();
-            //phieu.noidung = txt;
+            PhieuDanhGia phieuDanhGia = new PhieuDanhGia();
+            phieuDanhGia.noidung = txtNoiDung.Text;
+            phieuDanhGia.diem = Convert.ToInt32(txtDiem.Text);
+            phieuDanhGia.makhachhang = -1;
+            phieuDanhGia.maphieudanhgia = -1;
+            try
+            {
+                phieuDanhGiaService.addTakeFeedback(phieuDanhGia);
+                MessageBox.Show("Thêm đánh giá thành công!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                MessageBox.Show("Thêm đánh giá thất bại!");
+            }
         }
     }
 }

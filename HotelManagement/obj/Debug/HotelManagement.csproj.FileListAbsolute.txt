@@ -62,3 +62,5 @@ D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\obj\Debug\Hotel
 D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fTakeFeedback.resources
 D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\bin\Debug\BCrypt.Net.dll
 D:\Document-HK6\PTTKHTTT\Doan\gd3\QuanLyKhachSan\HotelManagement\bin\Debug\BCrypt.Net.xml
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\bin\Debug\BCrypt.Net.dll
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\bin\Debug\BCrypt.Net.xml

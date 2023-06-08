@@ -36,11 +36,11 @@
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.btnGhiNhan = new MaterialSkin.Controls.MaterialButton();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtMaKhachHang = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtMaPhieuDatPhong = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtDiem = new MaterialSkin.Controls.MaterialTextBox();
             this.txtNoiDung = new MaterialSkin.Controls.MaterialTextBox();
             this.listViewDanhSach = new MaterialSkin.Controls.MaterialListView();
+            this.txtDiem = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtMaPhieuDatPhong = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtMaKhachHang = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -148,57 +148,6 @@
             this.materialTextBox1.Text = "";
             this.materialTextBox1.TrailingIcon = null;
             // 
-            // txtMaKhachHang
-            // 
-            this.txtMaKhachHang.AnimateReadOnly = false;
-            this.txtMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMaKhachHang.Depth = 0;
-            this.txtMaKhachHang.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtMaKhachHang.LeadingIcon = null;
-            this.txtMaKhachHang.Location = new System.Drawing.Point(794, 81);
-            this.txtMaKhachHang.MaxLength = 50;
-            this.txtMaKhachHang.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtMaKhachHang.Multiline = false;
-            this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(160, 50);
-            this.txtMaKhachHang.TabIndex = 11;
-            this.txtMaKhachHang.Text = "";
-            this.txtMaKhachHang.TrailingIcon = null;
-            // 
-            // txtMaPhieuDatPhong
-            // 
-            this.txtMaPhieuDatPhong.AnimateReadOnly = false;
-            this.txtMaPhieuDatPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMaPhieuDatPhong.Depth = 0;
-            this.txtMaPhieuDatPhong.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtMaPhieuDatPhong.LeadingIcon = null;
-            this.txtMaPhieuDatPhong.Location = new System.Drawing.Point(794, 167);
-            this.txtMaPhieuDatPhong.MaxLength = 50;
-            this.txtMaPhieuDatPhong.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtMaPhieuDatPhong.Multiline = false;
-            this.txtMaPhieuDatPhong.Name = "txtMaPhieuDatPhong";
-            this.txtMaPhieuDatPhong.Size = new System.Drawing.Size(160, 50);
-            this.txtMaPhieuDatPhong.TabIndex = 12;
-            this.txtMaPhieuDatPhong.Text = "";
-            this.txtMaPhieuDatPhong.TrailingIcon = null;
-            // 
-            // txtDiem
-            // 
-            this.txtDiem.AnimateReadOnly = false;
-            this.txtDiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiem.Depth = 0;
-            this.txtDiem.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDiem.LeadingIcon = null;
-            this.txtDiem.Location = new System.Drawing.Point(794, 246);
-            this.txtDiem.MaxLength = 50;
-            this.txtDiem.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDiem.Multiline = false;
-            this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(160, 50);
-            this.txtDiem.TabIndex = 13;
-            this.txtDiem.Text = "";
-            this.txtDiem.TrailingIcon = null;
-            // 
             // txtNoiDung
             // 
             this.txtNoiDung.AnimateReadOnly = false;
@@ -235,6 +184,57 @@
             this.listViewDanhSach.UseCompatibleStateImageBehavior = false;
             this.listViewDanhSach.View = System.Windows.Forms.View.Details;
             // 
+            // txtDiem
+            // 
+            this.txtDiem.AnimateReadOnly = false;
+            this.txtDiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiem.Depth = 0;
+            this.txtDiem.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDiem.LeadingIcon = null;
+            this.txtDiem.Location = new System.Drawing.Point(794, 246);
+            this.txtDiem.MaxLength = 50;
+            this.txtDiem.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDiem.Multiline = false;
+            this.txtDiem.Name = "txtDiem";
+            this.txtDiem.Size = new System.Drawing.Size(160, 50);
+            this.txtDiem.TabIndex = 13;
+            this.txtDiem.Text = "";
+            this.txtDiem.TrailingIcon = null;
+            // 
+            // txtMaPhieuDatPhong
+            // 
+            this.txtMaPhieuDatPhong.AnimateReadOnly = false;
+            this.txtMaPhieuDatPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaPhieuDatPhong.Depth = 0;
+            this.txtMaPhieuDatPhong.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMaPhieuDatPhong.LeadingIcon = null;
+            this.txtMaPhieuDatPhong.Location = new System.Drawing.Point(794, 167);
+            this.txtMaPhieuDatPhong.MaxLength = 50;
+            this.txtMaPhieuDatPhong.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtMaPhieuDatPhong.Multiline = false;
+            this.txtMaPhieuDatPhong.Name = "txtMaPhieuDatPhong";
+            this.txtMaPhieuDatPhong.Size = new System.Drawing.Size(160, 50);
+            this.txtMaPhieuDatPhong.TabIndex = 12;
+            this.txtMaPhieuDatPhong.Text = "";
+            this.txtMaPhieuDatPhong.TrailingIcon = null;
+            // 
+            // txtMaKhachHang
+            // 
+            this.txtMaKhachHang.AnimateReadOnly = false;
+            this.txtMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaKhachHang.Depth = 0;
+            this.txtMaKhachHang.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMaKhachHang.LeadingIcon = null;
+            this.txtMaKhachHang.Location = new System.Drawing.Point(794, 81);
+            this.txtMaKhachHang.MaxLength = 50;
+            this.txtMaKhachHang.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtMaKhachHang.Multiline = false;
+            this.txtMaKhachHang.Name = "txtMaKhachHang";
+            this.txtMaKhachHang.Size = new System.Drawing.Size(160, 50);
+            this.txtMaKhachHang.TabIndex = 11;
+            this.txtMaKhachHang.Text = "";
+            this.txtMaKhachHang.TrailingIcon = null;
+            // 
             // fTakeFeedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,10 +269,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialButton btnGhiNhan;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox txtMaKhachHang;
-        private MaterialSkin.Controls.MaterialTextBox txtMaPhieuDatPhong;
-        private MaterialSkin.Controls.MaterialTextBox txtDiem;
         private MaterialSkin.Controls.MaterialTextBox txtNoiDung;
         private MaterialSkin.Controls.MaterialListView listViewDanhSach;
+        private MaterialSkin.Controls.MaterialTextBox txtDiem;
+        private MaterialSkin.Controls.MaterialTextBox txtMaPhieuDatPhong;
+        private MaterialSkin.Controls.MaterialTextBox txtMaKhachHang;
     }
 }
