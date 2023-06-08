@@ -68,6 +68,7 @@
     <Compile Include="BUS\TaiKhoanService.cs" />
     <Compile Include="DAO\HoaDonRepo.cs" />
     <Compile Include="DAO\KhachHangRepo.cs" />
+    <Compile Include="DAO\PhieuDanhGiaRepo.cs" />
     <Compile Include="DAO\PhieuDatPhongRepo.cs" />
     <Compile Include="DAO\PhongRepo.cs" />
     <Compile Include="DAO\TaiKhoanRepo.cs" />
