@@ -9,6 +9,7 @@ namespace HotelManagement.DAO
     internal class HoaDonRepo
     {
         private static HoaDonRepo instance = new HoaDonRepo();
+
         private HotelManagementEntities db = new HotelManagementEntities();
         private HoaDonRepo() { }
 
@@ -17,6 +18,11 @@ namespace HotelManagement.DAO
         public HoaDon findByMaDatPhong(int madatphong)
         {
             return db.HoaDons.SingleOrDefault(p => p.PhieuDatPhong.maphieudatphong == madatphong);
+        }
+        public void addInvoice(HoaDon hoaDon)
+        {
+            db.HoaDons.Add(hoaDon);
+            db.SaveChanges();
         }
     }
 }

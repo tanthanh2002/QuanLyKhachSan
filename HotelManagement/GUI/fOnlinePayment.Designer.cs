@@ -105,13 +105,14 @@
             this.btnThanhCong.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThanhCong.UseAccentColor = false;
             this.btnThanhCong.UseVisualStyleBackColor = true;
+            this.btnThanhCong.Click += new System.EventHandler(this.btnThanhCong_Click);
             // 
             // txtMaDatPhong
             // 
             this.txtMaDatPhong.AnimateReadOnly = false;
             this.txtMaDatPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaDatPhong.Depth = 0;
-            this.txtMaDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMaDatPhong.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtMaDatPhong.LeadingIcon = null;
             this.txtMaDatPhong.Location = new System.Drawing.Point(290, 101);
             this.txtMaDatPhong.MaxLength = 50;
@@ -128,7 +129,7 @@
             this.txtSoTienDaThanhToan.AnimateReadOnly = false;
             this.txtSoTienDaThanhToan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoTienDaThanhToan.Depth = 0;
-            this.txtSoTienDaThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSoTienDaThanhToan.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSoTienDaThanhToan.LeadingIcon = null;
             this.txtSoTienDaThanhToan.Location = new System.Drawing.Point(290, 241);
             this.txtSoTienDaThanhToan.MaxLength = 50;
@@ -145,7 +146,7 @@
             this.txtTongTien.AnimateReadOnly = false;
             this.txtTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTongTien.Depth = 0;
-            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTongTien.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTongTien.LeadingIcon = null;
             this.txtTongTien.Location = new System.Drawing.Point(290, 169);
             this.txtTongTien.MaxLength = 50;
@@ -162,7 +163,7 @@
             this.txtNoiDungThanhToan.AnimateReadOnly = false;
             this.txtNoiDungThanhToan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNoiDungThanhToan.Depth = 0;
-            this.txtNoiDungThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNoiDungThanhToan.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNoiDungThanhToan.LeadingIcon = null;
             this.txtNoiDungThanhToan.Location = new System.Drawing.Point(290, 309);
             this.txtNoiDungThanhToan.MaxLength = 50;

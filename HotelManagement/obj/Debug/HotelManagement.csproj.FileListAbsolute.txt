@@ -94,3 +94,8 @@ D:\HOC_KY6_3\PTTKHTTT\Project\New folder\QuanLyKhachSan\HotelManagement\obj\Debu
 D:\HOC_KY6_3\PTTKHTTT\Project\New folder\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.csproj.CopyComplete
 D:\HOC_KY6_3\PTTKHTTT\Project\New folder\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.exe
 D:\HOC_KY6_3\PTTKHTTT\Project\New folder\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.pdb
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fChinhSuaTaiKhoan.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fGhiNhanThongTinHanhLy.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fKeToanHome.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fQuanLyTaiKhoan.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fThemTaiKhoan.resources

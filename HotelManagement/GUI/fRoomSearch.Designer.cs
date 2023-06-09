@@ -36,8 +36,10 @@
             this.checkPhongDon = new MaterialSkin.Controls.MaterialCheckbox();
             this.checkCaoCap = new MaterialSkin.Controls.MaterialCheckbox();
             this.checkPhongDoi = new MaterialSkin.Controls.MaterialCheckbox();
-            this.listViewTimPhong = new MaterialSkin.Controls.MaterialListView();
             this.btnXong = new MaterialSkin.Controls.MaterialButton();
+            this.btnTimKiem = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridViewKetQua = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKetQua)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -45,8 +47,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(44, 80);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(59, 98);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(110, 19);
@@ -58,8 +59,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(71, 110);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel2.Location = new System.Drawing.Point(95, 135);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(99, 19);
@@ -71,8 +71,7 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(71, 145);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel3.Location = new System.Drawing.Point(95, 178);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(107, 19);
@@ -84,8 +83,7 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(44, 177);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel4.Location = new System.Drawing.Point(59, 218);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(120, 19);
@@ -96,23 +94,23 @@
             // 
             this.checkBinhDan.AutoSize = true;
             this.checkBinhDan.Depth = 0;
-            this.checkBinhDan.Location = new System.Drawing.Point(186, 104);
+            this.checkBinhDan.Location = new System.Drawing.Point(248, 128);
             this.checkBinhDan.Margin = new System.Windows.Forms.Padding(0);
             this.checkBinhDan.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkBinhDan.MouseState = MaterialSkin.MouseState.HOVER;
             this.checkBinhDan.Name = "checkBinhDan";
             this.checkBinhDan.ReadOnly = false;
             this.checkBinhDan.Ripple = true;
-            this.checkBinhDan.Size = new System.Drawing.Size(98, 37);
+            this.checkBinhDan.Size = new System.Drawing.Size(106, 37);
             this.checkBinhDan.TabIndex = 4;
-            this.checkBinhDan.Text = "Bình dân";
+            this.checkBinhDan.Text = "2.000.000";
             this.checkBinhDan.UseVisualStyleBackColor = true;
             // 
             // checkPhongDon
             // 
             this.checkPhongDon.AutoSize = true;
             this.checkPhongDon.Depth = 0;
-            this.checkPhongDon.Location = new System.Drawing.Point(186, 137);
+            this.checkPhongDon.Location = new System.Drawing.Point(248, 169);
             this.checkPhongDon.Margin = new System.Windows.Forms.Padding(0);
             this.checkPhongDon.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkPhongDon.MouseState = MaterialSkin.MouseState.HOVER;
@@ -128,23 +126,23 @@
             // 
             this.checkCaoCap.AutoSize = true;
             this.checkCaoCap.Depth = 0;
-            this.checkCaoCap.Location = new System.Drawing.Point(316, 104);
+            this.checkCaoCap.Location = new System.Drawing.Point(421, 128);
             this.checkCaoCap.Margin = new System.Windows.Forms.Padding(0);
             this.checkCaoCap.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkCaoCap.MouseState = MaterialSkin.MouseState.HOVER;
             this.checkCaoCap.Name = "checkCaoCap";
             this.checkCaoCap.ReadOnly = false;
             this.checkCaoCap.Ripple = true;
-            this.checkCaoCap.Size = new System.Drawing.Size(93, 37);
+            this.checkCaoCap.Size = new System.Drawing.Size(106, 37);
             this.checkCaoCap.TabIndex = 6;
-            this.checkCaoCap.Text = "Cao cấp";
+            this.checkCaoCap.Text = "5.000.000";
             this.checkCaoCap.UseVisualStyleBackColor = true;
             // 
             // checkPhongDoi
             // 
             this.checkPhongDoi.AutoSize = true;
             this.checkPhongDoi.Depth = 0;
-            this.checkPhongDoi.Location = new System.Drawing.Point(316, 137);
+            this.checkPhongDoi.Location = new System.Drawing.Point(421, 169);
             this.checkPhongDoi.Margin = new System.Windows.Forms.Padding(0);
             this.checkPhongDoi.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkPhongDoi.MouseState = MaterialSkin.MouseState.HOVER;
@@ -156,26 +154,6 @@
             this.checkPhongDoi.Text = "Phòng đôi";
             this.checkPhongDoi.UseVisualStyleBackColor = true;
             // 
-            // listViewTimPhong
-            // 
-            this.listViewTimPhong.AutoSizeTable = false;
-            this.listViewTimPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.listViewTimPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewTimPhong.Depth = 0;
-            this.listViewTimPhong.FullRowSelect = true;
-            this.listViewTimPhong.HideSelection = false;
-            this.listViewTimPhong.Location = new System.Drawing.Point(46, 215);
-            this.listViewTimPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listViewTimPhong.MinimumSize = new System.Drawing.Size(150, 81);
-            this.listViewTimPhong.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.listViewTimPhong.MouseState = MaterialSkin.MouseState.OUT;
-            this.listViewTimPhong.Name = "listViewTimPhong";
-            this.listViewTimPhong.OwnerDraw = true;
-            this.listViewTimPhong.Size = new System.Drawing.Size(521, 122);
-            this.listViewTimPhong.TabIndex = 8;
-            this.listViewTimPhong.UseCompatibleStateImageBehavior = false;
-            this.listViewTimPhong.View = System.Windows.Forms.View.Details;
-            // 
             // btnXong
             // 
             this.btnXong.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -183,8 +161,8 @@
             this.btnXong.Depth = 0;
             this.btnXong.HighEmphasis = true;
             this.btnXong.Icon = null;
-            this.btnXong.Location = new System.Drawing.Point(503, 357);
-            this.btnXong.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnXong.Location = new System.Drawing.Point(671, 439);
+            this.btnXong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnXong.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnXong.Name = "btnXong";
             this.btnXong.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -194,14 +172,46 @@
             this.btnXong.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXong.UseAccentColor = false;
             this.btnXong.UseVisualStyleBackColor = true;
+            this.btnXong.Click += new System.EventHandler(this.btnXong_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimKiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimKiem.Depth = 0;
+            this.btnTimKiem.HighEmphasis = true;
+            this.btnTimKiem.Icon = null;
+            this.btnTimKiem.Location = new System.Drawing.Point(550, 439);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimKiem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimKiem.Size = new System.Drawing.Size(86, 36);
+            this.btnTimKiem.TabIndex = 10;
+            this.btnTimKiem.Text = "Tìm kiếm ";
+            this.btnTimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimKiem.UseAccentColor = false;
+            this.btnTimKiem.UseMnemonic = false;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // dataGridViewKetQua
+            // 
+            this.dataGridViewKetQua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKetQua.Location = new System.Drawing.Point(62, 254);
+            this.dataGridViewKetQua.Name = "dataGridViewKetQua";
+            this.dataGridViewKetQua.RowHeadersWidth = 51;
+            this.dataGridViewKetQua.Size = new System.Drawing.Size(673, 149);
+            this.dataGridViewKetQua.TabIndex = 11;
             // 
             // fRoomSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 406);
+            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.dataGridViewKetQua);
+            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXong);
-            this.Controls.Add(this.listViewTimPhong);
             this.Controls.Add(this.checkPhongDoi);
             this.Controls.Add(this.checkCaoCap);
             this.Controls.Add(this.checkPhongDon);
@@ -210,10 +220,11 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fRoomSearch";
-            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Text = "Tìm kiếm phòng";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKetQua)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,7 +240,8 @@
         private MaterialSkin.Controls.MaterialCheckbox checkPhongDon;
         private MaterialSkin.Controls.MaterialCheckbox checkCaoCap;
         private MaterialSkin.Controls.MaterialCheckbox checkPhongDoi;
-        private MaterialSkin.Controls.MaterialListView listViewTimPhong;
         private MaterialSkin.Controls.MaterialButton btnXong;
+        private MaterialSkin.Controls.MaterialButton btnTimKiem;
+        private System.Windows.Forms.DataGridView dataGridViewKetQua;
     }
 }

@@ -15,6 +15,8 @@ namespace HotelManagement.GUI
     public partial class fTakeFeedback : MaterialSkin.Controls.MaterialForm
     {
         private PhieuDanhGiaService phieuDanhGiaService = PhieuDanhGiaService.getInstance();
+        
+        private PhieuSuDungDichVuChiTietService phieuSuDungDichVuChiTietService = PhieuSuDungDichVuChiTietService.getInstance();
         public fTakeFeedback()
         {
             InitializeComponent();
@@ -22,6 +24,13 @@ namespace HotelManagement.GUI
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+
+            Load();
+        }
+
+        private void Load()
+        {
+          //  dataGridViewDS = phieuSuDungDichVuChiTietService.GetChiTietList(Convert.ToInt32(txtMaPhieuDatPhong.Text));
         }
 
         private void btnGhiNhan_Click(object sender, EventArgs e)
@@ -42,10 +51,5 @@ namespace HotelManagement.GUI
                 MessageBox.Show("Thêm đánh giá thất bại!");
             }
         }
-        /*private void load()
-        {
-            //dataGridViewDS.DataSource = .....\
-
-        }*/
     }
 }

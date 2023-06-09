@@ -54,8 +54,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(115, 63);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(153, 78);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(156, 19);
@@ -67,8 +66,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(466, 63);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel2.Location = new System.Drawing.Point(621, 78);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(146, 19);
@@ -80,8 +78,7 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(58, 249);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel3.Location = new System.Drawing.Point(77, 306);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(50, 19);
@@ -93,8 +90,7 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(56, 193);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel4.Location = new System.Drawing.Point(75, 238);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(95, 19);
@@ -106,8 +102,7 @@
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(58, 135);
-            this.materialLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel5.Location = new System.Drawing.Point(77, 166);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(47, 19);
@@ -121,8 +116,8 @@
             this.btnDatPhong.Depth = 0;
             this.btnDatPhong.HighEmphasis = true;
             this.btnDatPhong.Icon = null;
-            this.btnDatPhong.Location = new System.Drawing.Point(564, 313);
-            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnDatPhong.Location = new System.Drawing.Point(752, 385);
+            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDatPhong.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDatPhong.Name = "btnDatPhong";
             this.btnDatPhong.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -132,6 +127,7 @@
             this.btnDatPhong.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDatPhong.UseAccentColor = false;
             this.btnDatPhong.UseVisualStyleBackColor = true;
+            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
             // txtTenKhachHang
             // 
@@ -140,13 +136,13 @@
             this.txtTenKhachHang.Depth = 0;
             this.txtTenKhachHang.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTenKhachHang.LeadingIcon = null;
-            this.txtTenKhachHang.Location = new System.Drawing.Point(165, 110);
-            this.txtTenKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenKhachHang.Location = new System.Drawing.Point(220, 135);
+            this.txtTenKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenKhachHang.MaxLength = 50;
             this.txtTenKhachHang.MouseState = MaterialSkin.MouseState.OUT;
             this.txtTenKhachHang.Multiline = false;
             this.txtTenKhachHang.Name = "txtTenKhachHang";
-            this.txtTenKhachHang.Size = new System.Drawing.Size(156, 50);
+            this.txtTenKhachHang.Size = new System.Drawing.Size(247, 50);
             this.txtTenKhachHang.TabIndex = 6;
             this.txtTenKhachHang.Text = "";
             this.txtTenKhachHang.TrailingIcon = null;
@@ -158,13 +154,13 @@
             this.txtDiaChi.Depth = 0;
             this.txtDiaChi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDiaChi.LeadingIcon = null;
-            this.txtDiaChi.Location = new System.Drawing.Point(165, 223);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Location = new System.Drawing.Point(220, 274);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.MaxLength = 50;
             this.txtDiaChi.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDiaChi.Multiline = false;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(156, 50);
+            this.txtDiaChi.Size = new System.Drawing.Size(247, 50);
             this.txtDiaChi.TabIndex = 7;
             this.txtDiaChi.Text = "";
             this.txtDiaChi.TrailingIcon = null;
@@ -176,13 +172,13 @@
             this.txtSoDienThoai.Depth = 0;
             this.txtSoDienThoai.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSoDienThoai.LeadingIcon = null;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(165, 168);
-            this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(220, 207);
+            this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoDienThoai.MaxLength = 50;
             this.txtSoDienThoai.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSoDienThoai.Multiline = false;
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(156, 50);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(247, 50);
             this.txtSoDienThoai.TabIndex = 8;
             this.txtSoDienThoai.Text = "";
             this.txtSoDienThoai.TrailingIcon = null;
@@ -192,8 +188,7 @@
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(58, 362);
-            this.materialLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel6.Location = new System.Drawing.Point(77, 446);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(42, 19);
@@ -205,8 +200,7 @@
             this.materialLabel7.AutoSize = true;
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.Location = new System.Drawing.Point(58, 303);
-            this.materialLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel7.Location = new System.Drawing.Point(77, 373);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(50, 19);
@@ -220,13 +214,13 @@
             this.txtSoFax.Depth = 0;
             this.txtSoFax.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSoFax.LeadingIcon = null;
-            this.txtSoFax.Location = new System.Drawing.Point(165, 278);
-            this.txtSoFax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoFax.Location = new System.Drawing.Point(220, 342);
+            this.txtSoFax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoFax.MaxLength = 50;
             this.txtSoFax.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSoFax.Multiline = false;
             this.txtSoFax.Name = "txtSoFax";
-            this.txtSoFax.Size = new System.Drawing.Size(156, 50);
+            this.txtSoFax.Size = new System.Drawing.Size(247, 50);
             this.txtSoFax.TabIndex = 12;
             this.txtSoFax.Text = "";
             this.txtSoFax.TrailingIcon = null;
@@ -238,13 +232,13 @@
             this.txtCCCD.Depth = 0;
             this.txtCCCD.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCCCD.LeadingIcon = null;
-            this.txtCCCD.Location = new System.Drawing.Point(165, 336);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCCCD.Location = new System.Drawing.Point(220, 414);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCCCD.MaxLength = 50;
             this.txtCCCD.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCCCD.Multiline = false;
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(156, 50);
+            this.txtCCCD.Size = new System.Drawing.Size(247, 50);
             this.txtCCCD.TabIndex = 13;
             this.txtCCCD.Text = "";
             this.txtCCCD.TrailingIcon = null;
@@ -256,13 +250,13 @@
             this.txtYeuCauDacBiet.Depth = 0;
             this.txtYeuCauDacBiet.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtYeuCauDacBiet.LeadingIcon = null;
-            this.txtYeuCauDacBiet.Location = new System.Drawing.Point(526, 104);
-            this.txtYeuCauDacBiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYeuCauDacBiet.Location = new System.Drawing.Point(701, 128);
+            this.txtYeuCauDacBiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtYeuCauDacBiet.MaxLength = 50;
             this.txtYeuCauDacBiet.MouseState = MaterialSkin.MouseState.OUT;
             this.txtYeuCauDacBiet.Multiline = false;
             this.txtYeuCauDacBiet.Name = "txtYeuCauDacBiet";
-            this.txtYeuCauDacBiet.Size = new System.Drawing.Size(156, 50);
+            this.txtYeuCauDacBiet.Size = new System.Drawing.Size(250, 50);
             this.txtYeuCauDacBiet.TabIndex = 15;
             this.txtYeuCauDacBiet.Text = "";
             this.txtYeuCauDacBiet.TrailingIcon = null;
@@ -272,8 +266,7 @@
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel8.Location = new System.Drawing.Point(400, 129);
-            this.materialLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel8.Location = new System.Drawing.Point(533, 159);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(119, 19);
@@ -285,8 +278,7 @@
             this.materialLabel9.AutoSize = true;
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.Location = new System.Drawing.Point(400, 193);
-            this.materialLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel9.Location = new System.Drawing.Point(533, 238);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
             this.materialLabel9.Size = new System.Drawing.Size(106, 19);
@@ -298,8 +290,7 @@
             this.materialLabel10.AutoSize = true;
             this.materialLabel10.Depth = 0;
             this.materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.Location = new System.Drawing.Point(400, 249);
-            this.materialLabel10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel10.Location = new System.Drawing.Point(533, 306);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
             this.materialLabel10.Size = new System.Drawing.Size(69, 19);
@@ -313,30 +304,30 @@
             this.txtSoDemLuuTru.Depth = 0;
             this.txtSoDemLuuTru.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSoDemLuuTru.LeadingIcon = null;
-            this.txtSoDemLuuTru.Location = new System.Drawing.Point(526, 168);
-            this.txtSoDemLuuTru.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoDemLuuTru.Location = new System.Drawing.Point(701, 207);
+            this.txtSoDemLuuTru.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoDemLuuTru.MaxLength = 50;
             this.txtSoDemLuuTru.MouseState = MaterialSkin.MouseState.OUT;
             this.txtSoDemLuuTru.Multiline = false;
             this.txtSoDemLuuTru.Name = "txtSoDemLuuTru";
-            this.txtSoDemLuuTru.Size = new System.Drawing.Size(156, 50);
+            this.txtSoDemLuuTru.Size = new System.Drawing.Size(250, 50);
             this.txtSoDemLuuTru.TabIndex = 17;
             this.txtSoDemLuuTru.Text = "";
             this.txtSoDemLuuTru.TrailingIcon = null;
             // 
             // txtNgayDen
             // 
-            this.txtNgayDen.Location = new System.Drawing.Point(526, 245);
-            this.txtNgayDen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNgayDen.Location = new System.Drawing.Point(701, 302);
+            this.txtNgayDen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNgayDen.Name = "txtNgayDen";
-            this.txtNgayDen.Size = new System.Drawing.Size(151, 20);
+            this.txtNgayDen.Size = new System.Drawing.Size(250, 22);
             this.txtNgayDen.TabIndex = 19;
             // 
             // fRoomBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 406);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.txtNgayDen);
             this.Controls.Add(this.materialLabel10);
             this.Controls.Add(this.txtSoDemLuuTru);
@@ -356,9 +347,9 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fRoomBook";
-            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Text = "Đặt phòng";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,6 +16,7 @@ namespace HotelManagement.DAO
 
         public static PhongRepo Instance { get {  return instance; } }
 
+        public static PhongRepo GetInstance() { return instance; }
         public void save(Phong phong)
         {
             db.Phongs.Add(phong);
@@ -43,5 +44,10 @@ namespace HotelManagement.DAO
             return db.Phongs.SingleOrDefault(p => p.sophong == numberRoom);
         }
 
+        //Tan them
+        public List<Phong> findAll(float theoGia, int theoSoPhong) 
+        {
+            return db.Phongs.Where(p => p.gia < theoGia).ToList();
+        }
     }
 }
