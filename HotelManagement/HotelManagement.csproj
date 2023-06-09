@@ -92,6 +92,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Class1.cs" />
+    <Compile Include="GUI\fChinhSuaTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fChinhSuaTaiKhoan.Designer.cs">
+      <DependentUpon>fChinhSuaTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fCreateServiceInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,18 @@
     <Compile Include="GUI\fEmployee.Designer.cs">
       <DependentUpon>fEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fGhiNhanThongTinHanhLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fGhiNhanThongTinHanhLy.Designer.cs">
+      <DependentUpon>fGhiNhanThongTinHanhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fKeToanHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fKeToanHome.Designer.cs">
+      <DependentUpon>fKeToanHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +139,12 @@
     </Compile>
     <Compile Include="GUI\fOnlinePayment.Designer.cs">
       <DependentUpon>fOnlinePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fRoomBook.cs">
       <SubType>Form</SubType>
@@ -139,6 +163,12 @@
     </Compile>
     <Compile Include="GUI\fTakeFeedback.Designer.cs">
       <DependentUpon>fTakeFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fThemTaiKhoan.Designer.cs">
+      <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="HanhLy.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
@@ -217,14 +247,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fChinhSuaTaiKhoan.resx">
+      <DependentUpon>fChinhSuaTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fCreateServiceInvoice.resx">
       <DependentUpon>fCreateServiceInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fGhiNhanThongTinHanhLy.resx">
+      <DependentUpon>fGhiNhanThongTinHanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fKeToanHome.resx">
+      <DependentUpon>fKeToanHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fOnlinePayment.resx">
       <DependentUpon>fOnlinePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyTaiKhoan.resx">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fRoomBook.resx">
       <DependentUpon>fRoomBook.cs</DependentUpon>
@@ -234,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fTakeFeedback.resx">
       <DependentUpon>fTakeFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fThemTaiKhoan.resx">
+      <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

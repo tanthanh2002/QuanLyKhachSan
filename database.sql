@@ -308,4 +308,4 @@ CREATE TABLE PhieuSuDungDichVuChiTiet
 --INSERT INTO KhachHang(tenkhachhang,diachi,sodienthoai,sofax,email,cccd) VALUES (N'Lương Văn Triều',N'Q3, TPHCM','098283444','277702','email4@gmail.com','1233232');
 --INSERT INTO KhachHang(tenkhachhang,diachi,sodienthoai,sofax,email,cccd) VALUES (N'Nguyễn Hoài Sơn',N'Q5, TPHCM','0985583','220222','email5@gmail.com','19999232');
 
---INSERT INTO TaiKhoan(tentaikhoan,matkhau,loaitaikhoan) VALUES('khachhang','123456','khachhang',0);
+--INSERT INTO TaiKhoan(tentaikhoan,matkhau,loaitaikhoan,bikhoa) VALUES('khachhang','123456','khachhang',0);
