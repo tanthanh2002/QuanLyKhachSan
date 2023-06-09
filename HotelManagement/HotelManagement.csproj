@@ -63,13 +63,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BcryptEncoder.cs" />
+    <Compile Include="BUS\DatPhongService.cs" />
     <Compile Include="BUS\KhachHangService.cs" />
     <Compile Include="BUS\PhieuDanhGiaService.cs" />
+    <Compile Include="BUS\PhieuSuDungDichVuChiTietService.cs" />
     <Compile Include="BUS\TaiKhoanService.cs" />
+    <Compile Include="BUS\ThanhToanCocOnlineService.cs" />
+    <Compile Include="BUS\TimPhongService.cs" />
     <Compile Include="DAO\HoaDonRepo.cs" />
     <Compile Include="DAO\KhachHangRepo.cs" />
     <Compile Include="DAO\PhieuDanhGiaRepo.cs" />
     <Compile Include="DAO\PhieuDatPhongRepo.cs" />
+    <Compile Include="DAO\PhieuSuDungDichVuChiTietRepo.cs" />
     <Compile Include="DAO\PhongRepo.cs" />
     <Compile Include="DAO\TaiKhoanRepo.cs" />
     <Compile Include="DAO\ThanhVienRepo.cs" />

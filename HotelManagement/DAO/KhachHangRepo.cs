@@ -43,5 +43,13 @@ namespace HotelManagement.DAO
         {
             return db.KhachHangs.Find(makhachhang);
         }
+
+        //Tan them
+
+        public KhachHang findByCCCD(string CCCD)
+        {
+            return db.KhachHangs.SingleOrDefault(p => p.cccd == CCCD);
+        }
+
     }
 }

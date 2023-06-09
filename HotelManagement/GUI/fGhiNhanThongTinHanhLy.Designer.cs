@@ -98,7 +98,7 @@
             this.materialTextBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.materialTextBox21.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBox21.Depth = 0;
-            this.materialTextBox21.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox21.HideSelection = true;
             this.materialTextBox21.LeadingIcon = null;
             this.materialTextBox21.Location = new System.Drawing.Point(256, 113);
@@ -126,7 +126,7 @@
             this.materialTextBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.materialTextBox22.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBox22.Depth = 0;
-            this.materialTextBox22.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox22.HideSelection = true;
             this.materialTextBox22.LeadingIcon = null;
             this.materialTextBox22.Location = new System.Drawing.Point(256, 183);
@@ -154,7 +154,7 @@
             this.materialTextBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.materialTextBox23.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.materialTextBox23.Depth = 0;
-            this.materialTextBox23.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox23.HideSelection = true;
             this.materialTextBox23.LeadingIcon = null;
             this.materialTextBox23.Location = new System.Drawing.Point(256, 254);
