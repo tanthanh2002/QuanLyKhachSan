@@ -29,7 +29,7 @@ namespace HotelManagement.DAO
 
         public void save(TaiKhoan taiKhoan)
         {
-            db.TaiKhoans.Add(taiKhoan);
+            db.TaiKhoans.AddOrUpdate(taiKhoan);
             db.SaveChanges();
         }
 

@@ -18,5 +18,12 @@ namespace HotelManagement.DAO
         {
             return db.HoaDons.SingleOrDefault(p => p.PhieuDatPhong.maphieudatphong == madatphong);
         }
+
+        public List<HoaDon> findByDate(DateTime date)
+        {
+            return db.HoaDons.Where(p => p.PhieuDatPhong.ngayden == date).ToList();
+        }
+
+
     }
 }
