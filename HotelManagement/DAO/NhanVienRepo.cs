@@ -25,5 +25,9 @@ namespace HotelManagement.DAO
             db.NhanViens.AddOrUpdate(nhanVien);
             db.SaveChanges();
         }
+
+        public void update(NhanVien nhanVien) { 
+            db.NhanViens.AddOrUpdate(nhanVien) ; db.SaveChanges();
+        }
     }
 }

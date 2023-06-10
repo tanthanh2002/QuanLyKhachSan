@@ -88,7 +88,7 @@ namespace HotelManagement.BUS
                 }
                 else
                 {
-                    throw new Exception("old password incorrect");
+                    throw new Exception("old password incorrect.");
                 }
             }catch(Exception e)
             {
