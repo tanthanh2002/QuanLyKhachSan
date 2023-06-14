@@ -72,7 +72,7 @@
     <Property Name="tongtien" Type="float" Nullable="false" />
     <Property Name="sotiendathanhtoan" Type="float" Nullable="false" />
     <Property Name="maphieudatphong" Type="int" Nullable="false" />
-    <Property Name="maketoan" Type="int" Nullable="false" />
+    <Property Name="maketoan" Type="int" />
     <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="KhachHang">
@@ -138,8 +138,8 @@
     <Property Name="sodemluutru" Type="int" Nullable="false" />
     <Property Name="ngayden" Type="date" Nullable="false" />
     <Property Name="makhachhang" Type="int" Nullable="false" />
-    <Property Name="nhanviencheckout" Type="int" Nullable="false" />
-    <Property Name="nhanvienvesinh" Type="int" Nullable="false" />
+    <Property Name="nhanviencheckout" Type="int" />
+    <Property Name="nhanvienvesinh" Type="int" />
   </EntityType>
   <EntityType Name="PhieuDatPhongChiTiet">
     <Key>
@@ -336,7 +336,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_HoaDon_maketoan">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -432,7 +432,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_PhieuDatPhong_nhanviencheckout">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -444,7 +444,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_PhieuDatPhong_nhanvienvesinh">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">

@@ -41,6 +41,21 @@ namespace HotelManagement.GUI
             {
                 String type = taiKhoanService.findByUsername(username).loaitaikhoan;
                 MessageBox.Show("Đăng nhập thành công! Bạn là " + type);
+                /////////////////////////////////////////
+                if (type == "ketoan")
+                {
+                    fKeToanHome ketoan = new fKeToanHome();
+                    ketoan.Show();
+                    this.Visible = false;
+                }
+                if (type == "admin")
+                {
+                    fQuanLyTaiKhoan quanly = new fQuanLyTaiKhoan();
+                    quanly.Show();
+                    this.Visible=false;
+                }
+                else { MessageBox.Show("không thể đăng nhập, bạn không có tài khoản!!"); }
+                ////////////////////////////////////////////
             }
             else
             {

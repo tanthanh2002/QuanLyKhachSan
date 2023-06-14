@@ -77,7 +77,7 @@
           <Property Name="tongtien" Type="float" Nullable="false" />
           <Property Name="sotiendathanhtoan" Type="float" Nullable="false" />
           <Property Name="maphieudatphong" Type="int" Nullable="false" />
-          <Property Name="maketoan" Type="int" Nullable="false" />
+          <Property Name="maketoan" Type="int" />
           <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="KhachHang">
@@ -143,8 +143,8 @@
           <Property Name="sodemluutru" Type="int" Nullable="false" />
           <Property Name="ngayden" Type="date" Nullable="false" />
           <Property Name="makhachhang" Type="int" Nullable="false" />
-          <Property Name="nhanviencheckout" Type="int" Nullable="false" />
-          <Property Name="nhanvienvesinh" Type="int" Nullable="false" />
+          <Property Name="nhanviencheckout" Type="int" />
+          <Property Name="nhanvienvesinh" Type="int" />
         </EntityType>
         <EntityType Name="PhieuDatPhongChiTiet">
           <Key>
@@ -341,7 +341,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_HoaDon_maketoan">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -437,7 +437,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanviencheckout">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
           <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -449,7 +449,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanvienvesinh">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
           <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -990,7 +990,7 @@
           <Property Name="tongtien" Type="Double" Nullable="false" />
           <Property Name="sotiendathanhtoan" Type="Double" Nullable="false" />
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
-          <Property Name="maketoan" Type="Int32" Nullable="false" />
+          <Property Name="maketoan" Type="Int32" />
           <Property Name="tinhtrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_HoaDon_maketoan" FromRole="HoaDon" ToRole="NhanVien" />
           <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_HoaDon_maphieudatphong" FromRole="HoaDon" ToRole="PhieuDatPhong" />
@@ -1073,8 +1073,8 @@
           <Property Name="sodemluutru" Type="Int32" Nullable="false" />
           <Property Name="ngayden" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="makhachhang" Type="Int32" Nullable="false" />
-          <Property Name="nhanviencheckout" Type="Int32" Nullable="false" />
-          <Property Name="nhanvienvesinh" Type="Int32" Nullable="false" />
+          <Property Name="nhanviencheckout" Type="Int32" />
+          <Property Name="nhanvienvesinh" Type="Int32" />
           <NavigationProperty Name="HoaDons" Relationship="HotelManagementModel.fk_HoaDon_maphieudatphong" FromRole="PhieuDatPhong" ToRole="HoaDon" />
           <NavigationProperty Name="KhachHang" Relationship="HotelManagementModel.fk_PhieuDatPhong_makhachhang" FromRole="PhieuDatPhong" ToRole="KhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" FromRole="PhieuDatPhong" ToRole="NhanVien" />
@@ -1304,7 +1304,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_HoaDon_maketoan">
-          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
           <End Type="HotelManagementModel.HoaDon" Role="HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -1376,7 +1376,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanviencheckout">
-          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
           <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -1388,7 +1388,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanvienvesinh">
-          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
           <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
