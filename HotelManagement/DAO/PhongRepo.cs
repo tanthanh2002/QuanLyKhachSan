@@ -49,5 +49,12 @@ namespace HotelManagement.DAO
         {
             return db.Phongs.Where(p => p.gia < theoGia).ToList();
         }
+
+        public List<Phong> findByBiKhoa()
+        {
+            var s = db.Phongs.Where(p => p.bikhoa == true);
+            return s.ToList();
+        }
+           
     }
 }

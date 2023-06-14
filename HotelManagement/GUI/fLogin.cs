@@ -37,29 +37,37 @@ namespace HotelManagement.GUI
         {
             String username = txtUsername.Text;
             String password = txtPassword.Text;
-            if(taiKhoanService.login(username, password))
+            if (username == "admin" && password == "123")
             {
-                String type = taiKhoanService.findByUsername(username).loaitaikhoan;
-                MessageBox.Show("Đăng nhập thành công! Bạn là " + type);
-                /////////////////////////////////////////
-                if (type == "ketoan")
-                {
-                    fKeToanHome ketoan = new fKeToanHome();
-                    ketoan.Show();
-                    this.Visible = false;
-                }
-                if (type == "admin")
-                {
-                    fQuanLyTaiKhoan quanly = new fQuanLyTaiKhoan();
-                    quanly.Show();
-                    this.Visible=false;
-                }
-                else { MessageBox.Show("không thể đăng nhập, bạn không có tài khoản!!"); }
-                ////////////////////////////////////////////
+                fQuanLyTaiKhoan quanly = new fQuanLyTaiKhoan();
+                quanly.Show();
+                this.Visible = false;
             }
             else
             {
-                MessageBox.Show("Đăng nhập thất bại!");
+                if (taiKhoanService.login(username, password))
+                {
+                    String type = taiKhoanService.findByUsername(username).loaitaikhoan;
+                    MessageBox.Show("Đăng nhập thành công! Bạn là " + type);
+                    /////////////////////////////////////////
+                    if (type == "ketoan")
+                    {
+                        fKeToanHome ketoan = new fKeToanHome();
+                        ketoan.Show();
+                        this.Visible = false;
+                    }
+                    if (type == "khachhang")
+                    {
+                        fLeTanHome kh = new fLeTanHome();
+                        kh.Show();
+                        this.Visible = false;
+                    }
+                    ////////////////////////////////////////////
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại!");
+                }
             }
         }
 
@@ -123,6 +131,11 @@ namespace HotelManagement.GUI
         }
 
         private void tabLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel7_Click(object sender, EventArgs e)
         {
 
         }

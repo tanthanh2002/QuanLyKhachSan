@@ -69,6 +69,7 @@
     <Compile Include="BUS\NhanVienService.cs" />
     <Compile Include="BUS\PhieuDanhGiaService.cs" />
     <Compile Include="BUS\PhieuSuDungDichVuChiTietService.cs" />
+    <Compile Include="BUS\PhongService.cs" />
     <Compile Include="BUS\TaiKhoanService.cs" />
     <Compile Include="BUS\ThanhToanCocOnlineService.cs" />
     <Compile Include="BUS\TimPhongService.cs" />
@@ -118,6 +119,12 @@
     <Compile Include="GUI\fCustomer.Designer.cs">
       <DependentUpon>fCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDichVu.Designer.cs">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +142,12 @@
     </Compile>
     <Compile Include="GUI\fKeToanHome.Designer.cs">
       <DependentUpon>fKeToanHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLeTanHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLeTanHome.Designer.cs">
+      <DependentUpon>fLeTanHome.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fLogin.cs">
       <SubType>Form</SubType>
@@ -261,11 +274,17 @@
     <EmbeddedResource Include="GUI\fCreateServiceInvoice.resx">
       <DependentUpon>fCreateServiceInvoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fDichVu.resx">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fGhiNhanThongTinHanhLy.resx">
       <DependentUpon>fGhiNhanThongTinHanhLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fKeToanHome.resx">
       <DependentUpon>fKeToanHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLeTanHome.resx">
+      <DependentUpon>fLeTanHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -306,6 +325,7 @@
       <DependentUpon>HotelEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Phong.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
