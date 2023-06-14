@@ -77,7 +77,7 @@
           <Property Name="tongtien" Type="float" Nullable="false" />
           <Property Name="sotiendathanhtoan" Type="float" Nullable="false" />
           <Property Name="maphieudatphong" Type="int" Nullable="false" />
-          <Property Name="maketoan" Type="int" />
+          <Property Name="maketoan" Type="int" Nullable="false" />
           <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="KhachHang">
@@ -143,8 +143,8 @@
           <Property Name="sodemluutru" Type="int" Nullable="false" />
           <Property Name="ngayden" Type="date" Nullable="false" />
           <Property Name="makhachhang" Type="int" Nullable="false" />
-          <Property Name="nhanviencheckout" Type="int" />
-          <Property Name="nhanvienvesinh" Type="int" />
+          <Property Name="nhanviencheckout" Type="int" Nullable="false" />
+          <Property Name="nhanvienvesinh" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuDatPhongChiTiet">
           <Key>
@@ -216,6 +216,16 @@
           <Property Name="gia" Type="float" Nullable="false" />
           <Property Name="bikhoa" Type="bit" Nullable="false" />
           <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -341,7 +351,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_HoaDon_maketoan">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -437,7 +447,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanviencheckout">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
           <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -449,7 +459,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanvienvesinh">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
           <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -652,6 +662,7 @@
           <EntitySet Name="PhieuSuDungThucPham" EntityType="Self.PhieuSuDungThucPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhieuVanChuyenHanhLy" EntityType="Self.PhieuVanChuyenHanhLy" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThanhVien" EntityType="Self.ThanhVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThucPham" EntityType="Self.ThucPham" Schema="dbo" store:Type="Tables" />
@@ -805,6 +816,7 @@
           <EntitySet Name="PhieuSuDungThucPhams" EntityType="HotelManagementModel.PhieuSuDungThucPham" />
           <EntitySet Name="PhieuVanChuyenHanhLies" EntityType="HotelManagementModel.PhieuVanChuyenHanhLy" />
           <EntitySet Name="Phongs" EntityType="HotelManagementModel.Phong" />
+          <EntitySet Name="sysdiagrams" EntityType="HotelManagementModel.sysdiagram" />
           <EntitySet Name="TaiKhoans" EntityType="HotelManagementModel.TaiKhoan" />
           <EntitySet Name="ThanhViens" EntityType="HotelManagementModel.ThanhVien" />
           <EntitySet Name="ThucPhams" EntityType="HotelManagementModel.ThucPham" />
@@ -990,7 +1002,7 @@
           <Property Name="tongtien" Type="Double" Nullable="false" />
           <Property Name="sotiendathanhtoan" Type="Double" Nullable="false" />
           <Property Name="maphieudatphong" Type="Int32" Nullable="false" />
-          <Property Name="maketoan" Type="Int32" />
+          <Property Name="maketoan" Type="Int32" Nullable="false" />
           <Property Name="tinhtrang" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_HoaDon_maketoan" FromRole="HoaDon" ToRole="NhanVien" />
           <NavigationProperty Name="PhieuDatPhong" Relationship="HotelManagementModel.fk_HoaDon_maphieudatphong" FromRole="HoaDon" ToRole="PhieuDatPhong" />
@@ -1073,8 +1085,8 @@
           <Property Name="sodemluutru" Type="Int32" Nullable="false" />
           <Property Name="ngayden" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="makhachhang" Type="Int32" Nullable="false" />
-          <Property Name="nhanviencheckout" Type="Int32" />
-          <Property Name="nhanvienvesinh" Type="Int32" />
+          <Property Name="nhanviencheckout" Type="Int32" Nullable="false" />
+          <Property Name="nhanvienvesinh" Type="Int32" Nullable="false" />
           <NavigationProperty Name="HoaDons" Relationship="HotelManagementModel.fk_HoaDon_maphieudatphong" FromRole="PhieuDatPhong" ToRole="HoaDon" />
           <NavigationProperty Name="KhachHang" Relationship="HotelManagementModel.fk_PhieuDatPhong_makhachhang" FromRole="PhieuDatPhong" ToRole="KhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="HotelManagementModel.fk_PhieuDatPhong_nhanviencheckout" FromRole="PhieuDatPhong" ToRole="NhanVien" />
@@ -1173,6 +1185,16 @@
           <NavigationProperty Name="PhieuDatPhongChiTiets" Relationship="HotelManagementModel.fk_PhieuDatPhongChiTiet_maphong" FromRole="Phong" ToRole="PhieuDatPhongChiTiet" />
           <NavigationProperty Name="KhuyenMais" Relationship="HotelManagementModel.ApDungKhuyenMai" FromRole="Phong" ToRole="KhuyenMai" />
           <NavigationProperty Name="DichVus" Relationship="HotelManagementModel.CungCapDichVu" FromRole="Phong" ToRole="DichVu" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -1304,7 +1326,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_HoaDon_maketoan">
-          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
           <End Type="HotelManagementModel.HoaDon" Role="HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -1376,7 +1398,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanviencheckout">
-          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
           <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -1388,7 +1410,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_PhieuDatPhong_nhanvienvesinh">
-          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="HotelManagementModel.NhanVien" Role="NhanVien" Multiplicity="1" />
           <End Type="HotelManagementModel.PhieuDatPhong" Role="PhieuDatPhong" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NhanVien">
@@ -1766,6 +1788,17 @@
                 <ScalarProperty Name="gia" ColumnName="gia" />
                 <ScalarProperty Name="sophong" ColumnName="sophong" />
                 <ScalarProperty Name="maphong" ColumnName="maphong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="HotelManagementModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

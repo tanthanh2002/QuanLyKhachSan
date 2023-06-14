@@ -21,7 +21,7 @@ namespace HotelManagement
         public double tongtien { get; set; }
         public double sotiendathanhtoan { get; set; }
         public int maphieudatphong { get; set; }
-        public Nullable<int> maketoan { get; set; }
+        public int maketoan { get; set; }
         public string tinhtrang { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }

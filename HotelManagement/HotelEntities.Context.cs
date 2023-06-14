@@ -44,6 +44,7 @@ namespace HotelManagement
         public virtual DbSet<PhieuSuDungThucPham> PhieuSuDungThucPhams { get; set; }
         public virtual DbSet<PhieuVanChuyenHanhLy> PhieuVanChuyenHanhLies { get; set; }
         public virtual DbSet<Phong> Phongs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<ThanhVien> ThanhViens { get; set; }
         public virtual DbSet<ThucPham> ThucPhams { get; set; }

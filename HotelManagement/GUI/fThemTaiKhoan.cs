@@ -45,35 +45,24 @@ namespace HotelManagement.GUI
             taiKhoan.loaitaikhoan = txtLoaiTK.Text;
             taiKhoan.bikhoa = false;
             
-            try
-            {
-                taiKhoanService.save(taiKhoan);
-                MessageBox.Show("Đăng ký tài khoản thành công!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.StackTrace);
-                MessageBox.Show("Đăng ký tài khoản thất bại!");
-            }
-
-
-
             NhanVien nv = new NhanVien();
             nv.ten=txtTenNV.Text;
             nv.loai=txtLoaiNV.Text;
             nv.luong=double.Parse(txtLuong.Text);
             nv.trangthai = "còn làm việc";
             //nv.ngaybatdau=
-            nv.mataikhoan = taiKhoanService.findByUsername(txtTK.Text).mataikhoan;
             try
             {
-                nhanVienService.save(nv);            
+                nv.TaiKhoan = taiKhoan;
+                nhanVienService.save(nv);
+
                 MessageBox.Show("Đăng ký thành công!");
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
-                MessageBox.Show("Đăng ký thất bại!");
+                //Console.WriteLine(ex.StackTrace);
+
+                MessageBox.Show(ex.Message);
             }
 
         }

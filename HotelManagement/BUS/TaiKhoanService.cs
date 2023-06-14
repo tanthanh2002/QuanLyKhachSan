@@ -68,7 +68,7 @@ namespace HotelManagement.BUS
         public void unlockTaiKhoan(String username)
         {
             TaiKhoan taiKhoan = repo.findByUsername(username);
-            taiKhoan.bikhoa = true;
+            taiKhoan.bikhoa = false;
             repo.save(taiKhoan);
         }
 
@@ -77,18 +77,21 @@ namespace HotelManagement.BUS
             try
             {
                 TaiKhoan taiKhoan = repo.findByUsername(username);
-                if(taiKhoan != null)
+                if (taiKhoan == null)
                 {
                     throw new Exception("username not found!");
                 }
-                if (bcryptEncoder.verify(oldPassword, taiKhoan.matkhau))
-                {
-                    taiKhoan.matkhau = bcryptEncoder.HashPassword(newPassword);
-                    repo.save(taiKhoan);
-                }
                 else
                 {
-                    throw new Exception("old password incorrect.");
+                    if (bcryptEncoder.verify(oldPassword, taiKhoan.matkhau)==true)
+                    {
+                        taiKhoan.matkhau = bcryptEncoder.HashPassword(newPassword);
+                        repo.save(taiKhoan);
+                    }
+                    else
+                    {
+                        throw new Exception("old password incorrect.");
+                    }
                 }
             }catch(Exception e)
             {

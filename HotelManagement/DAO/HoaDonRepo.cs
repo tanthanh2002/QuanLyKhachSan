@@ -25,13 +25,28 @@ namespace HotelManagement.DAO
         {
             return db.HoaDons.Where(p => p.PhieuDatPhong.ngayden == date).ToList();
         }
-
+        public List<HoaDon> getAll()
+        {
+            var result = from c in db.HoaDons select c;
+            return result.ToList();
+        }
 
 
         public void addInvoice(HoaDon hoaDon)
         {
             db.HoaDons.Add(hoaDon);
             db.SaveChanges();
+        }
+
+        public Double tinhtong(DateTime date)
+        {
+            double tong = 0;
+            var hoadonss = instance.findByDate(date);
+            foreach (var hoadon in hoadonss)
+            {
+                tong += hoadon.tongtien;
+            }
+            return tong;
         }
 
     }

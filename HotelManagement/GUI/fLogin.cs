@@ -43,8 +43,12 @@ namespace HotelManagement.GUI
                 quanly.Show();
                 this.Visible = false;
             }
+<<<<<<< HEAD
             else
             {
+=======
+            else {
+>>>>>>> a52655bd379f4a22deebc24ae7fc65d482841d17
                 if (taiKhoanService.login(username, password))
                 {
                     String type = taiKhoanService.findByUsername(username).loaitaikhoan;
@@ -56,11 +60,17 @@ namespace HotelManagement.GUI
                         ketoan.Show();
                         this.Visible = false;
                     }
+<<<<<<< HEAD
                     if (type == "khachhang")
                     {
                         fLeTanHome kh = new fLeTanHome();
                         kh.Show();
                         this.Visible = false;
+=======
+                    else
+                    {
+                        MessageBox.Show("không thể đăng nhập, bạn không có tài khoản!!"); 
+>>>>>>> a52655bd379f4a22deebc24ae7fc65d482841d17
                     }
                     ////////////////////////////////////////////
                 }

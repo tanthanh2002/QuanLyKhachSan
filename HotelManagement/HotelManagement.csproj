@@ -253,6 +253,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
