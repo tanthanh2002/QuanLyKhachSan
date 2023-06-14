@@ -60,8 +60,9 @@ namespace HotelManagement.GUI
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.StackTrace);
-                MessageBox.Show("Đăng ký thất bại!");
+                //Console.WriteLine(ex.StackTrace);
+
+                MessageBox.Show(ex.Message);
             }
 
         }

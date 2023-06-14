@@ -22,8 +22,13 @@ namespace HotelManagement.DAO
         
         public void save(NhanVien nhanVien)
         {
-            db.NhanViens.AddOrUpdate(nhanVien);
-            db.SaveChanges();
+            try {
+                db.NhanViens.AddOrUpdate(nhanVien);
+                db.SaveChanges();
+            }catch (Exception e) {
+                Console.WriteLine(e.StackTrace);
+                throw new Exception(e.Message);
+            }
         }
 
         public void update(NhanVien nhanVien) { 
