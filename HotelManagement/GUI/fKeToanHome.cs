@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using HotelManagement.BUS;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace HotelManagement.GUI
 {
     public partial class fKeToanHome : MaterialSkin.Controls.MaterialForm
     {
+        HoaDonService hoaDonService = HoaDonService.getInstance();
+
         public fKeToanHome()
         {
             InitializeComponent();
@@ -20,10 +23,15 @@ namespace HotelManagement.GUI
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            
+            load();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void load()
         {
 
         }

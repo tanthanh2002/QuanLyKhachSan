@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="BUS\BcryptEncoder.cs" />
     <Compile Include="BUS\DatPhongService.cs" />
+    <Compile Include="BUS\HoaDonService.cs" />
     <Compile Include="BUS\KhachHangService.cs" />
     <Compile Include="BUS\NhanVienService.cs" />
     <Compile Include="BUS\PhieuDanhGiaService.cs" />

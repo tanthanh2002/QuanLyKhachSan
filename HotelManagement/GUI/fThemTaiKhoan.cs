@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using HotelManagement.BUS;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HotelManagement.GUI
 {
     public partial class fThemTaiKhoan : MaterialSkin.Controls.MaterialForm
     {
+        private BcryptEncoder bcryptEncoder = BcryptEncoder.getInstance();
+        private TaiKhoanService taiKhoanService = TaiKhoanService.getInstance();
+        private NhanVienService nhanVienService= NhanVienService.getInstance();
+
         public fThemTaiKhoan()
         {
             InitializeComponent();
@@ -23,9 +29,53 @@ namespace HotelManagement.GUI
 
         }
 
+
+
         private void materialLabel1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btThemTKNV_Click(object sender, EventArgs e)
+        {
+
+            TaiKhoan taiKhoan = new TaiKhoan();
+            taiKhoan.tentaikhoan = txtTK.Text.ToString();
+            taiKhoan.matkhau = bcryptEncoder.HashPassword(txtMK.Text);
+            taiKhoan.loaitaikhoan = txtLoaiTK.Text;
+            taiKhoan.bikhoa = false;
+            
+            try
+            {
+                taiKhoanService.save(taiKhoan);
+                MessageBox.Show("Đăng ký tài khoản thành công!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                MessageBox.Show("Đăng ký tài khoản thất bại!");
+            }
+
+
+
+            NhanVien nv = new NhanVien();
+            nv.ten=txtTenNV.Text;
+            nv.loai=txtLoaiNV.Text;
+            nv.luong=double.Parse(txtLuong.Text);
+            nv.trangthai = "còn làm việc";
+            //nv.ngaybatdau=
+            nv.mataikhoan = taiKhoanService.findByUsername(txtTK.Text).mataikhoan;
+            try
+            {
+                nhanVienService.save(nv);            
+                MessageBox.Show("Đăng ký thành công!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                MessageBox.Show("Đăng ký thất bại!");
+            }
+
         }
     }
 }

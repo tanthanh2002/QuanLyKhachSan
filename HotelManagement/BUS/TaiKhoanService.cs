@@ -46,7 +46,7 @@ namespace HotelManagement.BUS
             }
             
         }
-
+        public List<TaiKhoan> getAll() { return repo.getAll(); }
 
         public void save(TaiKhoan taiKhoan)
         {

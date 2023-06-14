@@ -27,6 +27,8 @@ namespace HotelManagement.DAO
             }
         }
 
+
+
         public void save(TaiKhoan taiKhoan)
         {
             db.TaiKhoans.AddOrUpdate(taiKhoan);
@@ -37,6 +39,11 @@ namespace HotelManagement.DAO
         {
             db.TaiKhoans.AddOrUpdate(taiKhoan);
             db.SaveChanges();
+        }
+
+        public List<TaiKhoan> getAll(){
+            var result = from c in db.TaiKhoans select c;
+            return result.ToList();
         }
     }
 }

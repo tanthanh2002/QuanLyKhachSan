@@ -34,8 +34,8 @@
             this.btChinhSua = new MaterialSkin.Controls.MaterialButton();
             this.btKhoaTK = new MaterialSkin.Controls.MaterialButton();
             this.btMoTK = new MaterialSkin.Controls.MaterialButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewdstk = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdstk)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -55,7 +55,7 @@
             this.txtMaTK.AnimateReadOnly = false;
             this.txtMaTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaTK.Depth = 0;
-            this.txtMaTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMaTK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtMaTK.LeadingIcon = null;
             this.txtMaTK.Location = new System.Drawing.Point(145, 86);
             this.txtMaTK.MaxLength = 50;
@@ -85,6 +85,7 @@
             this.btTHemTK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btTHemTK.UseAccentColor = false;
             this.btTHemTK.UseVisualStyleBackColor = true;
+            this.btTHemTK.Click += new System.EventHandler(this.btTHemTK_Click);
             // 
             // btChinhSua
             // 
@@ -104,6 +105,7 @@
             this.btChinhSua.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btChinhSua.UseAccentColor = false;
             this.btChinhSua.UseVisualStyleBackColor = true;
+            this.btChinhSua.Click += new System.EventHandler(this.btChinhSua_Click);
             // 
             // btKhoaTK
             // 
@@ -123,6 +125,7 @@
             this.btKhoaTK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btKhoaTK.UseAccentColor = false;
             this.btKhoaTK.UseVisualStyleBackColor = true;
+            this.btKhoaTK.Click += new System.EventHandler(this.btKhoaTK_Click);
             // 
             // btMoTK
             // 
@@ -142,23 +145,24 @@
             this.btMoTK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btMoTK.UseAccentColor = false;
             this.btMoTK.UseVisualStyleBackColor = true;
+            this.btMoTK.Click += new System.EventHandler(this.btMoTK_Click);
             // 
-            // dataGridView1
+            // dataGridViewdstk
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 218);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(876, 287);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridViewdstk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewdstk.Location = new System.Drawing.Point(18, 218);
+            this.dataGridViewdstk.Name = "dataGridViewdstk";
+            this.dataGridViewdstk.RowHeadersWidth = 51;
+            this.dataGridViewdstk.RowTemplate.Height = 24;
+            this.dataGridViewdstk.Size = new System.Drawing.Size(876, 287);
+            this.dataGridViewdstk.TabIndex = 6;
             // 
             // fQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 514);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewdstk);
             this.Controls.Add(this.btMoTK);
             this.Controls.Add(this.btKhoaTK);
             this.Controls.Add(this.btChinhSua);
@@ -167,7 +171,7 @@
             this.Controls.Add(this.materialLabel1);
             this.Name = "fQuanLyTaiKhoan";
             this.Text = "Quản Lý Tài Khoản";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdstk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,6 +185,6 @@
         private MaterialSkin.Controls.MaterialButton btChinhSua;
         private MaterialSkin.Controls.MaterialButton btKhoaTK;
         private MaterialSkin.Controls.MaterialButton btMoTK;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewdstk;
     }
 }

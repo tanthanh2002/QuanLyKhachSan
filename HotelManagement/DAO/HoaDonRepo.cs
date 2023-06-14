@@ -19,7 +19,7 @@ namespace HotelManagement.DAO
         {
             return db.HoaDons.SingleOrDefault(p => p.PhieuDatPhong.maphieudatphong == madatphong);
         }
-<<<<<<< HEAD
+
 
         public List<HoaDon> findByDate(DateTime date)
         {
@@ -27,12 +27,12 @@ namespace HotelManagement.DAO
         }
 
 
-=======
+
         public void addInvoice(HoaDon hoaDon)
         {
             db.HoaDons.Add(hoaDon);
             db.SaveChanges();
         }
->>>>>>> 2c228fe13a5bafe1b1d7cd1885943ec88ebf6556
+
     }
 }

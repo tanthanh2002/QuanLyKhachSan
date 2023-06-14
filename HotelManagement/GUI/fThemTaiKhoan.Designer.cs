@@ -136,6 +136,7 @@
             this.btThemTKNV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btThemTKNV.UseAccentColor = false;
             this.btThemTKNV.UseVisualStyleBackColor = true;
+            this.btThemTKNV.Click += new System.EventHandler(this.btThemTKNV_Click);
             // 
             // txtTK
             // 
@@ -143,7 +144,7 @@
             this.txtTK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtTK.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTK.Depth = 0;
-            this.txtTK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTK.HideSelection = true;
             this.txtTK.LeadingIcon = null;
             this.txtTK.Location = new System.Drawing.Point(212, 93);
@@ -171,7 +172,7 @@
             this.txtMK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtMK.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMK.Depth = 0;
-            this.txtMK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtMK.HideSelection = true;
             this.txtMK.LeadingIcon = null;
             this.txtMK.Location = new System.Drawing.Point(212, 147);
@@ -199,7 +200,7 @@
             this.txtLoaiTK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtLoaiTK.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtLoaiTK.Depth = 0;
-            this.txtLoaiTK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLoaiTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtLoaiTK.HideSelection = true;
             this.txtLoaiTK.LeadingIcon = null;
             this.txtLoaiTK.Location = new System.Drawing.Point(212, 201);
@@ -227,7 +228,7 @@
             this.txtTenNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtTenNV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTenNV.Depth = 0;
-            this.txtTenNV.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTenNV.HideSelection = true;
             this.txtTenNV.LeadingIcon = null;
             this.txtTenNV.Location = new System.Drawing.Point(212, 255);
@@ -255,7 +256,7 @@
             this.txtLoaiNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtLoaiNV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtLoaiNV.Depth = 0;
-            this.txtLoaiNV.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLoaiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtLoaiNV.HideSelection = true;
             this.txtLoaiNV.LeadingIcon = null;
             this.txtLoaiNV.Location = new System.Drawing.Point(212, 309);
@@ -283,7 +284,7 @@
             this.txtLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtLuong.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtLuong.Depth = 0;
-            this.txtLuong.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtLuong.HideSelection = true;
             this.txtLuong.LeadingIcon = null;
             this.txtLuong.Location = new System.Drawing.Point(212, 363);
