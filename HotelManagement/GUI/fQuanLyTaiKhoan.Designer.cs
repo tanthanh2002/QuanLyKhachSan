@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtMaTK = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtTenTK = new MaterialSkin.Controls.MaterialTextBox();
             this.btTHemTK = new MaterialSkin.Controls.MaterialButton();
             this.btChinhSua = new MaterialSkin.Controls.MaterialButton();
             this.btKhoaTK = new MaterialSkin.Controls.MaterialButton();
             this.btMoTK = new MaterialSkin.Controls.MaterialButton();
             this.dataGridViewdstk = new System.Windows.Forms.DataGridView();
+            this.btRS = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdstk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,29 +44,29 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(29, 110);
+            this.materialLabel1.Location = new System.Drawing.Point(29, 104);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(101, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(105, 19);
             this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Mã Tài Khoản";
+            this.materialLabel1.Text = "Tên Tài Khoản";
             // 
-            // txtMaTK
+            // txtTenTK
             // 
-            this.txtMaTK.AnimateReadOnly = false;
-            this.txtMaTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMaTK.Depth = 0;
-            this.txtMaTK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtMaTK.LeadingIcon = null;
-            this.txtMaTK.Location = new System.Drawing.Point(145, 86);
-            this.txtMaTK.MaxLength = 50;
-            this.txtMaTK.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtMaTK.Multiline = false;
-            this.txtMaTK.Name = "txtMaTK";
-            this.txtMaTK.Size = new System.Drawing.Size(282, 50);
-            this.txtMaTK.TabIndex = 1;
-            this.txtMaTK.Text = "";
-            this.txtMaTK.TrailingIcon = null;
+            this.txtTenTK.AnimateReadOnly = false;
+            this.txtTenTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenTK.Depth = 0;
+            this.txtTenTK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTenTK.LeadingIcon = null;
+            this.txtTenTK.Location = new System.Drawing.Point(226, 88);
+            this.txtTenTK.MaxLength = 50;
+            this.txtTenTK.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtTenTK.Multiline = false;
+            this.txtTenTK.Name = "txtTenTK";
+            this.txtTenTK.Size = new System.Drawing.Size(282, 50);
+            this.txtTenTK.TabIndex = 1;
+            this.txtTenTK.Text = "";
+            this.txtTenTK.TrailingIcon = null;
             // 
             // btTHemTK
             // 
@@ -156,18 +157,41 @@
             this.dataGridViewdstk.RowTemplate.Height = 24;
             this.dataGridViewdstk.Size = new System.Drawing.Size(876, 287);
             this.dataGridViewdstk.TabIndex = 6;
+            this.dataGridViewdstk.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewdstk_CellContentClick);
+            // 
+            // btRS
+            // 
+            this.btRS.AutoSize = false;
+            this.btRS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btRS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btRS.Depth = 0;
+            this.btRS.HighEmphasis = true;
+            this.btRS.Icon = null;
+            this.btRS.Location = new System.Drawing.Point(697, 97);
+            this.btRS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btRS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btRS.Name = "btRS";
+            this.btRS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btRS.Size = new System.Drawing.Size(96, 36);
+            this.btRS.TabIndex = 7;
+            this.btRS.Text = "reset";
+            this.btRS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btRS.UseAccentColor = false;
+            this.btRS.UseVisualStyleBackColor = true;
+            this.btRS.Click += new System.EventHandler(this.btRS_Click);
             // 
             // fQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 514);
+            this.Controls.Add(this.btRS);
             this.Controls.Add(this.dataGridViewdstk);
             this.Controls.Add(this.btMoTK);
             this.Controls.Add(this.btKhoaTK);
             this.Controls.Add(this.btChinhSua);
             this.Controls.Add(this.btTHemTK);
-            this.Controls.Add(this.txtMaTK);
+            this.Controls.Add(this.txtTenTK);
             this.Controls.Add(this.materialLabel1);
             this.Name = "fQuanLyTaiKhoan";
             this.Text = "Quản Lý Tài Khoản";
@@ -180,11 +204,12 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialTextBox txtMaTK;
+        private MaterialSkin.Controls.MaterialTextBox txtTenTK;
         private MaterialSkin.Controls.MaterialButton btTHemTK;
         private MaterialSkin.Controls.MaterialButton btChinhSua;
         private MaterialSkin.Controls.MaterialButton btKhoaTK;
         private MaterialSkin.Controls.MaterialButton btMoTK;
         private System.Windows.Forms.DataGridView dataGridViewdstk;
+        private MaterialSkin.Controls.MaterialButton btRS;
     }
 }

@@ -40,19 +40,31 @@ namespace HotelManagement.GUI
 
         private void btChinhSua_Click(object sender, EventArgs e)
         {
-            fChinhSuaTaiKhoan chinhtk = new fChinhSuaTaiKhoan();
+            fChinhSuaTaiKhoan chinhtk = new fChinhSuaTaiKhoan(txtTenTK.Text);
             chinhtk.Show();
         }
 
         private void btKhoaTK_Click(object sender, EventArgs e)
         {
-            taikhoanService.lockTaiKhoan(txtMaTK.Text);
+            taikhoanService.lockTaiKhoan(txtTenTK.Text);
             load();
         }
 
         private void btMoTK_Click(object sender, EventArgs e)
         {
-            taikhoanService.unlockTaiKhoan(txtMaTK.Text);
+            taikhoanService.unlockTaiKhoan(txtTenTK.Text);
+            load();
+        }
+
+        private void dataGridViewdstk_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dataGridViewdstk.CurrentRow.Index;
+            txtTenTK.Text = dataGridViewdstk.Rows[i].Cells[1].Value.ToString();
+        }
+
+        private void btRS_Click(object sender, EventArgs e)
+        {
             load();
         }
     }

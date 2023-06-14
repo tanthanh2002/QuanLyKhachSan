@@ -29,5 +29,11 @@ namespace HotelManagement.DAO
         public void update(NhanVien nhanVien) { 
             db.NhanViens.AddOrUpdate(nhanVien) ; db.SaveChanges();
         }
+
+        public List<NhanVien> getAll()
+        {
+            var result = from c in db.NhanViens select c;
+            return result.ToList();
+        }
     }
 }

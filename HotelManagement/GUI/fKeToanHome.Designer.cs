@@ -30,7 +30,8 @@
         {
             this.tabControlLeTan = new System.Windows.Forms.TabControl();
             this.tabPageTKDT = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateTimePickertk = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewDSHD = new System.Windows.Forms.DataGridView();
             this.materialTextBox24 = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -40,11 +41,11 @@
             this.txtMaNV = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.dateTimePickertk = new System.Windows.Forms.DateTimePicker();
+            this.btThayDoiLuong = new MaterialSkin.Controls.MaterialButton();
+            this.btThongKe = new MaterialSkin.Controls.MaterialButton();
             this.tabControlLeTan.SuspendLayout();
             this.tabPageTKDT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHD)).BeginInit();
             this.tabPageQLBL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSNVL)).BeginInit();
             this.SuspendLayout();
@@ -62,8 +63,9 @@
             // 
             // tabPageTKDT
             // 
+            this.tabPageTKDT.Controls.Add(this.btThongKe);
             this.tabPageTKDT.Controls.Add(this.dateTimePickertk);
-            this.tabPageTKDT.Controls.Add(this.dataGridView1);
+            this.tabPageTKDT.Controls.Add(this.dataGridViewDSHD);
             this.tabPageTKDT.Controls.Add(this.materialTextBox24);
             this.tabPageTKDT.Controls.Add(this.materialLabel4);
             this.tabPageTKDT.Controls.Add(this.materialLabel1);
@@ -76,15 +78,22 @@
             this.tabPageTKDT.Text = "Thống Kê Doanh Thu";
             this.tabPageTKDT.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dateTimePickertk
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 191);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(948, 287);
-            this.dataGridView1.TabIndex = 16;
+            this.dateTimePickertk.Location = new System.Drawing.Point(102, 70);
+            this.dateTimePickertk.Name = "dateTimePickertk";
+            this.dateTimePickertk.Size = new System.Drawing.Size(256, 34);
+            this.dateTimePickertk.TabIndex = 17;
+            // 
+            // dataGridViewDSHD
+            // 
+            this.dataGridViewDSHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDSHD.Location = new System.Drawing.Point(18, 191);
+            this.dataGridViewDSHD.Name = "dataGridViewDSHD";
+            this.dataGridViewDSHD.RowHeadersWidth = 51;
+            this.dataGridViewDSHD.RowTemplate.Height = 24;
+            this.dataGridViewDSHD.Size = new System.Drawing.Size(948, 287);
+            this.dataGridViewDSHD.TabIndex = 16;
             // 
             // materialTextBox24
             // 
@@ -95,7 +104,7 @@
             this.materialTextBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox24.HideSelection = true;
             this.materialTextBox24.LeadingIcon = null;
-            this.materialTextBox24.Location = new System.Drawing.Point(635, 62);
+            this.materialTextBox24.Location = new System.Drawing.Point(736, 58);
             this.materialTextBox24.MaxLength = 32767;
             this.materialTextBox24.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox24.Name = "materialTextBox24";
@@ -119,7 +128,7 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(561, 78);
+            this.materialLabel4.Location = new System.Drawing.Point(662, 74);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(38, 19);
@@ -146,7 +155,7 @@
             this.tabPageQLBL.Controls.Add(this.txtMaNV);
             this.tabPageQLBL.Controls.Add(this.materialLabel6);
             this.tabPageQLBL.Controls.Add(this.materialLabel5);
-            this.tabPageQLBL.Controls.Add(this.materialButton1);
+            this.tabPageQLBL.Controls.Add(this.btThayDoiLuong);
             this.tabPageQLBL.Location = new System.Drawing.Point(4, 34);
             this.tabPageQLBL.Name = "tabPageQLBL";
             this.tabPageQLBL.Padding = new System.Windows.Forms.Padding(3);
@@ -164,6 +173,7 @@
             this.dataGridViewDSNVL.RowTemplate.Height = 24;
             this.dataGridViewDSNVL.Size = new System.Drawing.Size(953, 307);
             this.dataGridViewDSNVL.TabIndex = 6;
+            this.dataGridViewDSNVL.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSNVL_CellContentClick);
             // 
             // txtLuong
             // 
@@ -245,32 +255,46 @@
             this.materialLabel5.TabIndex = 1;
             this.materialLabel5.Text = "Mã Nhân Viên";
             // 
-            // materialButton1
+            // btThayDoiLuong
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(575, 77);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(103, 36);
-            this.materialButton1.TabIndex = 0;
-            this.materialButton1.Text = "Thay Đổi";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.btThayDoiLuong.AutoSize = false;
+            this.btThayDoiLuong.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btThayDoiLuong.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btThayDoiLuong.Depth = 0;
+            this.btThayDoiLuong.HighEmphasis = true;
+            this.btThayDoiLuong.Icon = null;
+            this.btThayDoiLuong.Location = new System.Drawing.Point(575, 77);
+            this.btThayDoiLuong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btThayDoiLuong.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btThayDoiLuong.Name = "btThayDoiLuong";
+            this.btThayDoiLuong.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btThayDoiLuong.Size = new System.Drawing.Size(103, 36);
+            this.btThayDoiLuong.TabIndex = 0;
+            this.btThayDoiLuong.Text = "Thay Đổi";
+            this.btThayDoiLuong.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btThayDoiLuong.UseAccentColor = false;
+            this.btThayDoiLuong.UseVisualStyleBackColor = true;
+            this.btThayDoiLuong.Click += new System.EventHandler(this.btThayDoiLuong_Click);
             // 
-            // dateTimePickertk
+            // btThongKe
             // 
-            this.dateTimePickertk.Location = new System.Drawing.Point(102, 70);
-            this.dateTimePickertk.Name = "dateTimePickertk";
-            this.dateTimePickertk.Size = new System.Drawing.Size(256, 34);
-            this.dateTimePickertk.TabIndex = 17;
+            this.btThongKe.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btThongKe.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btThongKe.Depth = 0;
+            this.btThongKe.HighEmphasis = true;
+            this.btThongKe.Icon = null;
+            this.btThongKe.Location = new System.Drawing.Point(447, 69);
+            this.btThongKe.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btThongKe.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btThongKe.Name = "btThongKe";
+            this.btThongKe.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btThongKe.Size = new System.Drawing.Size(93, 36);
+            this.btThongKe.TabIndex = 18;
+            this.btThongKe.Text = "Thống kê";
+            this.btThongKe.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btThongKe.UseAccentColor = false;
+            this.btThongKe.UseVisualStyleBackColor = true;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
             // 
             // fKeToanHome
             // 
@@ -283,7 +307,7 @@
             this.tabControlLeTan.ResumeLayout(false);
             this.tabPageTKDT.ResumeLayout(false);
             this.tabPageTKDT.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHD)).EndInit();
             this.tabPageQLBL.ResumeLayout(false);
             this.tabPageQLBL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSNVL)).EndInit();
@@ -299,13 +323,14 @@
         private MaterialSkin.Controls.MaterialTextBox2 materialTextBox24;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDSHD;
         private System.Windows.Forms.DataGridView dataGridViewDSNVL;
         private MaterialSkin.Controls.MaterialTextBox2 txtLuong;
         private MaterialSkin.Controls.MaterialTextBox2 txtMaNV;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton btThayDoiLuong;
         private System.Windows.Forms.DateTimePicker dateTimePickertk;
+        private MaterialSkin.Controls.MaterialButton btThongKe;
     }
 }

@@ -30,8 +30,8 @@ namespace HotelManagement
         public int sodemluutru { get; set; }
         public System.DateTime ngayden { get; set; }
         public int makhachhang { get; set; }
-        public Nullable<int> nhanviencheckout { get; set; }
-        public Nullable<int> nhanvienvesinh { get; set; }
+        public int nhanviencheckout { get; set; }
+        public int nhanvienvesinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

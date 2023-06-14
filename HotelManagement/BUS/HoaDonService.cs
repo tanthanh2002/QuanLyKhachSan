@@ -19,5 +19,7 @@ namespace HotelManagement.BUS
             return repo.findByDate(date);
         }
         public void addInvoice(HoaDon hoaDon) { repo.addInvoice(hoaDon); }
+        public Double tinhtong(DateTime date) { return repo.tinhtong(date); }
+        public List<HoaDon> getAll() { return repo.getAll(); }
     }
 }
