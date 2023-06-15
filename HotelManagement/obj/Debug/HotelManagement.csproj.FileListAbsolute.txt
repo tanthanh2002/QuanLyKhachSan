@@ -189,3 +189,4 @@ D:\Programs\HK2_Year3\PTTKHTTT\Project\GD4\HotelManagement\obj\Debug\HotelManage
 D:\Programs\HK2_Year3\PTTKHTTT\Project\GD4\HotelManagement\obj\Debug\HotelManagement.pdb
 D:\Programs\HK2_Year3\PTTKHTTT\Project\GD4\HotelManagement\obj\Debug\HotelManagement.GUI.fDichVu.resources
 D:\Programs\HK2_Year3\PTTKHTTT\Project\GD4\HotelManagement\obj\Debug\HotelManagement.GUI.fLeTanHome.resources
+D:\Programs\HK2_Year3\PTTKHTTT\Project\GD4\HotelManagement\obj\Debug\HotelManagement.GUI.fKhachHangHome.resources

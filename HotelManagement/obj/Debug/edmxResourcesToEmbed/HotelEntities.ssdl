@@ -72,7 +72,7 @@
     <Property Name="tongtien" Type="float" Nullable="false" />
     <Property Name="sotiendathanhtoan" Type="float" Nullable="false" />
     <Property Name="maphieudatphong" Type="int" Nullable="false" />
-    <Property Name="maketoan" Type="int" Nullable="false" />
+    <Property Name="maketoan" Type="int" />
     <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="KhachHang">
@@ -138,8 +138,8 @@
     <Property Name="sodemluutru" Type="int" Nullable="false" />
     <Property Name="ngayden" Type="date" Nullable="false" />
     <Property Name="makhachhang" Type="int" Nullable="false" />
-    <Property Name="nhanviencheckout" Type="int" Nullable="false" />
-    <Property Name="nhanvienvesinh" Type="int" Nullable="false" />
+    <Property Name="nhanviencheckout" Type="int" />
+    <Property Name="nhanvienvesinh" Type="int" />
   </EntityType>
   <EntityType Name="PhieuDatPhongChiTiet">
     <Key>
@@ -211,16 +211,6 @@
     <Property Name="gia" Type="float" Nullable="false" />
     <Property Name="bikhoa" Type="bit" Nullable="false" />
     <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -346,7 +336,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_HoaDon_maketoan">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -442,7 +432,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_PhieuDatPhong_nhanviencheckout">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -454,7 +444,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_PhieuDatPhong_nhanvienvesinh">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="PhieuDatPhong" Type="Self.PhieuDatPhong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -657,7 +647,6 @@
     <EntitySet Name="PhieuSuDungThucPham" EntityType="Self.PhieuSuDungThucPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhieuVanChuyenHanhLy" EntityType="Self.PhieuVanChuyenHanhLy" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ThanhVien" EntityType="Self.ThanhVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ThucPham" EntityType="Self.ThucPham" Schema="dbo" store:Type="Tables" />

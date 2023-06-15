@@ -143,6 +143,12 @@
     <Compile Include="GUI\fKeToanHome.Designer.cs">
       <DependentUpon>fKeToanHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fKhachHangHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fKhachHangHome.Designer.cs">
+      <DependentUpon>fKhachHangHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fLeTanHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,9 +259,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>HotelEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
@@ -285,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fKeToanHome.resx">
       <DependentUpon>fKeToanHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fKhachHangHome.resx">
+      <DependentUpon>fKhachHangHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLeTanHome.resx">
       <DependentUpon>fLeTanHome.cs</DependentUpon>
