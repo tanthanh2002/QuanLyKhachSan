@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="BUS\BcryptEncoder.cs" />
     <Compile Include="BUS\DatPhongService.cs" />
+    <Compile Include="BUS\DatTourService.cs" />
     <Compile Include="BUS\HoaDonService.cs" />
     <Compile Include="BUS\KhachHangService.cs" />
     <Compile Include="BUS\NhanVienService.cs" />
@@ -73,6 +74,10 @@
     <Compile Include="BUS\TaiKhoanService.cs" />
     <Compile Include="BUS\ThanhToanCocOnlineService.cs" />
     <Compile Include="BUS\TimPhongService.cs" />
+    <Compile Include="BUS\TourDuLichService.cs" />
+    <Compile Include="CONST\KhachHangConst.cs" />
+    <Compile Include="CONST\TaiKhoanConst.cs" />
+    <Compile Include="DAO\DatTourRepo.cs" />
     <Compile Include="DAO\HoaDonRepo.cs" />
     <Compile Include="DAO\KhachHangRepo.cs" />
     <Compile Include="DAO\NhanVienRepo.cs" />
@@ -82,6 +87,7 @@
     <Compile Include="DAO\PhongRepo.cs" />
     <Compile Include="DAO\TaiKhoanRepo.cs" />
     <Compile Include="DAO\ThanhVienRepo.cs" />
+    <Compile Include="DAO\TourDuLichRepo.cs" />
     <Compile Include="DatTour.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="GUI\fCustomer.Designer.cs">
       <DependentUpon>fCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fDangKyTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDangKyTour.Designer.cs">
+      <DependentUpon>fDangKyTour.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fDichVu.cs">
       <SubType>Form</SubType>
@@ -280,6 +292,9 @@
     <EmbeddedResource Include="GUI\fCreateServiceInvoice.resx">
       <DependentUpon>fCreateServiceInvoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fDangKyTour.resx">
+      <DependentUpon>fDangKyTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fDichVu.resx">
       <DependentUpon>fDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +350,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Phong.datasource" />
+    <None Include="Properties\DataSources\TourDuLich.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

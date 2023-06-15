@@ -49,6 +49,10 @@ namespace HotelManagement.GUI
                 if (taiKhoanService.login(username, password))
                 {
                     String type = taiKhoanService.findByUsername(username).loaitaikhoan;
+                    CONST.TaiKhoanConst.setUser(taiKhoanService.findByUsername(username));
+                    TaiKhoan curUser = CONST.TaiKhoanConst.getUser();
+                    int matk = curUser.mataikhoan;
+                    CONST.KhachHangConst.setKH(khachHangService.findByMaTaiKhoan(matk));
                     MessageBox.Show("Đăng nhập thành công! Bạn là " + type);
                     /////////////////////////////////////////
                     if (type == "ketoan")

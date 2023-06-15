@@ -51,5 +51,24 @@ namespace HotelManagement.DAO
             return db.KhachHangs.SingleOrDefault(p => p.cccd == CCCD);
         }
 
+        public List<KhachHang> TTKHfindByMaTaiKhoan(int mataikhoan)
+        {
+            var c = from a in db.KhachHangs
+                    where a.mataikhoan == mataikhoan
+                    select a;
+            return c.ToList();
+        }
+
+        //public KhachHang findByMaTaiKhoan(int matk)
+        //{
+        //    try
+        //    {
+        //        return db.KhachHangs.Where(p => p.mataikhoan.Equals(matk)).Single();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        throw new MissingManifestResourceException("username: " + Convert.ToString(matk) + " not found");
+        //    }
+        //}
     }
 }

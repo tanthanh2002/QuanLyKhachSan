@@ -53,5 +53,8 @@ namespace HotelManagement.BUS
             temp = repo.findByCCCD(khachHang.cccd);
             return temp.makhachhang;
         }
+        public List<KhachHang> TTKHfindByMaTaiKhoan(int mataikhoan) { return repo.TTKHfindByMaTaiKhoan(mataikhoan); }
+
+
     }
 }

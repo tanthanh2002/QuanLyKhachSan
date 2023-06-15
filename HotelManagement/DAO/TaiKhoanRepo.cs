@@ -45,5 +45,10 @@ namespace HotelManagement.DAO
             var result = from c in db.TaiKhoans select c;
             return result.ToList();
         }
+        //public List<TaiKhoan> findMaTk(string username)
+        //{
+        //    var result = from c in db.TaiKhoans where c.tentaikhoan==username select c.mataikhoan;
+        //    return result.ToList();
+        //}
     }
 }
