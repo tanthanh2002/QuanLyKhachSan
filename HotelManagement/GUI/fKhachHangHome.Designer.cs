@@ -55,6 +55,11 @@ namespace HotelManagement.GUI
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             this.tbMaTour = new MaterialSkin.Controls.MaterialTextBox();
             this.dgvDSTour = new System.Windows.Forms.DataGridView();
+            this.matourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.madoitacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tourDuLichBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.tbTenTour = new MaterialSkin.Controls.MaterialTextBox2();
@@ -77,11 +82,8 @@ namespace HotelManagement.GUI
             this.dgvTourCuaToi = new System.Windows.Forms.DataGridView();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madoitacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.cbMaPhong = new MaterialSkin.Controls.MaterialComboBox();
             this.tabThongTinTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).BeginInit();
             this.tabTour.SuspendLayout();
@@ -425,6 +427,46 @@ namespace HotelManagement.GUI
             this.dgvDSTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellClick);
             this.dgvDSTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellContentClick);
             // 
+            // matourDataGridViewTextBoxColumn
+            // 
+            this.matourDataGridViewTextBoxColumn.DataPropertyName = "matour";
+            this.matourDataGridViewTextBoxColumn.HeaderText = "matour";
+            this.matourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.matourDataGridViewTextBoxColumn.Name = "matourDataGridViewTextBoxColumn";
+            this.matourDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tentourDataGridViewTextBoxColumn
+            // 
+            this.tentourDataGridViewTextBoxColumn.DataPropertyName = "tentour";
+            this.tentourDataGridViewTextBoxColumn.HeaderText = "tentour";
+            this.tentourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tentourDataGridViewTextBoxColumn.Name = "tentourDataGridViewTextBoxColumn";
+            this.tentourDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // giaDataGridViewTextBoxColumn
+            // 
+            this.giaDataGridViewTextBoxColumn.DataPropertyName = "gia";
+            this.giaDataGridViewTextBoxColumn.HeaderText = "gia";
+            this.giaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
+            this.giaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // songayDataGridViewTextBoxColumn
+            // 
+            this.songayDataGridViewTextBoxColumn.DataPropertyName = "songay";
+            this.songayDataGridViewTextBoxColumn.HeaderText = "songay";
+            this.songayDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.songayDataGridViewTextBoxColumn.Name = "songayDataGridViewTextBoxColumn";
+            this.songayDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // madoitacDataGridViewTextBoxColumn
+            // 
+            this.madoitacDataGridViewTextBoxColumn.DataPropertyName = "madoitac";
+            this.madoitacDataGridViewTextBoxColumn.HeaderText = "madoitac";
+            this.madoitacDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.madoitacDataGridViewTextBoxColumn.Name = "madoitacDataGridViewTextBoxColumn";
+            this.madoitacDataGridViewTextBoxColumn.Width = 70;
+            // 
             // tourDuLichBindingSource
             // 
             this.tourDuLichBindingSource.DataSource = typeof(HotelManagement.TourDuLich);
@@ -485,6 +527,8 @@ namespace HotelManagement.GUI
             // 
             // tabDichVu
             // 
+            this.tabDichVu.Controls.Add(this.cbMaPhong);
+            this.tabDichVu.Controls.Add(this.materialLabel8);
             this.tabDichVu.Controls.Add(this.groupBox2);
             this.tabDichVu.Controls.Add(this.groupBox1);
             this.tabDichVu.Controls.Add(this.tbTenDV);
@@ -551,7 +595,7 @@ namespace HotelManagement.GUI
             this.tbTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTenDV.HideSelection = true;
             this.tbTenDV.LeadingIcon = null;
-            this.tbTenDV.Location = new System.Drawing.Point(168, 16);
+            this.tbTenDV.Location = new System.Drawing.Point(905, 16);
             this.tbTenDV.MaxLength = 32767;
             this.tbTenDV.MouseState = MaterialSkin.MouseState.OUT;
             this.tbTenDV.Name = "tbTenDV";
@@ -576,7 +620,7 @@ namespace HotelManagement.GUI
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(20, 33);
+            this.materialLabel6.Location = new System.Drawing.Point(757, 33);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(124, 19);
@@ -715,45 +759,39 @@ namespace HotelManagement.GUI
             this.phongBindingSource.DataSource = typeof(HotelManagement.Phong);
             this.phongBindingSource.CurrentChanged += new System.EventHandler(this.phongBindingSource_CurrentChanged);
             // 
-            // matourDataGridViewTextBoxColumn
+            // materialLabel8
             // 
-            this.matourDataGridViewTextBoxColumn.DataPropertyName = "matour";
-            this.matourDataGridViewTextBoxColumn.HeaderText = "matour";
-            this.matourDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.matourDataGridViewTextBoxColumn.Name = "matourDataGridViewTextBoxColumn";
-            this.matourDataGridViewTextBoxColumn.Width = 80;
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel8.Location = new System.Drawing.Point(23, 33);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(73, 19);
+            this.materialLabel8.TabIndex = 7;
+            this.materialLabel8.Text = "Mã phòng";
             // 
-            // tentourDataGridViewTextBoxColumn
+            // cbMaPhong
             // 
-            this.tentourDataGridViewTextBoxColumn.DataPropertyName = "tentour";
-            this.tentourDataGridViewTextBoxColumn.HeaderText = "tentour";
-            this.tentourDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tentourDataGridViewTextBoxColumn.Name = "tentourDataGridViewTextBoxColumn";
-            this.tentourDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // giaDataGridViewTextBoxColumn
-            // 
-            this.giaDataGridViewTextBoxColumn.DataPropertyName = "gia";
-            this.giaDataGridViewTextBoxColumn.HeaderText = "gia";
-            this.giaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
-            this.giaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // songayDataGridViewTextBoxColumn
-            // 
-            this.songayDataGridViewTextBoxColumn.DataPropertyName = "songay";
-            this.songayDataGridViewTextBoxColumn.HeaderText = "songay";
-            this.songayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.songayDataGridViewTextBoxColumn.Name = "songayDataGridViewTextBoxColumn";
-            this.songayDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // madoitacDataGridViewTextBoxColumn
-            // 
-            this.madoitacDataGridViewTextBoxColumn.DataPropertyName = "madoitac";
-            this.madoitacDataGridViewTextBoxColumn.HeaderText = "madoitac";
-            this.madoitacDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.madoitacDataGridViewTextBoxColumn.Name = "madoitacDataGridViewTextBoxColumn";
-            this.madoitacDataGridViewTextBoxColumn.Width = 70;
+            this.cbMaPhong.AutoResize = false;
+            this.cbMaPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbMaPhong.Depth = 0;
+            this.cbMaPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbMaPhong.DropDownHeight = 174;
+            this.cbMaPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMaPhong.DropDownWidth = 121;
+            this.cbMaPhong.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbMaPhong.ForeColor = System.Drawing.Color.White;
+            this.cbMaPhong.FormattingEnabled = true;
+            this.cbMaPhong.IntegralHeight = false;
+            this.cbMaPhong.ItemHeight = 43;
+            this.cbMaPhong.Location = new System.Drawing.Point(113, 15);
+            this.cbMaPhong.MaxDropDownItems = 4;
+            this.cbMaPhong.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbMaPhong.Name = "cbMaPhong";
+            this.cbMaPhong.Size = new System.Drawing.Size(133, 49);
+            this.cbMaPhong.StartIndex = 0;
+            this.cbMaPhong.TabIndex = 8;
             // 
             // fKhachHangHome
             // 
@@ -850,5 +888,7 @@ namespace HotelManagement.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn giaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn songayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn madoitacDataGridViewTextBoxColumn;
+        private MaterialSkin.Controls.MaterialComboBox cbMaPhong;
+        private MaterialSkin.Controls.MaterialLabel materialLabel8;
     }
 }

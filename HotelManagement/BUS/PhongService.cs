@@ -16,5 +16,11 @@ namespace HotelManagement.BUS
         public static PhongService getInstance() { return instance; }
 
         public List<Phong> findByBiKhoa() { return repo.findByBiKhoa(); }
+
+        public List<Phong> dsTour() { return repo.dsPhong(); }
+
+        public List<Phong> showListTinhTrangPhong() { return repo.showListTinhTrangPhong(); }
+
+        public void updateTinhTrangPhong(int maphong, string tinhtrang) { repo.updateTinhTrangPhong(maphong, tinhtrang); }
     }
 }

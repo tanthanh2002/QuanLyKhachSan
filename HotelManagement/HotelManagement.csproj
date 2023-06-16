@@ -68,25 +68,37 @@
     <Compile Include="BUS\HoaDonService.cs" />
     <Compile Include="BUS\KhachHangService.cs" />
     <Compile Include="BUS\NhanVienService.cs" />
+    <Compile Include="BUS\NoiThatService.cs" />
     <Compile Include="BUS\PhieuDanhGiaService.cs" />
+    <Compile Include="BUS\PhieuDatPhongChiTietService.cs" />
+    <Compile Include="BUS\PhieuHuHongNoiThatService.cs" />
     <Compile Include="BUS\PhieuSuDungDichVuChiTietService.cs" />
+    <Compile Include="BUS\PhieuSuDungThucPhamService.cs" />
     <Compile Include="BUS\PhongService.cs" />
     <Compile Include="BUS\TaiKhoanService.cs" />
     <Compile Include="BUS\ThanhToanCocOnlineService.cs" />
+    <Compile Include="BUS\ThucPhamService.cs" />
     <Compile Include="BUS\TimPhongService.cs" />
     <Compile Include="BUS\TourDuLichService.cs" />
     <Compile Include="CONST\KhachHangConst.cs" />
+    <Compile Include="CONST\PhieuDatPhongConst.cs" />
     <Compile Include="CONST\TaiKhoanConst.cs" />
     <Compile Include="DAO\DatTourRepo.cs" />
+    <Compile Include="DAO\DichVu.cs" />
     <Compile Include="DAO\HoaDonRepo.cs" />
     <Compile Include="DAO\KhachHangRepo.cs" />
     <Compile Include="DAO\NhanVienRepo.cs" />
+    <Compile Include="DAO\NoiThatRepo.cs" />
     <Compile Include="DAO\PhieuDanhGiaRepo.cs" />
+    <Compile Include="DAO\PhieuDatPhongChiTietRepo.cs" />
     <Compile Include="DAO\PhieuDatPhongRepo.cs" />
+    <Compile Include="DAO\PhieuHuHongNoiThatChiTietRepo.cs" />
     <Compile Include="DAO\PhieuSuDungDichVuChiTietRepo.cs" />
+    <Compile Include="DAO\PhieuSuDungThucPhamRepo.cs" />
     <Compile Include="DAO\PhongRepo.cs" />
     <Compile Include="DAO\TaiKhoanRepo.cs" />
     <Compile Include="DAO\ThanhVienRepo.cs" />
+    <Compile Include="DAO\ThucPhamRepo.cs" />
     <Compile Include="DAO\TourDuLichRepo.cs" />
     <Compile Include="DatTour.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
@@ -107,6 +119,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Class1.cs" />
+    <Compile Include="GUI\fBuongPhongHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fBuongPhongHome.Designer.cs">
+      <DependentUpon>fBuongPhongHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fChinhSuaTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +303,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fBuongPhongHome.resx">
+      <DependentUpon>fBuongPhongHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fChinhSuaTaiKhoan.resx">
       <DependentUpon>fChinhSuaTaiKhoan.cs</DependentUpon>

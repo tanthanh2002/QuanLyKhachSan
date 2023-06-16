@@ -7,17 +7,23 @@ using System.Threading.Tasks;
 
 namespace HotelManagement.BUS
 {
-    internal class DatPhongService
+    public class DatPhongService
     {
-        private static DatPhongService instace = new BUS.DatPhongService();
-    
+        private static DatPhongService instance = new DatPhongService();
+
         private PhieuDatPhongRepo repo = PhieuDatPhongRepo.getInstance();
 
         private DatPhongService() { }
-        public static DatPhongService getInstance() {  return instace; }
+
+        public static DatPhongService getInstance() { return instance; }
+
         public void addRoomBook(PhieuDatPhong phieuDatPhong)
         {
             repo.save(phieuDatPhong);
         }
+        //public DatPhongService findByMaKhachHang(int makh)
+        //{
+        //    return repo.findByMaKhachHang(makh);
+        //}
     }
 }

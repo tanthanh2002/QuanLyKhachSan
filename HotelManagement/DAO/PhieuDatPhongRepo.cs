@@ -35,5 +35,11 @@ namespace HotelManagement.DAO
             db.PhieuDatPhongs.Remove(findById(id));
             db.SaveChanges();
         }
+
+        public PhieuDatPhong findByMaKhachHang(int makh)
+        {
+            return db.PhieuDatPhongs.Where(p => p.makhachhang.Equals(makh)).Single();
+        }
+
     }
 }

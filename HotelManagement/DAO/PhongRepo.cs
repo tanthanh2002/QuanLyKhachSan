@@ -55,6 +55,27 @@ namespace HotelManagement.DAO
             var s = db.Phongs.Where(p => p.bikhoa == true);
             return s.ToList();
         }
-           
+
+        public List<Phong> dsPhong()
+        {
+            return db.Phongs.ToList();
+        }
+
+        public List<Phong> showListTinhTrangPhong()
+        {
+            var s = from a in db.Phongs select a;
+            return s.ToList();
+        }
+
+        public void updateTinhTrangPhong(int maphong, string tinhtrang)
+        {
+            Phong phongUpdate = db.Phongs.Find(maphong);
+            if (phongUpdate != null)
+            {
+                phongUpdate.tinhtrang = tinhtrang;
+                db.SaveChanges();
+            }
+        }
+
     }
 }

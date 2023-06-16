@@ -16,6 +16,8 @@ namespace HotelManagement
 
         private KhachHangService khachHangService = KhachHangService.getInstance();
 
+        private PhieuSuDungThucPhamService suDungThucPhamService = PhieuSuDungThucPhamService.getInstance();
+
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace HotelManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loadData();
+            MessageBox.Show(suDungThucPhamService.getMaThucPham("coca").ToString());
         }
 
         private void Form1_Load(object sender, EventArgs e)

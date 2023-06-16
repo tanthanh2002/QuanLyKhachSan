@@ -17,6 +17,7 @@ namespace HotelManagement.GUI
         private KhachHangService khachHangService = KhachHangService.getInstance();
         private TourDuLichService tourDuLichService = TourDuLichService.getInstance();
         private DatTourService datTourService = DatTourService.getInstance();
+        private PhieuDatPhongChiTietService phieuDatPhongChiTietService = PhieuDatPhongChiTietService.getInstance();
         public fKhachHangHome()
         {
             InitializeComponent();
@@ -30,6 +31,9 @@ namespace HotelManagement.GUI
             KhachHang curUser = CONST.KhachHangConst.getKH();
             int makh = curUser.makhachhang;
             tbMaKhach.Text = Convert.ToString(makh);
+
+            cbMaPhong.ValueMember = "maphong";
+            cbMaPhong.DataSource = phieuDatPhongChiTietService.showListMaPhong(makh);
         }
 
         private void fKhachHangHome_Load(object sender, EventArgs e)

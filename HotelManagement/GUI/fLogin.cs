@@ -49,10 +49,17 @@ namespace HotelManagement.GUI
                 if (taiKhoanService.login(username, password))
                 {
                     String type = taiKhoanService.findByUsername(username).loaitaikhoan;
+
                     CONST.TaiKhoanConst.setUser(taiKhoanService.findByUsername(username));
+
                     TaiKhoan curUser = CONST.TaiKhoanConst.getUser();
                     int matk = curUser.mataikhoan;
                     CONST.KhachHangConst.setKH(khachHangService.findByMaTaiKhoan(matk));
+
+                    //KhachHang curMaKH = CONST.KhachHangConst.getKH();
+                    //int maKH = curMaKH.makhachhang;
+                    //CONST.PhieuDatPhongConst.setMaPhieu(DatPhongService.find(maKH));
+
                     MessageBox.Show("Đăng nhập thành công! Bạn là " + type);
                     /////////////////////////////////////////
                     if (type == "ketoan")
@@ -73,6 +80,13 @@ namespace HotelManagement.GUI
                     {
                         fKhachHangHome kh = new fKhachHangHome();
                         kh.Show();
+                        this.Visible = false;
+                    }
+
+                    if (type == "buongphong")
+                    {
+                        fBuongPhongHome bp = new fBuongPhongHome();
+                        bp.Show();
                         this.Visible = false;
                     }
 

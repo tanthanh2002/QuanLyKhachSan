@@ -223,3 +223,4 @@ C:\Users\DerKaiser\Source\Repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelMa
 C:\Users\DerKaiser\Source\Repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.exe
 C:\Users\DerKaiser\Source\Repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.pdb
 C:\Users\DerKaiser\Source\Repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fDangKyTour.resources
+C:\Users\DerKaiser\source\repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fBuongPhongHome.resources
