@@ -38,68 +38,68 @@ namespace HotelManagement.GUI
             this.checkout = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tour = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabThongTinTaiKhoan = new System.Windows.Forms.TabPage();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.dgvTKCuaToi = new System.Windows.Forms.DataGridView();
             this.tabTour = new System.Windows.Forms.TabPage();
+            this.btnTimKiem = new MaterialSkin.Controls.MaterialButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnDangKy = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
+            this.dtpTroVe = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
+            this.dtpKhoiHanh = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
+            this.tbMaKhach = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
+            this.tbMaTour = new MaterialSkin.Controls.MaterialTextBox();
+            this.dgvDSTour = new System.Windows.Forms.DataGridView();
+            this.tourDuLichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.tbTenTour = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.tabDichVu = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvDVKhongHoTro = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvDVCoHoTro = new System.Windows.Forms.DataGridView();
+            this.tbTenDV = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.phongCuaToi = new System.Windows.Forms.TabPage();
             this.tabDatPhong = new System.Windows.Forms.TabPage();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.tabKhachHang = new MaterialSkin.Controls.MaterialTabControl();
             this.tabDVCuaToi = new System.Windows.Forms.TabPage();
-            this.tabTourCuaToi = new System.Windows.Forms.TabPage();
-            this.dgvTKCuaToi = new System.Windows.Forms.DataGridView();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.tbTenTour = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.dgvDSTour = new System.Windows.Forms.DataGridView();
-            this.tbTenDV = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvDVCoHoTro = new System.Windows.Forms.DataGridView();
-            this.dgvDVKhongHoTro = new System.Windows.Forms.DataGridView();
-            this.dgvDVCuaToi = new System.Windows.Forms.DataGridView();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.dgvDVCuaToi = new System.Windows.Forms.DataGridView();
+            this.tabTourCuaToi = new System.Windows.Forms.TabPage();
             this.dgvTourCuaToi = new System.Windows.Forms.DataGridView();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
-            this.tbMaTour = new MaterialSkin.Controls.MaterialTextBox();
-            this.tbMaKhach = new MaterialSkin.Controls.MaterialTextBox();
-            this.dtpKhoiHanh = new System.Windows.Forms.DateTimePicker();
-            this.dtpTroVe = new System.Windows.Forms.DateTimePicker();
-            this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
-            this.btnDangKy = new MaterialSkin.Controls.MaterialButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tentourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.songayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.madoitacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourDuLichBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnTimKiem = new MaterialSkin.Controls.MaterialButton();
             this.tabThongTinTaiKhoan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).BeginInit();
             this.tabTour.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).BeginInit();
             this.tabDichVu.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVKhongHoTro)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVCoHoTro)).BeginInit();
             this.tabDatPhong.SuspendLayout();
             this.tabKhachHang.SuspendLayout();
             this.tabDVCuaToi.SuspendLayout();
-            this.tabTourCuaToi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDVCoHoTro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDVKhongHoTro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVCuaToi)).BeginInit();
+            this.tabTourCuaToi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,6 +182,28 @@ namespace HotelManagement.GUI
             this.tabThongTinTaiKhoan.Text = "Thông tin tài khoản";
             this.tabThongTinTaiKhoan.UseVisualStyleBackColor = true;
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(496, 28);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(139, 19);
+            this.materialLabel1.TabIndex = 4;
+            this.materialLabel1.Text = "Thông tin tài khoản";
+            // 
+            // dgvTKCuaToi
+            // 
+            this.dgvTKCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTKCuaToi.Location = new System.Drawing.Point(3, 68);
+            this.dgvTKCuaToi.Name = "dgvTKCuaToi";
+            this.dgvTKCuaToi.RowHeadersWidth = 51;
+            this.dgvTKCuaToi.RowTemplate.Height = 24;
+            this.dgvTKCuaToi.Size = new System.Drawing.Size(1171, 402);
+            this.dgvTKCuaToi.TabIndex = 3;
+            // 
             // tabTour
             // 
             this.tabTour.Controls.Add(this.btnTimKiem);
@@ -199,6 +221,268 @@ namespace HotelManagement.GUI
             this.tabTour.Text = "Tour";
             this.tabTour.UseVisualStyleBackColor = true;
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimKiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimKiem.Depth = 0;
+            this.btnTimKiem.HighEmphasis = true;
+            this.btnTimKiem.Icon = null;
+            this.btnTimKiem.Location = new System.Drawing.Point(437, 22);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimKiem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimKiem.Size = new System.Drawing.Size(86, 36);
+            this.btnTimKiem.TabIndex = 6;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimKiem.UseAccentColor = false;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.AutoSize = true;
+            this.groupBox3.BackColor = System.Drawing.Color.DarkGray;
+            this.groupBox3.Controls.Add(this.btnDangKy);
+            this.groupBox3.Controls.Add(this.materialLabel9);
+            this.groupBox3.Controls.Add(this.nudSoLuong);
+            this.groupBox3.Controls.Add(this.materialLabel10);
+            this.groupBox3.Controls.Add(this.dtpTroVe);
+            this.groupBox3.Controls.Add(this.materialLabel11);
+            this.groupBox3.Controls.Add(this.dtpKhoiHanh);
+            this.groupBox3.Controls.Add(this.materialLabel12);
+            this.groupBox3.Controls.Add(this.tbMaKhach);
+            this.groupBox3.Controls.Add(this.materialLabel13);
+            this.groupBox3.Controls.Add(this.tbMaTour);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(842, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(335, 467);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Đăng ký tour";
+            // 
+            // btnDangKy
+            // 
+            this.btnDangKy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDangKy.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDangKy.Depth = 0;
+            this.btnDangKy.HighEmphasis = true;
+            this.btnDangKy.Icon = null;
+            this.btnDangKy.Location = new System.Drawing.Point(141, 394);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDangKy.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDangKy.Size = new System.Drawing.Size(83, 36);
+            this.btnDangKy.TabIndex = 13;
+            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDangKy.UseAccentColor = false;
+            this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            // 
+            // materialLabel9
+            // 
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel9.Location = new System.Drawing.Point(6, 68);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(60, 19);
+            this.materialLabel9.TabIndex = 1;
+            this.materialLabel9.Text = "Mã tour:";
+            // 
+            // nudSoLuong
+            // 
+            this.nudSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSoLuong.Location = new System.Drawing.Point(98, 341);
+            this.nudSoLuong.Name = "nudSoLuong";
+            this.nudSoLuong.Size = new System.Drawing.Size(64, 27);
+            this.nudSoLuong.TabIndex = 12;
+            this.nudSoLuong.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // materialLabel10
+            // 
+            this.materialLabel10.AutoSize = true;
+            this.materialLabel10.Depth = 0;
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel10.Location = new System.Drawing.Point(6, 145);
+            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel10.Name = "materialLabel10";
+            this.materialLabel10.Size = new System.Drawing.Size(75, 19);
+            this.materialLabel10.TabIndex = 2;
+            this.materialLabel10.Text = "Mã khách:";
+            // 
+            // dtpTroVe
+            // 
+            this.dtpTroVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTroVe.Location = new System.Drawing.Point(97, 278);
+            this.dtpTroVe.Name = "dtpTroVe";
+            this.dtpTroVe.Size = new System.Drawing.Size(231, 27);
+            this.dtpTroVe.TabIndex = 11;
+            // 
+            // materialLabel11
+            // 
+            this.materialLabel11.AutoSize = true;
+            this.materialLabel11.Depth = 0;
+            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel11.Location = new System.Drawing.Point(6, 219);
+            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel11.Name = "materialLabel11";
+            this.materialLabel11.Size = new System.Drawing.Size(77, 19);
+            this.materialLabel11.TabIndex = 3;
+            this.materialLabel11.Text = "Khởi hành:";
+            // 
+            // dtpKhoiHanh
+            // 
+            this.dtpKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpKhoiHanh.Location = new System.Drawing.Point(98, 216);
+            this.dtpKhoiHanh.Name = "dtpKhoiHanh";
+            this.dtpKhoiHanh.Size = new System.Drawing.Size(231, 27);
+            this.dtpKhoiHanh.TabIndex = 10;
+            this.dtpKhoiHanh.ValueChanged += new System.EventHandler(this.dtpKhoiHanh_ValueChanged);
+            // 
+            // materialLabel12
+            // 
+            this.materialLabel12.AutoSize = true;
+            this.materialLabel12.Depth = 0;
+            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel12.Location = new System.Drawing.Point(6, 286);
+            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel12.Name = "materialLabel12";
+            this.materialLabel12.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel12.TabIndex = 4;
+            this.materialLabel12.Text = "Trở về:";
+            // 
+            // tbMaKhach
+            // 
+            this.tbMaKhach.AnimateReadOnly = false;
+            this.tbMaKhach.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMaKhach.Depth = 0;
+            this.tbMaKhach.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMaKhach.LeadingIcon = null;
+            this.tbMaKhach.Location = new System.Drawing.Point(97, 129);
+            this.tbMaKhach.MaxLength = 50;
+            this.tbMaKhach.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbMaKhach.Multiline = false;
+            this.tbMaKhach.Name = "tbMaKhach";
+            this.tbMaKhach.Size = new System.Drawing.Size(232, 50);
+            this.tbMaKhach.TabIndex = 7;
+            this.tbMaKhach.Text = "";
+            this.tbMaKhach.TrailingIcon = null;
+            // 
+            // materialLabel13
+            // 
+            this.materialLabel13.AutoSize = true;
+            this.materialLabel13.Depth = 0;
+            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel13.Location = new System.Drawing.Point(6, 344);
+            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel13.Name = "materialLabel13";
+            this.materialLabel13.Size = new System.Drawing.Size(69, 19);
+            this.materialLabel13.TabIndex = 5;
+            this.materialLabel13.Text = "Số lượng:";
+            // 
+            // tbMaTour
+            // 
+            this.tbMaTour.AnimateReadOnly = false;
+            this.tbMaTour.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMaTour.Depth = 0;
+            this.tbMaTour.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMaTour.LeadingIcon = null;
+            this.tbMaTour.Location = new System.Drawing.Point(97, 57);
+            this.tbMaTour.MaxLength = 50;
+            this.tbMaTour.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbMaTour.Multiline = false;
+            this.tbMaTour.Name = "tbMaTour";
+            this.tbMaTour.Size = new System.Drawing.Size(232, 50);
+            this.tbMaTour.TabIndex = 6;
+            this.tbMaTour.Text = "";
+            this.tbMaTour.TrailingIcon = null;
+            // 
+            // dgvDSTour
+            // 
+            this.dgvDSTour.AutoGenerateColumns = false;
+            this.dgvDSTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSTour.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.matourDataGridViewTextBoxColumn,
+            this.tentourDataGridViewTextBoxColumn,
+            this.giaDataGridViewTextBoxColumn,
+            this.songayDataGridViewTextBoxColumn,
+            this.madoitacDataGridViewTextBoxColumn});
+            this.dgvDSTour.DataSource = this.tourDuLichBindingSource;
+            this.dgvDSTour.Location = new System.Drawing.Point(6, 103);
+            this.dgvDSTour.Name = "dgvDSTour";
+            this.dgvDSTour.RowHeadersWidth = 51;
+            this.dgvDSTour.RowTemplate.Height = 24;
+            this.dgvDSTour.Size = new System.Drawing.Size(745, 355);
+            this.dgvDSTour.TabIndex = 3;
+            this.dgvDSTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellClick);
+            this.dgvDSTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellContentClick);
+            // 
+            // tourDuLichBindingSource
+            // 
+            this.tourDuLichBindingSource.DataSource = typeof(HotelManagement.TourDuLich);
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.materialLabel3.Location = new System.Drawing.Point(495, 71);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(109, 19);
+            this.materialLabel3.TabIndex = 2;
+            this.materialLabel3.Text = "Danh sách tour";
+            // 
+            // tbTenTour
+            // 
+            this.tbTenTour.AnimateReadOnly = false;
+            this.tbTenTour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tbTenTour.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbTenTour.Depth = 0;
+            this.tbTenTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbTenTour.HideSelection = true;
+            this.tbTenTour.LeadingIcon = null;
+            this.tbTenTour.Location = new System.Drawing.Point(164, 15);
+            this.tbTenTour.MaxLength = 32767;
+            this.tbTenTour.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbTenTour.Name = "tbTenTour";
+            this.tbTenTour.PasswordChar = '\0';
+            this.tbTenTour.PrefixSuffixText = null;
+            this.tbTenTour.ReadOnly = false;
+            this.tbTenTour.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbTenTour.SelectedText = "";
+            this.tbTenTour.SelectionLength = 0;
+            this.tbTenTour.SelectionStart = 0;
+            this.tbTenTour.ShortcutsEnabled = true;
+            this.tbTenTour.Size = new System.Drawing.Size(248, 48);
+            this.tbTenTour.TabIndex = 1;
+            this.tbTenTour.TabStop = false;
+            this.tbTenTour.Text = "Nhập tên tour";
+            this.tbTenTour.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbTenTour.TrailingIcon = null;
+            this.tbTenTour.UseSystemPasswordChar = false;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(32, 32);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(101, 19);
+            this.materialLabel2.TabIndex = 0;
+            this.materialLabel2.Text = "Nhập tên tour:";
+            // 
             // tabDichVu
             // 
             this.tabDichVu.Controls.Add(this.groupBox2);
@@ -213,6 +497,91 @@ namespace HotelManagement.GUI
             this.tabDichVu.TabIndex = 3;
             this.tabDichVu.Text = "Dịch vụ";
             this.tabDichVu.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvDVKhongHoTro);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(605, 89);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(550, 363);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dịch vụ không hỗ trợ";
+            // 
+            // dgvDVKhongHoTro
+            // 
+            this.dgvDVKhongHoTro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDVKhongHoTro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDVKhongHoTro.Location = new System.Drawing.Point(3, 26);
+            this.dgvDVKhongHoTro.Name = "dgvDVKhongHoTro";
+            this.dgvDVKhongHoTro.RowHeadersWidth = 51;
+            this.dgvDVKhongHoTro.RowTemplate.Height = 24;
+            this.dgvDVKhongHoTro.Size = new System.Drawing.Size(544, 334);
+            this.dgvDVKhongHoTro.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvDVCoHoTro);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(23, 89);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(549, 363);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dịch vụ có hỗ trợ";
+            // 
+            // dgvDVCoHoTro
+            // 
+            this.dgvDVCoHoTro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDVCoHoTro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDVCoHoTro.Location = new System.Drawing.Point(3, 26);
+            this.dgvDVCoHoTro.Name = "dgvDVCoHoTro";
+            this.dgvDVCoHoTro.RowHeadersWidth = 51;
+            this.dgvDVCoHoTro.RowTemplate.Height = 24;
+            this.dgvDVCoHoTro.Size = new System.Drawing.Size(543, 334);
+            this.dgvDVCoHoTro.TabIndex = 0;
+            // 
+            // tbTenDV
+            // 
+            this.tbTenDV.AnimateReadOnly = false;
+            this.tbTenDV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tbTenDV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbTenDV.Depth = 0;
+            this.tbTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbTenDV.HideSelection = true;
+            this.tbTenDV.LeadingIcon = null;
+            this.tbTenDV.Location = new System.Drawing.Point(168, 16);
+            this.tbTenDV.MaxLength = 32767;
+            this.tbTenDV.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbTenDV.Name = "tbTenDV";
+            this.tbTenDV.PasswordChar = '\0';
+            this.tbTenDV.PrefixSuffixText = null;
+            this.tbTenDV.ReadOnly = false;
+            this.tbTenDV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbTenDV.SelectedText = "";
+            this.tbTenDV.SelectionLength = 0;
+            this.tbTenDV.SelectionStart = 0;
+            this.tbTenDV.ShortcutsEnabled = true;
+            this.tbTenDV.Size = new System.Drawing.Size(248, 48);
+            this.tbTenDV.TabIndex = 4;
+            this.tbTenDV.TabStop = false;
+            this.tbTenDV.Text = "Nhập tên dịch vụ";
+            this.tbTenDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbTenDV.TrailingIcon = null;
+            this.tbTenDV.UseSystemPasswordChar = false;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel6.Location = new System.Drawing.Point(20, 33);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(124, 19);
+            this.materialLabel6.TabIndex = 3;
+            this.materialLabel6.Text = "Nhập tên dịch vụ:";
             // 
             // phongCuaToi
             // 
@@ -284,6 +653,28 @@ namespace HotelManagement.GUI
             this.tabDVCuaToi.Text = "Dịch vụ của tôi";
             this.tabDVCuaToi.UseVisualStyleBackColor = true;
             // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.Location = new System.Drawing.Point(496, 20);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(138, 19);
+            this.materialLabel5.TabIndex = 1;
+            this.materialLabel5.Text = "Dịch vụ đã đăng ký";
+            // 
+            // dgvDVCuaToi
+            // 
+            this.dgvDVCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDVCuaToi.Location = new System.Drawing.Point(6, 60);
+            this.dgvDVCuaToi.Name = "dgvDVCuaToi";
+            this.dgvDVCuaToi.RowHeadersWidth = 51;
+            this.dgvDVCuaToi.RowTemplate.Height = 24;
+            this.dgvDVCuaToi.Size = new System.Drawing.Size(1168, 407);
+            this.dgvDVCuaToi.TabIndex = 0;
+            // 
             // tabTourCuaToi
             // 
             this.tabTourCuaToi.Controls.Add(this.dgvTourCuaToi);
@@ -297,207 +688,15 @@ namespace HotelManagement.GUI
             this.tabTourCuaToi.Text = "Tour của tôi";
             this.tabTourCuaToi.UseVisualStyleBackColor = true;
             // 
-            // dgvTKCuaToi
+            // dgvTourCuaToi
             // 
-            this.dgvTKCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTKCuaToi.Location = new System.Drawing.Point(3, 68);
-            this.dgvTKCuaToi.Name = "dgvTKCuaToi";
-            this.dgvTKCuaToi.RowHeadersWidth = 51;
-            this.dgvTKCuaToi.RowTemplate.Height = 24;
-            this.dgvTKCuaToi.Size = new System.Drawing.Size(1171, 402);
-            this.dgvTKCuaToi.TabIndex = 3;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(496, 28);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(139, 19);
-            this.materialLabel1.TabIndex = 4;
-            this.materialLabel1.Text = "Thông tin tài khoản";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(32, 32);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(101, 19);
-            this.materialLabel2.TabIndex = 0;
-            this.materialLabel2.Text = "Nhập tên tour:";
-            // 
-            // tbTenTour
-            // 
-            this.tbTenTour.AnimateReadOnly = false;
-            this.tbTenTour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tbTenTour.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbTenTour.Depth = 0;
-            this.tbTenTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbTenTour.HideSelection = true;
-            this.tbTenTour.LeadingIcon = null;
-            this.tbTenTour.Location = new System.Drawing.Point(164, 15);
-            this.tbTenTour.MaxLength = 32767;
-            this.tbTenTour.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbTenTour.Name = "tbTenTour";
-            this.tbTenTour.PasswordChar = '\0';
-            this.tbTenTour.PrefixSuffixText = null;
-            this.tbTenTour.ReadOnly = false;
-            this.tbTenTour.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbTenTour.SelectedText = "";
-            this.tbTenTour.SelectionLength = 0;
-            this.tbTenTour.SelectionStart = 0;
-            this.tbTenTour.ShortcutsEnabled = true;
-            this.tbTenTour.Size = new System.Drawing.Size(248, 48);
-            this.tbTenTour.TabIndex = 1;
-            this.tbTenTour.TabStop = false;
-            this.tbTenTour.Text = "Nhập tên tour";
-            this.tbTenTour.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbTenTour.TrailingIcon = null;
-            this.tbTenTour.UseSystemPasswordChar = false;
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(495, 71);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(109, 19);
-            this.materialLabel3.TabIndex = 2;
-            this.materialLabel3.Text = "Danh sách tour";
-            // 
-            // dgvDSTour
-            // 
-            this.dgvDSTour.AutoGenerateColumns = false;
-            this.dgvDSTour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSTour.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.matourDataGridViewTextBoxColumn,
-            this.tentourDataGridViewTextBoxColumn,
-            this.giaDataGridViewTextBoxColumn,
-            this.songayDataGridViewTextBoxColumn,
-            this.madoitacDataGridViewTextBoxColumn});
-            this.dgvDSTour.DataSource = this.tourDuLichBindingSource;
-            this.dgvDSTour.Location = new System.Drawing.Point(6, 103);
-            this.dgvDSTour.Name = "dgvDSTour";
-            this.dgvDSTour.RowHeadersWidth = 51;
-            this.dgvDSTour.RowTemplate.Height = 24;
-            this.dgvDSTour.Size = new System.Drawing.Size(810, 355);
-            this.dgvDSTour.TabIndex = 3;
-            this.dgvDSTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellClick);
-            this.dgvDSTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellContentClick);
-            // 
-            // tbTenDV
-            // 
-            this.tbTenDV.AnimateReadOnly = false;
-            this.tbTenDV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tbTenDV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbTenDV.Depth = 0;
-            this.tbTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbTenDV.HideSelection = true;
-            this.tbTenDV.LeadingIcon = null;
-            this.tbTenDV.Location = new System.Drawing.Point(168, 16);
-            this.tbTenDV.MaxLength = 32767;
-            this.tbTenDV.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbTenDV.Name = "tbTenDV";
-            this.tbTenDV.PasswordChar = '\0';
-            this.tbTenDV.PrefixSuffixText = null;
-            this.tbTenDV.ReadOnly = false;
-            this.tbTenDV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbTenDV.SelectedText = "";
-            this.tbTenDV.SelectionLength = 0;
-            this.tbTenDV.SelectionStart = 0;
-            this.tbTenDV.ShortcutsEnabled = true;
-            this.tbTenDV.Size = new System.Drawing.Size(248, 48);
-            this.tbTenDV.TabIndex = 4;
-            this.tbTenDV.TabStop = false;
-            this.tbTenDV.Text = "Nhập tên dịch vụ";
-            this.tbTenDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbTenDV.TrailingIcon = null;
-            this.tbTenDV.UseSystemPasswordChar = false;
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(20, 33);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(124, 19);
-            this.materialLabel6.TabIndex = 3;
-            this.materialLabel6.Text = "Nhập tên dịch vụ:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvDVCoHoTro);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 89);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(549, 363);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dịch vụ có hỗ trợ";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgvDVKhongHoTro);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(605, 89);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(550, 363);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dịch vụ không hỗ trợ";
-            // 
-            // dgvDVCoHoTro
-            // 
-            this.dgvDVCoHoTro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDVCoHoTro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDVCoHoTro.Location = new System.Drawing.Point(3, 26);
-            this.dgvDVCoHoTro.Name = "dgvDVCoHoTro";
-            this.dgvDVCoHoTro.RowHeadersWidth = 51;
-            this.dgvDVCoHoTro.RowTemplate.Height = 24;
-            this.dgvDVCoHoTro.Size = new System.Drawing.Size(543, 334);
-            this.dgvDVCoHoTro.TabIndex = 0;
-            // 
-            // dgvDVKhongHoTro
-            // 
-            this.dgvDVKhongHoTro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDVKhongHoTro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDVKhongHoTro.Location = new System.Drawing.Point(3, 26);
-            this.dgvDVKhongHoTro.Name = "dgvDVKhongHoTro";
-            this.dgvDVKhongHoTro.RowHeadersWidth = 51;
-            this.dgvDVKhongHoTro.RowTemplate.Height = 24;
-            this.dgvDVKhongHoTro.Size = new System.Drawing.Size(544, 334);
-            this.dgvDVKhongHoTro.TabIndex = 0;
-            // 
-            // dgvDVCuaToi
-            // 
-            this.dgvDVCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDVCuaToi.Location = new System.Drawing.Point(6, 60);
-            this.dgvDVCuaToi.Name = "dgvDVCuaToi";
-            this.dgvDVCuaToi.RowHeadersWidth = 51;
-            this.dgvDVCuaToi.RowTemplate.Height = 24;
-            this.dgvDVCuaToi.Size = new System.Drawing.Size(1168, 407);
-            this.dgvDVCuaToi.TabIndex = 0;
-            // 
-            // materialLabel5
-            // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(496, 20);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(138, 19);
-            this.materialLabel5.TabIndex = 1;
-            this.materialLabel5.Text = "Dịch vụ đã đăng ký";
+            this.dgvTourCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTourCuaToi.Location = new System.Drawing.Point(6, 53);
+            this.dgvTourCuaToi.Name = "dgvTourCuaToi";
+            this.dgvTourCuaToi.RowHeadersWidth = 51;
+            this.dgvTourCuaToi.RowTemplate.Height = 24;
+            this.dgvTourCuaToi.Size = new System.Drawing.Size(1168, 414);
+            this.dgvTourCuaToi.TabIndex = 1;
             // 
             // materialLabel7
             // 
@@ -511,179 +710,10 @@ namespace HotelManagement.GUI
             this.materialLabel7.TabIndex = 0;
             this.materialLabel7.Text = "Tour đã đăng ký";
             // 
-            // dgvTourCuaToi
+            // phongBindingSource
             // 
-            this.dgvTourCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTourCuaToi.Location = new System.Drawing.Point(6, 53);
-            this.dgvTourCuaToi.Name = "dgvTourCuaToi";
-            this.dgvTourCuaToi.RowHeadersWidth = 51;
-            this.dgvTourCuaToi.RowTemplate.Height = 24;
-            this.dgvTourCuaToi.Size = new System.Drawing.Size(1168, 414);
-            this.dgvTourCuaToi.TabIndex = 1;
-            // 
-            // materialLabel9
-            // 
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.Location = new System.Drawing.Point(6, 68);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(60, 19);
-            this.materialLabel9.TabIndex = 1;
-            this.materialLabel9.Text = "Mã tour:";
-            // 
-            // materialLabel10
-            // 
-            this.materialLabel10.AutoSize = true;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.Location = new System.Drawing.Point(6, 145);
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(75, 19);
-            this.materialLabel10.TabIndex = 2;
-            this.materialLabel10.Text = "Mã khách:";
-            // 
-            // materialLabel11
-            // 
-            this.materialLabel11.AutoSize = true;
-            this.materialLabel11.Depth = 0;
-            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel11.Location = new System.Drawing.Point(6, 219);
-            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(77, 19);
-            this.materialLabel11.TabIndex = 3;
-            this.materialLabel11.Text = "Khởi hành:";
-            // 
-            // materialLabel12
-            // 
-            this.materialLabel12.AutoSize = true;
-            this.materialLabel12.Depth = 0;
-            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel12.Location = new System.Drawing.Point(6, 286);
-            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel12.Name = "materialLabel12";
-            this.materialLabel12.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel12.TabIndex = 4;
-            this.materialLabel12.Text = "Trở về:";
-            // 
-            // materialLabel13
-            // 
-            this.materialLabel13.AutoSize = true;
-            this.materialLabel13.Depth = 0;
-            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel13.Location = new System.Drawing.Point(6, 344);
-            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel13.Name = "materialLabel13";
-            this.materialLabel13.Size = new System.Drawing.Size(69, 19);
-            this.materialLabel13.TabIndex = 5;
-            this.materialLabel13.Text = "Số lượng:";
-            // 
-            // tbMaTour
-            // 
-            this.tbMaTour.AnimateReadOnly = false;
-            this.tbMaTour.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMaTour.Depth = 0;
-            this.tbMaTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbMaTour.LeadingIcon = null;
-            this.tbMaTour.Location = new System.Drawing.Point(97, 57);
-            this.tbMaTour.MaxLength = 50;
-            this.tbMaTour.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbMaTour.Multiline = false;
-            this.tbMaTour.Name = "tbMaTour";
-            this.tbMaTour.Size = new System.Drawing.Size(232, 50);
-            this.tbMaTour.TabIndex = 6;
-            this.tbMaTour.Text = "";
-            this.tbMaTour.TrailingIcon = null;
-            // 
-            // tbMaKhach
-            // 
-            this.tbMaKhach.AnimateReadOnly = false;
-            this.tbMaKhach.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMaKhach.Depth = 0;
-            this.tbMaKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbMaKhach.LeadingIcon = null;
-            this.tbMaKhach.Location = new System.Drawing.Point(97, 129);
-            this.tbMaKhach.MaxLength = 50;
-            this.tbMaKhach.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbMaKhach.Multiline = false;
-            this.tbMaKhach.Name = "tbMaKhach";
-            this.tbMaKhach.Size = new System.Drawing.Size(232, 50);
-            this.tbMaKhach.TabIndex = 7;
-            this.tbMaKhach.Text = "";
-            this.tbMaKhach.TrailingIcon = null;
-            // 
-            // dtpKhoiHanh
-            // 
-            this.dtpKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpKhoiHanh.Location = new System.Drawing.Point(98, 216);
-            this.dtpKhoiHanh.Name = "dtpKhoiHanh";
-            this.dtpKhoiHanh.Size = new System.Drawing.Size(231, 27);
-            this.dtpKhoiHanh.TabIndex = 10;
-            this.dtpKhoiHanh.ValueChanged += new System.EventHandler(this.dtpKhoiHanh_ValueChanged);
-            // 
-            // dtpTroVe
-            // 
-            this.dtpTroVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTroVe.Location = new System.Drawing.Point(97, 278);
-            this.dtpTroVe.Name = "dtpTroVe";
-            this.dtpTroVe.Size = new System.Drawing.Size(231, 27);
-            this.dtpTroVe.TabIndex = 11;
-            // 
-            // nudSoLuong
-            // 
-            this.nudSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSoLuong.Location = new System.Drawing.Point(98, 341);
-            this.nudSoLuong.Name = "nudSoLuong";
-            this.nudSoLuong.Size = new System.Drawing.Size(64, 27);
-            this.nudSoLuong.TabIndex = 12;
-            this.nudSoLuong.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // btnDangKy
-            // 
-            this.btnDangKy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDangKy.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDangKy.Depth = 0;
-            this.btnDangKy.HighEmphasis = true;
-            this.btnDangKy.Icon = null;
-            this.btnDangKy.Location = new System.Drawing.Point(141, 394);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDangKy.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDangKy.Size = new System.Drawing.Size(83, 36);
-            this.btnDangKy.TabIndex = 13;
-            this.btnDangKy.Text = "Đăng ký";
-            this.btnDangKy.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDangKy.UseAccentColor = false;
-            this.btnDangKy.UseVisualStyleBackColor = true;
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.AutoSize = true;
-            this.groupBox3.BackColor = System.Drawing.Color.DarkGray;
-            this.groupBox3.Controls.Add(this.btnDangKy);
-            this.groupBox3.Controls.Add(this.materialLabel9);
-            this.groupBox3.Controls.Add(this.nudSoLuong);
-            this.groupBox3.Controls.Add(this.materialLabel10);
-            this.groupBox3.Controls.Add(this.dtpTroVe);
-            this.groupBox3.Controls.Add(this.materialLabel11);
-            this.groupBox3.Controls.Add(this.dtpKhoiHanh);
-            this.groupBox3.Controls.Add(this.materialLabel12);
-            this.groupBox3.Controls.Add(this.tbMaKhach);
-            this.groupBox3.Controls.Add(this.materialLabel13);
-            this.groupBox3.Controls.Add(this.tbMaTour);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(842, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(335, 467);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Đăng ký tour";
+            this.phongBindingSource.DataSource = typeof(HotelManagement.Phong);
+            this.phongBindingSource.CurrentChanged += new System.EventHandler(this.phongBindingSource_CurrentChanged);
             // 
             // matourDataGridViewTextBoxColumn
             // 
@@ -691,7 +721,7 @@ namespace HotelManagement.GUI
             this.matourDataGridViewTextBoxColumn.HeaderText = "matour";
             this.matourDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.matourDataGridViewTextBoxColumn.Name = "matourDataGridViewTextBoxColumn";
-            this.matourDataGridViewTextBoxColumn.Width = 125;
+            this.matourDataGridViewTextBoxColumn.Width = 80;
             // 
             // tentourDataGridViewTextBoxColumn
             // 
@@ -715,7 +745,7 @@ namespace HotelManagement.GUI
             this.songayDataGridViewTextBoxColumn.HeaderText = "songay";
             this.songayDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.songayDataGridViewTextBoxColumn.Name = "songayDataGridViewTextBoxColumn";
-            this.songayDataGridViewTextBoxColumn.Width = 125;
+            this.songayDataGridViewTextBoxColumn.Width = 60;
             // 
             // madoitacDataGridViewTextBoxColumn
             // 
@@ -723,36 +753,7 @@ namespace HotelManagement.GUI
             this.madoitacDataGridViewTextBoxColumn.HeaderText = "madoitac";
             this.madoitacDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.madoitacDataGridViewTextBoxColumn.Name = "madoitacDataGridViewTextBoxColumn";
-            this.madoitacDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tourDuLichBindingSource
-            // 
-            this.tourDuLichBindingSource.DataSource = typeof(HotelManagement.TourDuLich);
-            // 
-            // phongBindingSource
-            // 
-            this.phongBindingSource.DataSource = typeof(HotelManagement.Phong);
-            this.phongBindingSource.CurrentChanged += new System.EventHandler(this.phongBindingSource_CurrentChanged);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTimKiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTimKiem.Depth = 0;
-            this.btnTimKiem.HighEmphasis = true;
-            this.btnTimKiem.Icon = null;
-            this.btnTimKiem.Location = new System.Drawing.Point(437, 22);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTimKiem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTimKiem.Size = new System.Drawing.Size(158, 36);
-            this.btnTimKiem.TabIndex = 6;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTimKiem.UseAccentColor = false;
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.madoitacDataGridViewTextBoxColumn.Width = 70;
             // 
             // fKhachHangHome
             // 
@@ -768,29 +769,29 @@ namespace HotelManagement.GUI
             this.Load += new System.EventHandler(this.fKhachHangHome_Load);
             this.tabThongTinTaiKhoan.ResumeLayout(false);
             this.tabThongTinTaiKhoan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).EndInit();
             this.tabTour.ResumeLayout(false);
             this.tabTour.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).EndInit();
             this.tabDichVu.ResumeLayout(false);
             this.tabDichVu.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVKhongHoTro)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVCoHoTro)).EndInit();
             this.tabDatPhong.ResumeLayout(false);
             this.tabDatPhong.PerformLayout();
             this.tabKhachHang.ResumeLayout(false);
             this.tabDVCuaToi.ResumeLayout(false);
             this.tabDVCuaToi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVCuaToi)).EndInit();
             this.tabTourCuaToi.ResumeLayout(false);
             this.tabTourCuaToi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDVCoHoTro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDVKhongHoTro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDVCuaToi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -843,11 +844,11 @@ namespace HotelManagement.GUI
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private System.Windows.Forms.GroupBox groupBox3;
+        private MaterialSkin.Controls.MaterialButton btnTimKiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn matourDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tentourDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn songayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn madoitacDataGridViewTextBoxColumn;
-        private MaterialSkin.Controls.MaterialButton btnTimKiem;
     }
 }
