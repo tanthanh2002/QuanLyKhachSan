@@ -1,8 +1,8 @@
 ﻿--DROP DATABASE IF EXISTS HotelManagement;
-CREATE DATABASE HotelManagement
-go
-USE HotelManagement;
-go
+--CREATE DATABASE HotelManagement;
+--go
+--USE HotelManagement;
+--go
 --select * from TaiKhoan;
 --select * from KhachHang;
 --0
@@ -241,9 +241,10 @@ CREATE TABLE KhuyenMai
 --15
 CREATE TABLE ApDungKhuyenMai
 (
+	id								int					identity primary key,
 	makhuyenmai						int					,
 	maphong							int					,
-	primary key(makhuyenmai,maphong),
+	constraint unique_pk_apdungkhuyenmai unique(makhuyenmai,maphong),
 	constraint fk_ApDungKhuyenMai_makhuyenmai foreign key(makhuyenmai) references KhuyenMai(makhuyenmai),
 	constraint fk_ApDungKhuyenMai_maphong foreign key(maphong) references Phong(maphong)
 );
@@ -277,9 +278,10 @@ CREATE TABLE DichVu
 --18
 CREATE TABLE CungCapDichVu
 (
+	id								int					primary key identity,
 	madichvu						int					not null,
 	maloaiphong							int					not null,
-	primary key (madichvu,maloaiphong),
+	constraint unique_pk_cungcapdichvu unique(madichvu,maloaiphong),
 	constraint fk_CungCapDichVu_madichvu foreign key (madichvu) references DichVu(madichvu),
 	constraint fk_CungCapDichVu_maloaiphong foreign key (maloaiphong) references LoaiPhong(maloaiphong)
 );
