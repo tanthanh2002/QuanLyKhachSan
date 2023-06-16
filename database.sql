@@ -1,7 +1,8 @@
 ﻿--DROP DATABASE IF EXISTS HotelManagement;
---CREATE DATABASE HotelManagement;
---USE HotelManagement;
-
+CREATE DATABASE HotelManagement
+go
+USE HotelManagement;
+go
 --select * from TaiKhoan;
 --select * from KhachHang;
 --0
@@ -94,7 +95,7 @@ CREATE TABLE NhanVien
 	luong							float				not null check(luong > 0),
 	ngaybatdau						date				default getdate(),
 	trangthai						nvarchar(20)		not null check(trangthai in (N'còn làm việc',N'đã nghỉ việc')),
-	mataikhoan						int						not null,
+	mataikhoan						int					not null,
 	constraint fk_NhanVien_taikhoan foreign key (mataikhoan) references TaiKhoan(mataikhoan)
 );
 
@@ -106,6 +107,7 @@ CREATE TABLE PhieuDatPhong
 	sodemluutru						int					not null check(sodemluutru > 0),
 	ngayden							date				not null,
 	makhachhang						int					not null,
+	checkin							bit					not null,
 	nhanviencheckout				int					,
 	nhanvienvesinh					int					,
 	constraint fk_PhieuDatPhong_makhachhang foreign key (makhachhang) references KhachHang(makhachhang) ,
@@ -150,6 +152,11 @@ CREATE TABLE HanhLy
 	constraint fk_HanhLy_maphieuvanchuyen foreign key (maphieuvanchuyen) references PhieuVanChuyenHanhLy(maphieuvanchuyen)
 );
 
+CREATE TABLE LoaiPhong
+(
+	maloaiphong						int					identity primary key,
+	tenloaiphong					varchar(5)			not null unique,
+);
 
 --12
 CREATE TABLE Phong
@@ -158,7 +165,9 @@ CREATE TABLE Phong
 	sophong							varchar(5)			not null unique,
 	gia								float				not null check(gia>0),
 	bikhoa							bit					not null default 0,
-	tinhtrang						nvarchar(20)		not null check(tinhtrang in (N'đã sẵn sàng',N'chưa sẵn sàng'))
+	tinhtrang						nvarchar(20)		not null check(tinhtrang in (N'đã sẵn sàng',N'chưa sẵn sàng')),
+	maloaiphong						int 				,
+	constraint fk_Phong_loaiphong foreign key (maloaiphong) references LoaiPhong(maloaiphong)
 );
 
 
@@ -269,10 +278,10 @@ CREATE TABLE DichVu
 CREATE TABLE CungCapDichVu
 (
 	madichvu						int					not null,
-	maphong							int					not null,
-	primary key (madichvu,maphong),
+	maloaiphong							int					not null,
+	primary key (madichvu,maloaiphong),
 	constraint fk_CungCapDichVu_madichvu foreign key (madichvu) references DichVu(madichvu),
-	constraint fk_CungCapDichVu_maphong foreign key (maphong) references Phong(maphong)
+	constraint fk_CungCapDichVu_maloaiphong foreign key (maloaiphong) references LoaiPhong(maloaiphong)
 );
 
 --19
