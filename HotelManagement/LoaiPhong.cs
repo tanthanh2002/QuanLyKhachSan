@@ -12,22 +12,21 @@ namespace HotelManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class DichVu
+    public partial class LoaiPhong
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DichVu()
+        public LoaiPhong()
         {
             this.CungCapDichVus = new HashSet<CungCapDichVu>();
-            this.PhieuSuDungDichVuChiTiets = new HashSet<PhieuSuDungDichVuChiTiet>();
+            this.Phongs = new HashSet<Phong>();
         }
     
-        public int madichvu { get; set; }
-        public string tendichvu { get; set; }
-        public Nullable<double> gia { get; set; }
+        public int maloaiphong { get; set; }
+        public string tenloaiphong { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CungCapDichVu> CungCapDichVus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuSuDungDichVuChiTiet> PhieuSuDungDichVuChiTiets { get; set; }
+        public virtual ICollection<Phong> Phongs { get; set; }
     }
 }

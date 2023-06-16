@@ -25,6 +25,8 @@ namespace HotelManagement
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ApDungKhuyenMai> ApDungKhuyenMais { get; set; }
+        public virtual DbSet<CungCapDichVu> CungCapDichVus { get; set; }
         public virtual DbSet<DatTour> DatTours { get; set; }
         public virtual DbSet<DichVu> DichVus { get; set; }
         public virtual DbSet<Doan> Doans { get; set; }
@@ -33,6 +35,7 @@ namespace HotelManagement
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
+        public virtual DbSet<LoaiPhong> LoaiPhongs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<NoiThat> NoiThats { get; set; }
         public virtual DbSet<PhieuDanhGia> PhieuDanhGias { get; set; }

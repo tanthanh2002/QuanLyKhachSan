@@ -17,10 +17,9 @@ namespace HotelManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Phong()
         {
+            this.ApDungKhuyenMais = new HashSet<ApDungKhuyenMai>();
             this.NoiThats = new HashSet<NoiThat>();
             this.PhieuDatPhongChiTiets = new HashSet<PhieuDatPhongChiTiet>();
-            this.KhuyenMais = new HashSet<KhuyenMai>();
-            this.DichVus = new HashSet<DichVu>();
         }
     
         public int maphong { get; set; }
@@ -28,14 +27,14 @@ namespace HotelManagement
         public double gia { get; set; }
         public bool bikhoa { get; set; }
         public string tinhtrang { get; set; }
+        public Nullable<int> maloaiphong { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ApDungKhuyenMai> ApDungKhuyenMais { get; set; }
+        public virtual LoaiPhong LoaiPhong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NoiThat> NoiThats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuDatPhongChiTiet> PhieuDatPhongChiTiets { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KhuyenMai> KhuyenMais { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DichVu> DichVus { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace HotelManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KhuyenMai()
         {
-            this.Phongs = new HashSet<Phong>();
+            this.ApDungKhuyenMais = new HashSet<ApDungKhuyenMai>();
         }
     
         public int makhuyenmai { get; set; }
@@ -27,6 +27,6 @@ namespace HotelManagement
         public Nullable<System.DateTime> ngaykhoa { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Phong> Phongs { get; set; }
+        public virtual ICollection<ApDungKhuyenMai> ApDungKhuyenMais { get; set; }
     }
 }

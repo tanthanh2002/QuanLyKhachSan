@@ -30,6 +30,7 @@ namespace HotelManagement
         public int sodemluutru { get; set; }
         public System.DateTime ngayden { get; set; }
         public int makhachhang { get; set; }
+        public bool checkin { get; set; }
         public Nullable<int> nhanviencheckout { get; set; }
         public Nullable<int> nhanvienvesinh { get; set; }
     
