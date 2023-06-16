@@ -14,7 +14,7 @@ namespace HotelManagement.DAO
         
         private PhieuDanhGiaRepo() { } 
         public static PhieuDanhGiaRepo getInstance() { return instance; }
-        public void addTakeFeedback(PhieuDanhGia phieuDanhGia)
+        public void themDanhGia(PhieuDanhGia phieuDanhGia)
         {
             db.PhieuDanhGias.Add(phieuDanhGia);
             db.SaveChanges();

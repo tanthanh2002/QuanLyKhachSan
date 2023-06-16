@@ -15,9 +15,9 @@ namespace HotelManagement.BUS
 
         private PhieuDanhGiaService() { }
         public static PhieuDanhGiaService getInstance() { return instance; }
-        public void addTakeFeedback(PhieuDanhGia phieuDanhGia)
+        public void themDanhGia(PhieuDanhGia phieuDanhGia)
         {
-            repo.addTakeFeedback(phieuDanhGia);
+            repo.themDanhGia(phieuDanhGia);
         }
     }
 }

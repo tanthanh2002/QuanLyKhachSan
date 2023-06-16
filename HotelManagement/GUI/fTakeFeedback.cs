@@ -42,7 +42,7 @@ namespace HotelManagement.GUI
             phieuDanhGia.maphieudanhgia = -1;
             try
             {
-                phieuDanhGiaService.addTakeFeedback(phieuDanhGia);
+                phieuDanhGiaService.themDanhGia(phieuDanhGia);
                 MessageBox.Show("Thêm đánh giá thành công!");
             }
             catch (Exception ex)

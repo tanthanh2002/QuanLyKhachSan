@@ -16,11 +16,9 @@ namespace HotelManagement.BUS
         private TimPhongService() { }
         public static TimPhongService getInstance() {  return instance; }
 
-        public List<Phong> GetPhongList(float theoGia, int theoSoPhong)
+        public List<Phong> tiemKiemPhong(float theoGia, string theoSoPhong)
         {
-            return repo.findAll(theoGia, theoSoPhong);
+            return repo.timPhongTheoGiaVaSLPhong(theoGia, theoSoPhong);
         }
-
-
     }
 }

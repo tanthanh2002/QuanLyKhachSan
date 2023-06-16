@@ -130,5 +130,11 @@ namespace HotelManagement.GUI
                 MessageBox.Show(exc.Message);
             }
         }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            var newView = new fRoomSearch();
+            newView.ShowDialog();
+        }
     }
 }

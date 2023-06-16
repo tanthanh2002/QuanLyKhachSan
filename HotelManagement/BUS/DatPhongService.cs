@@ -17,7 +17,7 @@ namespace HotelManagement.BUS
 
         public static DatPhongService getInstance() { return instance; }
 
-        public void addRoomBook(PhieuDatPhong phieuDatPhong)
+        public void themPhieuDatPhong(PhieuDatPhong phieuDatPhong)
         {
             repo.save(phieuDatPhong);
         }

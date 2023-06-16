@@ -65,6 +65,8 @@ namespace HotelManagement.GUI
             this.tbTenTour = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.tabDichVu = new System.Windows.Forms.TabPage();
+            this.cbMaPhong = new MaterialSkin.Controls.MaterialComboBox();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDVKhongHoTro = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -73,7 +75,14 @@ namespace HotelManagement.GUI
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.phongCuaToi = new System.Windows.Forms.TabPage();
             this.tabDatPhong = new System.Windows.Forms.TabPage();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabKhachHang = new MaterialSkin.Controls.MaterialTabControl();
             this.tabDVCuaToi = new System.Windows.Forms.TabPage();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
@@ -82,8 +91,8 @@ namespace HotelManagement.GUI
             this.dgvTourCuaToi = new System.Windows.Forms.DataGridView();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.cbMaPhong = new MaterialSkin.Controls.MaterialComboBox();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabThongTinTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).BeginInit();
             this.tabTour.SuspendLayout();
@@ -103,6 +112,7 @@ namespace HotelManagement.GUI
             this.tabTourCuaToi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // icon
@@ -542,6 +552,40 @@ namespace HotelManagement.GUI
             this.tabDichVu.Text = "Dịch vụ";
             this.tabDichVu.UseVisualStyleBackColor = true;
             // 
+            // cbMaPhong
+            // 
+            this.cbMaPhong.AutoResize = false;
+            this.cbMaPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbMaPhong.Depth = 0;
+            this.cbMaPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbMaPhong.DropDownHeight = 174;
+            this.cbMaPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMaPhong.DropDownWidth = 121;
+            this.cbMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbMaPhong.ForeColor = System.Drawing.Color.White;
+            this.cbMaPhong.FormattingEnabled = true;
+            this.cbMaPhong.IntegralHeight = false;
+            this.cbMaPhong.ItemHeight = 43;
+            this.cbMaPhong.Location = new System.Drawing.Point(113, 15);
+            this.cbMaPhong.MaxDropDownItems = 4;
+            this.cbMaPhong.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbMaPhong.Name = "cbMaPhong";
+            this.cbMaPhong.Size = new System.Drawing.Size(133, 49);
+            this.cbMaPhong.StartIndex = 0;
+            this.cbMaPhong.TabIndex = 8;
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel8.Location = new System.Drawing.Point(23, 33);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(73, 19);
+            this.materialLabel8.TabIndex = 7;
+            this.materialLabel8.Text = "Mã phòng";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvDVKhongHoTro);
@@ -641,7 +685,16 @@ namespace HotelManagement.GUI
             // 
             // tabDatPhong
             // 
-            this.tabDatPhong.Controls.Add(this.materialLabel4);
+            this.tabDatPhong.Controls.Add(this.dataGridView1);
+            this.tabDatPhong.Controls.Add(this.materialButton1);
+            this.tabDatPhong.Controls.Add(this.checkBox6);
+            this.tabDatPhong.Controls.Add(this.checkBox5);
+            this.tabDatPhong.Controls.Add(this.checkBox4);
+            this.tabDatPhong.Controls.Add(this.checkBox3);
+            this.tabDatPhong.Controls.Add(this.checkBox2);
+            this.tabDatPhong.Controls.Add(this.checkBox1);
+            this.tabDatPhong.Controls.Add(this.label2);
+            this.tabDatPhong.Controls.Add(this.label1);
             this.tabDatPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDatPhong.ImageKey = "booking.png";
             this.tabDatPhong.Location = new System.Drawing.Point(4, 39);
@@ -652,17 +705,83 @@ namespace HotelManagement.GUI
             this.tabDatPhong.Text = "Đặt phòng";
             this.tabDatPhong.UseVisualStyleBackColor = true;
             // 
-            // materialLabel4
+            // checkBox6
             // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(415, 207);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(61, 19);
-            this.materialLabel4.TabIndex = 0;
-            this.materialLabel4.Text = "xin chào";
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(265, 180);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(81, 26);
+            this.checkBox6.TabIndex = 7;
+            this.checkBox6.Text = "Tất cả";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(265, 82);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(81, 26);
+            this.checkBox5.TabIndex = 6;
+            this.checkBox5.Text = "Tất cả";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(142, 180);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(111, 26);
+            this.checkBox4.TabIndex = 5;
+            this.checkBox4.Text = "Phòng đôi";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(23, 180);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(115, 26);
+            this.checkBox3.TabIndex = 4;
+            this.checkBox3.Text = "Phòng đơn";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(142, 82);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(99, 26);
+            this.checkBox2.TabIndex = 3;
+            this.checkBox2.Text = "> 5 triệu";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(23, 82);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(99, 26);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "> 2 triệu";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Theo số phòng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Theo Giá";
             // 
             // tabKhachHang
             // 
@@ -759,39 +878,35 @@ namespace HotelManagement.GUI
             this.phongBindingSource.DataSource = typeof(HotelManagement.Phong);
             this.phongBindingSource.CurrentChanged += new System.EventHandler(this.phongBindingSource_CurrentChanged);
             // 
-            // materialLabel8
+            // materialButton1
             // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel8.Location = new System.Drawing.Point(23, 33);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(73, 19);
-            this.materialLabel8.TabIndex = 7;
-            this.materialLabel8.Text = "Mã phòng";
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(96, 247);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(86, 36);
+            this.materialButton1.TabIndex = 8;
+            this.materialButton1.Text = "Tìm kiếm";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
-            // cbMaPhong
+            // dataGridView1
             // 
-            this.cbMaPhong.AutoResize = false;
-            this.cbMaPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cbMaPhong.Depth = 0;
-            this.cbMaPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbMaPhong.DropDownHeight = 174;
-            this.cbMaPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMaPhong.DropDownWidth = 121;
-            this.cbMaPhong.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cbMaPhong.ForeColor = System.Drawing.Color.White;
-            this.cbMaPhong.FormattingEnabled = true;
-            this.cbMaPhong.IntegralHeight = false;
-            this.cbMaPhong.ItemHeight = 43;
-            this.cbMaPhong.Location = new System.Drawing.Point(113, 15);
-            this.cbMaPhong.MaxDropDownItems = 4;
-            this.cbMaPhong.MouseState = MaterialSkin.MouseState.OUT;
-            this.cbMaPhong.Name = "cbMaPhong";
-            this.cbMaPhong.Size = new System.Drawing.Size(133, 49);
-            this.cbMaPhong.StartIndex = 0;
-            this.cbMaPhong.TabIndex = 8;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(468, 55);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(633, 248);
+            this.dataGridView1.TabIndex = 9;
             // 
             // fKhachHangHome
             // 
@@ -831,6 +946,7 @@ namespace HotelManagement.GUI
             this.tabTourCuaToi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -849,7 +965,6 @@ namespace HotelManagement.GUI
         private System.Windows.Forms.TabPage tabDichVu;
         private System.Windows.Forms.TabPage phongCuaToi;
         private System.Windows.Forms.TabPage tabDatPhong;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialTabControl tabKhachHang;
         private System.Windows.Forms.TabPage tabDVCuaToi;
         private System.Windows.Forms.TabPage tabTourCuaToi;
@@ -890,5 +1005,15 @@ namespace HotelManagement.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn madoitacDataGridViewTextBoxColumn;
         private MaterialSkin.Controls.MaterialComboBox cbMaPhong;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

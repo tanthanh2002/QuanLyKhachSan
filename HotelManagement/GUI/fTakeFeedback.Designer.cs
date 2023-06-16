@@ -41,6 +41,9 @@
             this.txtMaPhieuDatPhong = new MaterialSkin.Controls.MaterialTextBox();
             this.txtMaKhachHang = new MaterialSkin.Controls.MaterialTextBox();
             this.dataGridViewDS = new System.Windows.Forms.DataGridView();
+            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,12 +223,37 @@
             // dataGridViewDS
             // 
             this.dataGridViewDS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDV,
+            this.TenDV,
+            this.SoLuong});
             this.dataGridViewDS.Location = new System.Drawing.Point(51, 90);
             this.dataGridViewDS.Name = "dataGridViewDS";
             this.dataGridViewDS.RowHeadersWidth = 51;
             this.dataGridViewDS.RowTemplate.Height = 24;
             this.dataGridViewDS.Size = new System.Drawing.Size(561, 211);
             this.dataGridViewDS.TabIndex = 14;
+            // 
+            // MaDV
+            // 
+            this.MaDV.HeaderText = "MaDV";
+            this.MaDV.MinimumWidth = 6;
+            this.MaDV.Name = "MaDV";
+            this.MaDV.Width = 125;
+            // 
+            // TenDV
+            // 
+            this.TenDV.HeaderText = "TenDV";
+            this.TenDV.MinimumWidth = 6;
+            this.TenDV.Name = "TenDV";
+            this.TenDV.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "SoLuong";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 125;
             // 
             // fTakeFeedback
             // 
@@ -267,5 +295,8 @@
         private MaterialSkin.Controls.MaterialTextBox txtMaPhieuDatPhong;
         private MaterialSkin.Controls.MaterialTextBox txtMaKhachHang;
         private System.Windows.Forms.DataGridView dataGridViewDS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
     }
 }

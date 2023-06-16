@@ -62,6 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApDungKhuyenMai.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="BUS\BcryptEncoder.cs" />
     <Compile Include="BUS\DatPhongService.cs" />
     <Compile Include="BUS\DatTourService.cs" />
@@ -83,6 +86,9 @@
     <Compile Include="CONST\KhachHangConst.cs" />
     <Compile Include="CONST\PhieuDatPhongConst.cs" />
     <Compile Include="CONST\TaiKhoanConst.cs" />
+    <Compile Include="CungCapDichVu.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DatTourRepo.cs" />
     <Compile Include="DAO\DichVu.cs" />
     <Compile Include="DAO\HoaDonRepo.cs" />
@@ -254,6 +260,9 @@
     <Compile Include="KhuyenMai.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoaiPhong.cs">
+      <DependentUpon>HotelEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
@@ -292,6 +301,9 @@
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="TANN\Messenger.cs" />
+    <Compile Include="TANN\Shared.cs" />
+    <Compile Include="TANN\ShareDataModel.cs" />
     <Compile Include="ThanhVien.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>

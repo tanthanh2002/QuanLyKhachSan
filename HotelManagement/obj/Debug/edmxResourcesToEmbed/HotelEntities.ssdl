@@ -2,19 +2,19 @@
 <Schema Namespace="HotelManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ApDungKhuyenMai">
     <Key>
-      <PropertyRef Name="makhuyenmai" />
-      <PropertyRef Name="maphong" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="makhuyenmai" Type="int" Nullable="false" />
-    <Property Name="maphong" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="makhuyenmai" Type="int" />
+    <Property Name="maphong" Type="int" />
   </EntityType>
   <EntityType Name="CungCapDichVu">
     <Key>
-      <PropertyRef Name="madichvu" />
-      <PropertyRef Name="maphong" />
+      <PropertyRef Name="id" />
     </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="madichvu" Type="int" Nullable="false" />
-    <Property Name="maphong" Type="int" Nullable="false" />
+    <Property Name="maloaiphong" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DatTour">
     <Key>
@@ -98,6 +98,13 @@
     <Property Name="thoigianketthuc" Type="date" Nullable="false" />
     <Property Name="ngaykhoa" Type="date" />
   </EntityType>
+  <EntityType Name="LoaiPhong">
+    <Key>
+      <PropertyRef Name="maloaiphong" />
+    </Key>
+    <Property Name="maloaiphong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenloaiphong" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
   <EntityType Name="NhanVien">
     <Key>
       <PropertyRef Name="manhanvien" />
@@ -138,6 +145,7 @@
     <Property Name="sodemluutru" Type="int" Nullable="false" />
     <Property Name="ngayden" Type="date" Nullable="false" />
     <Property Name="makhachhang" Type="int" Nullable="false" />
+    <Property Name="checkin" Type="bit" Nullable="false" />
     <Property Name="nhanviencheckout" Type="int" />
     <Property Name="nhanvienvesinh" Type="int" />
   </EntityType>
@@ -211,6 +219,7 @@
     <Property Name="gia" Type="float" Nullable="false" />
     <Property Name="bikhoa" Type="bit" Nullable="false" />
     <Property Name="tinhtrang" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="maloaiphong" Type="int" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -252,7 +261,7 @@
     <Property Name="madoitac" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="fk_ApDungKhuyenMai_makhuyenmai">
-    <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="1" />
+    <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="0..1" />
     <End Role="ApDungKhuyenMai" Type="Self.ApDungKhuyenMai" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="KhuyenMai">
@@ -264,7 +273,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_ApDungKhuyenMai_maphong">
-    <End Role="Phong" Type="Self.Phong" Multiplicity="1" />
+    <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
     <End Role="ApDungKhuyenMai" Type="Self.ApDungKhuyenMai" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Phong">
@@ -287,15 +296,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_CungCapDichVu_maphong">
-    <End Role="Phong" Type="Self.Phong" Multiplicity="1" />
+  <Association Name="fk_CungCapDichVu_maloaiphong">
+    <End Role="LoaiPhong" Type="Self.LoaiPhong" Multiplicity="1" />
     <End Role="CungCapDichVu" Type="Self.CungCapDichVu" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Phong">
-        <PropertyRef Name="maphong" />
+      <Principal Role="LoaiPhong">
+        <PropertyRef Name="maloaiphong" />
       </Principal>
       <Dependent Role="CungCapDichVu">
-        <PropertyRef Name="maphong" />
+        <PropertyRef Name="maloaiphong" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -589,6 +598,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_Phong_loaiphong">
+    <End Role="LoaiPhong" Type="Self.LoaiPhong" Multiplicity="0..1" />
+    <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiPhong">
+        <PropertyRef Name="maloaiphong" />
+      </Principal>
+      <Dependent Role="Phong">
+        <PropertyRef Name="maloaiphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_ThanhVien_madoan">
     <End Role="Doan" Type="Self.Doan" Multiplicity="1" />
     <End Role="ThanhVien" Type="Self.ThanhVien" Multiplicity="*" />
@@ -636,6 +657,7 @@
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiPhong" EntityType="Self.LoaiPhong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NoiThat" EntityType="Self.NoiThat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhieuDanhGia" EntityType="Self.PhieuDanhGia" Schema="dbo" store:Type="Tables" />
@@ -663,8 +685,8 @@
       <End Role="DichVu" EntitySet="DichVu" />
       <End Role="CungCapDichVu" EntitySet="CungCapDichVu" />
     </AssociationSet>
-    <AssociationSet Name="fk_CungCapDichVu_maphong" Association="Self.fk_CungCapDichVu_maphong">
-      <End Role="Phong" EntitySet="Phong" />
+    <AssociationSet Name="fk_CungCapDichVu_maloaiphong" Association="Self.fk_CungCapDichVu_maloaiphong">
+      <End Role="LoaiPhong" EntitySet="LoaiPhong" />
       <End Role="CungCapDichVu" EntitySet="CungCapDichVu" />
     </AssociationSet>
     <AssociationSet Name="fk_DatTour_makhachhang" Association="Self.fk_DatTour_makhachhang">
@@ -762,6 +784,10 @@
     <AssociationSet Name="fk_PhieuVanChuyenHanhLy_maphieudatphong" Association="Self.fk_PhieuVanChuyenHanhLy_maphieudatphong">
       <End Role="PhieuDatPhong" EntitySet="PhieuDatPhong" />
       <End Role="PhieuVanChuyenHanhLy" EntitySet="PhieuVanChuyenHanhLy" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Phong_loaiphong" Association="Self.fk_Phong_loaiphong">
+      <End Role="LoaiPhong" EntitySet="LoaiPhong" />
+      <End Role="Phong" EntitySet="Phong" />
     </AssociationSet>
     <AssociationSet Name="fk_ThanhVien_madoan" Association="Self.fk_ThanhVien_madoan">
       <End Role="Doan" EntitySet="Doan" />

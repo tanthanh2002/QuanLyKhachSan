@@ -27,6 +27,12 @@ namespace HotelManagement.GUI
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
+        private void themKhachHang(KhachHang khachHang)
+        {
+            var newView = new fOnlinePayment();
+            newView.Show();
+        }
+
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
             KhachHang khachHang = new KhachHang();
@@ -57,7 +63,7 @@ namespace HotelManagement.GUI
             phieuDatPhong.nhanvienvesinh = 0;
             try
             {
-                datPhongService.addRoomBook(phieuDatPhong);
+                datPhongService.themPhieuDatPhong(phieuDatPhong);
             }
             catch (Exception ex)
             {

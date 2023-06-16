@@ -224,3 +224,8 @@ C:\Users\DerKaiser\Source\Repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelMa
 C:\Users\DerKaiser\Source\Repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.pdb
 C:\Users\DerKaiser\Source\Repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fDangKyTour.resources
 C:\Users\DerKaiser\source\repos\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fBuongPhongHome.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fBuongPhongHome.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fDangKyTour.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fDichVu.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fKhachHangHome.resources
+D:\HK2-20222023\PTTKHTTT\QuanLyKhachSan\HotelManagement\obj\Debug\HotelManagement.GUI.fLeTanHome.resources

@@ -36,9 +36,9 @@
             this.linkLblRegister = new System.Windows.Forms.LinkLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.lblHello = new MaterialSkin.Controls.MaterialLabel();
+            this.btnLogin = new MaterialSkin.Controls.MaterialButton();
             this.icon = new System.Windows.Forms.ImageList(this.components);
             this.lblPassword = new MaterialSkin.Controls.MaterialLabel();
-            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.lblUsername = new MaterialSkin.Controls.MaterialLabel();
             this.txtUsername = new MaterialSkin.Controls.MaterialTextBox();
             this.tabRegister = new System.Windows.Forms.TabPage();
@@ -61,7 +61,7 @@
             this.registerTxtConfirmPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.registerTxtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.registerTxtUsername = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnLogin = new MaterialSkin.Controls.MaterialButton();
+            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.tabControlMenu.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabRegister.SuspendLayout();
@@ -75,7 +75,7 @@
             this.tabControlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMenu.ImageList = this.icon;
             this.tabControlMenu.Location = new System.Drawing.Point(4, 79);
-            this.tabControlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControlMenu.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControlMenu.Multiline = true;
             this.tabControlMenu.Name = "tabControlMenu";
@@ -96,9 +96,9 @@
             this.tabLogin.Controls.Add(this.txtUsername);
             this.tabLogin.ImageKey = "icons8-login-48.png";
             this.tabLogin.Location = new System.Drawing.Point(4, 39);
-            this.tabLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabLogin.Margin = new System.Windows.Forms.Padding(4);
             this.tabLogin.Name = "tabLogin";
-            this.tabLogin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabLogin.Padding = new System.Windows.Forms.Padding(4);
             this.tabLogin.Size = new System.Drawing.Size(1355, 611);
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "Đăng nhập";
@@ -160,6 +160,29 @@
             this.lblHello.TabIndex = 5;
             this.lblHello.Text = "Xin chào! ";
             // 
+            // btnLogin
+            // 
+            this.btnLogin.AutoSize = false;
+            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnLogin.Depth = 0;
+            this.btnLogin.HighEmphasis = true;
+            this.btnLogin.Icon = null;
+            this.btnLogin.ImageKey = "icons8-login-96.png";
+            this.btnLogin.ImageList = this.icon;
+            this.btnLogin.Location = new System.Drawing.Point(243, 404);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnLogin.Size = new System.Drawing.Size(349, 44);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnLogin.UseAccentColor = false;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // icon
             // 
             this.icon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icon.ImageStream")));
@@ -197,27 +220,6 @@
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Mật khẩu";
             // 
-            // txtPassword
-            // 
-            this.txtPassword.AnimateReadOnly = false;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtPassword.Hint = "mật khẩu";
-            this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(243, 300);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPassword.MaxLength = 50;
-            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtPassword.Multiline = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Password = true;
-            this.txtPassword.Size = new System.Drawing.Size(349, 50);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "";
-            this.txtPassword.TrailingIcon = null;
-            this.txtPassword.TextChanged += new System.EventHandler(this.materialTextBox1_TextChanged);
-            // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
@@ -236,11 +238,11 @@
             this.txtUsername.AnimateReadOnly = false;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Depth = 0;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsername.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtUsername.Hint = "tên tài khoản";
             this.txtUsername.LeadingIcon = null;
             this.txtUsername.Location = new System.Drawing.Point(243, 175);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.MaxLength = 50;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
             this.txtUsername.Multiline = false;
@@ -273,9 +275,9 @@
             this.tabRegister.Controls.Add(this.registerTxtUsername);
             this.tabRegister.ImageKey = "icons8-register-48.png";
             this.tabRegister.Location = new System.Drawing.Point(4, 39);
-            this.tabRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabRegister.Margin = new System.Windows.Forms.Padding(4);
             this.tabRegister.Name = "tabRegister";
-            this.tabRegister.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabRegister.Padding = new System.Windows.Forms.Padding(4);
             this.tabRegister.Size = new System.Drawing.Size(1355, 611);
             this.tabRegister.TabIndex = 1;
             this.tabRegister.Text = "Đăng ký";
@@ -425,11 +427,11 @@
             this.registerTxtID.AnimateReadOnly = false;
             this.registerTxtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtID.Depth = 0;
-            this.registerTxtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtID.Hint = "căn cước công dân";
             this.registerTxtID.LeadingIcon = null;
             this.registerTxtID.Location = new System.Drawing.Point(920, 82);
-            this.registerTxtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtID.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtID.MaxLength = 50;
             this.registerTxtID.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtID.Multiline = false;
@@ -444,11 +446,11 @@
             this.registerTxtPhone.AnimateReadOnly = false;
             this.registerTxtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtPhone.Depth = 0;
-            this.registerTxtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtPhone.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtPhone.Hint = "số điện thoại";
             this.registerTxtPhone.LeadingIcon = null;
             this.registerTxtPhone.Location = new System.Drawing.Point(511, 471);
-            this.registerTxtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtPhone.MaxLength = 50;
             this.registerTxtPhone.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtPhone.Multiline = false;
@@ -463,11 +465,11 @@
             this.registerTxtFax.AnimateReadOnly = false;
             this.registerTxtFax.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtFax.Depth = 0;
-            this.registerTxtFax.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtFax.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtFax.Hint = "số fax";
             this.registerTxtFax.LeadingIcon = null;
             this.registerTxtFax.Location = new System.Drawing.Point(507, 336);
-            this.registerTxtFax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtFax.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtFax.MaxLength = 50;
             this.registerTxtFax.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtFax.Multiline = false;
@@ -482,11 +484,11 @@
             this.registerTxtEmail.AnimateReadOnly = false;
             this.registerTxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtEmail.Depth = 0;
-            this.registerTxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtEmail.Hint = "email";
             this.registerTxtEmail.LeadingIcon = null;
             this.registerTxtEmail.Location = new System.Drawing.Point(507, 218);
-            this.registerTxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtEmail.MaxLength = 50;
             this.registerTxtEmail.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtEmail.Multiline = false;
@@ -501,11 +503,11 @@
             this.registerTxtAddress.AnimateReadOnly = false;
             this.registerTxtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtAddress.Depth = 0;
-            this.registerTxtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtAddress.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtAddress.Hint = "địa chỉ";
             this.registerTxtAddress.LeadingIcon = null;
             this.registerTxtAddress.Location = new System.Drawing.Point(507, 82);
-            this.registerTxtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtAddress.MaxLength = 50;
             this.registerTxtAddress.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtAddress.Multiline = false;
@@ -520,11 +522,11 @@
             this.registerTxtFullName.AnimateReadOnly = false;
             this.registerTxtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtFullName.Depth = 0;
-            this.registerTxtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtFullName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtFullName.Hint = "họ tên";
             this.registerTxtFullName.LeadingIcon = null;
             this.registerTxtFullName.Location = new System.Drawing.Point(72, 471);
-            this.registerTxtFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtFullName.MaxLength = 50;
             this.registerTxtFullName.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtFullName.Multiline = false;
@@ -539,11 +541,11 @@
             this.registerTxtConfirmPassword.AnimateReadOnly = false;
             this.registerTxtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtConfirmPassword.Depth = 0;
-            this.registerTxtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtConfirmPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtConfirmPassword.Hint = "xác nhận mật khẩu";
             this.registerTxtConfirmPassword.LeadingIcon = null;
             this.registerTxtConfirmPassword.Location = new System.Drawing.Point(76, 336);
-            this.registerTxtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtConfirmPassword.MaxLength = 50;
             this.registerTxtConfirmPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtConfirmPassword.Multiline = false;
@@ -559,11 +561,11 @@
             this.registerTxtPassword.AnimateReadOnly = false;
             this.registerTxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtPassword.Depth = 0;
-            this.registerTxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtPassword.Hint = "mật khẩu";
             this.registerTxtPassword.LeadingIcon = null;
             this.registerTxtPassword.Location = new System.Drawing.Point(72, 201);
-            this.registerTxtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtPassword.MaxLength = 50;
             this.registerTxtPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtPassword.Multiline = false;
@@ -579,11 +581,11 @@
             this.registerTxtUsername.AnimateReadOnly = false;
             this.registerTxtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.registerTxtUsername.Depth = 0;
-            this.registerTxtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.registerTxtUsername.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.registerTxtUsername.Hint = "tên tài khoản";
             this.registerTxtUsername.LeadingIcon = null;
             this.registerTxtUsername.Location = new System.Drawing.Point(68, 82);
-            this.registerTxtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerTxtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.registerTxtUsername.MaxLength = 50;
             this.registerTxtUsername.MouseState = MaterialSkin.MouseState.OUT;
             this.registerTxtUsername.Multiline = false;
@@ -593,28 +595,26 @@
             this.registerTxtUsername.Text = "";
             this.registerTxtUsername.TrailingIcon = null;
             // 
-            // btnLogin
+            // txtPassword
             // 
-            this.btnLogin.AutoSize = false;
-            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnLogin.Depth = 0;
-            this.btnLogin.HighEmphasis = true;
-            this.btnLogin.Icon = null;
-            this.btnLogin.ImageKey = "icons8-login-96.png";
-            this.btnLogin.ImageList = this.icon;
-            this.btnLogin.Location = new System.Drawing.Point(243, 404);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLogin.Size = new System.Drawing.Size(349, 44);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnLogin.UseAccentColor = false;
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.txtPassword.AnimateReadOnly = false;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.Hint = "mật khẩu";
+            this.txtPassword.LeadingIcon = null;
+            this.txtPassword.Location = new System.Drawing.Point(243, 300);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.MaxLength = 50;
+            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Password = true;
+            this.txtPassword.Size = new System.Drawing.Size(349, 50);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "";
+            this.txtPassword.TrailingIcon = null;
+            this.txtPassword.TextChanged += new System.EventHandler(this.materialTextBox1_TextChanged);
             // 
             // fLogin
             // 
@@ -624,7 +624,7 @@
             this.Controls.Add(this.tabControlMenu);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.tabControlMenu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fLogin";
             this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Sizable = false;
@@ -647,7 +647,6 @@
         private System.Windows.Forms.ImageList icon;
         private MaterialSkin.Controls.MaterialButton btnLogin;
         private MaterialSkin.Controls.MaterialLabel lblPassword;
-        private MaterialSkin.Controls.MaterialTextBox txtPassword;
         private MaterialSkin.Controls.MaterialLabel lblUsername;
         private MaterialSkin.Controls.MaterialTextBox txtUsername;
         private MaterialSkin.Controls.MaterialLabel lblHello;
@@ -673,5 +672,6 @@
         private MaterialSkin.Controls.MaterialTextBox registerTxtConfirmPassword;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialTextBox registerTxtPhone;
+        private MaterialSkin.Controls.MaterialTextBox txtPassword;
     }
 }

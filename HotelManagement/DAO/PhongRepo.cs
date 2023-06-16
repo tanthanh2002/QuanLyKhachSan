@@ -44,11 +44,25 @@ namespace HotelManagement.DAO
             return db.Phongs.SingleOrDefault(p => p.sophong == numberRoom);
         }
 
-        //Tan them
-        public List<Phong> findAll(float theoGia, int theoSoPhong) 
+        //Tan 
+        public List<Phong> timPhongTheoGiaVaSLPhong(float theoGia, string theoSoPhong) 
         {
+            if (theoGia == 0 && theoSoPhong == "0")
+            {
+                return db.Phongs.ToList();
+            }
+            else if (theoGia == 0)
+            {
+                return db.Phongs.Where(p => p.gia >= theoGia).ToList();
+            }
+            else if (theoSoPhong == "0")
+            {
+                return db.Phongs.Where(p => p.gia < theoGia).ToList();
+            }
+            else
             return db.Phongs.Where(p => p.gia < theoGia).ToList();
         }
+        //
 
         public List<Phong> findByBiKhoa()
         {

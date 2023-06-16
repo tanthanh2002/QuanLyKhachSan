@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="HotelManagementModelStoreContainer" CdmEntityContainer="HotelManagementEntities">
+    <EntitySetMapping Name="ApDungKhuyenMais">
+      <EntityTypeMapping TypeName="HotelManagementModel.ApDungKhuyenMai">
+        <MappingFragment StoreEntitySet="ApDungKhuyenMai">
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="makhuyenmai" ColumnName="makhuyenmai" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CungCapDichVus">
+      <EntityTypeMapping TypeName="HotelManagementModel.CungCapDichVu">
+        <MappingFragment StoreEntitySet="CungCapDichVu">
+          <ScalarProperty Name="maloaiphong" ColumnName="maloaiphong" />
+          <ScalarProperty Name="madichvu" ColumnName="madichvu" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="DatTours">
       <EntityTypeMapping TypeName="HotelManagementModel.DatTour">
         <MappingFragment StoreEntitySet="DatTour">
@@ -91,6 +109,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="LoaiPhongs">
+      <EntityTypeMapping TypeName="HotelManagementModel.LoaiPhong">
+        <MappingFragment StoreEntitySet="LoaiPhong">
+          <ScalarProperty Name="tenloaiphong" ColumnName="tenloaiphong" />
+          <ScalarProperty Name="maloaiphong" ColumnName="maloaiphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="NhanViens">
       <EntityTypeMapping TypeName="HotelManagementModel.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
@@ -130,6 +156,7 @@
         <MappingFragment StoreEntitySet="PhieuDatPhong">
           <ScalarProperty Name="nhanvienvesinh" ColumnName="nhanvienvesinh" />
           <ScalarProperty Name="nhanviencheckout" ColumnName="nhanviencheckout" />
+          <ScalarProperty Name="checkin" ColumnName="checkin" />
           <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
           <ScalarProperty Name="ngayden" ColumnName="ngayden" />
           <ScalarProperty Name="sodemluutru" ColumnName="sodemluutru" />
@@ -203,6 +230,7 @@
     <EntitySetMapping Name="Phongs">
       <EntityTypeMapping TypeName="HotelManagementModel.Phong">
         <MappingFragment StoreEntitySet="Phong">
+          <ScalarProperty Name="maloaiphong" ColumnName="maloaiphong" />
           <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
           <ScalarProperty Name="bikhoa" ColumnName="bikhoa" />
           <ScalarProperty Name="gia" ColumnName="gia" />
@@ -253,21 +281,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="ApDungKhuyenMai" TypeName="HotelManagementModel.ApDungKhuyenMai" StoreEntitySet="ApDungKhuyenMai">
-      <EndProperty Name="Phong">
-        <ScalarProperty Name="maphong" ColumnName="maphong" />
-      </EndProperty>
-      <EndProperty Name="KhuyenMai">
-        <ScalarProperty Name="makhuyenmai" ColumnName="makhuyenmai" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="CungCapDichVu" TypeName="HotelManagementModel.CungCapDichVu" StoreEntitySet="CungCapDichVu">
-      <EndProperty Name="Phong">
-        <ScalarProperty Name="maphong" ColumnName="maphong" />
-      </EndProperty>
-      <EndProperty Name="DichVu">
-        <ScalarProperty Name="madichvu" ColumnName="madichvu" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
