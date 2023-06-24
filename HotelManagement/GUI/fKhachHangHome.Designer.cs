@@ -41,7 +41,7 @@ namespace HotelManagement.GUI
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.dgvTKCuaToi = new System.Windows.Forms.DataGridView();
             this.tabTour = new System.Windows.Forms.TabPage();
-            this.btnTimKiem = new MaterialSkin.Controls.MaterialButton();
+            this.btnTimKiemTour = new MaterialSkin.Controls.MaterialButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnDangKy = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
@@ -55,26 +55,33 @@ namespace HotelManagement.GUI
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             this.tbMaTour = new MaterialSkin.Controls.MaterialTextBox();
             this.dgvDSTour = new System.Windows.Forms.DataGridView();
-            this.matourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madoitacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourDuLichBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.tbTenTour = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.tabDichVu = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tbThoiGianSuDung = new System.Windows.Forms.TextBox();
+            this.btnDangKyDV = new MaterialSkin.Controls.MaterialButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbTongTienDV = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.nudSoLuongDV = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpThoiGianBatDau = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbTenDichVu = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbMaPhieuDatPhong = new System.Windows.Forms.TextBox();
+            this.te = new System.Windows.Forms.Label();
             this.cbMaPhong = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDVKhongHoTro = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDVCoHoTro = new System.Windows.Forms.DataGridView();
-            this.tbTenDV = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.phongCuaToi = new System.Windows.Forms.TabPage();
             this.tabDatPhong = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -90,29 +97,55 @@ namespace HotelManagement.GUI
             this.tabTourCuaToi = new System.Windows.Forms.TabPage();
             this.dgvTourCuaToi = new System.Windows.Forms.DataGridView();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.madichvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maphieusudungdichvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigiansudungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianbatdauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenkhachhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phieuSuDungDichVuChiTietBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.madoitacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourDuLichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.madattourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matourDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makhachhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigiankhoihanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigiantroveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluonghanhkhachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datTourBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnTimKiemTenDV = new MaterialSkin.Controls.MaterialButton();
+            this.tbTenDVTimKiem = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabThongTinTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).BeginInit();
             this.tabTour.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).BeginInit();
             this.tabDichVu.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongDV)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVKhongHoTro)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVCoHoTro)).BeginInit();
             this.tabDatPhong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabKhachHang.SuspendLayout();
             this.tabDVCuaToi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVCuaToi)).BeginInit();
             this.tabTourCuaToi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuSuDungDichVuChiTietBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datTourBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // icon
@@ -189,7 +222,7 @@ namespace HotelManagement.GUI
             this.tabThongTinTaiKhoan.Location = new System.Drawing.Point(4, 39);
             this.tabThongTinTaiKhoan.Name = "tabThongTinTaiKhoan";
             this.tabThongTinTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabThongTinTaiKhoan.Size = new System.Drawing.Size(1180, 473);
+            this.tabThongTinTaiKhoan.Size = new System.Drawing.Size(1266, 473);
             this.tabThongTinTaiKhoan.TabIndex = 1;
             this.tabThongTinTaiKhoan.Text = "Thông tin tài khoản";
             this.tabThongTinTaiKhoan.UseVisualStyleBackColor = true;
@@ -218,40 +251,39 @@ namespace HotelManagement.GUI
             // 
             // tabTour
             // 
-            this.tabTour.Controls.Add(this.btnTimKiem);
+            this.tabTour.Controls.Add(this.btnTimKiemTour);
             this.tabTour.Controls.Add(this.groupBox3);
             this.tabTour.Controls.Add(this.dgvDSTour);
-            this.tabTour.Controls.Add(this.materialLabel3);
             this.tabTour.Controls.Add(this.tbTenTour);
             this.tabTour.Controls.Add(this.materialLabel2);
             this.tabTour.ImageKey = "destination.png";
             this.tabTour.Location = new System.Drawing.Point(4, 39);
             this.tabTour.Name = "tabTour";
             this.tabTour.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTour.Size = new System.Drawing.Size(1180, 473);
+            this.tabTour.Size = new System.Drawing.Size(1266, 473);
             this.tabTour.TabIndex = 4;
             this.tabTour.Text = "Tour";
             this.tabTour.UseVisualStyleBackColor = true;
             // 
-            // btnTimKiem
+            // btnTimKiemTour
             // 
-            this.btnTimKiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTimKiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTimKiem.Depth = 0;
-            this.btnTimKiem.HighEmphasis = true;
-            this.btnTimKiem.Icon = null;
-            this.btnTimKiem.Location = new System.Drawing.Point(437, 22);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTimKiem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTimKiem.Size = new System.Drawing.Size(86, 36);
-            this.btnTimKiem.TabIndex = 6;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTimKiem.UseAccentColor = false;
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btnTimKiemTour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimKiemTour.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimKiemTour.Depth = 0;
+            this.btnTimKiemTour.HighEmphasis = true;
+            this.btnTimKiemTour.Icon = null;
+            this.btnTimKiemTour.Location = new System.Drawing.Point(437, 22);
+            this.btnTimKiemTour.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimKiemTour.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimKiemTour.Name = "btnTimKiemTour";
+            this.btnTimKiemTour.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimKiemTour.Size = new System.Drawing.Size(86, 36);
+            this.btnTimKiemTour.TabIndex = 6;
+            this.btnTimKiemTour.Text = "Tìm kiếm";
+            this.btnTimKiemTour.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimKiemTour.UseAccentColor = false;
+            this.btnTimKiemTour.UseVisualStyleBackColor = true;
+            this.btnTimKiemTour.Click += new System.EventHandler(this.btnTimKiemTour_Click);
             // 
             // groupBox3
             // 
@@ -268,11 +300,10 @@ namespace HotelManagement.GUI
             this.groupBox3.Controls.Add(this.tbMaKhach);
             this.groupBox3.Controls.Add(this.materialLabel13);
             this.groupBox3.Controls.Add(this.tbMaTour);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(842, 3);
+            this.groupBox3.Location = new System.Drawing.Point(773, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(335, 467);
+            this.groupBox3.Size = new System.Drawing.Size(341, 464);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Đăng ký tour";
@@ -376,7 +407,7 @@ namespace HotelManagement.GUI
             this.tbMaKhach.AnimateReadOnly = false;
             this.tbMaKhach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMaKhach.Depth = 0;
-            this.tbMaKhach.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMaKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMaKhach.LeadingIcon = null;
             this.tbMaKhach.Location = new System.Drawing.Point(97, 129);
             this.tbMaKhach.MaxLength = 50;
@@ -405,7 +436,7 @@ namespace HotelManagement.GUI
             this.tbMaTour.AnimateReadOnly = false;
             this.tbMaTour.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMaTour.Depth = 0;
-            this.tbMaTour.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMaTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMaTour.LeadingIcon = null;
             this.tbMaTour.Location = new System.Drawing.Point(97, 57);
             this.tbMaTour.MaxLength = 50;
@@ -436,63 +467,6 @@ namespace HotelManagement.GUI
             this.dgvDSTour.TabIndex = 3;
             this.dgvDSTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellClick);
             this.dgvDSTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellContentClick);
-            // 
-            // matourDataGridViewTextBoxColumn
-            // 
-            this.matourDataGridViewTextBoxColumn.DataPropertyName = "matour";
-            this.matourDataGridViewTextBoxColumn.HeaderText = "matour";
-            this.matourDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.matourDataGridViewTextBoxColumn.Name = "matourDataGridViewTextBoxColumn";
-            this.matourDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // tentourDataGridViewTextBoxColumn
-            // 
-            this.tentourDataGridViewTextBoxColumn.DataPropertyName = "tentour";
-            this.tentourDataGridViewTextBoxColumn.HeaderText = "tentour";
-            this.tentourDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tentourDataGridViewTextBoxColumn.Name = "tentourDataGridViewTextBoxColumn";
-            this.tentourDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // giaDataGridViewTextBoxColumn
-            // 
-            this.giaDataGridViewTextBoxColumn.DataPropertyName = "gia";
-            this.giaDataGridViewTextBoxColumn.HeaderText = "gia";
-            this.giaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
-            this.giaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // songayDataGridViewTextBoxColumn
-            // 
-            this.songayDataGridViewTextBoxColumn.DataPropertyName = "songay";
-            this.songayDataGridViewTextBoxColumn.HeaderText = "songay";
-            this.songayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.songayDataGridViewTextBoxColumn.Name = "songayDataGridViewTextBoxColumn";
-            this.songayDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // madoitacDataGridViewTextBoxColumn
-            // 
-            this.madoitacDataGridViewTextBoxColumn.DataPropertyName = "madoitac";
-            this.madoitacDataGridViewTextBoxColumn.HeaderText = "madoitac";
-            this.madoitacDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.madoitacDataGridViewTextBoxColumn.Name = "madoitacDataGridViewTextBoxColumn";
-            this.madoitacDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // tourDuLichBindingSource
-            // 
-            this.tourDuLichBindingSource.DataSource = typeof(HotelManagement.TourDuLich);
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.materialLabel3.Location = new System.Drawing.Point(495, 71);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(109, 19);
-            this.materialLabel3.TabIndex = 2;
-            this.materialLabel3.Text = "Danh sách tour";
             // 
             // tbTenTour
             // 
@@ -537,20 +511,181 @@ namespace HotelManagement.GUI
             // 
             // tabDichVu
             // 
+            this.tabDichVu.Controls.Add(this.btnTimKiemTenDV);
+            this.tabDichVu.Controls.Add(this.tbTenDVTimKiem);
+            this.tabDichVu.Controls.Add(this.groupBox4);
+            this.tabDichVu.Controls.Add(this.label9);
             this.tabDichVu.Controls.Add(this.cbMaPhong);
             this.tabDichVu.Controls.Add(this.materialLabel8);
             this.tabDichVu.Controls.Add(this.groupBox2);
             this.tabDichVu.Controls.Add(this.groupBox1);
-            this.tabDichVu.Controls.Add(this.tbTenDV);
-            this.tabDichVu.Controls.Add(this.materialLabel6);
             this.tabDichVu.ImageKey = "hotel-bell.png";
             this.tabDichVu.Location = new System.Drawing.Point(4, 39);
             this.tabDichVu.Name = "tabDichVu";
             this.tabDichVu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDichVu.Size = new System.Drawing.Size(1180, 473);
+            this.tabDichVu.Size = new System.Drawing.Size(1266, 473);
             this.tabDichVu.TabIndex = 3;
             this.tabDichVu.Text = "Dịch vụ";
             this.tabDichVu.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tbThoiGianSuDung);
+            this.groupBox4.Controls.Add(this.btnDangKyDV);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.tbTongTienDV);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.nudSoLuongDV);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.dtpThoiGianBatDau);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.tbTenDichVu);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.tbMaPhieuDatPhong);
+            this.groupBox4.Controls.Add(this.te);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(861, 16);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(313, 436);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Đăng ký dịch vụ";
+            // 
+            // tbThoiGianSuDung
+            // 
+            this.tbThoiGianSuDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbThoiGianSuDung.Location = new System.Drawing.Point(102, 243);
+            this.tbThoiGianSuDung.Name = "tbThoiGianSuDung";
+            this.tbThoiGianSuDung.Size = new System.Drawing.Size(83, 27);
+            this.tbThoiGianSuDung.TabIndex = 13;
+            this.tbThoiGianSuDung.Text = "60";
+            // 
+            // btnDangKyDV
+            // 
+            this.btnDangKyDV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDangKyDV.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnDangKyDV.Depth = 0;
+            this.btnDangKyDV.HighEmphasis = true;
+            this.btnDangKyDV.Icon = null;
+            this.btnDangKyDV.Location = new System.Drawing.Point(121, 391);
+            this.btnDangKyDV.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDangKyDV.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDangKyDV.Name = "btnDangKyDV";
+            this.btnDangKyDV.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnDangKyDV.Size = new System.Drawing.Size(83, 36);
+            this.btnDangKyDV.TabIndex = 12;
+            this.btnDangKyDV.Text = "Đăng ký";
+            this.btnDangKyDV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnDangKyDV.UseAccentColor = false;
+            this.btnDangKyDV.UseVisualStyleBackColor = true;
+            this.btnDangKyDV.Click += new System.EventHandler(this.btnDangKyDV_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 246);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Thời gian:";
+            // 
+            // tbTongTienDV
+            // 
+            this.tbTongTienDV.Location = new System.Drawing.Point(10, 346);
+            this.tbTongTienDV.Name = "tbTongTienDV";
+            this.tbTongTienDV.ReadOnly = true;
+            this.tbTongTienDV.Size = new System.Drawing.Size(285, 30);
+            this.tbTongTienDV.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 323);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 20);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Tổng tiền:";
+            // 
+            // nudSoLuongDV
+            // 
+            this.nudSoLuongDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSoLuongDV.Location = new System.Drawing.Point(102, 286);
+            this.nudSoLuongDV.Name = "nudSoLuongDV";
+            this.nudSoLuongDV.Size = new System.Drawing.Size(83, 27);
+            this.nudSoLuongDV.TabIndex = 7;
+            this.nudSoLuongDV.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSoLuongDV.ValueChanged += new System.EventHandler(this.nudSoLuongDV_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Số lượng:";
+            // 
+            // dtpThoiGianBatDau
+            // 
+            this.dtpThoiGianBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpThoiGianBatDau.Location = new System.Drawing.Point(10, 198);
+            this.dtpThoiGianBatDau.Name = "dtpThoiGianBatDau";
+            this.dtpThoiGianBatDau.Size = new System.Drawing.Size(285, 27);
+            this.dtpThoiGianBatDau.TabIndex = 5;
+            this.dtpThoiGianBatDau.ValueChanged += new System.EventHandler(this.dtpThoiGianBatDau_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Thời gian bắt đầu:";
+            // 
+            // tbTenDichVu
+            // 
+            this.tbTenDichVu.Location = new System.Drawing.Point(10, 131);
+            this.tbTenDichVu.Name = "tbTenDichVu";
+            this.tbTenDichVu.Size = new System.Drawing.Size(285, 30);
+            this.tbTenDichVu.TabIndex = 3;
+            this.tbTenDichVu.TextChanged += new System.EventHandler(this.tbTenDichVu_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tên dịch vụ:";
+            // 
+            // tbMaPhieuDatPhong
+            // 
+            this.tbMaPhieuDatPhong.Location = new System.Drawing.Point(10, 64);
+            this.tbMaPhieuDatPhong.Name = "tbMaPhieuDatPhong";
+            this.tbMaPhieuDatPhong.ReadOnly = true;
+            this.tbMaPhieuDatPhong.Size = new System.Drawing.Size(285, 30);
+            this.tbMaPhieuDatPhong.TabIndex = 1;
+            // 
+            // te
+            // 
+            this.te.AutoSize = true;
+            this.te.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.te.Location = new System.Drawing.Point(6, 41);
+            this.te.Name = "te";
+            this.te.Size = new System.Drawing.Size(115, 20);
+            this.te.TabIndex = 0;
+            this.te.Text = "Mã đặt phòng:";
             // 
             // cbMaPhong
             // 
@@ -573,6 +708,7 @@ namespace HotelManagement.GUI
             this.cbMaPhong.Size = new System.Drawing.Size(133, 49);
             this.cbMaPhong.StartIndex = 0;
             this.cbMaPhong.TabIndex = 8;
+            this.cbMaPhong.SelectedIndexChanged += new System.EventHandler(this.cbMaPhong_SelectedIndexChanged);
             // 
             // materialLabel8
             // 
@@ -590,9 +726,9 @@ namespace HotelManagement.GUI
             // 
             this.groupBox2.Controls.Add(this.dgvDVKhongHoTro);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(605, 89);
+            this.groupBox2.Location = new System.Drawing.Point(442, 89);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(550, 363);
+            this.groupBox2.Size = new System.Drawing.Size(413, 363);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dịch vụ không hỗ trợ";
@@ -605,8 +741,9 @@ namespace HotelManagement.GUI
             this.dgvDVKhongHoTro.Name = "dgvDVKhongHoTro";
             this.dgvDVKhongHoTro.RowHeadersWidth = 51;
             this.dgvDVKhongHoTro.RowTemplate.Height = 24;
-            this.dgvDVKhongHoTro.Size = new System.Drawing.Size(544, 334);
+            this.dgvDVKhongHoTro.Size = new System.Drawing.Size(407, 334);
             this.dgvDVKhongHoTro.TabIndex = 0;
+            this.dgvDVKhongHoTro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVKhongHoTro_CellClick);
             // 
             // groupBox1
             // 
@@ -614,7 +751,7 @@ namespace HotelManagement.GUI
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(549, 363);
+            this.groupBox1.Size = new System.Drawing.Size(413, 363);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dịch vụ có hỗ trợ";
@@ -627,49 +764,9 @@ namespace HotelManagement.GUI
             this.dgvDVCoHoTro.Name = "dgvDVCoHoTro";
             this.dgvDVCoHoTro.RowHeadersWidth = 51;
             this.dgvDVCoHoTro.RowTemplate.Height = 24;
-            this.dgvDVCoHoTro.Size = new System.Drawing.Size(543, 334);
+            this.dgvDVCoHoTro.Size = new System.Drawing.Size(407, 334);
             this.dgvDVCoHoTro.TabIndex = 0;
-            // 
-            // tbTenDV
-            // 
-            this.tbTenDV.AnimateReadOnly = false;
-            this.tbTenDV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tbTenDV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbTenDV.Depth = 0;
-            this.tbTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbTenDV.HideSelection = true;
-            this.tbTenDV.LeadingIcon = null;
-            this.tbTenDV.Location = new System.Drawing.Point(905, 16);
-            this.tbTenDV.MaxLength = 32767;
-            this.tbTenDV.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbTenDV.Name = "tbTenDV";
-            this.tbTenDV.PasswordChar = '\0';
-            this.tbTenDV.PrefixSuffixText = null;
-            this.tbTenDV.ReadOnly = false;
-            this.tbTenDV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbTenDV.SelectedText = "";
-            this.tbTenDV.SelectionLength = 0;
-            this.tbTenDV.SelectionStart = 0;
-            this.tbTenDV.ShortcutsEnabled = true;
-            this.tbTenDV.Size = new System.Drawing.Size(248, 48);
-            this.tbTenDV.TabIndex = 4;
-            this.tbTenDV.TabStop = false;
-            this.tbTenDV.Text = "Nhập tên dịch vụ";
-            this.tbTenDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbTenDV.TrailingIcon = null;
-            this.tbTenDV.UseSystemPasswordChar = false;
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(757, 33);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(124, 19);
-            this.materialLabel6.TabIndex = 3;
-            this.materialLabel6.Text = "Nhập tên dịch vụ:";
+            this.dgvDVCoHoTro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVCoHoTro_CellClick);
             // 
             // phongCuaToi
             // 
@@ -677,7 +774,7 @@ namespace HotelManagement.GUI
             this.phongCuaToi.Location = new System.Drawing.Point(4, 39);
             this.phongCuaToi.Name = "phongCuaToi";
             this.phongCuaToi.Padding = new System.Windows.Forms.Padding(3);
-            this.phongCuaToi.Size = new System.Drawing.Size(1180, 473);
+            this.phongCuaToi.Size = new System.Drawing.Size(1266, 473);
             this.phongCuaToi.TabIndex = 2;
             this.phongCuaToi.Text = "Phòng của tôi";
             this.phongCuaToi.UseVisualStyleBackColor = true;
@@ -700,10 +797,40 @@ namespace HotelManagement.GUI
             this.tabDatPhong.Location = new System.Drawing.Point(4, 39);
             this.tabDatPhong.Name = "tabDatPhong";
             this.tabDatPhong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatPhong.Size = new System.Drawing.Size(1180, 473);
+            this.tabDatPhong.Size = new System.Drawing.Size(1266, 473);
             this.tabDatPhong.TabIndex = 0;
             this.tabDatPhong.Text = "Đặt phòng";
             this.tabDatPhong.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(468, 55);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(633, 248);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(96, 247);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(86, 36);
+            this.materialButton1.TabIndex = 8;
+            this.materialButton1.Text = "Tìm kiếm";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // checkBox6
             // 
@@ -800,7 +927,7 @@ namespace HotelManagement.GUI
             this.tabKhachHang.Multiline = true;
             this.tabKhachHang.Name = "tabKhachHang";
             this.tabKhachHang.SelectedIndex = 0;
-            this.tabKhachHang.Size = new System.Drawing.Size(1188, 516);
+            this.tabKhachHang.Size = new System.Drawing.Size(1274, 516);
             this.tabKhachHang.TabIndex = 1;
             // 
             // tabDVCuaToi
@@ -811,7 +938,7 @@ namespace HotelManagement.GUI
             this.tabDVCuaToi.Location = new System.Drawing.Point(4, 39);
             this.tabDVCuaToi.Name = "tabDVCuaToi";
             this.tabDVCuaToi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDVCuaToi.Size = new System.Drawing.Size(1180, 473);
+            this.tabDVCuaToi.Size = new System.Drawing.Size(1266, 473);
             this.tabDVCuaToi.TabIndex = 5;
             this.tabDVCuaToi.Text = "Dịch vụ của tôi";
             this.tabDVCuaToi.UseVisualStyleBackColor = true;
@@ -830,7 +957,17 @@ namespace HotelManagement.GUI
             // 
             // dgvDVCuaToi
             // 
+            this.dgvDVCuaToi.AutoGenerateColumns = false;
             this.dgvDVCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDVCuaToi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.madichvuDataGridViewTextBoxColumn,
+            this.maphieusudungdichvuDataGridViewTextBoxColumn,
+            this.soluongDataGridViewTextBoxColumn,
+            this.thoigiansudungDataGridViewTextBoxColumn,
+            this.thoigianbatdauDataGridViewTextBoxColumn,
+            this.dongiaDataGridViewTextBoxColumn,
+            this.tenkhachhangDataGridViewTextBoxColumn});
+            this.dgvDVCuaToi.DataSource = this.phieuSuDungDichVuChiTietBindingSource;
             this.dgvDVCuaToi.Location = new System.Drawing.Point(6, 60);
             this.dgvDVCuaToi.Name = "dgvDVCuaToi";
             this.dgvDVCuaToi.RowHeadersWidth = 51;
@@ -846,14 +983,23 @@ namespace HotelManagement.GUI
             this.tabTourCuaToi.Location = new System.Drawing.Point(4, 39);
             this.tabTourCuaToi.Name = "tabTourCuaToi";
             this.tabTourCuaToi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTourCuaToi.Size = new System.Drawing.Size(1180, 473);
+            this.tabTourCuaToi.Size = new System.Drawing.Size(1266, 473);
             this.tabTourCuaToi.TabIndex = 6;
             this.tabTourCuaToi.Text = "Tour của tôi";
             this.tabTourCuaToi.UseVisualStyleBackColor = true;
             // 
             // dgvTourCuaToi
             // 
+            this.dgvTourCuaToi.AutoGenerateColumns = false;
             this.dgvTourCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTourCuaToi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.madattourDataGridViewTextBoxColumn,
+            this.matourDataGridViewTextBoxColumn1,
+            this.makhachhangDataGridViewTextBoxColumn,
+            this.thoigiankhoihanhDataGridViewTextBoxColumn,
+            this.thoigiantroveDataGridViewTextBoxColumn,
+            this.soluonghanhkhachDataGridViewTextBoxColumn});
+            this.dgvTourCuaToi.DataSource = this.datTourBindingSource;
             this.dgvTourCuaToi.Location = new System.Drawing.Point(6, 53);
             this.dgvTourCuaToi.Name = "dgvTourCuaToi";
             this.dgvTourCuaToi.RowHeadersWidth = 51;
@@ -872,48 +1018,211 @@ namespace HotelManagement.GUI
             this.materialLabel7.Size = new System.Drawing.Size(118, 19);
             this.materialLabel7.TabIndex = 0;
             this.materialLabel7.Text = "Tour đã đăng ký";
-
+            // 
+            // madichvuDataGridViewTextBoxColumn
+            // 
+            this.madichvuDataGridViewTextBoxColumn.DataPropertyName = "madichvu";
+            this.madichvuDataGridViewTextBoxColumn.HeaderText = "madichvu";
+            this.madichvuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.madichvuDataGridViewTextBoxColumn.Name = "madichvuDataGridViewTextBoxColumn";
+            this.madichvuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maphieusudungdichvuDataGridViewTextBoxColumn
+            // 
+            this.maphieusudungdichvuDataGridViewTextBoxColumn.DataPropertyName = "maphieusudungdichvu";
+            this.maphieusudungdichvuDataGridViewTextBoxColumn.HeaderText = "maphieusudungdichvu";
+            this.maphieusudungdichvuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maphieusudungdichvuDataGridViewTextBoxColumn.Name = "maphieusudungdichvuDataGridViewTextBoxColumn";
+            this.maphieusudungdichvuDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // soluongDataGridViewTextBoxColumn
+            // 
+            this.soluongDataGridViewTextBoxColumn.DataPropertyName = "soluong";
+            this.soluongDataGridViewTextBoxColumn.HeaderText = "soluong";
+            this.soluongDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soluongDataGridViewTextBoxColumn.Name = "soluongDataGridViewTextBoxColumn";
+            this.soluongDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // thoigiansudungDataGridViewTextBoxColumn
+            // 
+            this.thoigiansudungDataGridViewTextBoxColumn.DataPropertyName = "thoigiansudung";
+            this.thoigiansudungDataGridViewTextBoxColumn.HeaderText = "thoigiansudung";
+            this.thoigiansudungDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.thoigiansudungDataGridViewTextBoxColumn.Name = "thoigiansudungDataGridViewTextBoxColumn";
+            this.thoigiansudungDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // thoigianbatdauDataGridViewTextBoxColumn
+            // 
+            this.thoigianbatdauDataGridViewTextBoxColumn.DataPropertyName = "thoigianbatdau";
+            this.thoigianbatdauDataGridViewTextBoxColumn.HeaderText = "thoigianbatdau";
+            this.thoigianbatdauDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.thoigianbatdauDataGridViewTextBoxColumn.Name = "thoigianbatdauDataGridViewTextBoxColumn";
+            this.thoigianbatdauDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dongiaDataGridViewTextBoxColumn
+            // 
+            this.dongiaDataGridViewTextBoxColumn.DataPropertyName = "dongia";
+            this.dongiaDataGridViewTextBoxColumn.HeaderText = "dongia";
+            this.dongiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dongiaDataGridViewTextBoxColumn.Name = "dongiaDataGridViewTextBoxColumn";
+            this.dongiaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tenkhachhangDataGridViewTextBoxColumn
+            // 
+            this.tenkhachhangDataGridViewTextBoxColumn.DataPropertyName = "tenkhachhang";
+            this.tenkhachhangDataGridViewTextBoxColumn.HeaderText = "tenkhachhang";
+            this.tenkhachhangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenkhachhangDataGridViewTextBoxColumn.Name = "tenkhachhangDataGridViewTextBoxColumn";
+            this.tenkhachhangDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phieuSuDungDichVuChiTietBindingSource
+            // 
+            this.phieuSuDungDichVuChiTietBindingSource.DataSource = typeof(HotelManagement.PhieuSuDungDichVuChiTiet);
+            // 
+            // matourDataGridViewTextBoxColumn
+            // 
+            this.matourDataGridViewTextBoxColumn.DataPropertyName = "matour";
+            this.matourDataGridViewTextBoxColumn.HeaderText = "matour";
+            this.matourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.matourDataGridViewTextBoxColumn.Name = "matourDataGridViewTextBoxColumn";
+            this.matourDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tentourDataGridViewTextBoxColumn
+            // 
+            this.tentourDataGridViewTextBoxColumn.DataPropertyName = "tentour";
+            this.tentourDataGridViewTextBoxColumn.HeaderText = "tentour";
+            this.tentourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tentourDataGridViewTextBoxColumn.Name = "tentourDataGridViewTextBoxColumn";
+            this.tentourDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // giaDataGridViewTextBoxColumn
+            // 
+            this.giaDataGridViewTextBoxColumn.DataPropertyName = "gia";
+            this.giaDataGridViewTextBoxColumn.HeaderText = "gia";
+            this.giaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
+            this.giaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // songayDataGridViewTextBoxColumn
+            // 
+            this.songayDataGridViewTextBoxColumn.DataPropertyName = "songay";
+            this.songayDataGridViewTextBoxColumn.HeaderText = "songay";
+            this.songayDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.songayDataGridViewTextBoxColumn.Name = "songayDataGridViewTextBoxColumn";
+            this.songayDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // madoitacDataGridViewTextBoxColumn
+            // 
+            this.madoitacDataGridViewTextBoxColumn.DataPropertyName = "madoitac";
+            this.madoitacDataGridViewTextBoxColumn.HeaderText = "madoitac";
+            this.madoitacDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.madoitacDataGridViewTextBoxColumn.Name = "madoitacDataGridViewTextBoxColumn";
+            this.madoitacDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // tourDuLichBindingSource
+            // 
+            this.tourDuLichBindingSource.DataSource = typeof(HotelManagement.TourDuLich);
+            // 
+            // madattourDataGridViewTextBoxColumn
+            // 
+            this.madattourDataGridViewTextBoxColumn.DataPropertyName = "madattour";
+            this.madattourDataGridViewTextBoxColumn.HeaderText = "madattour";
+            this.madattourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.madattourDataGridViewTextBoxColumn.Name = "madattourDataGridViewTextBoxColumn";
+            this.madattourDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // matourDataGridViewTextBoxColumn1
+            // 
+            this.matourDataGridViewTextBoxColumn1.DataPropertyName = "matour";
+            this.matourDataGridViewTextBoxColumn1.HeaderText = "matour";
+            this.matourDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.matourDataGridViewTextBoxColumn1.Name = "matourDataGridViewTextBoxColumn1";
+            this.matourDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // makhachhangDataGridViewTextBoxColumn
+            // 
+            this.makhachhangDataGridViewTextBoxColumn.DataPropertyName = "makhachhang";
+            this.makhachhangDataGridViewTextBoxColumn.HeaderText = "makhachhang";
+            this.makhachhangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.makhachhangDataGridViewTextBoxColumn.Name = "makhachhangDataGridViewTextBoxColumn";
+            this.makhachhangDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // thoigiankhoihanhDataGridViewTextBoxColumn
+            // 
+            this.thoigiankhoihanhDataGridViewTextBoxColumn.DataPropertyName = "thoigiankhoihanh";
+            this.thoigiankhoihanhDataGridViewTextBoxColumn.HeaderText = "thoigiankhoihanh";
+            this.thoigiankhoihanhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.thoigiankhoihanhDataGridViewTextBoxColumn.Name = "thoigiankhoihanhDataGridViewTextBoxColumn";
+            this.thoigiankhoihanhDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // thoigiantroveDataGridViewTextBoxColumn
+            // 
+            this.thoigiantroveDataGridViewTextBoxColumn.DataPropertyName = "thoigiantrove";
+            this.thoigiantroveDataGridViewTextBoxColumn.HeaderText = "thoigiantrove";
+            this.thoigiantroveDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.thoigiantroveDataGridViewTextBoxColumn.Name = "thoigiantroveDataGridViewTextBoxColumn";
+            this.thoigiantroveDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // soluonghanhkhachDataGridViewTextBoxColumn
+            // 
+            this.soluonghanhkhachDataGridViewTextBoxColumn.DataPropertyName = "soluonghanhkhach";
+            this.soluonghanhkhachDataGridViewTextBoxColumn.HeaderText = "soluonghanhkhach";
+            this.soluonghanhkhachDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soluonghanhkhachDataGridViewTextBoxColumn.Name = "soluonghanhkhachDataGridViewTextBoxColumn";
+            this.soluonghanhkhachDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // datTourBindingSource
+            // 
+            this.datTourBindingSource.DataSource = typeof(HotelManagement.DatTour);
             // 
             // phongBindingSource
             // 
             this.phongBindingSource.DataSource = typeof(HotelManagement.Phong);
             this.phongBindingSource.CurrentChanged += new System.EventHandler(this.phongBindingSource_CurrentChanged);
             // 
-            // materialButton1
+            // btnTimKiemTenDV
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(96, 247);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(86, 36);
-            this.materialButton1.TabIndex = 8;
-            this.materialButton1.Text = "Tìm kiếm";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            this.btnTimKiemTenDV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimKiemTenDV.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimKiemTenDV.Depth = 0;
+            this.btnTimKiemTenDV.HighEmphasis = true;
+            this.btnTimKiemTenDV.Icon = null;
+            this.btnTimKiemTenDV.Location = new System.Drawing.Point(766, 28);
+            this.btnTimKiemTenDV.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimKiemTenDV.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimKiemTenDV.Name = "btnTimKiemTenDV";
+            this.btnTimKiemTenDV.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimKiemTenDV.Size = new System.Drawing.Size(86, 36);
+            this.btnTimKiemTenDV.TabIndex = 27;
+            this.btnTimKiemTenDV.Text = "Tìm kiếm";
+            this.btnTimKiemTenDV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimKiemTenDV.UseAccentColor = false;
+            this.btnTimKiemTenDV.UseVisualStyleBackColor = true;
+            this.btnTimKiemTenDV.Click += new System.EventHandler(this.btnTimKiemTenDV_Click);
             // 
-            // dataGridView1
+            // tbTenDVTimKiem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(468, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 248);
-            this.dataGridView1.TabIndex = 9;
+            this.tbTenDVTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTenDVTimKiem.Location = new System.Drawing.Point(572, 28);
+            this.tbTenDVTimKiem.Name = "tbTenDVTimKiem";
+            this.tbTenDVTimKiem.Size = new System.Drawing.Size(174, 30);
+            this.tbTenDVTimKiem.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(437, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(114, 25);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Tên dịch vụ";
             // 
             // fKhachHangHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 583);
+            this.ClientSize = new System.Drawing.Size(1280, 583);
             this.Controls.Add(this.tabKhachHang);
             this.DrawerIsOpen = true;
             this.DrawerShowIconsWhenHidden = true;
@@ -930,15 +1239,18 @@ namespace HotelManagement.GUI
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).EndInit();
             this.tabDichVu.ResumeLayout(false);
             this.tabDichVu.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongDV)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVKhongHoTro)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVCoHoTro)).EndInit();
             this.tabDatPhong.ResumeLayout(false);
             this.tabDatPhong.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabKhachHang.ResumeLayout(false);
             this.tabDVCuaToi.ResumeLayout(false);
             this.tabDVCuaToi.PerformLayout();
@@ -946,8 +1258,10 @@ namespace HotelManagement.GUI
             this.tabTourCuaToi.ResumeLayout(false);
             this.tabTourCuaToi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuSuDungDichVuChiTietBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datTourBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -972,15 +1286,12 @@ namespace HotelManagement.GUI
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.DataGridView dgvTKCuaToi;
         private System.Windows.Forms.DataGridView dgvDSTour;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialTextBox2 tbTenTour;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvDVKhongHoTro;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvDVCoHoTro;
-        private MaterialSkin.Controls.MaterialTextBox2 tbTenDV;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.DataGridView dgvDVCuaToi;
         private System.Windows.Forms.DataGridView dgvTourCuaToi;
@@ -998,7 +1309,7 @@ namespace HotelManagement.GUI
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private System.Windows.Forms.GroupBox groupBox3;
-        private MaterialSkin.Controls.MaterialButton btnTimKiem;
+        private MaterialSkin.Controls.MaterialButton btnTimKiemTour;
         private System.Windows.Forms.DataGridViewTextBoxColumn matourDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tentourDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaDataGridViewTextBoxColumn;
@@ -1016,5 +1327,37 @@ namespace HotelManagement.GUI
         private System.Windows.Forms.CheckBox checkBox1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbTenDichVu;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbMaPhieuDatPhong;
+        private System.Windows.Forms.Label te;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbTongTienDV;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown nudSoLuongDV;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpThoiGianBatDau;
+        private MaterialSkin.Controls.MaterialButton btnDangKyDV;
+        private System.Windows.Forms.TextBox tbThoiGianSuDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn madichvuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maphieusudungdichvuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigiansudungDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigianbatdauDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dongiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenkhachhangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource phieuSuDungDichVuChiTietBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn madattourDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matourDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn makhachhangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigiankhoihanhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoigiantroveDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluonghanhkhachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource datTourBindingSource;
+        private MaterialSkin.Controls.MaterialButton btnTimKiemTenDV;
+        private System.Windows.Forms.TextBox tbTenDVTimKiem;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -18,5 +18,10 @@ namespace HotelManagement.BUS
         public List<PhieuDatPhongChiTiet> showListMaPhieuDatPhong(int maPhong) { return repo.showListMaPhieuDatPhong(maPhong); }
 
         public List<PhieuDatPhongChiTiet> showListMaPhong(int maKhachHang) { return repo.showListMaPhong(maKhachHang); }
+
+        public List<PhieuDatPhongChiTiet> listMaPhongByMaPhieuDatPhong(int maphieu)
+        {
+            return repo.listMaPhongByMaPhieuDatPhong(maphieu);
+        }
     }
 }

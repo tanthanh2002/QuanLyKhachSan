@@ -27,10 +27,10 @@ namespace HotelManagement.DAO
         }
         public int getMaPhieuSuDungDichVuLatest()
         {
-            PhieuSuDungDichVu phieu = db.PhieuSuDungDichVus.OrderByDescending(p => p.maphieudatphong).FirstOrDefault();
+            PhieuSuDungDichVu phieu = db.PhieuSuDungDichVus.OrderByDescending(p => p.maphieu).FirstOrDefault();
             if (phieu != null)
             {
-                return phieu.maphieudatphong;
+                return phieu.maphieu;
             }
             else
             {

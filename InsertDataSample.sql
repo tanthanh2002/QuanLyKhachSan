@@ -151,3 +151,5 @@ select * from KhachHang;
 update PhieuDatPhongChiTiet
 set maphieudatphong=3
 where maphieudatphong=2;
+
+

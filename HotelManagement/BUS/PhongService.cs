@@ -17,10 +17,15 @@ namespace HotelManagement.BUS
 
         public List<Phong> findByBiKhoa() { return repo.findByBiKhoa(); }
 
-        public List<Phong> dsTour() { return repo.dsPhong(); }
+        public List<Phong> dsPhong() { return repo.dsPhong(); }
 
         public List<Phong> showListTinhTrangPhong() { return repo.showListTinhTrangPhong(); }
 
         public void updateTinhTrangPhong(int maphong, string tinhtrang) { repo.updateTinhTrangPhong(maphong, tinhtrang); }
+        public Phong findById(int id) { return repo.findById(id); }
+        public List<Phong> dsPhongbyMaPhong(int maPhong)
+        {
+            return repo.dsPhongbyMaPhong(maPhong);
+        }
     }
 }

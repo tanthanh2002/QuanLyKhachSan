@@ -19,6 +19,7 @@ namespace HotelManagement.GUI
         private KhachHangService khachHangService = KhachHangService.getInstance();
 
         private BcryptEncoder bcryptEncoder = BcryptEncoder.getInstance();
+        private NhanVienService nhanVienService = NhanVienService.getInstance();
         public fLogin()
         {
             InitializeComponent();
@@ -55,7 +56,7 @@ namespace HotelManagement.GUI
                     TaiKhoan curUser = CONST.TaiKhoanConst.getUser();
                     int matk = curUser.mataikhoan;
                     CONST.KhachHangConst.setKH(khachHangService.findByMaTaiKhoan(matk));
-
+                    CONST.NhanVienConst.setNV(nhanVienService.findByMaTaiKhoan(matk));
                     //KhachHang curMaKH = CONST.KhachHangConst.getKH();
                     //int maKH = curMaKH.makhachhang;
                     //CONST.PhieuDatPhongConst.setMaPhieu(DatPhongService.find(maKH));

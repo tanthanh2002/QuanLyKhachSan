@@ -38,5 +38,9 @@ namespace HotelManagement.BUS
         {
             return repo.getAll();
         }
+        public NhanVien findByMaTaiKhoan(int mataikhoan)
+        {
+            return repo.findByMaTaiKhoan(mataikhoan);
+        }
     }
 }

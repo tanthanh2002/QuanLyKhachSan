@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +37,21 @@ namespace HotelManagement.DAO
         {
             db.DatTours.Add(dattour);
             db.SaveChanges();
+        }
+
+        public List<DatTour> getAll()
+        {
+            var result = from a in db.DatTours
+                         select a;
+            return result.ToList();
+        }
+
+        public List<DatTour> getByMaKH(int makh)
+        {
+            var result = from a in db.DatTours
+                         where a.makhachhang == makh
+                         select a;
+            return result.ToList();
         }
     }
 }

@@ -19,14 +19,22 @@ namespace HotelManagement.DAO
         public List<PhieuDatPhongChiTiet> showListMaPhieuDatPhong(int maPhong)
         {
             var s = from a in db.PhieuDatPhongChiTiets join b in db.PhieuDatPhongs on a.maphieudatphong equals b.maphieudatphong
-                    where a.maphong == maPhong && b.nhanviencheckout == null //&& b.checkin==true
+                    where a.maphong == maPhong && b.nhanviencheckout == null && b.checkin==true
                     select a;
             return s.ToList();
         }
         public List<PhieuDatPhongChiTiet> showListMaPhong(int maKhachHang)
         {
             var s = from a in db.PhieuDatPhongChiTiets join b in db.PhieuDatPhongs on a.maphieudatphong equals b.maphieudatphong
-                    where b.makhachhang == maKhachHang && b.nhanviencheckout == null //&& b.checkin==true
+                    where b.makhachhang == maKhachHang && b.nhanviencheckout == null && b.checkin==true
+                    select a;
+            return s.ToList();
+        }
+        public List<PhieuDatPhongChiTiet> listMaPhongByMaPhieuDatPhong(int maphieu)
+        {
+            var s = from a in db.PhieuDatPhongChiTiets
+                    join b in db.PhieuDatPhongs on a.maphieudatphong equals b.maphieudatphong
+                    where b.maphieudatphong == maphieu && b.nhanviencheckout == null && b.checkin == true
                     select a;
             return s.ToList();
         }

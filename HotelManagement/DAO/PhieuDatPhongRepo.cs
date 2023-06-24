@@ -40,6 +40,22 @@ namespace HotelManagement.DAO
         {
             return db.PhieuDatPhongs.Where(p => p.makhachhang.Equals(makh)).Single();
         }
-
+        public int getMaPhieuDatPhongByMaKH(int makh)
+        {
+            PhieuDatPhong phieu = db.PhieuDatPhongs.SingleOrDefault(p => p.makhachhang == makh && p.checkin == true && p.nhanviencheckout == null);
+            if (phieu != null)
+            {
+                return phieu.maphieudatphong;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public List<PhieuDatPhong> listDSDatPhongCurrent()
+        {
+            return db.PhieuDatPhongs.Where(p => p.checkin == true && p.nhanviencheckout == null)
+                .ToList();
+        }
     }
 }

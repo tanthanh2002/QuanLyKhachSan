@@ -21,5 +21,14 @@ namespace HotelManagement.BUS
         {
             repo.addDatTour(dattour);
         }
+        public List<DatTour> getAll()
+        {
+            return repo.getAll();
+        }
+
+        public List<DatTour> getByMaKH(int makh)
+        {
+            return repo.getByMaKH(makh);
+        }
     }
 }

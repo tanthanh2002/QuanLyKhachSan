@@ -31,7 +31,6 @@ namespace HotelManagement.GUI
         {
             this.components = new System.ComponentModel.Container();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.tbTimMaPhong = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.dgvDSPhong = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,11 +51,13 @@ namespace HotelManagement.GUI
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             this.tbMaPhong = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
+            this.btnTimKiemMaPhong = new MaterialSkin.Controls.MaterialButton();
             this.maphongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sophongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bikhoaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tinhtrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbTimMaPhong = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSPhong)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,41 +71,12 @@ namespace HotelManagement.GUI
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(22, 88);
+            this.materialLabel1.Location = new System.Drawing.Point(22, 91);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(77, 19);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Mã phòng:";
-            // 
-            // tbTimMaPhong
-            // 
-            this.tbTimMaPhong.AnimateReadOnly = false;
-            this.tbTimMaPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tbTimMaPhong.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbTimMaPhong.Depth = 0;
-            this.tbTimMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tbTimMaPhong.HideSelection = true;
-            this.tbTimMaPhong.LeadingIcon = null;
-            this.tbTimMaPhong.Location = new System.Drawing.Point(105, 76);
-            this.tbTimMaPhong.MaxLength = 32767;
-            this.tbTimMaPhong.MouseState = MaterialSkin.MouseState.OUT;
-            this.tbTimMaPhong.Name = "tbTimMaPhong";
-            this.tbTimMaPhong.PasswordChar = '\0';
-            this.tbTimMaPhong.PrefixSuffixText = null;
-            this.tbTimMaPhong.ReadOnly = false;
-            this.tbTimMaPhong.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbTimMaPhong.SelectedText = "";
-            this.tbTimMaPhong.SelectionLength = 0;
-            this.tbTimMaPhong.SelectionStart = 0;
-            this.tbTimMaPhong.ShortcutsEnabled = true;
-            this.tbTimMaPhong.Size = new System.Drawing.Size(250, 48);
-            this.tbTimMaPhong.TabIndex = 1;
-            this.tbTimMaPhong.TabStop = false;
-            this.tbTimMaPhong.Text = "Nhập mã phòng";
-            this.tbTimMaPhong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbTimMaPhong.TrailingIcon = null;
-            this.tbTimMaPhong.UseSystemPasswordChar = false;
             // 
             // materialLabel2
             // 
@@ -420,6 +392,26 @@ namespace HotelManagement.GUI
             this.materialLabel13.TabIndex = 8;
             this.materialLabel13.Text = "Mã phòng:";
             // 
+            // btnTimKiemMaPhong
+            // 
+            this.btnTimKiemMaPhong.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimKiemMaPhong.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimKiemMaPhong.Depth = 0;
+            this.btnTimKiemMaPhong.HighEmphasis = true;
+            this.btnTimKiemMaPhong.Icon = null;
+            this.btnTimKiemMaPhong.Location = new System.Drawing.Point(376, 84);
+            this.btnTimKiemMaPhong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimKiemMaPhong.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimKiemMaPhong.Name = "btnTimKiemMaPhong";
+            this.btnTimKiemMaPhong.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimKiemMaPhong.Size = new System.Drawing.Size(86, 36);
+            this.btnTimKiemMaPhong.TabIndex = 12;
+            this.btnTimKiemMaPhong.Text = "Tìm kiếm";
+            this.btnTimKiemMaPhong.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimKiemMaPhong.UseAccentColor = false;
+            this.btnTimKiemMaPhong.UseVisualStyleBackColor = true;
+            this.btnTimKiemMaPhong.Click += new System.EventHandler(this.btnTimKiemMaPhong_Click);
+            // 
             // maphongDataGridViewTextBoxColumn
             // 
             this.maphongDataGridViewTextBoxColumn.DataPropertyName = "maphong";
@@ -456,11 +448,22 @@ namespace HotelManagement.GUI
             // 
             this.phongBindingSource.DataSource = typeof(HotelManagement.Phong);
             // 
+            // cbTimMaPhong
+            // 
+            this.cbTimMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTimMaPhong.FormattingEnabled = true;
+            this.cbTimMaPhong.Location = new System.Drawing.Point(116, 85);
+            this.cbTimMaPhong.Name = "cbTimMaPhong";
+            this.cbTimMaPhong.Size = new System.Drawing.Size(222, 33);
+            this.cbTimMaPhong.TabIndex = 13;
+            // 
             // fBuongPhongHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 583);
+            this.Controls.Add(this.cbTimMaPhong);
+            this.Controls.Add(this.btnTimKiemMaPhong);
             this.Controls.Add(this.cbMaPhieuDat);
             this.Controls.Add(this.materialLabel12);
             this.Controls.Add(this.tbMaPhong);
@@ -470,7 +473,6 @@ namespace HotelManagement.GUI
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvDSPhong);
             this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.tbTimMaPhong);
             this.Controls.Add(this.materialLabel1);
             this.DrawerIsOpen = true;
             this.DrawerShowIconsWhenHidden = true;
@@ -494,7 +496,6 @@ namespace HotelManagement.GUI
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialTextBox2 tbTimMaPhong;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.DataGridView dgvDSPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn maphongDataGridViewTextBoxColumn;
@@ -520,5 +521,7 @@ namespace HotelManagement.GUI
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private MaterialSkin.Controls.MaterialTextBox tbMaPhong;
         private MaterialSkin.Controls.MaterialLabel materialLabel13;
+        private MaterialSkin.Controls.MaterialButton btnTimKiemMaPhong;
+        private System.Windows.Forms.ComboBox cbTimMaPhong;
     }
 }

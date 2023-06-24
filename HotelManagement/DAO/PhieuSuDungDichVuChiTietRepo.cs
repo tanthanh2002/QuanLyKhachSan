@@ -27,5 +27,27 @@ namespace HotelManagement.DAO
             db.PhieuSuDungDichVuChiTiets.Add(phieu);
             db.SaveChanges();
         }
+        public List<PhieuSuDungDichVuChiTiet> DSDichVufindByMaDatPhong(int madat)
+        {
+            var result = from a in db.PhieuSuDungDichVuChiTiets
+                         join b in db.PhieuSuDungDichVus on a.maphieusudungdichvu equals b.maphieu
+                         where b.maphieudatphong == madat
+                         select a;
+            return result.ToList();
+        }
+        public List<PhieuSuDungDichVuChiTiet> getAll()
+        {
+            var result = from a in db.PhieuSuDungDichVuChiTiets
+                         select a;
+            return result.ToList();
+        }
+        public List<PhieuSuDungDichVuChiTiet> getAllByMaPhieuDatPhong(int maphieu)
+        {
+            var result = from a in db.PhieuSuDungDichVuChiTiets
+                         join b in db.PhieuSuDungDichVus on a.maphieusudungdichvu equals b.maphieu
+                         where b.maphieudatphong == maphieu
+                         select a;
+            return result.ToList();
+        }
     }
 }

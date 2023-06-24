@@ -33,11 +33,13 @@ namespace HotelManagement.GUI
             cbTenThucPham.DataSource = thucPhamService.showListThucPham();
             cbTinhTrangPhong.Items.Add("Chưa sẵn sàng");
             cbTinhTrangPhong.Items.Add("Đã sẵn sàng");
+            cbTimMaPhong.ValueMember = "maphong";
+            cbTimMaPhong.DataSource = phongService.dsPhong();
         }
 
         private void loadDSPhong()
         {
-            dgvDSPhong.DataSource = phongService.dsTour();
+            dgvDSPhong.DataSource = phongService.dsPhong();
         }
 
         private void dgvDSPhong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -118,6 +120,12 @@ namespace HotelManagement.GUI
                 Console.WriteLine(ex.StackTrace);
                 MessageBox.Show("Thêm thất bại!");
             }
+        }
+
+        private void btnTimKiemMaPhong_Click(object sender, EventArgs e)
+        {
+            int maphong = Convert.ToInt32(cbTimMaPhong.Text);
+            dgvDSPhong.DataSource = phongService.dsPhongbyMaPhong(maphong);
         }
     }
 }

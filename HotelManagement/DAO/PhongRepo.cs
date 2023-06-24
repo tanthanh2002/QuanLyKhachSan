@@ -90,6 +90,10 @@ namespace HotelManagement.DAO
                 db.SaveChanges();
             }
         }
-
+        public List<Phong> dsPhongbyMaPhong(int maPhong)
+        {
+            var s = db.Phongs.Where(p => p.maphong == maPhong);
+            return s.ToList();
+        }
     }
 }

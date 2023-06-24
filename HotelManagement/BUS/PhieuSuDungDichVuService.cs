@@ -16,6 +16,6 @@ namespace HotelManagement.BUS
         public static PhieuSuDungDichVuService getInstance() { return instance; }
         public void addPhieuSuDungDichVu(PhieuSuDungDichVu phieu) { repo.addPhieuSuDungDichVu(phieu); }
 
-        public int MaPhieuSuDungDichVuLatest => repo.getMaPhieuSuDungDichVuLatest();
+        public int MaPhieuSuDungDichVuLatest() { return repo.getMaPhieuSuDungDichVuLatest(); }
     }
 }

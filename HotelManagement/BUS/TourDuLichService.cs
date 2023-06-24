@@ -16,5 +16,9 @@ namespace HotelManagement.BUS
         public static TourDuLichService getInstance() { return instance; }
 
         public List<TourDuLich> dsTour() { return repo.dsTour(); }
+        public List<TourDuLich> getAllByTenTour(string tenTour)
+        {
+            return repo.getAllByTenTour(tenTour);
+        }
     }
 }

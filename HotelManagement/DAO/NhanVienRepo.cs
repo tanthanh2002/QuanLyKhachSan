@@ -40,5 +40,9 @@ namespace HotelManagement.DAO
             var result = from c in db.NhanViens select c;
             return result.ToList();
         }
+        public NhanVien findByMaTaiKhoan(int mataikhoan)
+        {
+            return db.NhanViens.SingleOrDefault(p => p.TaiKhoan.mataikhoan == mataikhoan);
+        }
     }
 }

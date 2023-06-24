@@ -20,5 +20,12 @@ namespace HotelManagement.DAO
         {
             return db.TourDuLiches.ToList();
         }
+        public List<TourDuLich> getAllByTenTour(string tenTour)
+        {
+            var result = from a in db.TourDuLiches
+                         where a.tentour.Contains(tenTour)
+                         select a;
+            return result.ToList();
+        }
     }
 }
