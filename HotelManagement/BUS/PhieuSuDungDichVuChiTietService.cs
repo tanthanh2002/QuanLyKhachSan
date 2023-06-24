@@ -20,5 +20,6 @@ namespace HotelManagement.BUS
         {
             return repo.getChiTietList (maPhieuDatPhong);
         }
+        public void addPhieuSuDungDichVuChiTiet(PhieuSuDungDichVuChiTiet phieu) { repo.addPhieuSuDungDichVuChiTiet(phieu); }
     }
 }

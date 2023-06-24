@@ -68,6 +68,7 @@
     <Compile Include="BUS\BcryptEncoder.cs" />
     <Compile Include="BUS\DatPhongService.cs" />
     <Compile Include="BUS\DatTourService.cs" />
+    <Compile Include="BUS\DichVuService.cs" />
     <Compile Include="BUS\HoaDonService.cs" />
     <Compile Include="BUS\KhachHangService.cs" />
     <Compile Include="BUS\NhanVienService.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="BUS\PhieuDatPhongChiTietService.cs" />
     <Compile Include="BUS\PhieuHuHongNoiThatService.cs" />
     <Compile Include="BUS\PhieuSuDungDichVuChiTietService.cs" />
+    <Compile Include="BUS\PhieuSuDungDichVuService.cs" />
     <Compile Include="BUS\PhieuSuDungThucPhamService.cs" />
     <Compile Include="BUS\PhongService.cs" />
     <Compile Include="BUS\TaiKhoanService.cs" />
@@ -90,7 +92,7 @@
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DAO\DatTourRepo.cs" />
-    <Compile Include="DAO\DichVu.cs" />
+    <Compile Include="DAO\DichVuRepo.cs" />
     <Compile Include="DAO\HoaDonRepo.cs" />
     <Compile Include="DAO\KhachHangRepo.cs" />
     <Compile Include="DAO\NhanVienRepo.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="DAO\PhieuDatPhongRepo.cs" />
     <Compile Include="DAO\PhieuHuHongNoiThatChiTietRepo.cs" />
     <Compile Include="DAO\PhieuSuDungDichVuChiTietRepo.cs" />
+    <Compile Include="DAO\PhieuSuDungDichVuRepo.cs" />
     <Compile Include="DAO\PhieuSuDungThucPhamRepo.cs" />
     <Compile Include="DAO\PhongRepo.cs" />
     <Compile Include="DAO\TaiKhoanRepo.cs" />

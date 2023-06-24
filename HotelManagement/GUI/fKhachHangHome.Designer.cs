@@ -872,6 +872,7 @@ namespace HotelManagement.GUI
             this.materialLabel7.Size = new System.Drawing.Size(118, 19);
             this.materialLabel7.TabIndex = 0;
             this.materialLabel7.Text = "Tour đã đăng ký";
+
             // 
             // phongBindingSource
             // 

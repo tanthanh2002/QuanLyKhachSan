@@ -22,5 +22,10 @@ namespace HotelManagement.DAO
             maPhieu = db.PhieuSuDungDichVus.Where(p => p.maphieudatphong == maPhieuDatPhong).Select(p=>p.maphieu).FirstOrDefault();
             return db.PhieuSuDungDichVuChiTiets.Where(p=>p.maphieusudungdichvu == maPhieu ).ToList();
         }
+        public void addPhieuSuDungDichVuChiTiet(PhieuSuDungDichVuChiTiet phieu)
+        {
+            db.PhieuSuDungDichVuChiTiets.Add(phieu);
+            db.SaveChanges();
+        }
     }
 }
