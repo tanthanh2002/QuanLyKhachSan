@@ -38,5 +38,10 @@ namespace HotelManagement.DAO
                     select a;
             return s.ToList();
         }
+        public void save(PhieuDatPhongChiTiet chi)
+        {
+            db.PhieuDatPhongChiTiets.Add(chi);
+            db.SaveChanges();
+        }
     }
 }

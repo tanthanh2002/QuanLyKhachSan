@@ -23,5 +23,9 @@ namespace HotelManagement.BUS
         {
             return repo.listMaPhongByMaPhieuDatPhong(maphieu);
         }
+        public void themPhieuDPCT(PhieuDatPhongChiTiet phieuDatPhong)
+        {
+            repo.save(phieuDatPhong);
+        }
     }
 }

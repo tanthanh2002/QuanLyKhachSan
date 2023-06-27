@@ -91,32 +91,33 @@
         
         
         
-        <EntityTypeShape EntityType="HotelManagementModel.ApDungKhuyenMai" Width="1.5" PointX="11.905792191580773" PointY="15.602055467479888" />
-        <EntityTypeShape EntityType="HotelManagementModel.CungCapDichVu" Width="1.5" PointX="10.2613664335857" PointY="19.389768281667386" />
-        <EntityTypeShape EntityType="HotelManagementModel.DatTour" Width="1.5" PointX="0.1393014249109204" PointY="7.0584037485804423" />
-        <EntityTypeShape EntityType="HotelManagementModel.DichVu" Width="1.5" PointX="4.0145626664229495" PointY="4.7615714840412009" />
-        <EntityTypeShape EntityType="HotelManagementModel.Doan" Width="1.5" PointX="1.4741180862645238" PointY="24.099427457945154" />
-        <EntityTypeShape EntityType="HotelManagementModel.DoiTac" Width="1.5" PointX="11.263185655355075" PointY="10.527202998533474" />
-        <EntityTypeShape EntityType="HotelManagementModel.HanhLy" Width="1.5" PointX="5.92917454146276" PointY="27.402684537415713" />
-        <EntityTypeShape EntityType="HotelManagementModel.HoaDon" Width="1.5" PointX="5.3431741880919663" PointY="23.888012822665281" />
-        <EntityTypeShape EntityType="HotelManagementModel.KhachHang" Width="1.5" PointX="11.837981639354481" PointY="30.681124060731904" />
-        <EntityTypeShape EntityType="HotelManagementModel.KhuyenMai" Width="1.5" PointX="9.9363914476411388" PointY="22.461375276772944" />
-        <EntityTypeShape EntityType="HotelManagementModel.LoaiPhong" Width="1.5" PointX="0.75917829608506437" PointY="26.897778314956362" />
-        <EntityTypeShape EntityType="HotelManagementModel.NhanVien" Width="1.5" PointX="1.9160158661734386" PointY="26.424102646496195" />
-        <EntityTypeShape EntityType="HotelManagementModel.NoiThat" Width="1.5" PointX="0.35586719976545644" PointY="25.912335989024648" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuDanhGia" Width="1.5" PointX="8.7852896809509442" PointY="0.5844276103118563" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhong" Width="1.5" PointX="11.4460208972199" PointY="18.106167026844886" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhongChiTiet" Width="1.5" PointX="1.1131091588703492" PointY="21.893948103251844" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuHuHongNoiThat" Width="1.5" PointX="8.3650310190231671" PointY="20.12125466210826" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVu" Width="1.5" PointX="0.9821828813209118" PointY="20.343539411362045" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVuChiTiet" Width="1.5" PointX="0.6374631322163451" PointY="15.817614860747762" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungThucPham" Width="1.5" PointX="11.503029780230964" PointY="24.891785081891243" />
-        <EntityTypeShape EntityType="HotelManagementModel.PhieuVanChuyenHanhLy" Width="1.5" PointX="10.158880417309181" PointY="11.612344285292711" />
-        <EntityTypeShape EntityType="HotelManagementModel.Phong" Width="1.5" PointX="3.2852539360920217" PointY="1.7173532851586832" />
-        <EntityTypeShape EntityType="HotelManagementModel.TaiKhoan" Width="1.5" PointX="11.992198772724811" PointY="3.7743010687522132" />
-        <EntityTypeShape EntityType="HotelManagementModel.ThanhVien" Width="1.5" PointX="4.94501782252687" PointY="1.253482297646572" />
-        <EntityTypeShape EntityType="HotelManagementModel.ThucPham" Width="1.5" PointX="3.4637878199404977" PointY="8.0820661820853434" />
-        <EntityTypeShape EntityType="HotelManagementModel.TourDuLich" Width="1.5" PointX="7.3615973197676237" PointY="6.1741608559033647" />
+        
+        <EntityTypeShape EntityType="HotelManagementModel.ApDungKhuyenMai" Width="1.5" PointX="5.7694298726364179" PointY="1.8173824855207383" />
+        <EntityTypeShape EntityType="HotelManagementModel.CungCapDichVu" Width="1.5" PointX="1.9963608784584146" PointY="13.946359879312274" />
+        <EntityTypeShape EntityType="HotelManagementModel.DatTour" Width="1.5" PointX="9.6017107486732822" PointY="2.9591964199017715" />
+        <EntityTypeShape EntityType="HotelManagementModel.DichVu" Width="1.5" PointX="0.53814293282951364" PointY="22.475590358709727" />
+        <EntityTypeShape EntityType="HotelManagementModel.Doan" Width="1.5" PointX="1.1739007500810086" PointY="26.101822477812796" />
+        <EntityTypeShape EntityType="HotelManagementModel.DoiTac" Width="1.5" PointX="3.5948773601999866" PointY="22.925238396471944" />
+        <EntityTypeShape EntityType="HotelManagementModel.HanhLy" Width="1.5" PointX="7.8501217047917287" PointY="21.389893854684146" />
+        <EntityTypeShape EntityType="HotelManagementModel.HoaDon" Width="1.5" PointX="3.75" PointY="29" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhachHang" Width="1.5" PointX="8.449718695343341" PointY="7.2818060700231264" />
+        <EntityTypeShape EntityType="HotelManagementModel.KhuyenMai" Width="1.5" PointX="5.5088124468497988" PointY="10.906880801034569" />
+        <EntityTypeShape EntityType="HotelManagementModel.LoaiPhong" Width="1.5" PointX="5.9893492860669966" PointY="15.87798818195145" />
+        <EntityTypeShape EntityType="HotelManagementModel.NhanVien" Width="1.5" PointX="5.3931200603922456" PointY="25.816671964627073" />
+        <EntityTypeShape EntityType="HotelManagementModel.NoiThat" Width="1.5" PointX="8.1113769487065159" PointY="25.476944801154055" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDanhGia" Width="1.5" PointX="6.080695384219613" PointY="6.6331894726647018" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhong" Width="1.5" PointX="11.125" PointY="8.625" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuDatPhongChiTiet" Width="1.5" PointX="7.79821494212291" PointY="14.597801975252946" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuHuHongNoiThat" Width="1.5" PointX="3.1887031231022922" PointY="0.69434069129374842" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVu" Width="1.5" PointX="7.420862102611391" PointY="22.349058712995173" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungDichVuChiTiet" Width="1.5" PointX="6.4091578621459924" PointY="18.290538960271768" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuSuDungThucPham" Width="1.5" PointX="15.25" PointY="9" />
+        <EntityTypeShape EntityType="HotelManagementModel.PhieuVanChuyenHanhLy" Width="1.5" PointX="2.363424836827174" PointY="11.71912405440543" />
+        <EntityTypeShape EntityType="HotelManagementModel.Phong" Width="1.5" PointX="13.625" PointY="6" />
+        <EntityTypeShape EntityType="HotelManagementModel.TaiKhoan" Width="1.5" PointX="9.875" PointY="23.25" />
+        <EntityTypeShape EntityType="HotelManagementModel.ThanhVien" Width="1.5" PointX="0.1365513727704768" PointY="4.9641476147641184" />
+        <EntityTypeShape EntityType="HotelManagementModel.ThucPham" Width="1.5" PointX="8.8898630313993721" PointY="10.637857933825748" />
+        <EntityTypeShape EntityType="HotelManagementModel.TourDuLich" Width="1.5" PointX="3.875" PointY="20.375" />
         <AssociationConnector Association="HotelManagementModel.fk_ApDungKhuyenMai_makhuyenmai" />
         <AssociationConnector Association="HotelManagementModel.fk_ApDungKhuyenMai_maphong" />
         <AssociationConnector Association="HotelManagementModel.fk_CungCapDichVu_madichvu" />
@@ -149,6 +150,63 @@
         <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungThucPham_maphieudatphongchitiet" />
         <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungDichVuChiTiet_maphieusudungdichvu" />
         <AssociationConnector Association="HotelManagementModel.fk_PhieuSuDungThucPham_mathucpham" />
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         

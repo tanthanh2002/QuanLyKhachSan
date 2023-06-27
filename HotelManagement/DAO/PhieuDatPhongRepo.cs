@@ -14,9 +14,11 @@ namespace HotelManagement.DAO
 
         public static PhieuDatPhongRepo getInstance() { return instance; }
 
-        public void save(PhieuDatPhong phieuDatPhong) { 
+        public int save(PhieuDatPhong phieuDatPhong) { 
             db.PhieuDatPhongs.Add(phieuDatPhong);
             db.SaveChanges();
+
+            return phieuDatPhong.maphieudatphong;
         }
 
         public List<PhieuDatPhong> findByUsername(string username)

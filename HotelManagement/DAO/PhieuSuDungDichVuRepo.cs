@@ -20,10 +20,12 @@ namespace HotelManagement.DAO
         {
             return instance;
         }
-        public void addPhieuSuDungDichVu(PhieuSuDungDichVu phieu)
+        public int addPhieuSuDungDichVu(PhieuSuDungDichVu phieu)
         {
             db.PhieuSuDungDichVus.Add(phieu);
             db.SaveChanges();
+
+            return phieu.maphieu;
         }
         public int getMaPhieuSuDungDichVuLatest()
         {

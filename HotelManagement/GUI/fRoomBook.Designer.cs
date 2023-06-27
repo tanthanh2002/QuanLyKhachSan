@@ -49,6 +49,9 @@
             this.txtNgayDen = new System.Windows.Forms.DateTimePicker();
             this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtMaPhong = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -118,7 +121,7 @@
             this.btnDatPhong.Depth = 0;
             this.btnDatPhong.HighEmphasis = true;
             this.btnDatPhong.Icon = null;
-            this.btnDatPhong.Location = new System.Drawing.Point(752, 385);
+            this.btnDatPhong.Location = new System.Drawing.Point(811, 430);
             this.btnDatPhong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDatPhong.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDatPhong.Name = "btnDatPhong";
@@ -252,7 +255,7 @@
             this.txtYeuCauDacBiet.Depth = 0;
             this.txtYeuCauDacBiet.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtYeuCauDacBiet.LeadingIcon = null;
-            this.txtYeuCauDacBiet.Location = new System.Drawing.Point(701, 128);
+            this.txtYeuCauDacBiet.Location = new System.Drawing.Point(697, 172);
             this.txtYeuCauDacBiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtYeuCauDacBiet.MaxLength = 50;
             this.txtYeuCauDacBiet.MouseState = MaterialSkin.MouseState.OUT;
@@ -268,7 +271,7 @@
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel8.Location = new System.Drawing.Point(533, 159);
+            this.materialLabel8.Location = new System.Drawing.Point(529, 203);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(119, 19);
@@ -280,7 +283,7 @@
             this.materialLabel9.AutoSize = true;
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.Location = new System.Drawing.Point(533, 238);
+            this.materialLabel9.Location = new System.Drawing.Point(529, 282);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
             this.materialLabel9.Size = new System.Drawing.Size(106, 19);
@@ -292,7 +295,7 @@
             this.materialLabel10.AutoSize = true;
             this.materialLabel10.Depth = 0;
             this.materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.Location = new System.Drawing.Point(533, 306);
+            this.materialLabel10.Location = new System.Drawing.Point(529, 350);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
             this.materialLabel10.Size = new System.Drawing.Size(69, 19);
@@ -306,7 +309,7 @@
             this.txtSoDemLuuTru.Depth = 0;
             this.txtSoDemLuuTru.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSoDemLuuTru.LeadingIcon = null;
-            this.txtSoDemLuuTru.Location = new System.Drawing.Point(701, 207);
+            this.txtSoDemLuuTru.Location = new System.Drawing.Point(697, 251);
             this.txtSoDemLuuTru.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoDemLuuTru.MaxLength = 50;
             this.txtSoDemLuuTru.MouseState = MaterialSkin.MouseState.OUT;
@@ -319,7 +322,7 @@
             // 
             // txtNgayDen
             // 
-            this.txtNgayDen.Location = new System.Drawing.Point(701, 302);
+            this.txtNgayDen.Location = new System.Drawing.Point(697, 346);
             this.txtNgayDen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNgayDen.Name = "txtNgayDen";
             this.txtNgayDen.Size = new System.Drawing.Size(250, 22);
@@ -354,11 +357,64 @@
             this.materialLabel11.TabIndex = 21;
             this.materialLabel11.Text = "Email";
             // 
+            // txtMaPhong
+            // 
+            this.txtMaPhong.AnimateReadOnly = false;
+            this.txtMaPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaPhong.Depth = 0;
+            this.txtMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMaPhong.LeadingIcon = null;
+            this.txtMaPhong.Location = new System.Drawing.Point(697, 108);
+            this.txtMaPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaPhong.MaxLength = 50;
+            this.txtMaPhong.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtMaPhong.Multiline = false;
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(250, 50);
+            this.txtMaPhong.TabIndex = 23;
+            this.txtMaPhong.Text = "";
+            this.txtMaPhong.TrailingIcon = null;
+            // 
+            // materialLabel12
+            // 
+            this.materialLabel12.AutoSize = true;
+            this.materialLabel12.Depth = 0;
+            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel12.Location = new System.Drawing.Point(529, 139);
+            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel12.Name = "materialLabel12";
+            this.materialLabel12.Size = new System.Drawing.Size(73, 19);
+            this.materialLabel12.TabIndex = 22;
+            this.materialLabel12.Text = "Mã phòng";
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(703, 430);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(64, 36);
+            this.materialButton1.TabIndex = 24;
+            this.materialButton1.Text = "Hủy";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
             // fRoomBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.txtMaPhong);
+            this.Controls.Add(this.materialLabel12);
             this.Controls.Add(this.materialLabel11);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNgayDen);
@@ -412,5 +468,8 @@
         private System.Windows.Forms.DateTimePicker txtNgayDen;
         private MaterialSkin.Controls.MaterialTextBox txtEmail;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
+        private MaterialSkin.Controls.MaterialTextBox txtMaPhong;
+        private MaterialSkin.Controls.MaterialLabel materialLabel12;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }

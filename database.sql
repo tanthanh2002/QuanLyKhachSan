@@ -251,17 +251,25 @@ CREATE TABLE ApDungKhuyenMai
 
 
 --16
+--ALTER TABLE dbo.HoaDon 
+--ALTER COLUMN tiendichvu FLOAT NULL;
+--ALTER TABLE dbo.HoaDon
+--DROP CONSTRAINT CK__HoaDon__tinhtran__09A971A2;
+--ALTER TABLE dbo.HoaDon
+--ADD CONSTRAINT CHK_tinhtrang
+--CHECK (tinhtrang IN (N'đang chờ', N'đã thanh toán', N'đã cọc'));
+
 CREATE TABLE HoaDon
 (
 	mahoadon						int					identity primary key,
-	tiendichvu						float				not null check(tiendichvu > 0),
+	tiendichvu						float				null check(tiendichvu > 0),
 	tienthucpham					float				not null check(tienthucpham > 0),
 	tienhuhongnoithat				float				not null check(tienhuhongnoithat > 0),
 	tongtien						float				not null check(tongtien > 0),
 	sotiendathanhtoan				float				not null ,
 	maphieudatphong					int					not null,
 	maketoan						int					,
-	tinhtrang						nvarchar(20)		check(tinhtrang in (N'đang chờ',N'đã thanh toán')),
+	tinhtrang						nvarchar(20)		check(tinhtrang in (N'đang chờ',N'đã thanh toán','đã cọc')),
 	constraint fk_HoaDon_maphieudatphong foreign key (maphieudatphong) references PhieuDatPhong(maphieudatphong),
 	constraint fk_HoaDon_maketoan foreign key (maketoan) references NhanVien(manhanvien),
 	constraint ck_sotiendathanhtoan check(sotiendathanhtoan > 0 and sotiendathanhtoan <= tongtien)

@@ -1,4 +1,5 @@
 ﻿using HotelManagement.BUS;
+using HotelManagement.TANN;
 using MaterialSkin;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,22 @@ namespace HotelManagement.GUI
         private DatPhongService datPhongService = DatPhongService.getInstance();
 
         private KhachHangService khachHangService = KhachHangService.getInstance();
+        private PhieuDatPhongChiTietService phieuDatPhongChiTietService = PhieuDatPhongChiTietService.getInstance();
+        private PhieuSuDungDichVuService phieuSuDungDichVuService = PhieuSuDungDichVuService.getInstance();
+        private PhieuSuDungDichVuChiTietService phieuSuDungDichVuChiTietService = PhieuSuDungDichVuChiTietService.getInstance();    
         private int maKH;
+        private int maTK;
+
+        private int maPhong;
+        private int maPhieuDatPhong;
+        private decimal gia;
+        private int maPhieuDP;
+
+        private KhachHang khachHang = new KhachHang();
+        private PhieuDatPhong phieuDatPhong = new PhieuDatPhong();
+        private PhieuDatPhongChiTiet phieuDatPhongChiTiet = new PhieuDatPhongChiTiet();
+        private PhieuSuDungDichVu phieuSuDungDichVu = new PhieuSuDungDichVu();
+        private PhieuSuDungDichVuChiTiet phieuSuDungDichVuChiTiet = new PhieuSuDungDichVuChiTiet();
         public fRoomBook()
         {
             InitializeComponent();
@@ -25,6 +41,27 @@ namespace HotelManagement.GUI
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            TANN.EventAggregator.Instance.Subscribe<datPhongSelected>(Load);
+            LoadDefault();
+        }
+
+        private void LoadDefault()
+        {
+            TaiKhoan curUser = CONST.TaiKhoanConst.getUser();
+            khachHang = khachHangService.findByMaTaiKhoan(curUser.mataikhoan);
+            txtTenKhachHang.Text = khachHang.tenkhachhang.ToString();
+            txtSoDienThoai.Text = khachHang.sodienthoai.ToString();
+            txtDiaChi.Text = khachHang.diachi.ToString();
+            txtSoFax.Text = khachHang.sofax.ToString();
+            txtEmail.Text = khachHang.email.ToString();
+            txtCCCD.Text = khachHang.cccd.ToString();
+            txtMaPhong.Text = maPhong.ToString();
+        }
+        private new void Load(datPhongSelected obj)
+        {
+            maPhong = obj._maPhong;
+            txtMaPhong.Text = maPhong.ToString();
+            gia = obj._gia;
         }
 
         private void themKhachHang(KhachHang khachHang)
@@ -35,41 +72,58 @@ namespace HotelManagement.GUI
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
-            KhachHang khachHang = new KhachHang();
-            khachHang.tenkhachhang = txtTenKhachHang.Text;
-            khachHang.diachi = txtDiaChi.Text;
-            khachHang.sodienthoai = txtSoDienThoai.Text;
-            khachHang.sofax = txtSoFax.Text;
-            khachHang.email = "";
-            khachHang.cccd = txtCCCD.Text;
-            //???
-            khachHang.mataikhoan = 0;
-            try
+           /* try
             {
                 maKH = khachHangService.CheckInsertOrUpdate(khachHang);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("Hãy kiểm tra lại thông tin cá nhân!"); 
-            }
-            PhieuDatPhong phieuDatPhong = new PhieuDatPhong();
-            phieuDatPhong.yeucaudatbiet = txtYeuCauDacBiet.Text;
+                MessageBox.Show("Hãy kiểm tra lại thông tin cá nhân!");
+            }*/
+           //PhieuDatPhong
+            phieuDatPhong.yeucaudatbiet = txtYeuCauDacBiet.Text.ToString();
             phieuDatPhong.sodemluutru = Convert.ToInt32(txtSoDemLuuTru.Text);
             phieuDatPhong.ngayden = txtNgayDen.Value;
-            phieuDatPhong.makhachhang = maKH;
-            //???
-            phieuDatPhong.nhanviencheckout = 0;
-            phieuDatPhong.nhanvienvesinh = 0;
+            phieuDatPhong.makhachhang = khachHang.makhachhang;
+            phieuDatPhong.checkin = false;
+           /* phieuDatPhong.nhanviencheckout = 0;
+            phieuDatPhong.nhanvienvesinh = 0;*/
+            //PhieuDatPhongChiTiet
+            phieuDatPhongChiTiet.maphong = maPhong;
+            //PhieuSuDungDichVu
+            phieuSuDungDichVu.tongtien = (double?)(phieuDatPhong.sodemluutru * gia);
+            phieuSuDungDichVu.maletan = 0;
+            //PhieuSuDungDichVuChiTiet
+            //phieuSuDungDichVuChiTiet.soluong = 0;
+            /*phieuSuDungDichVuChiTiet.thoigiansudung = phieuDatPhong.sodemluutru;
+            phieuSuDungDichVuChiTiet.thoigianbatdau = phieuDatPhong.ngayden;
+            phieuSuDungDichVuChiTiet.dongia = (float)gia;
+            phieuSuDungDichVuChiTiet.tenkhachhang = khachHang.tenkhachhang;*/
+
             try
             {
-                datPhongService.themPhieuDatPhong(phieuDatPhong);
+                maPhieuDatPhong = datPhongService.themPhieuDatPhong(phieuDatPhong);
+                phieuDatPhongChiTiet.maphieudatphong = maPhieuDatPhong;
+                phieuDatPhongChiTietService.themPhieuDPCT(phieuDatPhongChiTiet);
+                phieuSuDungDichVu.maphieudatphong = maPhieuDatPhong;
+                int temp = phieuSuDungDichVuService.addPhieuSuDungDichVu(phieuSuDungDichVu);
+                /*phieuSuDungDichVuChiTietService.addPhieuSuDungDichVuChiTiet(phieuSuDungDichVuChiTiet);*/
+                this.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("Hãy kiểm tra lại thông tin đặt phòng!");
             }
+            var newView = new fOnlinePayment();
+            newView.Show();
+            TANN.EventAggregator.Instance.Publish(new onlinePaymentInf(maPhieuDatPhong, phieuSuDungDichVu.tongtien));
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

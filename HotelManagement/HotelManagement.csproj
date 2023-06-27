@@ -306,9 +306,8 @@
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="TANN\Messenger.cs" />
+    <Compile Include="TANN\EventAggregator.cs" />
     <Compile Include="TANN\Shared.cs" />
-    <Compile Include="TANN\ShareDataModel.cs" />
     <Compile Include="ThanhVien.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>

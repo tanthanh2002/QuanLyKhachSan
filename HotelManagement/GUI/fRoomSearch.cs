@@ -1,4 +1,5 @@
 ﻿using HotelManagement.BUS;
+using HotelManagement.TANN;
 using MaterialSkin;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace HotelManagement.GUI
         private TimPhongService timPhongService = TimPhongService.getInstance();
 
         DataGridViewRow row = new DataGridViewRow();
+        private int maphong;
+        private decimal gia;
         public fRoomSearch()
         {
             InitializeComponent();
@@ -60,19 +63,27 @@ namespace HotelManagement.GUI
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
-            if (row == null)
+            if (dgvDSPhong.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn phòng!");
             }
             else
             {
+
+                /*int maphong = Convert.ToInt32(row.Cells["maphong"].Value);
+                decimal gia = Convert.ToDecimal(row.Cells["gia"].Value);*/
+                /* maphong = Convert.ToInt32(dgvDSPhong.Rows[e.RowIndex].Cells[0].Value);
+                 gia = Convert.ToDecimal(dgvDSPhong.Rows[e.RowIndex].Cells[2].Value);*/
                 var newView = new fRoomBook();
                 newView.Show();
+                TANN.EventAggregator.Instance.Publish(new datPhongSelected(maphong, gia));
+               
+                //return;
             }
         }
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            if (row == null)
+            if (dgvDSPhong.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn phòng!");
             }
@@ -84,6 +95,18 @@ namespace HotelManagement.GUI
         private void btnXong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvDSPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvDSPhong.CurrentRow.Selected = true;
+            //tbTenDichVu.Text = dgvDVCoHoTro.Rows[e.RowIndex].Cells[1].Value.ToString();
+            maphong = Convert.ToInt32(dgvDSPhong.Rows[e.RowIndex].Cells[0].Value);
+            gia = Convert.ToDecimal(dgvDSPhong.Rows[e.RowIndex].Cells[2].Value);
+
+            /* row = dgvDSPhong.Rows[e.RowIndex];
+             maphong = Convert.ToInt32(row.Cells[0].Value);
+             gia = Convert.ToDecimal(row.Cells[2].Value);*/
         }
     }
 }
