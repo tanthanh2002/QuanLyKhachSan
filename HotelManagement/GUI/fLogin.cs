@@ -40,7 +40,15 @@ namespace HotelManagement.GUI
             String password = txtPassword.Text;
             if (username == "admin" && password == "123")
             {
-                fQuanLyTaiKhoan quanly = new fQuanLyTaiKhoan();
+                //fQuanLyTaiKhoan quanly = new fQuanLyTaiKhoan();
+                //quanly.Show();
+                //this.Visible = false;
+
+                //fQuanLyDichVu quanly = new fQuanLyDichVu();
+                //quanly.Show();
+                //this.Visible = false;
+
+                fQuanLyKhuyenMai quanly = new fQuanLyKhuyenMai();
                 quanly.Show();
                 this.Visible = false;
             }

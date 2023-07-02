@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -135,6 +136,22 @@ namespace HotelManagement.DAO
 
             var result = full.Except(con);
             return result.ToList();
+        }
+        public List<DichVu> layDS()
+        {
+            var result = from a in db.DichVus
+                         select a;
+            return result.ToList();
+        }
+        public void suaGiaDV(DichVu dichVu)
+        {
+            db.DichVus.AddOrUpdate(dichVu);
+            db.SaveChanges();
+        }
+        public void themDV(DichVu dichVu)
+        {
+            db.DichVus.AddOrUpdate(dichVu);
+            db.SaveChanges();
         }
     }
 }

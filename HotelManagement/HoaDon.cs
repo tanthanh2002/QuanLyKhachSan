@@ -15,7 +15,7 @@ namespace HotelManagement
     public partial class HoaDon
     {
         public int mahoadon { get; set; }
-        public double tiendichvu { get; set; }
+        public Nullable<double> tiendichvu { get; set; }
         public double tienthucpham { get; set; }
         public double tienhuhongnoithat { get; set; }
         public double tongtien { get; set; }

@@ -35,6 +35,10 @@ INSert into DichVu(tendichvu, gia) values ('an sang', 123456);
 INSert into DichVu(tendichvu, gia) values ('ca phe', 123456);
 go
 
+-- khuyen mai
+Insert into KhuyenMai(makhuyenmai,tenkhuyenmai,thoigianbatdau,thoigianketthuc,ngaykhoa) values (100, 'giam 50 %', '29/02/2023','29/04/2023','29/06/2023' )
+Insert into KhuyenMai(makhuyenmai,tenkhuyenmai,thoigianbatdau,thoigianketthuc,ngaykhoa) values (200, 'giam 70 %', '29/03/2023','29/05/2023','30/06/2023' )
+
 -- cung cap dich vu
 INSert into CungCapDichVu(madichvu, maloaiphong) values (1, 1);
 INSert into CungCapDichVu(madichvu, maloaiphong) values (2, 1);

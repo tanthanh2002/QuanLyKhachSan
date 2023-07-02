@@ -37,5 +37,18 @@ namespace HotelManagement.BUS
         {
             return repo.showListDVKhongHoTroTheoMaPhieuDatTimKiem(maPhong, maphieu, tenDV);
         }
+        public List<DichVu> layDS()
+        {
+            return repo.layDS();
+        }
+        public void suaGiaDV(DichVu dichVu)
+        {
+            repo.suaGiaDV(dichVu);
+        }
+        public void themDV(DichVu dichVu)
+        {
+            repo.themDV(dichVu);
+        }
+
     }
 }
