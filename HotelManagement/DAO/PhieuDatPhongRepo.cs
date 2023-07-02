@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace HotelManagement.DAO
         public static PhieuDatPhongRepo getInstance() { return instance; }
 
         public int save(PhieuDatPhong phieuDatPhong) { 
-            db.PhieuDatPhongs.Add(phieuDatPhong);
+            db.PhieuDatPhongs.AddOrUpdate(phieuDatPhong);
             db.SaveChanges();
 
             return phieuDatPhong.maphieudatphong;
@@ -58,6 +59,11 @@ namespace HotelManagement.DAO
         {
             return db.PhieuDatPhongs.Where(p => p.checkin == true && p.nhanviencheckout == null)
                 .ToList();
+        }
+
+        public List<PhieuDatPhong> getAll()
+        {
+            return db.PhieuDatPhongs.ToList();
         }
     }
 }

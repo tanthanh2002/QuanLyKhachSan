@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace HotelManagement.GUI
 {
@@ -51,8 +52,24 @@ namespace HotelManagement.GUI
             cbMaPhieuDatPhongDV.DataSource = phieuDatPhongService.listDSDatPhongCurrent();
 
 
-        }
+            //tab danh sach phieu dat phong
+            loadDanhSachPhieuDatPhong();
 
+
+        }
+        #region
+        private void loadDanhSachPhieuDatPhong()
+        {
+            dgvDanhSachPhieuDatPhong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            var listPhieuDatPhong = phieuDatPhongService.getAll().Select(e => new { e.maphieudatphong, e.KhachHang.tenkhachhang, e.ngayden, e.sodemluutru });
+            dgvDanhSachPhieuDatPhong.DataSource = listPhieuDatPhong.ToList();
+            dgvDanhSachPhieuDatPhong.Columns["maphieudatphong"].HeaderText = "Mã phiếu đặt phòng";
+            dgvDanhSachPhieuDatPhong.Columns["tenkhachhang"].HeaderText = "Tên khách hàng";
+            dgvDanhSachPhieuDatPhong.Columns["ngayden"].HeaderText = "Ngày đến";
+            dgvDanhSachPhieuDatPhong.Columns["sodemluutru"].HeaderText = "Số đêm lưu trú";
+
+        }
+        #endregion
         private void fKhachHangHome_Load(object sender, EventArgs e)
         {
 
@@ -226,6 +243,7 @@ namespace HotelManagement.GUI
             string tenDV = tbTenDVTimKiem.Text;
             int maPhongcb = Convert.ToInt32(cbMaPhong.Text);
             int maphieudatphong = Convert.ToInt32(cbMaPhieuDat.Text);
+            dgvDVCoHoTro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDVCoHoTro.DataSource = dichVuService.showListDVCoHoTroTheoMaPhieuDatTimKiem(maPhongcb, maphieudatphong, tenDV);
             dgvDVCoHoTro.DataSource = dichVuService.showListDVKhongHoTroTheoMaPhieuDatTimKiem(maPhongcb, maphieudatphong, tenDV);
         }
@@ -235,6 +253,81 @@ namespace HotelManagement.GUI
             string tenTOur = tbTenTour.Text;
             dgvDSTour.DataSource = tourDuLichService.getAllByTenTour(tenTOur);
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra xem người dùng đã click vào cột button chưa
+            if (e.ColumnIndex == dgvDanhSachPhieuDatPhong.Columns["action"].Index && e.RowIndex >= 0)
+            {
+                // Lấy thông tin của đối tượng PhieuDatPhong tương ứng với hàng được click
+                PhieuDatPhong selectedPhieuDatPhong = (PhieuDatPhong)dgvDanhSachPhieuDatPhong.Rows[e.RowIndex].DataBoundItem;
+
+                // Xử lý sự kiện khi người dùng click vào button
+                MessageBox.Show(selectedPhieuDatPhong.maphieudatphong.ToString());
+                
+            }
+        }
+
+        private void dgvDSDVDaDK_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDanhSachPhieuDatPhong_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvDanhSachPhieuDatPhong.CurrentRow != null)
+            {
+                // Lấy thông tin của hàng được chọn
+                DataGridViewRow row = dgvDanhSachPhieuDatPhong.CurrentRow;
+
+                // Gán giá trị thuộc tính tương ứng cho các TextBox
+                txtMaPhieu.Text = row.Cells["maphieudatphong"].Value.ToString();
+                txtTenKhachHang.Text = row.Cells["tenkhachhang"].Value.ToString();
+                txtSoDemLuuTru.Text = row.Cells["sodemluutru"].Value.ToString();
+                txtNgayToi.Text = row.Cells["ngayden"].Value.ToString();
+
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int maphieu = int.Parse(txtMaPhieu.Text);
+                PhieuDatPhong phieuDatPhong = phieuDatPhongService.getById(maphieu);
+                if(int.Parse(txtSoDemLuuTru.Text) <= 0) {
+                    throw new Exception("Số đêm lưu trú không hợp lệ");
+                }
+                else
+                {
+                   phieuDatPhong.sodemluutru = int.Parse(txtSoDemLuuTru.Text);
+                   phieuDatPhongService.save(phieuDatPhong);
+                    MessageBox.Show("cập nhật thành công");
+                    loadDanhSachPhieuDatPhong();
+                }
+                  
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void tabPhieuDatPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTaoHoaDon_Click(object sender, EventArgs e)
+        {
+            int maphieu = int.Parse(txtMaPhieu.Text);
+            viewHoaDon viewHoaDon = new viewHoaDon(maphieu);
+            viewHoaDon.ShowDialog();
         }
     }
 }

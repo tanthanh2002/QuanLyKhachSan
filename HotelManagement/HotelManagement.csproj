@@ -125,11 +125,11 @@
     <Compile Include="DoiTac.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="fQuanLyPhieuDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="fQuanLyPhieuDatPhong.Designer.cs">
+      <DependentUpon>fQuanLyPhieuDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Class1.cs" />
     <Compile Include="GUI\fBuongPhongHome.cs">
@@ -252,6 +252,12 @@
     <Compile Include="GUI\fThemTaiKhoan.Designer.cs">
       <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\viewHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\viewHoaDon.Designer.cs">
+      <DependentUpon>viewHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="HanhLy.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
@@ -331,8 +337,8 @@
     <Compile Include="TourDuLich.cs">
       <DependentUpon>HotelEntities.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="fQuanLyPhieuDatPhong.resx">
+      <DependentUpon>fQuanLyPhieuDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fBuongPhongHome.resx">
       <DependentUpon>fBuongPhongHome.cs</DependentUpon>
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fThemTaiKhoan.resx">
       <DependentUpon>fThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\viewHoaDon.resx">
+      <DependentUpon>viewHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

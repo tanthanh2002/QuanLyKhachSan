@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,7 @@ namespace HotelManagement.DAO
 
         public void addInvoice(HoaDon hoaDon)
         {
-            db.HoaDons.Add(hoaDon);
+            db.HoaDons.AddOrUpdate(hoaDon);
             db.SaveChanges();
         }
 

@@ -65,12 +65,7 @@ namespace HotelManagement.GUI
                     int matk = curUser.mataikhoan;
                     CONST.KhachHangConst.setKH(khachHangService.findByMaTaiKhoan(matk));
                     CONST.NhanVienConst.setNV(nhanVienService.findByMaTaiKhoan(matk));
-                    //KhachHang curMaKH = CONST.KhachHangConst.getKH();
-                    //int maKH = curMaKH.makhachhang;
-                    //CONST.PhieuDatPhongConst.setMaPhieu(DatPhongService.find(maKH));
-
-                    MessageBox.Show("Đăng nhập thành công! Bạn là " + type);
-                    /////////////////////////////////////////
+      
                     if (type == "ketoan")
                     {
                         fKeToanHome ketoan = new fKeToanHome();
@@ -78,21 +73,21 @@ namespace HotelManagement.GUI
                         this.Visible = false;
                     }
 
-                    if (type == "letan")
+                    else if (type == "letan")
                     {
                         fLeTanHome lt = new fLeTanHome();
                         lt.Show();
                         this.Visible = false;
                     }
 
-                    if (type == "khachhang")
+                    else if (type == "khachhang")
                     {
                         fKhachHangHome kh = new fKhachHangHome();
                         kh.Show();
                         this.Visible = false;
                     }
 
-                    if (type == "buongphong")
+                    else if (type == "buongphong")
                     {
                         fBuongPhongHome bp = new fBuongPhongHome();
                         bp.Show();
