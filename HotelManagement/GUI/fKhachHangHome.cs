@@ -251,5 +251,10 @@ namespace HotelManagement.GUI
             string tenTOur = tbTenTour.Text;
             dgvDSTour.DataSource = tourDuLichService.getAllByTenTour(tenTOur);
         }
+
+        private void tabDatPhong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

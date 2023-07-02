@@ -27,5 +27,6 @@ namespace HotelManagement.BUS
         {
             repo.save(phieuDatPhong);
         }
+
     }
 }

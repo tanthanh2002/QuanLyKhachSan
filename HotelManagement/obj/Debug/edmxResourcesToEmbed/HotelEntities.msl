@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelManagementModelStoreContainer" CdmEntityContainer="HotelManagementEntities">
+    <EntitySetMapping Name="ApDungKhuyenMais">
+      <EntityTypeMapping TypeName="HotelManagementModel.ApDungKhuyenMai">
+        <MappingFragment StoreEntitySet="ApDungKhuyenMai">
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="makhuyenmai" ColumnName="makhuyenmai" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CungCapDichVus">
+      <EntityTypeMapping TypeName="HotelManagementModel.CungCapDichVu">
+        <MappingFragment StoreEntitySet="CungCapDichVu">
+          <ScalarProperty Name="maloaiphong" ColumnName="maloaiphong" />
+          <ScalarProperty Name="madichvu" ColumnName="madichvu" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatTours">
+      <EntityTypeMapping TypeName="HotelManagementModel.DatTour">
+        <MappingFragment StoreEntitySet="DatTour">
+          <ScalarProperty Name="soluonghanhkhach" ColumnName="soluonghanhkhach" />
+          <ScalarProperty Name="thoigiantrove" ColumnName="thoigiantrove" />
+          <ScalarProperty Name="thoigiankhoihanh" ColumnName="thoigiankhoihanh" />
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+          <ScalarProperty Name="matour" ColumnName="matour" />
+          <ScalarProperty Name="madattour" ColumnName="madattour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DichVus">
+      <EntityTypeMapping TypeName="HotelManagementModel.DichVu">
+        <MappingFragment StoreEntitySet="DichVu">
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="tendichvu" ColumnName="tendichvu" />
+          <ScalarProperty Name="madichvu" ColumnName="madichvu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doans">
+      <EntityTypeMapping TypeName="HotelManagementModel.Doan">
+        <MappingFragment StoreEntitySet="Doan">
+          <ScalarProperty Name="truongdoan" ColumnName="truongdoan" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="madoan" ColumnName="madoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoiTacs">
+      <EntityTypeMapping TypeName="HotelManagementModel.DoiTac">
+        <MappingFragment StoreEntitySet="DoiTac">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+          <ScalarProperty Name="tendoitac" ColumnName="tendoitac" />
+          <ScalarProperty Name="madoitac" ColumnName="madoitac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HanhLies">
+      <EntityTypeMapping TypeName="HotelManagementModel.HanhLy">
+        <MappingFragment StoreEntitySet="HanhLy">
+          <ScalarProperty Name="dacdiem" ColumnName="dacdiem" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="maphieuvanchuyen" ColumnName="maphieuvanchuyen" />
+          <ScalarProperty Name="mahanhly" ColumnName="mahanhly" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDons">
+      <EntityTypeMapping TypeName="HotelManagementModel.HoaDon">
+        <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+          <ScalarProperty Name="maketoan" ColumnName="maketoan" />
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+          <ScalarProperty Name="sotiendathanhtoan" ColumnName="sotiendathanhtoan" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="tienhuhongnoithat" ColumnName="tienhuhongnoithat" />
+          <ScalarProperty Name="tienthucpham" ColumnName="tienthucpham" />
+          <ScalarProperty Name="tiendichvu" ColumnName="tiendichvu" />
+          <ScalarProperty Name="mahoadon" ColumnName="mahoadon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHangs">
+      <EntityTypeMapping TypeName="HotelManagementModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="mataikhoan" ColumnName="mataikhoan" />
+          <ScalarProperty Name="cccd" ColumnName="cccd" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sofax" ColumnName="sofax" />
+          <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhuyenMais">
+      <EntityTypeMapping TypeName="HotelManagementModel.KhuyenMai">
+        <MappingFragment StoreEntitySet="KhuyenMai">
+          <ScalarProperty Name="ngaykhoa" ColumnName="ngaykhoa" />
+          <ScalarProperty Name="thoigianketthuc" ColumnName="thoigianketthuc" />
+          <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
+          <ScalarProperty Name="tenkhuyenmai" ColumnName="tenkhuyenmai" />
+          <ScalarProperty Name="makhuyenmai" ColumnName="makhuyenmai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiPhongs">
+      <EntityTypeMapping TypeName="HotelManagementModel.LoaiPhong">
+        <MappingFragment StoreEntitySet="LoaiPhong">
+          <ScalarProperty Name="tenloaiphong" ColumnName="tenloaiphong" />
+          <ScalarProperty Name="maloaiphong" ColumnName="maloaiphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanViens">
+      <EntityTypeMapping TypeName="HotelManagementModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="mataikhoan" ColumnName="mataikhoan" />
+          <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+          <ScalarProperty Name="ngaybatdau" ColumnName="ngaybatdau" />
+          <ScalarProperty Name="luong" ColumnName="luong" />
+          <ScalarProperty Name="loai" ColumnName="loai" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="manhanvien" ColumnName="manhanvien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NoiThats">
+      <EntityTypeMapping TypeName="HotelManagementModel.NoiThat">
+        <MappingFragment StoreEntitySet="NoiThat">
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="manoithat" ColumnName="manoithat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuDanhGias">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuDanhGia">
+        <MappingFragment StoreEntitySet="PhieuDanhGia">
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+          <ScalarProperty Name="diem" ColumnName="diem" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="maphieudanhgia" ColumnName="maphieudanhgia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuDatPhongs">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuDatPhong">
+        <MappingFragment StoreEntitySet="PhieuDatPhong">
+          <ScalarProperty Name="nhanvienvesinh" ColumnName="nhanvienvesinh" />
+          <ScalarProperty Name="nhanviencheckout" ColumnName="nhanviencheckout" />
+          <ScalarProperty Name="checkin" ColumnName="checkin" />
+          <ScalarProperty Name="makhachhang" ColumnName="makhachhang" />
+          <ScalarProperty Name="ngayden" ColumnName="ngayden" />
+          <ScalarProperty Name="sodemluutru" ColumnName="sodemluutru" />
+          <ScalarProperty Name="yeucaudatbiet" ColumnName="yeucaudatbiet" />
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuDatPhongChiTiets">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuDatPhongChiTiet">
+        <MappingFragment StoreEntitySet="PhieuDatPhongChiTiet">
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuHuHongNoiThats">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuHuHongNoiThat">
+        <MappingFragment StoreEntitySet="PhieuHuHongNoiThat">
+          <ScalarProperty Name="giatienden" ColumnName="giatienden" />
+          <ScalarProperty Name="manoithat" ColumnName="manoithat" />
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuSuDungDichVus">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuSuDungDichVu">
+        <MappingFragment StoreEntitySet="PhieuSuDungDichVu">
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+          <ScalarProperty Name="maletan" ColumnName="maletan" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="maphieu" ColumnName="maphieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuSuDungDichVuChiTiets">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuSuDungDichVuChiTiet">
+        <MappingFragment StoreEntitySet="PhieuSuDungDichVuChiTiet">
+          <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
+          <ScalarProperty Name="thoigiansudung" ColumnName="thoigiansudung" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="maphieusudungdichvu" ColumnName="maphieusudungdichvu" />
+          <ScalarProperty Name="madichvu" ColumnName="madichvu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuSuDungThucPhams">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuSuDungThucPham">
+        <MappingFragment StoreEntitySet="PhieuSuDungThucPham">
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="mathucpham" ColumnName="mathucpham" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuVanChuyenHanhLies">
+      <EntityTypeMapping TypeName="HotelManagementModel.PhieuVanChuyenHanhLy">
+        <MappingFragment StoreEntitySet="PhieuVanChuyenHanhLy">
+          <ScalarProperty Name="manhanvienphutrach" ColumnName="manhanvienphutrach" />
+          <ScalarProperty Name="maphieudatphong" ColumnName="maphieudatphong" />
+          <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+          <ScalarProperty Name="maphieuvanchuyen" ColumnName="maphieuvanchuyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phongs">
+      <EntityTypeMapping TypeName="HotelManagementModel.Phong">
+        <MappingFragment StoreEntitySet="Phong">
+          <ScalarProperty Name="maloaiphong" ColumnName="maloaiphong" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+          <ScalarProperty Name="bikhoa" ColumnName="bikhoa" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="sophong" ColumnName="sophong" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="HotelManagementModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="bikhoa" ColumnName="bikhoa" />
+          <ScalarProperty Name="loaitaikhoan" ColumnName="loaitaikhoan" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="tentaikhoan" ColumnName="tentaikhoan" />
+          <ScalarProperty Name="mataikhoan" ColumnName="mataikhoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThanhViens">
+      <EntityTypeMapping TypeName="HotelManagementModel.ThanhVien">
+        <MappingFragment StoreEntitySet="ThanhVien">
+          <ScalarProperty Name="cccd" ColumnName="cccd" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="madoan" ColumnName="madoan" />
+          <ScalarProperty Name="sothutu" ColumnName="sothutu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThucPhams">
+      <EntityTypeMapping TypeName="HotelManagementModel.ThucPham">
+        <MappingFragment StoreEntitySet="ThucPham">
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="soluongton" ColumnName="soluongton" />
+          <ScalarProperty Name="tenthucpham" ColumnName="tenthucpham" />
+          <ScalarProperty Name="mathucpham" ColumnName="mathucpham" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourDuLiches">
+      <EntityTypeMapping TypeName="HotelManagementModel.TourDuLich">
+        <MappingFragment StoreEntitySet="TourDuLich">
+          <ScalarProperty Name="madoitac" ColumnName="madoitac" />
+          <ScalarProperty Name="songay" ColumnName="songay" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="tentour" ColumnName="tentour" />
+          <ScalarProperty Name="matour" ColumnName="matour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -46,5 +46,10 @@ namespace HotelManagement.DAO
             db.PhieuHuHongNoiThats.Add(phieu);
             db.SaveChanges();
         }
+
+        public List<PhieuHuHongNoiThat> getByMaPhieuDatPhong(int maphieu)
+        {
+            return db.PhieuHuHongNoiThats.Where(p => p.maphieudatphong == maphieu).ToList();
+        }
     }
 }

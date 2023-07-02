@@ -13,9 +13,18 @@ namespace HotelManagement.BUS
 
         private PhieuSuDungDichVuRepo repo = PhieuSuDungDichVuRepo.getInstance();
 
+        private PhieuSuDungDichVuChiTietService phieuSuDungDichVuChiTietService = PhieuSuDungDichVuChiTietService.getInstance();
+
         public static PhieuSuDungDichVuService getInstance() { return instance; }
         public int addPhieuSuDungDichVu(PhieuSuDungDichVu phieu) { return repo.addPhieuSuDungDichVu(phieu); }
 
         public int MaPhieuSuDungDichVuLatest() { return repo.getMaPhieuSuDungDichVuLatest(); }
+
+        public float tongTienDichVu(int maphieudatphong)
+        {
+            List<PhieuSuDungDichVuChiTiet> listPhieuSuDungDVChiTiet = phieuSuDungDichVuChiTietService.GetChiTietList(maphieudatphong);
+            float tongtien = (float)listPhieuSuDungDVChiTiet.Sum(p => p.dongia);
+            return tongtien;
+        }
     }
 }

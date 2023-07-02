@@ -20,5 +20,19 @@ namespace HotelManagement.BUS
         {
             return repo.listDSDatPhongCurrent();
         }
+
+        public List<PhieuDatPhong> getAll()
+        {
+            return repo.getAll();
+        }
+
+        public void save(PhieuDatPhong phieudatphong) {
+            repo.save(phieudatphong);
+        }
+
+        public PhieuDatPhong getById(int id)
+        {
+            return repo.findById(id);
+        }
     }
 }

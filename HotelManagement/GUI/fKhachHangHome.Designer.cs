@@ -55,9 +55,17 @@ namespace HotelManagement.GUI
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             this.tbMaTour = new MaterialSkin.Controls.MaterialTextBox();
             this.dgvDSTour = new System.Windows.Forms.DataGridView();
+            this.matourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tentourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.songayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.madoitacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourDuLichBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbTenTour = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.tabDichVu = new System.Windows.Forms.TabPage();
+            this.btnTimKiemTenDV = new MaterialSkin.Controls.MaterialButton();
+            this.tbTenDVTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tbThoiGianSuDung = new System.Windows.Forms.TextBox();
             this.btnDangKyDV = new MaterialSkin.Controls.MaterialButton();
@@ -72,6 +80,7 @@ namespace HotelManagement.GUI
             this.label3 = new System.Windows.Forms.Label();
             this.tbMaPhieuDatPhong = new System.Windows.Forms.TextBox();
             this.te = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.cbMaPhong = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -94,9 +103,6 @@ namespace HotelManagement.GUI
             this.tabDVCuaToi = new System.Windows.Forms.TabPage();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.dgvDVCuaToi = new System.Windows.Forms.DataGridView();
-            this.tabTourCuaToi = new System.Windows.Forms.TabPage();
-            this.dgvTourCuaToi = new System.Windows.Forms.DataGridView();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.madichvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maphieusudungdichvuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,12 +111,8 @@ namespace HotelManagement.GUI
             this.dongiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenkhachhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phieuSuDungDichVuChiTietBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tentourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.songayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madoitacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourDuLichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabTourCuaToi = new System.Windows.Forms.TabPage();
+            this.dgvTourCuaToi = new System.Windows.Forms.DataGridView();
             this.madattourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matourDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makhachhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,16 +120,15 @@ namespace HotelManagement.GUI
             this.thoigiantroveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluonghanhkhachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datTourBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.phongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnTimKiemTenDV = new MaterialSkin.Controls.MaterialButton();
-            this.tbTenDVTimKiem = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.tabThongTinTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKCuaToi)).BeginInit();
             this.tabTour.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).BeginInit();
             this.tabDichVu.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongDV)).BeginInit();
@@ -140,10 +141,9 @@ namespace HotelManagement.GUI
             this.tabKhachHang.SuspendLayout();
             this.tabDVCuaToi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVCuaToi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuSuDungDichVuChiTietBindingSource)).BeginInit();
             this.tabTourCuaToi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuSuDungDichVuChiTietBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datTourBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -220,9 +220,10 @@ namespace HotelManagement.GUI
             this.tabThongTinTaiKhoan.Controls.Add(this.dgvTKCuaToi);
             this.tabThongTinTaiKhoan.ImageKey = "user.png";
             this.tabThongTinTaiKhoan.Location = new System.Drawing.Point(4, 39);
+            this.tabThongTinTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabThongTinTaiKhoan.Name = "tabThongTinTaiKhoan";
-            this.tabThongTinTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabThongTinTaiKhoan.Size = new System.Drawing.Size(1266, 473);
+            this.tabThongTinTaiKhoan.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabThongTinTaiKhoan.Size = new System.Drawing.Size(948, 376);
             this.tabThongTinTaiKhoan.TabIndex = 1;
             this.tabThongTinTaiKhoan.Text = "Thông tin tài khoản";
             this.tabThongTinTaiKhoan.UseVisualStyleBackColor = true;
@@ -232,7 +233,8 @@ namespace HotelManagement.GUI
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(496, 28);
+            this.materialLabel1.Location = new System.Drawing.Point(372, 23);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(139, 19);
@@ -242,11 +244,12 @@ namespace HotelManagement.GUI
             // dgvTKCuaToi
             // 
             this.dgvTKCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTKCuaToi.Location = new System.Drawing.Point(3, 68);
+            this.dgvTKCuaToi.Location = new System.Drawing.Point(2, 55);
+            this.dgvTKCuaToi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvTKCuaToi.Name = "dgvTKCuaToi";
             this.dgvTKCuaToi.RowHeadersWidth = 51;
             this.dgvTKCuaToi.RowTemplate.Height = 24;
-            this.dgvTKCuaToi.Size = new System.Drawing.Size(1171, 402);
+            this.dgvTKCuaToi.Size = new System.Drawing.Size(878, 327);
             this.dgvTKCuaToi.TabIndex = 3;
             // 
             // tabTour
@@ -258,9 +261,10 @@ namespace HotelManagement.GUI
             this.tabTour.Controls.Add(this.materialLabel2);
             this.tabTour.ImageKey = "destination.png";
             this.tabTour.Location = new System.Drawing.Point(4, 39);
+            this.tabTour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabTour.Name = "tabTour";
-            this.tabTour.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTour.Size = new System.Drawing.Size(1266, 473);
+            this.tabTour.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTour.Size = new System.Drawing.Size(948, 376);
             this.tabTour.TabIndex = 4;
             this.tabTour.Text = "Tour";
             this.tabTour.UseVisualStyleBackColor = true;
@@ -272,8 +276,8 @@ namespace HotelManagement.GUI
             this.btnTimKiemTour.Depth = 0;
             this.btnTimKiemTour.HighEmphasis = true;
             this.btnTimKiemTour.Icon = null;
-            this.btnTimKiemTour.Location = new System.Drawing.Point(437, 22);
-            this.btnTimKiemTour.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimKiemTour.Location = new System.Drawing.Point(328, 18);
+            this.btnTimKiemTour.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnTimKiemTour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTimKiemTour.Name = "btnTimKiemTour";
             this.btnTimKiemTour.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -301,9 +305,11 @@ namespace HotelManagement.GUI
             this.groupBox3.Controls.Add(this.materialLabel13);
             this.groupBox3.Controls.Add(this.tbMaTour);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(773, 6);
+            this.groupBox3.Location = new System.Drawing.Point(580, 5);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(341, 464);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(256, 382);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Đăng ký tour";
@@ -315,8 +321,8 @@ namespace HotelManagement.GUI
             this.btnDangKy.Depth = 0;
             this.btnDangKy.HighEmphasis = true;
             this.btnDangKy.Icon = null;
-            this.btnDangKy.Location = new System.Drawing.Point(141, 394);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDangKy.Location = new System.Drawing.Point(106, 320);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDangKy.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -333,7 +339,8 @@ namespace HotelManagement.GUI
             this.materialLabel9.AutoSize = true;
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.Location = new System.Drawing.Point(6, 68);
+            this.materialLabel9.Location = new System.Drawing.Point(4, 55);
+            this.materialLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
             this.materialLabel9.Size = new System.Drawing.Size(60, 19);
@@ -343,9 +350,10 @@ namespace HotelManagement.GUI
             // nudSoLuong
             // 
             this.nudSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSoLuong.Location = new System.Drawing.Point(98, 341);
+            this.nudSoLuong.Location = new System.Drawing.Point(74, 277);
+            this.nudSoLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudSoLuong.Name = "nudSoLuong";
-            this.nudSoLuong.Size = new System.Drawing.Size(64, 27);
+            this.nudSoLuong.Size = new System.Drawing.Size(48, 23);
             this.nudSoLuong.TabIndex = 12;
             this.nudSoLuong.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
@@ -354,7 +362,8 @@ namespace HotelManagement.GUI
             this.materialLabel10.AutoSize = true;
             this.materialLabel10.Depth = 0;
             this.materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.Location = new System.Drawing.Point(6, 145);
+            this.materialLabel10.Location = new System.Drawing.Point(4, 118);
+            this.materialLabel10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
             this.materialLabel10.Size = new System.Drawing.Size(75, 19);
@@ -364,9 +373,10 @@ namespace HotelManagement.GUI
             // dtpTroVe
             // 
             this.dtpTroVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTroVe.Location = new System.Drawing.Point(97, 278);
+            this.dtpTroVe.Location = new System.Drawing.Point(73, 226);
+            this.dtpTroVe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpTroVe.Name = "dtpTroVe";
-            this.dtpTroVe.Size = new System.Drawing.Size(231, 27);
+            this.dtpTroVe.Size = new System.Drawing.Size(174, 23);
             this.dtpTroVe.TabIndex = 11;
             // 
             // materialLabel11
@@ -374,7 +384,8 @@ namespace HotelManagement.GUI
             this.materialLabel11.AutoSize = true;
             this.materialLabel11.Depth = 0;
             this.materialLabel11.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel11.Location = new System.Drawing.Point(6, 219);
+            this.materialLabel11.Location = new System.Drawing.Point(4, 178);
+            this.materialLabel11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel11.Name = "materialLabel11";
             this.materialLabel11.Size = new System.Drawing.Size(77, 19);
@@ -384,9 +395,10 @@ namespace HotelManagement.GUI
             // dtpKhoiHanh
             // 
             this.dtpKhoiHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpKhoiHanh.Location = new System.Drawing.Point(98, 216);
+            this.dtpKhoiHanh.Location = new System.Drawing.Point(74, 176);
+            this.dtpKhoiHanh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpKhoiHanh.Name = "dtpKhoiHanh";
-            this.dtpKhoiHanh.Size = new System.Drawing.Size(231, 27);
+            this.dtpKhoiHanh.Size = new System.Drawing.Size(174, 23);
             this.dtpKhoiHanh.TabIndex = 10;
             this.dtpKhoiHanh.ValueChanged += new System.EventHandler(this.dtpKhoiHanh_ValueChanged);
             // 
@@ -395,7 +407,8 @@ namespace HotelManagement.GUI
             this.materialLabel12.AutoSize = true;
             this.materialLabel12.Depth = 0;
             this.materialLabel12.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel12.Location = new System.Drawing.Point(6, 286);
+            this.materialLabel12.Location = new System.Drawing.Point(4, 232);
+            this.materialLabel12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel12.Name = "materialLabel12";
             this.materialLabel12.Size = new System.Drawing.Size(49, 19);
@@ -407,14 +420,15 @@ namespace HotelManagement.GUI
             this.tbMaKhach.AnimateReadOnly = false;
             this.tbMaKhach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMaKhach.Depth = 0;
-            this.tbMaKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMaKhach.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMaKhach.LeadingIcon = null;
-            this.tbMaKhach.Location = new System.Drawing.Point(97, 129);
+            this.tbMaKhach.Location = new System.Drawing.Point(73, 105);
+            this.tbMaKhach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbMaKhach.MaxLength = 50;
             this.tbMaKhach.MouseState = MaterialSkin.MouseState.OUT;
             this.tbMaKhach.Multiline = false;
             this.tbMaKhach.Name = "tbMaKhach";
-            this.tbMaKhach.Size = new System.Drawing.Size(232, 50);
+            this.tbMaKhach.Size = new System.Drawing.Size(174, 50);
             this.tbMaKhach.TabIndex = 7;
             this.tbMaKhach.Text = "";
             this.tbMaKhach.TrailingIcon = null;
@@ -424,7 +438,8 @@ namespace HotelManagement.GUI
             this.materialLabel13.AutoSize = true;
             this.materialLabel13.Depth = 0;
             this.materialLabel13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel13.Location = new System.Drawing.Point(6, 344);
+            this.materialLabel13.Location = new System.Drawing.Point(4, 280);
+            this.materialLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel13.Name = "materialLabel13";
             this.materialLabel13.Size = new System.Drawing.Size(69, 19);
@@ -436,14 +451,15 @@ namespace HotelManagement.GUI
             this.tbMaTour.AnimateReadOnly = false;
             this.tbMaTour.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMaTour.Depth = 0;
-            this.tbMaTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tbMaTour.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbMaTour.LeadingIcon = null;
-            this.tbMaTour.Location = new System.Drawing.Point(97, 57);
+            this.tbMaTour.Location = new System.Drawing.Point(73, 46);
+            this.tbMaTour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbMaTour.MaxLength = 50;
             this.tbMaTour.MouseState = MaterialSkin.MouseState.OUT;
             this.tbMaTour.Multiline = false;
             this.tbMaTour.Name = "tbMaTour";
-            this.tbMaTour.Size = new System.Drawing.Size(232, 50);
+            this.tbMaTour.Size = new System.Drawing.Size(174, 50);
             this.tbMaTour.TabIndex = 6;
             this.tbMaTour.Text = "";
             this.tbMaTour.TrailingIcon = null;
@@ -459,14 +475,59 @@ namespace HotelManagement.GUI
             this.songayDataGridViewTextBoxColumn,
             this.madoitacDataGridViewTextBoxColumn});
             this.dgvDSTour.DataSource = this.tourDuLichBindingSource;
-            this.dgvDSTour.Location = new System.Drawing.Point(6, 103);
+            this.dgvDSTour.Location = new System.Drawing.Point(4, 84);
+            this.dgvDSTour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDSTour.Name = "dgvDSTour";
             this.dgvDSTour.RowHeadersWidth = 51;
             this.dgvDSTour.RowTemplate.Height = 24;
-            this.dgvDSTour.Size = new System.Drawing.Size(745, 355);
+            this.dgvDSTour.Size = new System.Drawing.Size(559, 288);
             this.dgvDSTour.TabIndex = 3;
             this.dgvDSTour.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellClick);
             this.dgvDSTour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTour_CellContentClick);
+            // 
+            // matourDataGridViewTextBoxColumn
+            // 
+            this.matourDataGridViewTextBoxColumn.DataPropertyName = "matour";
+            this.matourDataGridViewTextBoxColumn.HeaderText = "matour";
+            this.matourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.matourDataGridViewTextBoxColumn.Name = "matourDataGridViewTextBoxColumn";
+            this.matourDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tentourDataGridViewTextBoxColumn
+            // 
+            this.tentourDataGridViewTextBoxColumn.DataPropertyName = "tentour";
+            this.tentourDataGridViewTextBoxColumn.HeaderText = "tentour";
+            this.tentourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tentourDataGridViewTextBoxColumn.Name = "tentourDataGridViewTextBoxColumn";
+            this.tentourDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // giaDataGridViewTextBoxColumn
+            // 
+            this.giaDataGridViewTextBoxColumn.DataPropertyName = "gia";
+            this.giaDataGridViewTextBoxColumn.HeaderText = "gia";
+            this.giaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
+            this.giaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // songayDataGridViewTextBoxColumn
+            // 
+            this.songayDataGridViewTextBoxColumn.DataPropertyName = "songay";
+            this.songayDataGridViewTextBoxColumn.HeaderText = "songay";
+            this.songayDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.songayDataGridViewTextBoxColumn.Name = "songayDataGridViewTextBoxColumn";
+            this.songayDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // madoitacDataGridViewTextBoxColumn
+            // 
+            this.madoitacDataGridViewTextBoxColumn.DataPropertyName = "madoitac";
+            this.madoitacDataGridViewTextBoxColumn.HeaderText = "madoitac";
+            this.madoitacDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.madoitacDataGridViewTextBoxColumn.Name = "madoitacDataGridViewTextBoxColumn";
+            this.madoitacDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // tourDuLichBindingSource
+            // 
+            this.tourDuLichBindingSource.DataSource = typeof(HotelManagement.TourDuLich);
             // 
             // tbTenTour
             // 
@@ -477,7 +538,8 @@ namespace HotelManagement.GUI
             this.tbTenTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tbTenTour.HideSelection = true;
             this.tbTenTour.LeadingIcon = null;
-            this.tbTenTour.Location = new System.Drawing.Point(164, 15);
+            this.tbTenTour.Location = new System.Drawing.Point(123, 12);
+            this.tbTenTour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTenTour.MaxLength = 32767;
             this.tbTenTour.MouseState = MaterialSkin.MouseState.OUT;
             this.tbTenTour.Name = "tbTenTour";
@@ -489,7 +551,7 @@ namespace HotelManagement.GUI
             this.tbTenTour.SelectionLength = 0;
             this.tbTenTour.SelectionStart = 0;
             this.tbTenTour.ShortcutsEnabled = true;
-            this.tbTenTour.Size = new System.Drawing.Size(248, 48);
+            this.tbTenTour.Size = new System.Drawing.Size(186, 48);
             this.tbTenTour.TabIndex = 1;
             this.tbTenTour.TabStop = false;
             this.tbTenTour.Text = "Nhập tên tour";
@@ -502,7 +564,8 @@ namespace HotelManagement.GUI
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(32, 32);
+            this.materialLabel2.Location = new System.Drawing.Point(24, 26);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(101, 19);
@@ -521,12 +584,42 @@ namespace HotelManagement.GUI
             this.tabDichVu.Controls.Add(this.groupBox1);
             this.tabDichVu.ImageKey = "hotel-bell.png";
             this.tabDichVu.Location = new System.Drawing.Point(4, 39);
+            this.tabDichVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabDichVu.Name = "tabDichVu";
-            this.tabDichVu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDichVu.Size = new System.Drawing.Size(1266, 473);
+            this.tabDichVu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDichVu.Size = new System.Drawing.Size(948, 376);
             this.tabDichVu.TabIndex = 3;
             this.tabDichVu.Text = "Dịch vụ";
             this.tabDichVu.UseVisualStyleBackColor = true;
+            // 
+            // btnTimKiemTenDV
+            // 
+            this.btnTimKiemTenDV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimKiemTenDV.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimKiemTenDV.Depth = 0;
+            this.btnTimKiemTenDV.HighEmphasis = true;
+            this.btnTimKiemTenDV.Icon = null;
+            this.btnTimKiemTenDV.Location = new System.Drawing.Point(574, 23);
+            this.btnTimKiemTenDV.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnTimKiemTenDV.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimKiemTenDV.Name = "btnTimKiemTenDV";
+            this.btnTimKiemTenDV.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimKiemTenDV.Size = new System.Drawing.Size(86, 36);
+            this.btnTimKiemTenDV.TabIndex = 27;
+            this.btnTimKiemTenDV.Text = "Tìm kiếm";
+            this.btnTimKiemTenDV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimKiemTenDV.UseAccentColor = false;
+            this.btnTimKiemTenDV.UseVisualStyleBackColor = true;
+            this.btnTimKiemTenDV.Click += new System.EventHandler(this.btnTimKiemTenDV_Click);
+            // 
+            // tbTenDVTimKiem
+            // 
+            this.tbTenDVTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTenDVTimKiem.Location = new System.Drawing.Point(429, 23);
+            this.tbTenDVTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTenDVTimKiem.Name = "tbTenDVTimKiem";
+            this.tbTenDVTimKiem.Size = new System.Drawing.Size(132, 26);
+            this.tbTenDVTimKiem.TabIndex = 26;
             // 
             // groupBox4
             // 
@@ -544,9 +637,11 @@ namespace HotelManagement.GUI
             this.groupBox4.Controls.Add(this.tbMaPhieuDatPhong);
             this.groupBox4.Controls.Add(this.te);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(861, 16);
+            this.groupBox4.Location = new System.Drawing.Point(646, 13);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(313, 436);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(235, 354);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Đăng ký dịch vụ";
@@ -554,9 +649,10 @@ namespace HotelManagement.GUI
             // tbThoiGianSuDung
             // 
             this.tbThoiGianSuDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbThoiGianSuDung.Location = new System.Drawing.Point(102, 243);
+            this.tbThoiGianSuDung.Location = new System.Drawing.Point(76, 197);
+            this.tbThoiGianSuDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbThoiGianSuDung.Name = "tbThoiGianSuDung";
-            this.tbThoiGianSuDung.Size = new System.Drawing.Size(83, 27);
+            this.tbThoiGianSuDung.Size = new System.Drawing.Size(63, 23);
             this.tbThoiGianSuDung.TabIndex = 13;
             this.tbThoiGianSuDung.Text = "60";
             // 
@@ -567,8 +663,8 @@ namespace HotelManagement.GUI
             this.btnDangKyDV.Depth = 0;
             this.btnDangKyDV.HighEmphasis = true;
             this.btnDangKyDV.Icon = null;
-            this.btnDangKyDV.Location = new System.Drawing.Point(121, 391);
-            this.btnDangKyDV.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDangKyDV.Location = new System.Drawing.Point(91, 318);
+            this.btnDangKyDV.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDangKyDV.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDangKyDV.Name = "btnDangKyDV";
             this.btnDangKyDV.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -584,36 +680,40 @@ namespace HotelManagement.GUI
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 246);
+            this.label7.Location = new System.Drawing.Point(4, 200);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.Size = new System.Drawing.Size(71, 17);
             this.label7.TabIndex = 10;
             this.label7.Text = "Thời gian:";
             // 
             // tbTongTienDV
             // 
-            this.tbTongTienDV.Location = new System.Drawing.Point(10, 346);
+            this.tbTongTienDV.Location = new System.Drawing.Point(8, 281);
+            this.tbTongTienDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTongTienDV.Name = "tbTongTienDV";
             this.tbTongTienDV.ReadOnly = true;
-            this.tbTongTienDV.Size = new System.Drawing.Size(285, 30);
+            this.tbTongTienDV.Size = new System.Drawing.Size(215, 26);
             this.tbTongTienDV.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 323);
+            this.label6.Location = new System.Drawing.Point(4, 262);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 20);
+            this.label6.Size = new System.Drawing.Size(72, 17);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tổng tiền:";
             // 
             // nudSoLuongDV
             // 
             this.nudSoLuongDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSoLuongDV.Location = new System.Drawing.Point(102, 286);
+            this.nudSoLuongDV.Location = new System.Drawing.Point(76, 232);
+            this.nudSoLuongDV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudSoLuongDV.Name = "nudSoLuongDV";
-            this.nudSoLuongDV.Size = new System.Drawing.Size(83, 27);
+            this.nudSoLuongDV.Size = new System.Drawing.Size(62, 23);
             this.nudSoLuongDV.TabIndex = 7;
             this.nudSoLuongDV.Value = new decimal(new int[] {
             1,
@@ -626,18 +726,20 @@ namespace HotelManagement.GUI
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 288);
+            this.label5.Location = new System.Drawing.Point(4, 234);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Số lượng:";
             // 
             // dtpThoiGianBatDau
             // 
             this.dtpThoiGianBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpThoiGianBatDau.Location = new System.Drawing.Point(10, 198);
+            this.dtpThoiGianBatDau.Location = new System.Drawing.Point(8, 161);
+            this.dtpThoiGianBatDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpThoiGianBatDau.Name = "dtpThoiGianBatDau";
-            this.dtpThoiGianBatDau.Size = new System.Drawing.Size(285, 27);
+            this.dtpThoiGianBatDau.Size = new System.Drawing.Size(215, 23);
             this.dtpThoiGianBatDau.TabIndex = 5;
             this.dtpThoiGianBatDau.ValueChanged += new System.EventHandler(this.dtpThoiGianBatDau_ValueChanged);
             // 
@@ -645,17 +747,19 @@ namespace HotelManagement.GUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 175);
+            this.label4.Location = new System.Drawing.Point(4, 142);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 20);
+            this.label4.Size = new System.Drawing.Size(123, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Thời gian bắt đầu:";
             // 
             // tbTenDichVu
             // 
-            this.tbTenDichVu.Location = new System.Drawing.Point(10, 131);
+            this.tbTenDichVu.Location = new System.Drawing.Point(8, 106);
+            this.tbTenDichVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbTenDichVu.Name = "tbTenDichVu";
-            this.tbTenDichVu.Size = new System.Drawing.Size(285, 30);
+            this.tbTenDichVu.Size = new System.Drawing.Size(215, 26);
             this.tbTenDichVu.TabIndex = 3;
             this.tbTenDichVu.TextChanged += new System.EventHandler(this.tbTenDichVu_TextChanged);
             // 
@@ -663,29 +767,43 @@ namespace HotelManagement.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 108);
+            this.label3.Location = new System.Drawing.Point(4, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên dịch vụ:";
             // 
             // tbMaPhieuDatPhong
             // 
-            this.tbMaPhieuDatPhong.Location = new System.Drawing.Point(10, 64);
+            this.tbMaPhieuDatPhong.Location = new System.Drawing.Point(8, 52);
+            this.tbMaPhieuDatPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbMaPhieuDatPhong.Name = "tbMaPhieuDatPhong";
             this.tbMaPhieuDatPhong.ReadOnly = true;
-            this.tbMaPhieuDatPhong.Size = new System.Drawing.Size(285, 30);
+            this.tbMaPhieuDatPhong.Size = new System.Drawing.Size(215, 26);
             this.tbMaPhieuDatPhong.TabIndex = 1;
             // 
             // te
             // 
             this.te.AutoSize = true;
             this.te.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.te.Location = new System.Drawing.Point(6, 41);
+            this.te.Location = new System.Drawing.Point(4, 33);
+            this.te.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.te.Name = "te";
-            this.te.Size = new System.Drawing.Size(115, 20);
+            this.te.Size = new System.Drawing.Size(99, 17);
             this.te.TabIndex = 0;
             this.te.Text = "Mã đặt phòng:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(328, 27);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 20);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Tên dịch vụ";
             // 
             // cbMaPhong
             // 
@@ -701,11 +819,12 @@ namespace HotelManagement.GUI
             this.cbMaPhong.FormattingEnabled = true;
             this.cbMaPhong.IntegralHeight = false;
             this.cbMaPhong.ItemHeight = 43;
-            this.cbMaPhong.Location = new System.Drawing.Point(113, 15);
+            this.cbMaPhong.Location = new System.Drawing.Point(85, 12);
+            this.cbMaPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbMaPhong.MaxDropDownItems = 4;
             this.cbMaPhong.MouseState = MaterialSkin.MouseState.OUT;
             this.cbMaPhong.Name = "cbMaPhong";
-            this.cbMaPhong.Size = new System.Drawing.Size(133, 49);
+            this.cbMaPhong.Size = new System.Drawing.Size(101, 49);
             this.cbMaPhong.StartIndex = 0;
             this.cbMaPhong.TabIndex = 8;
             this.cbMaPhong.SelectedIndexChanged += new System.EventHandler(this.cbMaPhong_SelectedIndexChanged);
@@ -715,7 +834,8 @@ namespace HotelManagement.GUI
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel8.Location = new System.Drawing.Point(23, 33);
+            this.materialLabel8.Location = new System.Drawing.Point(17, 27);
+            this.materialLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(73, 19);
@@ -726,9 +846,11 @@ namespace HotelManagement.GUI
             // 
             this.groupBox2.Controls.Add(this.dgvDVKhongHoTro);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(442, 89);
+            this.groupBox2.Location = new System.Drawing.Point(332, 72);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(413, 363);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(310, 295);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dịch vụ không hỗ trợ";
@@ -737,11 +859,12 @@ namespace HotelManagement.GUI
             // 
             this.dgvDVKhongHoTro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDVKhongHoTro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDVKhongHoTro.Location = new System.Drawing.Point(3, 26);
+            this.dgvDVKhongHoTro.Location = new System.Drawing.Point(2, 21);
+            this.dgvDVKhongHoTro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDVKhongHoTro.Name = "dgvDVKhongHoTro";
             this.dgvDVKhongHoTro.RowHeadersWidth = 51;
             this.dgvDVKhongHoTro.RowTemplate.Height = 24;
-            this.dgvDVKhongHoTro.Size = new System.Drawing.Size(407, 334);
+            this.dgvDVKhongHoTro.Size = new System.Drawing.Size(306, 272);
             this.dgvDVKhongHoTro.TabIndex = 0;
             this.dgvDVKhongHoTro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVKhongHoTro_CellClick);
             // 
@@ -749,9 +872,11 @@ namespace HotelManagement.GUI
             // 
             this.groupBox1.Controls.Add(this.dgvDVCoHoTro);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 89);
+            this.groupBox1.Location = new System.Drawing.Point(17, 72);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(413, 363);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(310, 295);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dịch vụ có hỗ trợ";
@@ -760,11 +885,12 @@ namespace HotelManagement.GUI
             // 
             this.dgvDVCoHoTro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDVCoHoTro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDVCoHoTro.Location = new System.Drawing.Point(3, 26);
+            this.dgvDVCoHoTro.Location = new System.Drawing.Point(2, 21);
+            this.dgvDVCoHoTro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDVCoHoTro.Name = "dgvDVCoHoTro";
             this.dgvDVCoHoTro.RowHeadersWidth = 51;
             this.dgvDVCoHoTro.RowTemplate.Height = 24;
-            this.dgvDVCoHoTro.Size = new System.Drawing.Size(407, 334);
+            this.dgvDVCoHoTro.Size = new System.Drawing.Size(306, 272);
             this.dgvDVCoHoTro.TabIndex = 0;
             this.dgvDVCoHoTro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVCoHoTro_CellClick);
             // 
@@ -772,9 +898,10 @@ namespace HotelManagement.GUI
             // 
             this.phongCuaToi.ImageKey = "bed.png";
             this.phongCuaToi.Location = new System.Drawing.Point(4, 39);
+            this.phongCuaToi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.phongCuaToi.Name = "phongCuaToi";
-            this.phongCuaToi.Padding = new System.Windows.Forms.Padding(3);
-            this.phongCuaToi.Size = new System.Drawing.Size(1266, 473);
+            this.phongCuaToi.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phongCuaToi.Size = new System.Drawing.Size(948, 376);
             this.phongCuaToi.TabIndex = 2;
             this.phongCuaToi.Text = "Phòng của tôi";
             this.phongCuaToi.UseVisualStyleBackColor = true;
@@ -795,21 +922,24 @@ namespace HotelManagement.GUI
             this.tabDatPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDatPhong.ImageKey = "booking.png";
             this.tabDatPhong.Location = new System.Drawing.Point(4, 39);
+            this.tabDatPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabDatPhong.Name = "tabDatPhong";
-            this.tabDatPhong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatPhong.Size = new System.Drawing.Size(1266, 473);
+            this.tabDatPhong.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDatPhong.Size = new System.Drawing.Size(948, 377);
             this.tabDatPhong.TabIndex = 0;
             this.tabDatPhong.Text = "Đặt phòng";
             this.tabDatPhong.UseVisualStyleBackColor = true;
+            this.tabDatPhong.Click += new System.EventHandler(this.tabDatPhong_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(468, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(351, 45);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 248);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 202);
             this.dataGridView1.TabIndex = 9;
             // 
             // materialButton1
@@ -819,8 +949,8 @@ namespace HotelManagement.GUI
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(96, 247);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.Location = new System.Drawing.Point(72, 201);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -835,9 +965,10 @@ namespace HotelManagement.GUI
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(265, 180);
+            this.checkBox6.Location = new System.Drawing.Point(199, 146);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(81, 26);
+            this.checkBox6.Size = new System.Drawing.Size(66, 23);
             this.checkBox6.TabIndex = 7;
             this.checkBox6.Text = "Tất cả";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -845,9 +976,10 @@ namespace HotelManagement.GUI
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(265, 82);
+            this.checkBox5.Location = new System.Drawing.Point(199, 67);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(81, 26);
+            this.checkBox5.Size = new System.Drawing.Size(66, 23);
             this.checkBox5.TabIndex = 6;
             this.checkBox5.Text = "Tất cả";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -855,9 +987,10 @@ namespace HotelManagement.GUI
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(142, 180);
+            this.checkBox4.Location = new System.Drawing.Point(106, 146);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(111, 26);
+            this.checkBox4.Size = new System.Drawing.Size(89, 23);
             this.checkBox4.TabIndex = 5;
             this.checkBox4.Text = "Phòng đôi";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -865,9 +998,10 @@ namespace HotelManagement.GUI
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(23, 180);
+            this.checkBox3.Location = new System.Drawing.Point(17, 146);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(115, 26);
+            this.checkBox3.Size = new System.Drawing.Size(93, 23);
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "Phòng đơn";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -875,9 +1009,10 @@ namespace HotelManagement.GUI
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(142, 82);
+            this.checkBox2.Location = new System.Drawing.Point(106, 67);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(99, 26);
+            this.checkBox2.Size = new System.Drawing.Size(79, 23);
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "> 5 triệu";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -885,9 +1020,10 @@ namespace HotelManagement.GUI
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(23, 82);
+            this.checkBox1.Location = new System.Drawing.Point(17, 67);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(99, 26);
+            this.checkBox1.Size = new System.Drawing.Size(79, 23);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "> 2 triệu";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -895,18 +1031,20 @@ namespace HotelManagement.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 134);
+            this.label2.Location = new System.Drawing.Point(14, 109);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 22);
+            this.label2.Size = new System.Drawing.Size(99, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Theo số phòng";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 38);
+            this.label1.Location = new System.Drawing.Point(14, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 22);
+            this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Theo Giá";
             // 
@@ -922,12 +1060,13 @@ namespace HotelManagement.GUI
             this.tabKhachHang.Depth = 0;
             this.tabKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabKhachHang.ImageList = this.icon;
-            this.tabKhachHang.Location = new System.Drawing.Point(3, 64);
+            this.tabKhachHang.Location = new System.Drawing.Point(2, 52);
+            this.tabKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabKhachHang.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabKhachHang.Multiline = true;
             this.tabKhachHang.Name = "tabKhachHang";
             this.tabKhachHang.SelectedIndex = 0;
-            this.tabKhachHang.Size = new System.Drawing.Size(1274, 516);
+            this.tabKhachHang.Size = new System.Drawing.Size(956, 420);
             this.tabKhachHang.TabIndex = 1;
             // 
             // tabDVCuaToi
@@ -936,9 +1075,10 @@ namespace HotelManagement.GUI
             this.tabDVCuaToi.Controls.Add(this.dgvDVCuaToi);
             this.tabDVCuaToi.ImageKey = "shopping-list.png";
             this.tabDVCuaToi.Location = new System.Drawing.Point(4, 39);
+            this.tabDVCuaToi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabDVCuaToi.Name = "tabDVCuaToi";
-            this.tabDVCuaToi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDVCuaToi.Size = new System.Drawing.Size(1266, 473);
+            this.tabDVCuaToi.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDVCuaToi.Size = new System.Drawing.Size(948, 376);
             this.tabDVCuaToi.TabIndex = 5;
             this.tabDVCuaToi.Text = "Dịch vụ của tôi";
             this.tabDVCuaToi.UseVisualStyleBackColor = true;
@@ -948,7 +1088,8 @@ namespace HotelManagement.GUI
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(496, 20);
+            this.materialLabel5.Location = new System.Drawing.Point(372, 16);
+            this.materialLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(138, 19);
@@ -968,56 +1109,13 @@ namespace HotelManagement.GUI
             this.dongiaDataGridViewTextBoxColumn,
             this.tenkhachhangDataGridViewTextBoxColumn});
             this.dgvDVCuaToi.DataSource = this.phieuSuDungDichVuChiTietBindingSource;
-            this.dgvDVCuaToi.Location = new System.Drawing.Point(6, 60);
+            this.dgvDVCuaToi.Location = new System.Drawing.Point(4, 49);
+            this.dgvDVCuaToi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDVCuaToi.Name = "dgvDVCuaToi";
             this.dgvDVCuaToi.RowHeadersWidth = 51;
             this.dgvDVCuaToi.RowTemplate.Height = 24;
-            this.dgvDVCuaToi.Size = new System.Drawing.Size(1168, 407);
+            this.dgvDVCuaToi.Size = new System.Drawing.Size(876, 331);
             this.dgvDVCuaToi.TabIndex = 0;
-            // 
-            // tabTourCuaToi
-            // 
-            this.tabTourCuaToi.Controls.Add(this.dgvTourCuaToi);
-            this.tabTourCuaToi.Controls.Add(this.materialLabel7);
-            this.tabTourCuaToi.ImageKey = "list.png";
-            this.tabTourCuaToi.Location = new System.Drawing.Point(4, 39);
-            this.tabTourCuaToi.Name = "tabTourCuaToi";
-            this.tabTourCuaToi.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTourCuaToi.Size = new System.Drawing.Size(1266, 473);
-            this.tabTourCuaToi.TabIndex = 6;
-            this.tabTourCuaToi.Text = "Tour của tôi";
-            this.tabTourCuaToi.UseVisualStyleBackColor = true;
-            // 
-            // dgvTourCuaToi
-            // 
-            this.dgvTourCuaToi.AutoGenerateColumns = false;
-            this.dgvTourCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTourCuaToi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madattourDataGridViewTextBoxColumn,
-            this.matourDataGridViewTextBoxColumn1,
-            this.makhachhangDataGridViewTextBoxColumn,
-            this.thoigiankhoihanhDataGridViewTextBoxColumn,
-            this.thoigiantroveDataGridViewTextBoxColumn,
-            this.soluonghanhkhachDataGridViewTextBoxColumn});
-            this.dgvTourCuaToi.DataSource = this.datTourBindingSource;
-            this.dgvTourCuaToi.Location = new System.Drawing.Point(6, 53);
-            this.dgvTourCuaToi.Name = "dgvTourCuaToi";
-            this.dgvTourCuaToi.RowHeadersWidth = 51;
-            this.dgvTourCuaToi.RowTemplate.Height = 24;
-            this.dgvTourCuaToi.Size = new System.Drawing.Size(1168, 414);
-            this.dgvTourCuaToi.TabIndex = 1;
-            // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.Location = new System.Drawing.Point(483, 18);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(118, 19);
-            this.materialLabel7.TabIndex = 0;
-            this.materialLabel7.Text = "Tour đã đăng ký";
             // 
             // madichvuDataGridViewTextBoxColumn
             // 
@@ -1079,49 +1177,39 @@ namespace HotelManagement.GUI
             // 
             this.phieuSuDungDichVuChiTietBindingSource.DataSource = typeof(HotelManagement.PhieuSuDungDichVuChiTiet);
             // 
-            // matourDataGridViewTextBoxColumn
+            // tabTourCuaToi
             // 
-            this.matourDataGridViewTextBoxColumn.DataPropertyName = "matour";
-            this.matourDataGridViewTextBoxColumn.HeaderText = "matour";
-            this.matourDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.matourDataGridViewTextBoxColumn.Name = "matourDataGridViewTextBoxColumn";
-            this.matourDataGridViewTextBoxColumn.Width = 80;
+            this.tabTourCuaToi.Controls.Add(this.dgvTourCuaToi);
+            this.tabTourCuaToi.Controls.Add(this.materialLabel7);
+            this.tabTourCuaToi.ImageKey = "list.png";
+            this.tabTourCuaToi.Location = new System.Drawing.Point(4, 39);
+            this.tabTourCuaToi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTourCuaToi.Name = "tabTourCuaToi";
+            this.tabTourCuaToi.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTourCuaToi.Size = new System.Drawing.Size(948, 376);
+            this.tabTourCuaToi.TabIndex = 6;
+            this.tabTourCuaToi.Text = "Tour của tôi";
+            this.tabTourCuaToi.UseVisualStyleBackColor = true;
             // 
-            // tentourDataGridViewTextBoxColumn
+            // dgvTourCuaToi
             // 
-            this.tentourDataGridViewTextBoxColumn.DataPropertyName = "tentour";
-            this.tentourDataGridViewTextBoxColumn.HeaderText = "tentour";
-            this.tentourDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tentourDataGridViewTextBoxColumn.Name = "tentourDataGridViewTextBoxColumn";
-            this.tentourDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // giaDataGridViewTextBoxColumn
-            // 
-            this.giaDataGridViewTextBoxColumn.DataPropertyName = "gia";
-            this.giaDataGridViewTextBoxColumn.HeaderText = "gia";
-            this.giaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.giaDataGridViewTextBoxColumn.Name = "giaDataGridViewTextBoxColumn";
-            this.giaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // songayDataGridViewTextBoxColumn
-            // 
-            this.songayDataGridViewTextBoxColumn.DataPropertyName = "songay";
-            this.songayDataGridViewTextBoxColumn.HeaderText = "songay";
-            this.songayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.songayDataGridViewTextBoxColumn.Name = "songayDataGridViewTextBoxColumn";
-            this.songayDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // madoitacDataGridViewTextBoxColumn
-            // 
-            this.madoitacDataGridViewTextBoxColumn.DataPropertyName = "madoitac";
-            this.madoitacDataGridViewTextBoxColumn.HeaderText = "madoitac";
-            this.madoitacDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.madoitacDataGridViewTextBoxColumn.Name = "madoitacDataGridViewTextBoxColumn";
-            this.madoitacDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // tourDuLichBindingSource
-            // 
-            this.tourDuLichBindingSource.DataSource = typeof(HotelManagement.TourDuLich);
+            this.dgvTourCuaToi.AutoGenerateColumns = false;
+            this.dgvTourCuaToi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTourCuaToi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.madattourDataGridViewTextBoxColumn,
+            this.matourDataGridViewTextBoxColumn1,
+            this.makhachhangDataGridViewTextBoxColumn,
+            this.thoigiankhoihanhDataGridViewTextBoxColumn,
+            this.thoigiantroveDataGridViewTextBoxColumn,
+            this.soluonghanhkhachDataGridViewTextBoxColumn});
+            this.dgvTourCuaToi.DataSource = this.datTourBindingSource;
+            this.dgvTourCuaToi.Location = new System.Drawing.Point(4, 43);
+            this.dgvTourCuaToi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTourCuaToi.Name = "dgvTourCuaToi";
+            this.dgvTourCuaToi.RowHeadersWidth = 51;
+            this.dgvTourCuaToi.RowTemplate.Height = 24;
+            this.dgvTourCuaToi.Size = new System.Drawing.Size(876, 336);
+            this.dgvTourCuaToi.TabIndex = 1;
             // 
             // madattourDataGridViewTextBoxColumn
             // 
@@ -1175,59 +1263,36 @@ namespace HotelManagement.GUI
             // 
             this.datTourBindingSource.DataSource = typeof(HotelManagement.DatTour);
             // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel7.Location = new System.Drawing.Point(362, 15);
+            this.materialLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(118, 19);
+            this.materialLabel7.TabIndex = 0;
+            this.materialLabel7.Text = "Tour đã đăng ký";
+            // 
             // phongBindingSource
             // 
             this.phongBindingSource.DataSource = typeof(HotelManagement.Phong);
             this.phongBindingSource.CurrentChanged += new System.EventHandler(this.phongBindingSource_CurrentChanged);
             // 
-            // btnTimKiemTenDV
-            // 
-            this.btnTimKiemTenDV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTimKiemTenDV.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTimKiemTenDV.Depth = 0;
-            this.btnTimKiemTenDV.HighEmphasis = true;
-            this.btnTimKiemTenDV.Icon = null;
-            this.btnTimKiemTenDV.Location = new System.Drawing.Point(766, 28);
-            this.btnTimKiemTenDV.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTimKiemTenDV.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTimKiemTenDV.Name = "btnTimKiemTenDV";
-            this.btnTimKiemTenDV.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTimKiemTenDV.Size = new System.Drawing.Size(86, 36);
-            this.btnTimKiemTenDV.TabIndex = 27;
-            this.btnTimKiemTenDV.Text = "Tìm kiếm";
-            this.btnTimKiemTenDV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTimKiemTenDV.UseAccentColor = false;
-            this.btnTimKiemTenDV.UseVisualStyleBackColor = true;
-            this.btnTimKiemTenDV.Click += new System.EventHandler(this.btnTimKiemTenDV_Click);
-            // 
-            // tbTenDVTimKiem
-            // 
-            this.tbTenDVTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTenDVTimKiem.Location = new System.Drawing.Point(572, 28);
-            this.tbTenDVTimKiem.Name = "tbTenDVTimKiem";
-            this.tbTenDVTimKiem.Size = new System.Drawing.Size(174, 30);
-            this.tbTenDVTimKiem.TabIndex = 26;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(437, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 25);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Tên dịch vụ";
-            // 
             // fKhachHangHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 583);
+            this.ClientSize = new System.Drawing.Size(960, 474);
             this.Controls.Add(this.tabKhachHang);
             this.DrawerIsOpen = true;
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.tabKhachHang;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fKhachHangHome";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Khách hàng";
             this.Load += new System.EventHandler(this.fKhachHangHome_Load);
             this.tabThongTinTaiKhoan.ResumeLayout(false);
@@ -1239,6 +1304,7 @@ namespace HotelManagement.GUI
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).EndInit();
             this.tabDichVu.ResumeLayout(false);
             this.tabDichVu.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1255,11 +1321,10 @@ namespace HotelManagement.GUI
             this.tabDVCuaToi.ResumeLayout(false);
             this.tabDVCuaToi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVCuaToi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuSuDungDichVuChiTietBindingSource)).EndInit();
             this.tabTourCuaToi.ResumeLayout(false);
             this.tabTourCuaToi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCuaToi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuSuDungDichVuChiTietBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourDuLichBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datTourBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource)).EndInit();
             this.ResumeLayout(false);

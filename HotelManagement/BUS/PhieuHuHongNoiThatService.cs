@@ -21,5 +21,10 @@ namespace HotelManagement.BUS
         {
             repo.addPhieuHuHongNoiThatChiTiet(phieu);
         }
+
+        public float tongTienHuHong(int maphieudatphong)
+        {
+            return (float) repo.getByMaPhieuDatPhong(maphieudatphong).Sum(p => p.giatienden);
+        }
     }
 }
